@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.but4reuse.feature.list:FeatureList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.but4reuse.feature.list="http://org.but4reuse.feature.list">
+  <ownedFeatures id="BASE" name="BASE">
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.0"/>
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.1"/>
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.2"/>
+  </ownedFeatures>
+  <ownedFeatures id="LINE" name="LINE">
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.0"/>
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.1"/>
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.2"/>
+  </ownedFeatures>
+  <ownedFeatures id="WIPE" name="WIPE">
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.0"/>
+  </ownedFeatures>
+  <ownedFeatures id="COLOR" name="COLOR">
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.1"/>
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.2"/>
+  </ownedFeatures>
+  <ownedFeatures id="RECTANGLE" name="RECTANGLE">
+    <implementedInArtefacts href="variants.artefactmodel#//@ownedArtefacts.2"/>
+  </ownedFeatures>
+  <artefactModel href="variants.artefactmodel#/"/>
+</org.but4reuse.feature.list:FeatureList>

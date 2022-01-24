@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.but4reuse.artefact.model:ArtefactModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.but4reuse.artefact.model="http://org.but4reuse.artefact.model" name="DPL execution traces" adapters="jacoco">
+  <ownedArtefacts name="Line_V1.xml" artefactURI="platform:/resource/DPL_analysis/executionTraces/Line_V1.xml" date="2021-10-28T12:16:20.586+0200"/>
+  <ownedArtefacts name="Wipe_V1.xml" artefactURI="platform:/resource/DPL_analysis/executionTraces/Wipe_V1.xml" date="2021-10-28T12:16:20.580+0200"/>
+  <ownedArtefacts name="ColorLine_V2.xml" artefactURI="platform:/resource/DPL_analysis/executionTraces/ColorLine_V2.xml" date="2021-10-28T12:16:20.572+0200"/>
+  <ownedArtefacts name="Rectangle_V3.xml" artefactURI="platform:/resource/DPL_analysis/executionTraces/Rectangle_V3.xml" date="2021-10-28T12:16:20.601+0200"/>
+  <ownedArtefacts name="ColorRectangle_V3.xml" artefactURI="platform:/resource/DPL_analysis/executionTraces/ColorRectangle_V3.xml" date="2021-10-28T12:16:20.593+0200"/>
+</org.but4reuse.artefact.model:ArtefactModel>

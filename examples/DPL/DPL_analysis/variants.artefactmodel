@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.but4reuse.artefact.model:ArtefactModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.but4reuse.artefact.model="http://org.but4reuse.artefact.model" name="DPL variants" adapters="jdt">
+  <ownedArtefacts name="V1_src" artefactURI="platform:/resource/V1/src" date="2021-10-28T11:55:58.203+0200"/>
+  <ownedArtefacts name="V2_src" artefactURI="platform:/resource/V2/src" date="2021-10-28T11:50:58.302+0200"/>
+  <ownedArtefacts name="V3_src" artefactURI="platform:/resource/V3/src" date="2021-10-28T11:50:58.423+0200"/>
+</org.but4reuse.artefact.model:ArtefactModel>

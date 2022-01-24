@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.but4reuse.feature.list:FeatureList xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:org.but4reuse.feature.list="http://org.but4reuse.feature.list">
+  <ownedFeatures id="BASE" name="BASE">
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.2"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.4"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.0"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.3"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.1"/>
+  </ownedFeatures>
+  <ownedFeatures id="LINE" name="LINE">
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.2"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.0"/>
+  </ownedFeatures>
+  <ownedFeatures id="WIPE" name="WIPE">
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.1"/>
+  </ownedFeatures>
+  <ownedFeatures id="COLOR" name="COLOR">
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.2"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.4"/>
+  </ownedFeatures>
+  <ownedFeatures id="RECTANGLE" name="RECTANGLE">
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.4"/>
+    <implementedInArtefacts href="executionTraces.artefactmodel#//@ownedArtefacts.3"/>
+  </ownedFeatures>
+  <artefactModel href="executionTraces.artefactmodel#/"/>
+</org.but4reuse.feature.list:FeatureList>
