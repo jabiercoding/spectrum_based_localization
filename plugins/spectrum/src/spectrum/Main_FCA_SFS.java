@@ -44,9 +44,7 @@ public class Main_FCA_SFS {
 		
 		for (File scenario : scenarios) {
 			System.out.println("Current scenario: " + scenario.getName());
-			if (scenario.getName().contains("006")) {
-				break;
-			}
+			
 			// check if it was built
 			if (!ScenarioUtils.isScenarioBuilt(scenario)) {
 				System.out.println("Skip: The scenario variants were not derived.");
