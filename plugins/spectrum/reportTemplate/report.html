@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Report</title>
+  <meta charset="utf-8">
+  
+  <!--  for the charts -->
+  <script src="libs_js/Chart.bundle.js"></script>
+  <script src="libs_js/utils.js"></script>
+</head>
+
+<body id="mainPage">
+
+	<canvas id="bar-chart-grouped" width="600" height="250"></canvas>
+
+
+<script>    
+new Chart(document.getElementById("bar-chart-grouped"), {
+    type: 'bar',
+    data: {
+      labels: ["Original","Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009","Random010","Traditional","Random050","Random100","All"],
+      datasets: [
+        {
+          backgroundColor: "#89138A",
+          label: "Precision", data: [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.91,0.92,0.93,0.94,0.95,0.96]
+        }, {
+          backgroundColor: "#018080",
+          label: "Recall", data: [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.91,0.92,0.93,0.94,0.95,0.96]
+        }, {
+          backgroundColor: "#E6BB18",
+          label: "F1", data: [0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.91,0.92,0.93,0.94,0.95,0.96]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Feature location metrics'
+      }
+    }
+});
+</script>
+
+</body>
+</html>
