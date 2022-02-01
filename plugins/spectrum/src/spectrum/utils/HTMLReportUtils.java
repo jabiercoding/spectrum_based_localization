@@ -1,6 +1,7 @@
 package spectrum.utils;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -23,20 +24,26 @@ public class HTMLReportUtils {
 		
 		// Get the positions of the parts to replace from the template
 		List<String> lines = FileUtils.getLinesOfFile(report);
-		int indexOfScenarioLabels = 0;
+		List<Integer> indexOfScenarioLabels = new ArrayList<Integer>();;
 		int indexOfPrecision = 0;
 		int indexOfRecall = 0;
 		int indexOfF1 = 0;
+		int indexOfWithout = 0;
+		int indexOfInexistent = 0;
 		for (int i = 0; i < lines.size(); i++) {
 			String line = lines.get(i).trim();
 			if (line.startsWith("labels:")) {
-				indexOfScenarioLabels = i;
+				indexOfScenarioLabels.add(i);
 			} else if (line.startsWith("label: \"Precision\"")) {
 				indexOfPrecision = i;
 			} else if (line.startsWith("label: \"Recall\"")) {
 				indexOfRecall = i;
 			} else if (line.startsWith("label: \"F1\"")) {
 				indexOfF1 = i;
+			} else if (line.startsWith("label: \"FeaturesWithoutRetrieved\"")) {
+				indexOfWithout = i;
+			} else if (line.startsWith("label: \"InexistentFeaturesRetrieved\"")) {
+				indexOfInexistent = i;
 			}
 		}
 		
@@ -45,6 +52,9 @@ public class HTMLReportUtils {
 		StringBuffer precisionLine = new StringBuffer();
 		StringBuffer recallLine = new StringBuffer();
 		StringBuffer f1Line = new StringBuffer();
+		
+		StringBuffer withoutLine = new StringBuffer();
+		StringBuffer inexistentLine = new StringBuffer();
 		
 		scenariosLine.append("labels: [");
 		for (String scenario: mapScenarioMetricsFile.keySet()) {
@@ -58,12 +68,16 @@ public class HTMLReportUtils {
 		scenariosLine.substring(0, scenariosLine.length()-2);
 		scenariosLine.append("],\n");
 		
-		lines.remove(indexOfScenarioLabels);
-		lines.add(indexOfScenarioLabels, scenariosLine.toString());
+		for (Integer i : indexOfScenarioLabels) {
+			lines.remove(i.intValue());
+			lines.add(i, scenariosLine.toString());
+		}
 		
 		precisionLine.append("label: \"Precision\", data: [");
 		recallLine.append("label: \"Recall\", data: [");
 		f1Line.append("label: \"F1\", data: [");
+		withoutLine.append("label: \"FeaturesWithoutRetrieved\", data: [");
+		inexistentLine.append("label: \"InexistentFeaturesRetrieved\", data: [");
 		
 		for (String scenario: mapScenarioMetricsFile.keySet()) {
 			File resultsFile = mapScenarioMetricsFile.get(scenario);
@@ -74,6 +88,8 @@ public class HTMLReportUtils {
 					precisionLine.append(splitResultLine[1] + ",");
 					recallLine.append(splitResultLine[2] + ",");
 					f1Line.append(splitResultLine[3] + ",");
+					withoutLine.append(splitResultLine[4] + ",");
+					inexistentLine.append(splitResultLine[5] + ",");
 				}
 			}
 		}
@@ -85,6 +101,10 @@ public class HTMLReportUtils {
 		recallLine.append("]\n");
 		f1Line.substring(0, f1Line.length()-2);
 		f1Line.append("]\n");
+		withoutLine.substring(0, withoutLine.length()-2);
+		withoutLine.append("]\n");
+		inexistentLine.substring(0, inexistentLine.length()-2);
+		inexistentLine.append("]\n");
 		
 		lines.remove(indexOfPrecision);
 		lines.add(indexOfPrecision, precisionLine.toString());
@@ -92,6 +112,10 @@ public class HTMLReportUtils {
 		lines.add(indexOfRecall, recallLine.toString());
 		lines.remove(indexOfF1);
 		lines.add(indexOfF1, f1Line.toString());
+		lines.remove(indexOfWithout);
+		lines.add(indexOfWithout, withoutLine.toString());
+		lines.remove(indexOfInexistent);
+		lines.add(indexOfInexistent, inexistentLine.toString());
 				
 		// Save the report
 		StringBuffer newContent = new StringBuffer();

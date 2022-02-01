@@ -38,7 +38,7 @@ public class Main_FCA_SFS {
 
 		File scenariosFolder = new File(benchmarkFolder, "scenarios");
 		
-		File outputFolder = new File("output");
+		File outputFolder = new File("output_FCA_SFS");
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
 		
 		Map<String,File> mapScenarioMetricsFile = new LinkedHashMap<String,File>();

@@ -38,7 +38,7 @@ public class Main_SBLforStaticAnalysisOfVariants {
 
 		File scenariosFolder = new File(benchmarkFolder, "scenarios");
 
-		File outputFolder = new File("output");
+		File outputFolder = new File("output_SBL_Variants_Static");
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
