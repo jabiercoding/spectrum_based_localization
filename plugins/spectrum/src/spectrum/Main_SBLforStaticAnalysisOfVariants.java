@@ -70,8 +70,8 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			// Get blocks
 			// Using similar elements we will get one block for each element
 			SimilarElementsBlockIdentification blockIdentificationAlgo = new SimilarElementsBlockIdentification();
-			List<Block> blocks = blockIdentificationAlgo.identifyBlocks(adaptedModel.getOwnedAdaptedArtefacts(),
-					new ConsoleProgressMonitor(), false);
+			List<Block> blocks = blockIdentificationAlgo.identifyBlocks(adaptedModel.getOwnedAdaptedArtefacts(), false,
+					new ConsoleProgressMonitor());
 			adaptedModel.getOwnedBlocks().addAll(blocks);
 
 			// Launch feature location

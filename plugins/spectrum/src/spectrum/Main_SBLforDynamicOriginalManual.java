@@ -8,12 +8,14 @@ import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
+import org.but4reuse.adapters.IElement;
 import org.but4reuse.adapters.jacoco.JacocoAdapter;
+import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
+import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
-import org.but4reuse.block.identification.IBlockIdentification;
-import org.but4reuse.fca.block.identification.FCABlockIdentification;
+import org.but4reuse.block.identification.impl.SimilarElementsBlockIdentification;
 import org.but4reuse.feature.location.LocatedFeature;
 import org.but4reuse.feature.location.spectrum.RankingMetrics;
 import org.but4reuse.feature.location.spectrum.SpectrumBasedLocalization;
@@ -26,13 +28,17 @@ import spectrum.utils.ConsoleProgressMonitor;
 
 public class Main_SBLforDynamicOriginalManual {
 
+	static File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+
+	static File originalVariantSrc = new File(benchmarkFolder, "scenarios/ScenarioOriginalVariant/variants/Original.config/src/org/argouml");
+	
 	public static void main(String[] args) {
-		
+
 		// create artefact model and feature list
 		FeatureList featureList = FeatureListFactory.eINSTANCE.createFeatureList();
 		ArtefactModel artefactModel = ArtefactModelFactory.eINSTANCE.createArtefactModel();
 		featureList.setArtefactModel(artefactModel);
-		
+
 		File manualTraces = new File("execTraces/manual");
 		for (File trace : manualTraces.listFiles()) {
 			Artefact artefact = ArtefactModelFactory.eINSTANCE.createArtefact();
@@ -40,34 +46,48 @@ public class Main_SBLforDynamicOriginalManual {
 			String name = trace.getName().substring(0, trace.getName().length() - ".xml".length());
 			artefact.setName(name);
 			artefactModel.getOwnedArtefacts().add(artefact);
-			
+
 			Feature feature = FeatureListFactory.eINSTANCE.createFeature();
 			feature.setName(name);
 			feature.setId(name);
 			feature.getImplementedInArtefacts().add(artefact);
 			featureList.getOwnedFeatures().add(feature);
 		}
-		
+
 		// Adapt the variants and create the adapted model
 		IAdapter jacocoAdapter = new JacocoAdapter();
 		List<IAdapter> adapters = new ArrayList<IAdapter>();
 		adapters.add(jacocoAdapter);
 		AdaptedModel adaptedModel = AdaptedModelHelper.adapt(artefactModel, adapters, new ConsoleProgressMonitor());
 
-		// Get blocks
-		IBlockIdentification blockIdentificationAlgo = new FCABlockIdentification();
-		List<Block> blocks = blockIdentificationAlgo.identifyBlocks(adaptedModel.getOwnedAdaptedArtefacts(),
+		// Get blocks, one block per element
+		SimilarElementsBlockIdentification blockIdentificationAlgo = new SimilarElementsBlockIdentification();
+		List<Block> blocks = blockIdentificationAlgo.identifyBlocks(adaptedModel.getOwnedAdaptedArtefacts(), false,
 				new ConsoleProgressMonitor());
 		adaptedModel.getOwnedBlocks().addAll(blocks);
-		
+
 		// Launch feature location
 		IFaultLocalizer<Block> wong2 = RankingMetrics.getRankingMetricByName("Wong2");
 		SpectrumBasedLocalization featureLocationAlgo = new SpectrumBasedLocalization();
 		List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(featureList, adaptedModel, wong2, 1.0,
-							new ConsoleProgressMonitor());
+				new ConsoleProgressMonitor());
 		for (LocatedFeature located : flResult) {
-			System.out.println(located.getFeature().getName() + " : " + located);
+			System.out.println(located.getFeature().getName() + " : " + AdaptedModelHelper.getElementsOfBlock(located.getBlocks().get(0)));
+		}
+		
+		// adapt java source code
+		System.out.println("Adapting source code with JDT");
+		IAdapter jdtAdapter = new JavaJDTAdapter();
+		List<IElement> jdtElements = jdtAdapter.adapt(originalVariantSrc.toURI(), new ConsoleProgressMonitor());
+		for (IElement element : jdtElements) {
+			if (element instanceof MethodBodyElement) {
+				MethodBodyElement methodBody = (MethodBodyElement) element;
+				System.out.println("Method body of " + methodBody.getDependencies().get("methodBody").get(0));
+			} else {
+				System.out.println(element);
+			}
 		}
 
+		// TODO
 	}
 }
