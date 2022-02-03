@@ -2,15 +2,19 @@ package spectrum;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
 import org.but4reuse.adapters.IElement;
+import org.but4reuse.adapters.jacoco.CoveredLineElement;
 import org.but4reuse.adapters.jacoco.JacocoAdapter;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
+import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
@@ -30,8 +34,9 @@ public class Main_SBLforDynamicOriginalManual {
 
 	static File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
-	static File originalVariantSrc = new File(benchmarkFolder, "scenarios/ScenarioOriginalVariant/variants/Original.config/src/org/argouml");
-	
+	static File originalVariantSrc = new File(benchmarkFolder,
+			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org/argouml");
+
 	public static void main(String[] args) {
 
 		// create artefact model and feature list
@@ -71,15 +76,17 @@ public class Main_SBLforDynamicOriginalManual {
 		SpectrumBasedLocalization featureLocationAlgo = new SpectrumBasedLocalization();
 		List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(featureList, adaptedModel, wong2, 1.0,
 				new ConsoleProgressMonitor());
-		for (LocatedFeature located : flResult) {
-			System.out.println(located.getFeature().getName() + " : " + AdaptedModelHelper.getElementsOfBlock(located.getBlocks().get(0)));
-		}
+		Map<String, Map<String, List<Integer>>> mapFeatureJavaLines = getResults(flResult);
 		
 		// adapt java source code
 		System.out.println("Adapting source code with JDT");
 		IAdapter jdtAdapter = new JavaJDTAdapter();
+		List<CompilationUnitElement> compilationUnits = new ArrayList<CompilationUnitElement>();
 		List<IElement> jdtElements = jdtAdapter.adapt(originalVariantSrc.toURI(), new ConsoleProgressMonitor());
 		for (IElement element : jdtElements) {
+			if (element instanceof CompilationUnitElement) {
+				compilationUnits.add((CompilationUnitElement) element);
+			}
 			if (element instanceof MethodBodyElement) {
 				MethodBodyElement methodBody = (MethodBodyElement) element;
 				System.out.println("Method body of " + methodBody.getDependencies().get("methodBody").get(0));
@@ -87,7 +94,60 @@ public class Main_SBLforDynamicOriginalManual {
 				System.out.println(element);
 			}
 		}
+		
+		// transform from lines to JDT elements
+		for (String feature : mapFeatureJavaLines.keySet()) {
+			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
+			for (String javaFile : javaFiles.keySet()) {
+				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
+				List<Integer> lines = javaFiles.get(javaFile);
+				for (Integer line : lines) {
+					
+				}
+			}
+		}
 
 		// TODO
+	}
+
+	private static CompilationUnitElement getCompilationUnitElement(List<CompilationUnitElement> compilationUnits,
+			String javaFile) {
+		String javaFileInCUEFormat = javaFile.replaceAll("/", ".");
+		
+		for (CompilationUnitElement cu : compilationUnits) {
+			if (cu.id.equals(javaFileInCUEFormat)) {
+				
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Transform the results from locatedFeatures to a map
+	 * 
+	 * @param locatedFeatures
+	 * @return map of feature, Java file, and list of lines
+	 */
+	public static Map<String, Map<String, List<Integer>>> getResults(List<LocatedFeature> locatedFeatures) {
+		Map<String, Map<String, List<Integer>>> mapFeatureJavaLines = new LinkedHashMap<String, Map<String, List<Integer>>>();
+		for (LocatedFeature located : locatedFeatures) {
+			System.out.println(located.getFeature().getName() + " : "
+					+ AdaptedModelHelper.getElementsOfBlock(located.getBlocks().get(0)));
+			Map<String, List<Integer>> current = mapFeatureJavaLines.get(located.getFeature().getName());
+			if (current == null) {
+				current = new LinkedHashMap<String, List<Integer>>();
+			}
+			CoveredLineElement element = (CoveredLineElement) AdaptedModelHelper
+					.getElementsOfBlock(located.getBlocks().get(0)).get(0);
+			String javaFile = element.packageName + "/" + element.fileName;
+			List<Integer> lines = current.get(javaFile);
+			if (lines == null) {
+				lines = new ArrayList<Integer>();
+			}
+			lines.add(element.lineNumber);
+			current.put(javaFile, lines);
+			mapFeatureJavaLines.put(located.getFeature().getName(), current);
+		}
+		return mapFeatureJavaLines;
 	}
 }
