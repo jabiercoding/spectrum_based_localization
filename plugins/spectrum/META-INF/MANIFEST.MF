@@ -16,3 +16,4 @@ Require-Bundle: org.but4reuse.artefactmodel,
  org.but4reuse.feature.location.spectrum,
  org.but4reuse.feature.location,
  org.but4reuse.adapters.jacoco
+Import-Package: org.eclipse.jdt.core.dom
