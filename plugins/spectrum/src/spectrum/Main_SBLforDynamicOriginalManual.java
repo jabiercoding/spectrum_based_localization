@@ -10,12 +10,16 @@ import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
+import org.but4reuse.adapters.IDependencyObject;
 import org.but4reuse.adapters.IElement;
 import org.but4reuse.adapters.jacoco.CoveredLineElement;
 import org.but4reuse.adapters.jacoco.JacocoAdapter;
+import org.but4reuse.adapters.javajdt.JDTParser;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
+import org.but4reuse.adapters.javajdt.elements.TypeElement;
+import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
@@ -29,6 +33,7 @@ import org.but4reuse.featurelist.FeatureListFactory;
 
 import fk.stardust.localizer.IFaultLocalizer;
 import spectrum.utils.ConsoleProgressMonitor;
+import utils.JDTUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
@@ -102,7 +107,8 @@ public class Main_SBLforDynamicOriginalManual {
 				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
 				List<Integer> lines = javaFiles.get(javaFile);
 				for (Integer line : lines) {
-					
+					IElement element = getJDTElement(compUnit, line);
+					// TODO
 				}
 			}
 		}
@@ -110,13 +116,19 @@ public class Main_SBLforDynamicOriginalManual {
 		// TODO
 	}
 
+	private static IElement getJDTElement(CompilationUnitElement compUnit, Integer line) {
+		// TODO
+		return null;
+	}
+
 	private static CompilationUnitElement getCompilationUnitElement(List<CompilationUnitElement> compilationUnits,
 			String javaFile) {
-		String javaFileInCUEFormat = javaFile.replaceAll("/", ".");
-		
+		String cueFormat = javaFile.replaceAll("/", ".");
+		int separator = cueFormat.substring(0, cueFormat.length() - ".java".length()).lastIndexOf('.');
+		cueFormat = cueFormat.substring(0, separator) + " " + cueFormat.substring(separator + 1, cueFormat.length());
 		for (CompilationUnitElement cu : compilationUnits) {
-			if (cu.id.equals(javaFileInCUEFormat)) {
-				
+			if (cu.id.equals(cueFormat)) {
+				return cu;
 			}
 		}
 		return null;
