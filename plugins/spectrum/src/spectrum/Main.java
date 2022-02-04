@@ -4,7 +4,12 @@ import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.but4reuse.adaptedmodel.AdaptedArtefact;
 import org.but4reuse.adaptedmodel.AdaptedModel;
@@ -25,10 +30,15 @@ import org.but4reuse.featurelist.FeatureList;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.AnonymousClassDeclaration;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.FieldDeclaration;
 import org.eclipse.jdt.core.dom.MethodDeclaration;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 
 import utils.FileUtils;
 import utils.JDTUtils;
@@ -70,9 +80,12 @@ public class Main {
 				System.out.println("Exception get URI: " + e);
 			}
 
-			//List<IElement> elements = jdtAdapter.adapt(uri, null);
+			// List<IElement> elements = jdtAdapter.adapt(uri, null);
 
 			List<IElement> elementsJacoco = JacocoAdapter.adapt(jacocoExecutions);
+			Multimap<CompilationUnit, IElement> compilationUnitsExecuted = ArrayListMultimap.create();
+			// Map<CompilationUnit, ArrayList<IElement>>
+			// compilationUnitsExecuted = new HashMap<>();
 
 			for (IElement e : elementsJacoco) {
 
@@ -97,6 +110,7 @@ public class Main {
 				String source = FileUtils.getStringOfFile(new File(pathOriginalVariant));
 				parser.setSource(source.toCharArray());
 				CompilationUnit cu = (CompilationUnit) parser.createAST(null);
+
 				List<MethodDeclaration> methods = getMethods(cu);
 				List<MethodDeclaration> methodsCovered = new ArrayList<MethodDeclaration>();
 				List<FieldDeclaration> fields = getFields(cu);
@@ -106,21 +120,35 @@ public class Main {
 				int position = cu.getPosition(elementJacoco.getLineNumber(), 0);
 				MethodDeclaration method = JDTUtils.getMethodThatContainsAPosition(methods, position, position);
 				if (method != null) { // methodDeclaration
-					// add it if it was not already in the results
-					if (!methodsCovered.contains(method)) {
-						methodsCovered.add(method);
+					IElement element = getJDTElement(cu, elementJacoco.getLineNumber(), elementJacoco.getFileName());
+					if (element != null) {
+						compilationUnitsExecuted.put(cu, element);
 					}
+
 				} else {// FieldDeclaration
 					FieldDeclaration field = JDTUtils.getFieldThatContainsAPosition(fields, position, position);
 					if (field != null) {
-						if (!fieldsCovered.contains(field)) {
-							fieldsCovered.add(field);
+						IElement element = getJDTElement(cu, elementJacoco.getLineNumber(),
+								elementJacoco.getFileName());
+						if (element != null) {
+							compilationUnitsExecuted.put(cu, element);
 						}
 					}
 				}
-				System.out.println("Methods covered: "+methodsCovered.size()+" Total methods cu: "+methods.size());
 			}
+			
 
+			/*for (CompilationUnit key : compilationUnitsExecuted.keySet()) {
+				ArrayList<IElement> elements = (ArrayList<IElement>) compilationUnitsExecuted.get(key);
+	            for (int i = 0; i < elements.size(); i++) {
+	                for (int j = i + 1; j < elements.size(); j++) {
+	                    System.out.println(elements.get(i) + "," + elements.get(j));
+	                }
+	            }
+	            System.out.println();
+	        }
+			*/
+			
 		}
 
 		// Get blocks
@@ -135,6 +163,15 @@ public class Main {
 		// featureLocationAlgo.locateFeatures(fl,
 		// adaptedModel, new NullProgressMonitor());
 
+	}
+
+	private static IElement getJDTElement(final CompilationUnit cu, Integer lineNumber, String fileName) {
+
+		// Visit the cu to find the element corresponding to a line
+		// cu.accept();
+		ASTVisitorGabriela visitor = new ASTVisitorGabriela(cu, lineNumber, fileName);
+		cu.accept(visitor);
+		return visitor.e;
 	}
 
 	/**
@@ -194,4 +231,3 @@ public class Main {
 	}
 
 }
-

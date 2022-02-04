@@ -19,7 +19,6 @@ import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.adapters.javajdt.elements.TypeElement;
-import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
@@ -30,17 +29,26 @@ import org.but4reuse.feature.location.spectrum.SpectrumBasedLocalization;
 import org.but4reuse.featurelist.Feature;
 import org.but4reuse.featurelist.FeatureList;
 import org.but4reuse.featurelist.FeatureListFactory;
+import org.eclipse.jdt.core.dom.AST;
+import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.CompilationUnit;
 
 import fk.stardust.localizer.IFaultLocalizer;
 import spectrum.utils.ConsoleProgressMonitor;
+import utils.FileUtils;
 import utils.JDTUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
-	static File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	// static File benchmarkFolder = new
+	// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 	static File originalVariantSrc = new File(benchmarkFolder,
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org/argouml");
+
+	static File originalVariant = new File(benchmarkFolder,
+			"scenarios/ScenarioOriginalVariant/variants/Original.config/src");
 
 	public static void main(String[] args) {
 
@@ -49,6 +57,8 @@ public class Main_SBLforDynamicOriginalManual {
 		ArtefactModel artefactModel = ArtefactModelFactory.eINSTANCE.createArtefactModel();
 		featureList.setArtefactModel(artefactModel);
 
+		ArrayList<String> nullelements = new ArrayList<>();
+		
 		File manualTraces = new File("execTraces/manual");
 		for (File trace : manualTraces.listFiles()) {
 			Artefact artefact = ArtefactModelFactory.eINSTANCE.createArtefact();
@@ -82,7 +92,7 @@ public class Main_SBLforDynamicOriginalManual {
 		List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(featureList, adaptedModel, wong2, 1.0,
 				new ConsoleProgressMonitor());
 		Map<String, Map<String, List<Integer>>> mapFeatureJavaLines = getResults(flResult);
-		
+
 		// adapt java source code
 		System.out.println("Adapting source code with JDT");
 		IAdapter jdtAdapter = new JavaJDTAdapter();
@@ -94,31 +104,58 @@ public class Main_SBLforDynamicOriginalManual {
 			}
 			if (element instanceof MethodBodyElement) {
 				MethodBodyElement methodBody = (MethodBodyElement) element;
-				System.out.println("Method body of " + methodBody.getDependencies().get("methodBody").get(0));
+				//System.out.println("Method body of " + methodBody.getDependencies().get("methodBody").get(0));
 			} else {
-				System.out.println(element);
+				//System.out.println(element);
 			}
 		}
-		
+
 		// transform from lines to JDT elements
 		for (String feature : mapFeatureJavaLines.keySet()) {
 			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
 			for (String javaFile : javaFiles.keySet()) {
-				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
+				// CompilationUnitElement compUnit =
+				// getCompilationUnitElement(compilationUnits, javaFile);
+				CompilationUnit cu = getCompilationUnit(javaFile);
 				List<Integer> lines = javaFiles.get(javaFile);
 				for (Integer line : lines) {
-					IElement element = getJDTElement(compUnit, line);
-					// TODO
+					IElement element = getJDTElement(cu, line, javaFile);
+					if (element != null) {
+						//System.out.println(element.toString());
+						// TODO
+					}else{
+						nullelements.add("Element null in line: "+line+" class: "+javaFile);
+					}
+					
 				}
 			}
+		}
+		
+		for (String el : nullelements) {
+			System.out.println(el);
 		}
 
 		// TODO
 	}
 
-	private static IElement getJDTElement(CompilationUnitElement compUnit, Integer line) {
-		// TODO
-		return null;
+	private static CompilationUnit getCompilationUnit(String fileName) {
+		// Prepare the parser
+		ASTParser parser = ASTParser.newParser(AST.JLS8);
+		parser.setKind(ASTParser.K_COMPILATION_UNIT);
+		parser.setBindingsRecovery(true);
+		String source = FileUtils.getStringOfFile(new File(originalVariant, fileName));
+		parser.setSource(source.toCharArray());
+		CompilationUnit cu = (CompilationUnit) parser.createAST(null);
+		return cu;
+	}
+
+	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
+
+		// Visit the cu to find the element corresponding to a line
+		// cu.accept();
+		ASTVisitorGabriela visitor = new ASTVisitorGabriela(cu, lineNumber, fileName);
+		cu.accept(visitor);
+		return visitor.e;
 	}
 
 	private static CompilationUnitElement getCompilationUnitElement(List<CompilationUnitElement> compilationUnits,
