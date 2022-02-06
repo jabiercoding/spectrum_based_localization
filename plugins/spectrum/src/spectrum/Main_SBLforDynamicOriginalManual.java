@@ -131,8 +131,10 @@ public class Main_SBLforDynamicOriginalManual {
 								count++;
 							} else {
 								Integer percentageCovered = ((count * 100) / totallines);
-								linesCoveredMethod.put(element, percentageCovered);
+								linesCoveredMethod.put(previous, percentageCovered);
 								System.out.println(percentageCovered + "%");
+								count = 1;
+								previous = element;
 							}
 						}
 
