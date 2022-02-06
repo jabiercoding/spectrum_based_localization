@@ -29,7 +29,12 @@ import org.eclipse.jdt.core.dom.Type;
 import org.eclipse.jdt.core.dom.TypeDeclaration;
 import org.eclipse.jdt.core.dom.VariableDeclarationFragment;
 
-public class ASTVisitorGabriela extends ASTVisitor {
+/**
+ * Visit the AST nodes to retrieve the JDT element corresponding to a line
+ * number executed
+ * 
+ */
+public class TransformLinesToJDTElements extends ASTVisitor {
 
 	public static final String DEPENDENCY_IMPLEMENTS = "implements";
 	public static final String DEPENDENCY_IMPLEMENTED_TYPE = "implementedType";
@@ -45,39 +50,36 @@ public class ASTVisitorGabriela extends ASTVisitor {
 	static Map<String, JDTElement> typesMap;
 	static Map<String, JDTElement> methodsMap;
 
-	JDTElement currentTypeElement;
-	JDTElement currentPackageElement;
-	List<IElement> elements;
-	IElement e;
-	JDTElement currentCompilationUnitElement;
-	CompilationUnit cu;
-	Integer lineNumber;
+	public JDTElement currentTypeElement;
+	public JDTElement currentPackageElement;
+	public List<IElement> elements;
+	public IElement e;
+	public JDTElement currentCompilationUnitElement;
+	public CompilationUnit cu;
+	public Integer lineNumber;
 
-	List<IElement> newElements = new ArrayList<IElement>();
+	public List<IElement> newElements = new ArrayList<IElement>();
 
-	public ASTVisitorGabriela(CompilationUnit cu, Integer lineNumber, String fileName) {
+	public TransformLinesToJDTElements(CompilationUnit cu, Integer lineNumber, String fileName) {
 		this.cu = cu;
 		this.lineNumber = lineNumber;
 
-		currentTypeElement = null;
-		currentPackageElement = null;
+		this.currentTypeElement = null;
+		this.currentPackageElement = null;
 
 		packagesMap = new HashMap<String, JDTElement>();
 		typesMap = new HashMap<String, JDTElement>();
 		methodsMap = new HashMap<String, JDTElement>();
-
-		// List of elements to return
 		elements = new ArrayList<IElement>();
 		// IElement to return for the corresponding lineNumber
-		e = null;
+		this.e = null;
 
-		currentCompilationUnitElement = new CompilationUnitElement();
-		currentCompilationUnitElement.node = cu;
-		currentCompilationUnitElement.name = fileName;
-		currentCompilationUnitElement.id = IdUtils.getId(cu.getPackage()) + " " + fileName;
+		this.currentCompilationUnitElement = new CompilationUnitElement();
+		this.currentCompilationUnitElement.node = cu;
+		this.currentCompilationUnitElement.name = fileName;
+		this.currentCompilationUnitElement.id = IdUtils.getId(cu.getPackage()) + " " + fileName;
 		elements.add(currentCompilationUnitElement);
 	}
-	
 
 	// Packages
 	public boolean visit(PackageDeclaration node) {
@@ -118,6 +120,11 @@ public class ASTVisitorGabriela extends ASTVisitor {
 
 		// Add dependency to compilation unit
 		element.addDependency(DEPENDENCY_COMPILATION_UNIT, currentCompilationUnitElement);
+		int start = cu.getLineNumber(node.getStartPosition());
+		int end = cu.getLineNumber(node.getStartPosition() + node.getLength());
+		if (lineNumber >= start && lineNumber <= end) {
+			this.e = element;
+		}
 		return true;
 	}
 
@@ -167,7 +174,7 @@ public class ASTVisitorGabriela extends ASTVisitor {
 		int start = cu.getLineNumber(node.getStartPosition());
 		int end = cu.getLineNumber(node.getStartPosition() + node.getLength());
 		if (lineNumber >= start && lineNumber <= end) {
-			e = element;
+			this.e = element;
 		}
 		return true;
 	}
@@ -179,11 +186,17 @@ public class ASTVisitorGabriela extends ASTVisitor {
 		element.name = node.getName().getFullyQualifiedName();
 		element.id = currentCompilationUnitElement.id + " " + element.name;
 		elements.add(element);
-
 		// add dependency to the compilation unit
 		element.addDependency(DEPENDENCY_COMPILATION_UNIT, currentCompilationUnitElement);
+		int start = cu.getLineNumber(node.getStartPosition());
+		int end = cu.getLineNumber(node.getStartPosition() + node.getLength());
+		if (lineNumber >= start && lineNumber <= end) {
+			this.e = element;
+		}
 		return true;
 	}
+
+	
 
 	// Fields
 	public boolean visit(VariableDeclarationFragment node) {
@@ -197,14 +210,8 @@ public class ASTVisitorGabriela extends ASTVisitor {
 			int start = cu.getLineNumber(node.getStartPosition());
 			int end = cu.getLineNumber(node.getStartPosition() + node.getLength());
 			if (lineNumber >= start && lineNumber <= end) {
-				e = element;
+				this.e = element;
 			}
-
-			//System.out.println("cu " + cu.getRoot().toString());
-			//System.out.println("Node name: " + node.getName());
-			//System.out.println("node.getStartPosition(): " + start);
-			//System.out.println("node.getStartPosition()+node.getLength(): " + end);
-
 			// add dependency to the Type
 			element.addDependency(DEPENDENCY_TYPE, currentTypeElement);
 		}

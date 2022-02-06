@@ -10,15 +10,12 @@ import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
-import org.but4reuse.adapters.IDependencyObject;
 import org.but4reuse.adapters.IElement;
 import org.but4reuse.adapters.jacoco.CoveredLineElement;
 import org.but4reuse.adapters.jacoco.JacocoAdapter;
-import org.but4reuse.adapters.javajdt.JDTParser;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
-import org.but4reuse.adapters.javajdt.elements.TypeElement;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
@@ -36,7 +33,6 @@ import org.eclipse.jdt.core.dom.CompilationUnit;
 import fk.stardust.localizer.IFaultLocalizer;
 import spectrum.utils.ConsoleProgressMonitor;
 import utils.FileUtils;
-import utils.JDTUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
@@ -51,13 +47,11 @@ public class Main_SBLforDynamicOriginalManual {
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src");
 
 	public static void main(String[] args) {
-
+		
 		// create artefact model and feature list
 		FeatureList featureList = FeatureListFactory.eINSTANCE.createFeatureList();
 		ArtefactModel artefactModel = ArtefactModelFactory.eINSTANCE.createArtefactModel();
 		featureList.setArtefactModel(artefactModel);
-
-		ArrayList<String> nullelements = new ArrayList<>();
 		
 		File manualTraces = new File("execTraces/manual");
 		for (File trace : manualTraces.listFiles()) {
@@ -110,6 +104,7 @@ public class Main_SBLforDynamicOriginalManual {
 			}
 		}
 
+		//ArrayList<String> nullelements = new ArrayList<>();
 		// transform from lines to JDT elements
 		for (String feature : mapFeatureJavaLines.keySet()) {
 			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
@@ -121,19 +116,18 @@ public class Main_SBLforDynamicOriginalManual {
 				for (Integer line : lines) {
 					IElement element = getJDTElement(cu, line, javaFile);
 					if (element != null) {
-						//System.out.println(element.toString());
-						// TODO
+					
 					}else{
-						nullelements.add("Element null in line: "+line+" class: "+javaFile);
+						//nullelements.add("Element null in line: "+line+" class: "+javaFile);
 					}
 					
 				}
 			}
 		}
 		
-		for (String el : nullelements) {
-			System.out.println(el);
-		}
+		//for (String el : nullelements) {
+		//	System.out.println(el);
+		//}
 
 		// TODO
 	}
@@ -150,10 +144,8 @@ public class Main_SBLforDynamicOriginalManual {
 	}
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
-
 		// Visit the cu to find the element corresponding to a line
-		// cu.accept();
-		ASTVisitorGabriela visitor = new ASTVisitorGabriela(cu, lineNumber, fileName);
+		TransformLinesToJDTElements visitor = new TransformLinesToJDTElements(cu, lineNumber, fileName);
 		cu.accept(visitor);
 		return visitor.e;
 	}
