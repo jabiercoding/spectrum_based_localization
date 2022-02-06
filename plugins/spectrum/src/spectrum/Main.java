@@ -36,6 +36,7 @@ import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import utils.FileUtils;
 import utils.JDTUtils;
+import utils.ScenarioUtils;
 
 public class Main {
 
@@ -53,6 +54,7 @@ public class Main {
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src");
 
 	static File variantsFolder = new File(scenariosFolder, "ScenarioRandom003Variants");
+	
 
 	public static void main(String[] args) {
 

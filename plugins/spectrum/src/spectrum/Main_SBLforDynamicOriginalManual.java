@@ -2,9 +2,15 @@ package spectrum;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.regex.Pattern;
+
+import javax.sound.midi.Soundbank;
 
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
@@ -16,6 +22,7 @@ import org.but4reuse.adapters.jacoco.JacocoAdapter;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
+import org.but4reuse.adapters.javajdt.elements.MethodElement;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
@@ -28,11 +35,17 @@ import org.but4reuse.featurelist.FeatureList;
 import org.but4reuse.featurelist.FeatureListFactory;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
+import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.AnonymousClassDeclaration;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
+
+import com.sun.javafx.scene.control.skin.ComboBoxPopupControl.FakeFocusTextField;
 
 import fk.stardust.localizer.IFaultLocalizer;
 import spectrum.utils.ConsoleProgressMonitor;
 import utils.FileUtils;
+import utils.JDTUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
@@ -47,12 +60,12 @@ public class Main_SBLforDynamicOriginalManual {
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src");
 
 	public static void main(String[] args) {
-		
+
 		// create artefact model and feature list
 		FeatureList featureList = FeatureListFactory.eINSTANCE.createFeatureList();
 		ArtefactModel artefactModel = ArtefactModelFactory.eINSTANCE.createArtefactModel();
 		featureList.setArtefactModel(artefactModel);
-		
+
 		File manualTraces = new File("execTraces/manual");
 		for (File trace : manualTraces.listFiles()) {
 			Artefact artefact = ArtefactModelFactory.eINSTANCE.createArtefact();
@@ -98,46 +111,91 @@ public class Main_SBLforDynamicOriginalManual {
 			}
 			if (element instanceof MethodBodyElement) {
 				MethodBodyElement methodBody = (MethodBodyElement) element;
-				//System.out.println("Method body of " + methodBody.getDependencies().get("methodBody").get(0));
-			} else {
-				//System.out.println(element);
+				// System.out.println("Method body of " +
+				// methodBody.getDependencies().get("methodBody").get(0));
+			} else if (element instanceof MethodElement) {
+				// System.out.println(element);
 			}
 		}
 
-		//ArrayList<String> nullelements = new ArrayList<>();
+		// get java files to parse from original variant
+		List<File> files = new LinkedList<>();
+		Map<String, Map<MethodDeclaration, Integer>> linesMethodEachClass = new HashMap<>();
+		getFilesToProcess(originalVariant, files);
+
+		for (File file : files) {
+			CompilationUnit cu = getCompilationUnit(file);
+			// get all the JDT element methods of a class and their respective number of
+			// lines
+			//TODO
+			/*Map<MethodDeclaration, Integer> methods = JDTUtils.getMethodsLenght(cu);
+			linesMethodEachClass.put(file.getAbsoluteFile().getName(), methods);
+			 for (Entry<String, Map<MethodDeclaration, Integer>> method : linesMethodEachClass.entrySet()) {
+				 Map<MethodDeclaration, Integer> md = method.getValue();
+				 for (Entry<MethodDeclaration,Integer> mtlines : md.entrySet()) {
+					 System.out.println(mtlines.getKey());
+				}
+			 }*/
+
+		}
+
 		// transform from lines to JDT elements
 		for (String feature : mapFeatureJavaLines.keySet()) {
 			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
+			Map<MethodDeclaration, Integer> linesCoveredMethod = new HashMap<>();
 			for (String javaFile : javaFiles.keySet()) {
 				// CompilationUnitElement compUnit =
 				// getCompilationUnitElement(compilationUnits, javaFile);
-				CompilationUnit cu = getCompilationUnit(javaFile);
+				CompilationUnit cu = getCompilationUnit(new File(originalVariant, javaFile));
 				List<Integer> lines = javaFiles.get(javaFile);
 				for (Integer line : lines) {
 					IElement element = getJDTElement(cu, line, javaFile);
 					if (element != null) {
-					
-					}else{
-						//nullelements.add("Element null in line: "+line+" class: "+javaFile);
+						if (element instanceof MethodElement) {
+							//TODO create a map with all the repetitive method elements and a counter for the number of lines executed
+							
+							// if (element.getText().contains("Method:"))
+							// if (((MethodDeclaration) ((MethodElement)
+							// element).node).getBody() != null) {
+							//if (jdtElements.contains(element))
+								//System.out.println(element);
+						}
+
 					}
-					
 				}
 			}
+			//TODO for each value of the map analyze the percentage of lines executed in relation to the total number of lines existing in a specific method
 		}
-		
-		//for (String el : nullelements) {
-		//	System.out.println(el);
-		//}
 
-		// TODO
 	}
 
-	private static CompilationUnit getCompilationUnit(String fileName) {
+	/**
+	 * Get only java classes from the feature variant directory
+	 * 
+	 * @param featureVariantDir
+	 * @param files
+	 * @return
+	 */
+	public static void getFilesToProcess(File featureVariantDir, List<File> files) {
+		if (featureVariantDir.isDirectory()) {
+			for (File file : featureVariantDir.listFiles()) {
+				// if (!files.contains(featureVariantDir) &&
+				// !file.getName().equals(featureVariantDir.getName()))
+				// files.add(featureVariantDir);
+				getFilesToProcess(file, files);
+			}
+		} else if (featureVariantDir.isFile() && featureVariantDir.getName()
+				.substring(featureVariantDir.getName().lastIndexOf('.') + 1).equals("java")) {
+			files.add(featureVariantDir);
+		}
+	}
+
+	private static CompilationUnit getCompilationUnit(File file) {
 		// Prepare the parser
 		ASTParser parser = ASTParser.newParser(AST.JLS8);
 		parser.setKind(ASTParser.K_COMPILATION_UNIT);
 		parser.setBindingsRecovery(true);
-		String source = FileUtils.getStringOfFile(new File(originalVariant, fileName));
+		String source = FileUtils.getStringOfFile(file);
 		parser.setSource(source.toCharArray());
 		CompilationUnit cu = (CompilationUnit) parser.createAST(null);
 		return cu;
