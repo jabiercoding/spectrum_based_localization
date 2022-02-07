@@ -3,9 +3,12 @@ package spectrum;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
@@ -17,9 +20,13 @@ import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.adapters.javajdt.elements.MethodElement;
+import org.but4reuse.adapters.javajdt.elements.TypeElement;
+import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
+import org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils;
+import org.but4reuse.benchmarks.argoumlspl.utils.TransformFLResultsToBenchFormat;
 import org.but4reuse.block.identification.impl.SimilarElementsBlockIdentification;
 import org.but4reuse.feature.location.LocatedFeature;
 import org.but4reuse.feature.location.spectrum.RankingMetrics;
@@ -30,15 +37,19 @@ import org.but4reuse.featurelist.FeatureListFactory;
 import org.eclipse.jdt.core.dom.AST;
 import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
+import org.eclipse.jdt.core.dom.TypeDeclaration;
+
 import fk.stardust.localizer.IFaultLocalizer;
+import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
+import spectrum.utils.HTMLReportUtils;
 import utils.FileUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
-	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
 	// static File benchmarkFolder = new
-	// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+	// File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	static File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 	static File originalVariantSrc = new File(benchmarkFolder,
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org/argouml");
@@ -107,14 +118,27 @@ public class Main_SBLforDynamicOriginalManual {
 			}
 		}
 
-		// transform from lines to JDT elements and print the percentage covered for each method
+		Map<String, Set<String>> benchmarkResults = new LinkedHashMap<String, Set<String>>();
+		// transform from lines to JDT elements and print the percentage covered for
+		// each method
 		for (String feature : mapFeatureJavaLines.keySet()) {
+			Set<String> benchmarkResultsCurrentFeature = new HashSet<String>();
 			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
 			Map<IElement, Integer> linesCoveredMethod = new HashMap<>();
 			System.out.println("Feature: " + feature);
 			for (String javaFile : javaFiles.keySet()) {
-				// CompilationUnitElement compUnit =
-				// getCompilationUnitElement(compilationUnits, javaFile);
+				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
+				if (compUnit == null) {
+					System.out.println("Not found: " + javaFile);
+					continue;
+				}
+				for (TypeElement typeElement : JDTElementUtils.getTypes(compUnit)) {
+					// naive solution: adding a class-level localization when there is at least one line in the class.
+					TypeDeclaration type = (TypeDeclaration) typeElement.node;
+					benchmarkResultsCurrentFeature.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
+				}
+				
+				
 				CompilationUnit cu = getCompilationUnit(new File(originalVariant, javaFile));
 				List<Integer> lines = javaFiles.get(javaFile);
 				Integer count = 0;
@@ -141,8 +165,28 @@ public class Main_SBLforDynamicOriginalManual {
 					}
 				}
 			}
+			benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 		}
 
+		File outputFolder = new File("output_DyamicOriginalManual");
+		File resultsFolder = new File(outputFolder, "location");
+		TransformFLResultsToBenchFormat.serializeResults(resultsFolder, benchmarkResults);
+
+		// Metrics calculation
+		System.out.println("Calculating metrics");
+		String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), resultsFolder);
+		File resultsFile = new File(outputFolder, "resultPrecisionRecall.csv");
+		try {
+			FileUtils.writeFile(resultsFile, results);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		// update html report
+		System.out.println("Update html report");
+		Map<String, File> mapScenarioMetricsFile = new HashMap<String, File>();
+		mapScenarioMetricsFile.put("Original", resultsFile);
+		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 	}
 
 	private static CompilationUnit getCompilationUnit(File file) {
