@@ -3,8 +3,8 @@ package spectrum;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -122,7 +122,7 @@ public class Main_SBLforDynamicOriginalManual {
 		// transform from lines to JDT elements and print the percentage covered for
 		// each method
 		for (String feature : mapFeatureJavaLines.keySet()) {
-			Set<String> benchmarkResultsCurrentFeature = new HashSet<String>();
+			Set<String> benchmarkResultsCurrentFeature = new LinkedHashSet<String>();
 			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
 			Map<IElement, Integer> linesCoveredMethod = new HashMap<>();
 			System.out.println("Feature: " + feature);
@@ -139,7 +139,7 @@ public class Main_SBLforDynamicOriginalManual {
 				}
 				
 				
-				CompilationUnit cu = getCompilationUnit(new File(originalVariant, javaFile));
+				CompilationUnit cu = (CompilationUnit) compUnit.node; // getCompilationUnit(new File(originalVariant, javaFile));
 				List<Integer> lines = javaFiles.get(javaFile);
 				Integer count = 0;
 				IElement previous = null;
@@ -189,16 +189,16 @@ public class Main_SBLforDynamicOriginalManual {
 		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 	}
 
-	private static CompilationUnit getCompilationUnit(File file) {
-		// Prepare the parser
-		ASTParser parser = ASTParser.newParser(AST.JLS8);
-		parser.setKind(ASTParser.K_COMPILATION_UNIT);
-		parser.setBindingsRecovery(true);
-		String source = FileUtils.getStringOfFile(file);
-		parser.setSource(source.toCharArray());
-		CompilationUnit cu = (CompilationUnit) parser.createAST(null);
-		return cu;
-	}
+//	private static CompilationUnit getCompilationUnit(File file) {
+//		// Prepare the parser
+//		ASTParser parser = ASTParser.newParser(AST.JLS8);
+//		parser.setKind(ASTParser.K_COMPILATION_UNIT);
+//		parser.setBindingsRecovery(true);
+//		String source = FileUtils.getStringOfFile(file);
+//		parser.setSource(source.toCharArray());
+//		CompilationUnit cu = (CompilationUnit) parser.createAST(null);
+//		return cu;
+//	}
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
 		// Visit the cu to find the element corresponding to a line
