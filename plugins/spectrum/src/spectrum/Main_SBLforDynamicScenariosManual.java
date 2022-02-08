@@ -126,159 +126,165 @@ public class Main_SBLforDynamicScenariosManual {
 		}
 
 		for (File scenario : scenarios) {
-			System.out.println("Current scenario: " + scenario.getName());
+			if (!scenario.getName().equals("ScenarioOriginalVariant")) {
+				System.out.println("Current scenario: " + scenario.getName());
 
-			// check if it was built
-			if (!ScenarioUtils.isScenarioBuilt(scenario)) {
-				System.out.println("Skip: The scenario variants were not derived.");
-				continue;
-			}
-
-			Map<String, Set<String>> benchmarkResults = new LinkedHashMap<String, Set<String>>();
-
-			// for each feature transform from executed lines to JDT elements
-			for (String feature : mapFeatureJavaLines.keySet()) {
-				String xmlfile = feature + ".xml";
-				File featureExecutions = new File(jacocoExecutions, xmlfile);
-				Multimap<String, Integer> elementsJacoco = ArrayListMultimap.create();
-				Main.adapt(featureExecutions, elementsJacoco);
-				ArrayList<IElement> jdtElementsJacoco = new ArrayList<>();
-
-				Set<String> benchmarkResultsCurrentFeature = new LinkedHashSet<String>();
-	
-				System.out.println("Feature: " + feature);
-				
-				for (String javaFile : elementsJacoco.keySet()) {
-					CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
-					if (compUnit == null) {
-						System.out.println("Not found: " + javaFile);
-						continue;
-					}
-					CompilationUnit cu = (CompilationUnit) compUnit.node;
-
-					// to remove repetitive jdt elements
-					for (Integer line : elementsJacoco.get(javaFile)) {
-						// System.out.println(line);
-						IElement element = getJDTElement(cu, line, javaFile);
-						if (element != null && !jdtElementsJacoco.contains(element))
-							jdtElementsJacoco.add(element);
-					}
+				// check if it was built
+				if (!ScenarioUtils.isScenarioBuilt(scenario)) {
+					System.out.println("Skip: The scenario variants were not derived.");
+					continue;
 				}
 
-				ArrayList<String> featuresVariant = new ArrayList<>();
-				File configsFolder = Main.getFileofFileByName(scenario, "configs", 0);
+				Map<String, Set<String>> benchmarkResults = new LinkedHashMap<String, Set<String>>();
 
-				// Get all config files
-				File[] configFile = configsFolder.listFiles();
-				ArrayList<IElement> elementsToRemove = new ArrayList<>();
+				// for each feature transform from executed lines to JDT
+				// elements
+				for (String feature : mapFeatureJavaLines.keySet()) {
+					String xmlfile = feature + ".xml";
+					File featureExecutions = new File(jacocoExecutions, xmlfile);
+					Multimap<String, Integer> elementsJacoco = ArrayListMultimap.create();
+					Main.adapt(featureExecutions, elementsJacoco);
+					ArrayList<IElement> jdtElementsJacoco = new ArrayList<>();
 
-				// first rule
-				// remove all jdt elements in common with variants that do not
-				// contain the feature
-				for (int i = 0; i < configFile.length; i++) {
-					// get features of a variant
+					Set<String> benchmarkResultsCurrentFeature = new LinkedHashSet<String>();
 
-					List<String> lines = FileUtils.getLinesOfFile(configFile[i]);
-					if (lines.size() > 0) {
-						for (int n = 0; n < lines.size(); n++)
-							featuresVariant.add(lines.get(n));
-					}
+					System.out.println("Feature: " + feature);
 
-					// if the variant does not contain the feature of the
-					// execution traces
-					// search for common jdt elements to remove from
-					// jdtElementsJacoco
-					if (!featuresVariant.contains(feature)) {
-						System.out.println("VARIANT: " + configFile[i].getAbsolutePath().toString());
-						String variantpath = configFile[i].getAbsolutePath().replace("configs", "variants");
-						File variant = new File(variantpath + "/src/org/argouml");
-						URI uri = variant.toURI();
+					for (String javaFile : elementsJacoco.keySet()) {
+						CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
+						if (compUnit == null) {
+							System.out.println("Not found: " + javaFile);
+							continue;
+						}
+						CompilationUnit cu = (CompilationUnit) compUnit.node;
 
-						List<IElement> elements = jdtAdapter.adapt(uri, null);
-						for (IElement iElement : jdtElementsJacoco) {
-							if (elements.contains(iElement) && !elementsToRemove.contains(iElement)) {
-								elementsToRemove.add(iElement);
-							}
+						// to remove repetitive jdt elements
+						for (Integer line : elementsJacoco.get(javaFile)) {
+							// System.out.println(line);
+							IElement element = getJDTElement(cu, line, javaFile);
+							if (element != null && !jdtElementsJacoco.contains(element))
+								jdtElementsJacoco.add(element);
 						}
 					}
-				}
-				System.out.println("SIZE elementsToRemove: " + elementsToRemove.size());
-				System.out.println("SIZE jdtElementsJacoco before remove: " + jdtElementsJacoco.size());
-				jdtElementsJacoco.removeAll(elementsToRemove);
-				System.out.println("SIZE jdtElementsJacoco after remove: " + jdtElementsJacoco.size());
 
-				Map<String, List<IElement>> elementsVariants = new HashMap<>();
-				ArrayList<IElement> elementsInCommonAllVariantsWithFeature = new ArrayList<>();
+					ArrayList<String> featuresVariant = new ArrayList<>();
+					File configsFolder = Main.getFileofFileByName(scenario, "configs", 0);
 
-				// second rule
-				// get all the jdt elements of the variants that contain a
-				// feature
-				for (int i = 0; i < configFile.length; i++) {
-					if (featuresVariant.contains(feature)) {
-						File variantPath = new File(configFile[i].getAbsolutePath().replace("configs", "variants"),
-								"src/org");
-						List<IElement> jdtElementsVariant = jdtAdapter.adapt(variantPath.toURI(),
-								new ConsoleProgressMonitor());
-						elementsVariants.put(configFile[i].getName(), jdtElementsVariant);
-					}
-				}
+					// Get all config files
+					File[] configFile = configsFolder.listFiles();
+					ArrayList<IElement> elementsToRemove = new ArrayList<>();
 
-				// for each List of jdt elements get the ones that are in common
-				// with all variants that contain the feature
-				for (Map.Entry<String, List<IElement>> elementsVariant : elementsVariants.entrySet()) {
-					for (IElement iElement : elementsVariant.getValue()) {
-						Boolean commonAllVariants = false;
-						for (Map.Entry<String, List<IElement>> elementsVariantAux : elementsVariants.entrySet()) {
-							if (!elementsVariantAux.getKey().equals(elementsVariant.getKey())) {
-								if (elementsVariantAux.getValue().contains(iElement)) {
-									commonAllVariants = true;
-								} else {
-									commonAllVariants = false;
-									break;
+					// first rule
+					// remove all jdt elements in common with variants that do
+					// not
+					// contain the feature
+					for (int i = 0; i < configFile.length; i++) {
+						// get features of a variant
+
+						List<String> lines = FileUtils.getLinesOfFile(configFile[i]);
+						if (lines.size() > 0) {
+							for (int n = 0; n < lines.size(); n++)
+								featuresVariant.add(lines.get(n));
+						}
+
+						// if the variant does not contain the feature of the
+						// execution traces
+						// search for common jdt elements to remove from
+						// jdtElementsJacoco
+						if (!featuresVariant.contains(feature)) {
+							System.out.println("VARIANT: " + configFile[i].getAbsolutePath().toString());
+							String variantpath = configFile[i].getAbsolutePath().replace("configs", "variants");
+							File variant = new File(variantpath + "/src/org/argouml");
+							URI uri = variant.toURI();
+
+							List<IElement> elements = jdtAdapter.adapt(uri, null);
+							for (IElement iElement : jdtElementsJacoco) {
+								if (elements.contains(iElement) && !elementsToRemove.contains(iElement)) {
+									elementsToRemove.add(iElement);
 								}
 							}
 						}
-						if (commonAllVariants && !elementsInCommonAllVariantsWithFeature.contains(iElement))
-							elementsInCommonAllVariantsWithFeature.add(iElement);
 					}
+					System.out.println("SIZE elementsToRemove: " + elementsToRemove.size());
+					System.out.println("SIZE jdtElementsJacoco before remove: " + jdtElementsJacoco.size());
+					jdtElementsJacoco.removeAll(elementsToRemove);
+					System.out.println("SIZE jdtElementsJacoco after remove: " + jdtElementsJacoco.size());
+
+					Map<String, List<IElement>> elementsVariants = new HashMap<>();
+					ArrayList<IElement> elementsInCommonAllVariantsWithFeature = new ArrayList<>();
+
+					// second rule
+					// get all the jdt elements of the variants that contain a
+					// feature
+					for (int i = 0; i < configFile.length; i++) {
+						if (featuresVariant.contains(feature)) {
+							File variantPath = new File(configFile[i].getAbsolutePath().replace("configs", "variants"),
+									"src/org");
+							List<IElement> jdtElementsVariant = jdtAdapter.adapt(variantPath.toURI(),
+									new ConsoleProgressMonitor());
+							elementsVariants.put(configFile[i].getName(), jdtElementsVariant);
+						}
+					}
+
+					// for each List of jdt elements get the ones that are in
+					// common
+					// with all variants that contain the feature
+					for (Map.Entry<String, List<IElement>> elementsVariant : elementsVariants.entrySet()) {
+						for (IElement iElement : elementsVariant.getValue()) {
+							Boolean commonAllVariants = false;
+							for (Map.Entry<String, List<IElement>> elementsVariantAux : elementsVariants.entrySet()) {
+								if (!elementsVariantAux.getKey().equals(elementsVariant.getKey())) {
+									if (elementsVariantAux.getValue().contains(iElement)) {
+										commonAllVariants = true;
+									} else {
+										commonAllVariants = false;
+										break;
+									}
+								}
+							}
+							if (commonAllVariants && !elementsInCommonAllVariantsWithFeature.contains(iElement))
+								elementsInCommonAllVariantsWithFeature.add(iElement);
+						}
+					}
+
+					ArrayList<IElement> finaljdtElementsJacoco = new ArrayList<>();
+					for (IElement iElement : jdtElementsJacoco) {
+						if (elementsInCommonAllVariantsWithFeature.contains(iElement)
+								&& !finaljdtElementsJacoco.contains(iElement)) {
+							finaljdtElementsJacoco.add(iElement);
+						}
+					}
+
+					System.out.println("SIZE elements in common all variants containing a feature: "
+							+ elementsInCommonAllVariantsWithFeature.size());
+					System.out.println("SIZE jdtElementsJacoco before second rule: " + jdtElementsJacoco.size());
+					System.out.println("SIZE jdtElementsJacoco after second rule: " + finaljdtElementsJacoco.size());
+
+					// compute results
+					List<CompilationUnitElement> compilationUnitsAfterTwoRules = new ArrayList<CompilationUnitElement>();
+					for (IElement element : finaljdtElementsJacoco) {
+						if (element instanceof CompilationUnitElement) {
+							TypeDeclaration type = (TypeDeclaration) element;
+							benchmarkResultsCurrentFeature
+									.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
+							compilationUnitsAfterTwoRules.add((CompilationUnitElement) element);
+						}
+						if (element instanceof MethodBodyElement) {
+							// MethodBodyElement methodBody =
+							// (MethodBodyElement)
+							// element;
+							// System.out.println("Method body of " +
+							// methodBody.getDependencies().get("methodBody").get(0));
+						} else if (element instanceof MethodElement) {
+							// System.out.println(element);
+						}
+					}
+
+					benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 				}
-
-				ArrayList<IElement> finaljdtElementsJacoco = new ArrayList<>();
-				for (IElement iElement : jdtElementsJacoco) {
-					if (elementsInCommonAllVariantsWithFeature.contains(iElement)
-							&& !finaljdtElementsJacoco.contains(iElement)) {
-						finaljdtElementsJacoco.add(iElement);
-					}
-				}
-
-				System.out.println("SIZE elements in common all variants containing a feature: "
-						+ elementsInCommonAllVariantsWithFeature.size());
-				System.out.println("SIZE jdtElementsJacoco before second rule: " + jdtElementsJacoco.size());
-				System.out.println("SIZE jdtElementsJacoco after second rule: " + finaljdtElementsJacoco.size());
-
-				// compute results
-				List<CompilationUnitElement> compilationUnitsAfterTwoRules = new ArrayList<CompilationUnitElement>();
-				for (IElement element : finaljdtElementsJacoco) {
-					if (element instanceof CompilationUnitElement) {
-						TypeDeclaration type = (TypeDeclaration) element;
-						benchmarkResultsCurrentFeature
-								.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
-						compilationUnitsAfterTwoRules.add((CompilationUnitElement) element);
-					}
-					if (element instanceof MethodBodyElement) {
-						// MethodBodyElement methodBody = (MethodBodyElement)
-						// element;
-						// System.out.println("Method body of " +
-						// methodBody.getDependencies().get("methodBody").get(0));
-					} else if (element instanceof MethodElement) {
-						// System.out.println(element);
-					}
-				}
-
-				benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 
 				File outputFolder = new File("output_DyamicScenariosManual");
-				File outputFolderScenario = new File(outputFolder,scenario.getName());
+				File outputFolderScenario = new File(outputFolder, scenario.getName());
 				File resultsFolder = new File(outputFolderScenario, "location");
 				TransformFLResultsToBenchFormat.serializeResults(resultsFolder, benchmarkResults);
 
