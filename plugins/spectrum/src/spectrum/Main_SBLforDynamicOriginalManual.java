@@ -55,9 +55,6 @@ public class Main_SBLforDynamicOriginalManual {
 	static File originalVariantSrc = new File(benchmarkFolder,
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org");
 
-	static File originalVariant = new File(benchmarkFolder,
-			"scenarios/ScenarioOriginalVariant/variants/Original.config/src");
-
 	static float totallines = 0;
 	static float previousTotalLines = 0;
 
@@ -143,9 +140,7 @@ public class Main_SBLforDynamicOriginalManual {
 							.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
 				}
 
-				CompilationUnit cu = (CompilationUnit) compUnit.node; // getCompilationUnit(new
-																		// File(originalVariant,
-																		// javaFile));
+				CompilationUnit cu = (CompilationUnit) compUnit.node;
 				
 				//get percentage of coverage for each method executed
 				List<Integer> lines = javaFiles.get(javaFile);
@@ -177,7 +172,7 @@ public class Main_SBLforDynamicOriginalManual {
 						previous = null;
 					}
 				}
-				if (previous.equals(element)) {
+				if (previous != null && element != null && previous.equals(element)) {
 					Float percentageCovered = (count * 100) / totallines;
 					linesCoveredMethod.put(previous, percentageCovered);
 					System.out.println(percentageCovered + "%" + " " + previous);
@@ -207,17 +202,6 @@ public class Main_SBLforDynamicOriginalManual {
 		mapScenarioMetricsFile.put("Original", resultsFile);
 		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 	}
-
-	// private static CompilationUnit getCompilationUnit(File file) {
-	// // Prepare the parser
-	// ASTParser parser = ASTParser.newParser(AST.JLS8);
-	// parser.setKind(ASTParser.K_COMPILATION_UNIT);
-	// parser.setBindingsRecovery(true);
-	// String source = FileUtils.getStringOfFile(file);
-	// parser.setSource(source.toCharArray());
-	// CompilationUnit cu = (CompilationUnit) parser.createAST(null);
-	// return cu;
-	// }
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
 		// Visit the cu to find the element corresponding to a line
