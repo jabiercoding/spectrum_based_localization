@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.lang.model.element.TypeElement;
+
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
@@ -226,24 +228,23 @@ public class Main_SBLforDynamicScenariosManual {
 						}
 					}
 
-					// for each List of jdt elements get the ones that are in
-					// common
-					// with all variants that contain the feature
-					for (Map.Entry<String, List<IElement>> elementsVariant : elementsVariants.entrySet()) {
-						for (IElement iElement : elementsVariant.getValue()) {
-							Boolean commonAllVariants = false;
-							for (Map.Entry<String, List<IElement>> elementsVariantAux : elementsVariants.entrySet()) {
-								if (!elementsVariantAux.getKey().equals(elementsVariant.getKey())) {
-									if (elementsVariantAux.getValue().contains(iElement)) {
-										commonAllVariants = true;
-									} else {
-										commonAllVariants = false;
-										break;
-									}
-								}
+					Map<IElement, Integer> countElementsVariants = new HashMap<IElement, Integer>();
+
+					for (List<IElement> elms : elementsVariants.values()) {
+						for (IElement e : elms) {
+							if (!countElementsVariants.containsKey(e)) {
+								countElementsVariants.put(e, 1);
+							} else {
+								int count = countElementsVariants.get(e) + 1;
+								countElementsVariants.remove(e);
+								countElementsVariants.put(e, count);
 							}
-							if (commonAllVariants && !elementsInCommonAllVariantsWithFeature.contains(iElement))
-								elementsInCommonAllVariantsWithFeature.add(iElement);
+						}
+					}
+
+					for (Map.Entry<IElement, Integer> count : countElementsVariants.entrySet()) {
+						if (count.getValue() == elementsVariants.size()) {
+							elementsInCommonAllVariantsWithFeature.add(count.getKey());
 						}
 					}
 
@@ -263,21 +264,10 @@ public class Main_SBLforDynamicScenariosManual {
 					// compute results
 					List<CompilationUnitElement> compilationUnitsAfterTwoRules = new ArrayList<CompilationUnitElement>();
 					for (IElement element : finaljdtElementsJacoco) {
-						if (element instanceof CompilationUnitElement) {
-							TypeDeclaration type = (TypeDeclaration) element;
-							benchmarkResultsCurrentFeature
-									.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
-							compilationUnitsAfterTwoRules.add((CompilationUnitElement) element);
-						}
-						if (element instanceof MethodBodyElement) {
-							// MethodBodyElement methodBody =
-							// (MethodBodyElement)
-							// element;
-							// System.out.println("Method body of " +
-							// methodBody.getDependencies().get("methodBody").get(0));
-						} else if (element instanceof MethodElement) {
-							// System.out.println(element);
-						}
+						TypeDeclaration typeDeclaration = (TypeDeclaration) element;
+						benchmarkResultsCurrentFeature
+								.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(typeDeclaration));
+						compilationUnitsAfterTwoRules.add((CompilationUnitElement) element);
 					}
 
 					benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
