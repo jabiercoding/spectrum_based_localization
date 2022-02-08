@@ -91,12 +91,10 @@ public class Main {
 			adapt(jacocoExecutions, elementsJacoco);
 
 			ArrayList<String> nullelements = new ArrayList<>();
-			int count = 0;
 			for (String javaFile : elementsJacoco.keySet()) {
 				// System.out.println("Class: " + javaFile);
 				CompilationUnit cu = getCompilationUnit(javaFile);
 				for (Integer line : elementsJacoco.get(javaFile)) {
-					count++;
 					// System.out.println(line);
 					IElement element = getJDTElement(cu, line, javaFile);
 					if (element != null) {
@@ -172,7 +170,7 @@ public class Main {
 	 *            - 0 Folder, 1 File, other does not matter
 	 * @return
 	 */
-	private static File getFileofFileByName(File parentFile, String nameOfFile, int typeOfFile) {
+	public static File getFileofFileByName(File parentFile, String nameOfFile, int typeOfFile) {
 
 		File fileOfInterest = null;
 		try {

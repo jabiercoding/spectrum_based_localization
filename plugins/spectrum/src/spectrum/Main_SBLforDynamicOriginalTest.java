@@ -65,8 +65,8 @@ public class Main_SBLforDynamicOriginalTest {
 		ArtefactModel artefactModel = ArtefactModelFactory.eINSTANCE.createArtefactModel();
 		featureList.setArtefactModel(artefactModel);
 
-		File manualTraces = new File("execTraces/test");
-		for (File trace : manualTraces.listFiles()) {
+		File testTraces = new File("execTraces/test");
+		for (File trace : testTraces.listFiles()) {
 			Artefact artefact = ArtefactModelFactory.eINSTANCE.createArtefact();
 			artefact.setArtefactURI(trace.toURI().toString());
 			String name = trace.getName().substring(0, trace.getName().length() - ".xml".length());
