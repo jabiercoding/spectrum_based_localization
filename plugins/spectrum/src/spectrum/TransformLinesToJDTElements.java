@@ -57,7 +57,7 @@ public class TransformLinesToJDTElements extends ASTVisitor {
 	public JDTElement currentCompilationUnitElement;
 	public CompilationUnit cu;
 	public Integer lineNumber;
-	public Integer totalLines;
+	public float totalLines;
 
 	public List<IElement> newElements = new ArrayList<IElement>();
 
@@ -173,13 +173,10 @@ public class TransformLinesToJDTElements extends ASTVisitor {
 		methodBodyElement.addDependency(DEPENDENCY_METHOD_BODY, element);
 		elements.add(methodBodyElement);
 		int start = cu.getLineNumber(node.getStartPosition());
-		int end = cu.getLineNumber(node.getStartPosition() + node.getLength());
+		int end = cu.getLineNumber(node.getStartPosition() + node.getLength()) + 1;
 		if (lineNumber >= start && lineNumber <= end) {
 			this.e = element;
-			if (end - start == 0)
-				this.totalLines = 1;
-			else
-				this.totalLines = end - start;
+			this.totalLines = end - start;
 		}
 		return true;
 	}

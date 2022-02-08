@@ -2,6 +2,7 @@ package spectrum;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -47,17 +48,18 @@ import utils.FileUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
-	 static File benchmarkFolder = new
-	 File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
-	//static File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	// static File benchmarkFolder = new
+	// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 	static File originalVariantSrc = new File(benchmarkFolder,
-			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org/argouml");
+			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org");
 
 	static File originalVariant = new File(benchmarkFolder,
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src");
 
-	static Integer totallines = 0;
+	static float totallines = 0;
+	static float previousTotalLines = 0;
 
 	public static void main(String[] args) {
 
@@ -119,12 +121,13 @@ public class Main_SBLforDynamicOriginalManual {
 		}
 
 		Map<String, Set<String>> benchmarkResults = new LinkedHashMap<String, Set<String>>();
-		// transform from lines to JDT elements and print the percentage covered for
+		// transform from lines to JDT elements and print the percentage covered
+		// for
 		// each method
 		for (String feature : mapFeatureJavaLines.keySet()) {
 			Set<String> benchmarkResultsCurrentFeature = new LinkedHashSet<String>();
 			Map<String, List<Integer>> javaFiles = mapFeatureJavaLines.get(feature);
-			Map<IElement, Integer> linesCoveredMethod = new HashMap<>();
+			Map<IElement, Float> linesCoveredMethod = new HashMap<>();
 			System.out.println("Feature: " + feature);
 			for (String javaFile : javaFiles.keySet()) {
 				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
@@ -133,38 +136,54 @@ public class Main_SBLforDynamicOriginalManual {
 					continue;
 				}
 				for (TypeElement typeElement : JDTElementUtils.getTypes(compUnit)) {
-					// naive solution: adding a class-level localization when there is at least one line in the class.
+					// naive solution: adding a class-level localization when
+					// there is at least one line in the class.
 					TypeDeclaration type = (TypeDeclaration) typeElement.node;
-					benchmarkResultsCurrentFeature.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
+					benchmarkResultsCurrentFeature
+							.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
 				}
-				
-				
-				CompilationUnit cu = (CompilationUnit) compUnit.node; // getCompilationUnit(new File(originalVariant, javaFile));
-				List<Integer> lines = javaFiles.get(javaFile);
-				Integer count = 0;
-				IElement previous = null;
 
+				CompilationUnit cu = (CompilationUnit) compUnit.node; // getCompilationUnit(new
+																		// File(originalVariant,
+																		// javaFile));
+				
+				//get percentage of coverage for each method executed
+				List<Integer> lines = javaFiles.get(javaFile);
+				Collections.sort(lines);
+				float count = 0;
+				IElement previous = null;
+				IElement element = null;
 				for (Integer line : lines) {
-					IElement element = getJDTElement(cu, line, javaFile);
+					element = getJDTElement(cu, line, javaFile);
 					if (element != null) {
 						if (element instanceof MethodElement) {
 							if (previous == null) {
 								previous = element;
+								previousTotalLines = totallines;
 								count++;
 							} else if (previous.equals(element)) {
 								count++;
 							} else {
-								Integer percentageCovered = ((count * 100) / totallines);
+								Float percentageCovered = (count * 100) / previousTotalLines;
 								linesCoveredMethod.put(previous, percentageCovered);
-								System.out.println(percentageCovered + "%");
+								System.out.println(percentageCovered + "%" + " " + previous);
 								count = 1;
 								previous = element;
+								previousTotalLines = totallines;
 							}
 						}
 
+					} else {
+						previous = null;
 					}
 				}
+				if (previous.equals(element)) {
+					Float percentageCovered = (count * 100) / totallines;
+					linesCoveredMethod.put(previous, percentageCovered);
+					System.out.println(percentageCovered + "%" + " " + previous);
+				}
 			}
+			
 			benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 		}
 
@@ -189,16 +208,16 @@ public class Main_SBLforDynamicOriginalManual {
 		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 	}
 
-//	private static CompilationUnit getCompilationUnit(File file) {
-//		// Prepare the parser
-//		ASTParser parser = ASTParser.newParser(AST.JLS8);
-//		parser.setKind(ASTParser.K_COMPILATION_UNIT);
-//		parser.setBindingsRecovery(true);
-//		String source = FileUtils.getStringOfFile(file);
-//		parser.setSource(source.toCharArray());
-//		CompilationUnit cu = (CompilationUnit) parser.createAST(null);
-//		return cu;
-//	}
+	// private static CompilationUnit getCompilationUnit(File file) {
+	// // Prepare the parser
+	// ASTParser parser = ASTParser.newParser(AST.JLS8);
+	// parser.setKind(ASTParser.K_COMPILATION_UNIT);
+	// parser.setBindingsRecovery(true);
+	// String source = FileUtils.getStringOfFile(file);
+	// parser.setSource(source.toCharArray());
+	// CompilationUnit cu = (CompilationUnit) parser.createAST(null);
+	// return cu;
+	// }
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
 		// Visit the cu to find the element corresponding to a line
