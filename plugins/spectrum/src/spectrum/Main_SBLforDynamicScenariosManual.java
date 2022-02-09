@@ -10,8 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.lang.model.element.TypeElement;
-
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
@@ -21,8 +19,10 @@ import org.but4reuse.adapters.jacoco.CoveredLineElement;
 import org.but4reuse.adapters.jacoco.JacocoAdapter;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
+import org.but4reuse.adapters.javajdt.elements.FieldElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.adapters.javajdt.elements.MethodElement;
+import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
@@ -264,10 +264,29 @@ public class Main_SBLforDynamicScenariosManual {
 					// compute results
 					List<CompilationUnitElement> compilationUnitsAfterTwoRules = new ArrayList<CompilationUnitElement>();
 					for (IElement element : finaljdtElementsJacoco) {
-						TypeDeclaration typeDeclaration = (TypeDeclaration) element;
-						benchmarkResultsCurrentFeature
-								.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(typeDeclaration));
-						compilationUnitsAfterTwoRules.add((CompilationUnitElement) element);
+						CompilationUnitElement compUnit = null;
+						if (element instanceof FieldElement) {
+							compUnit = JDTElementUtils.getCompilationUnit((FieldElement) element);
+						} else if (element instanceof MethodElement) {
+							compUnit = JDTElementUtils.getCompilationUnit((MethodElement) element);
+						} else if (element instanceof org.but4reuse.adapters.javajdt.elements.TypeElement) {
+							compUnit = JDTElementUtils.getCompilationUnit((org.but4reuse.adapters.javajdt.elements.TypeElement) element);
+						}else{
+							System.out.println(element);
+						}
+
+						for (org.but4reuse.adapters.javajdt.elements.TypeElement typeElement : JDTElementUtils.getTypes(compUnit)) {
+							// naive solution: adding a class-level localization
+							// when
+							// there is at least one line in the class.
+							if (!compilationUnitsAfterTwoRules.contains(compUnit)) {
+								TypeDeclaration type = (TypeDeclaration) typeElement.node;
+								benchmarkResultsCurrentFeature
+										.add(org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
+								compilationUnitsAfterTwoRules.add(compUnit);
+							}
+						}
+
 					}
 
 					benchmarkResults.put(feature, benchmarkResultsCurrentFeature);

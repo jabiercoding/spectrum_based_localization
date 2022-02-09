@@ -1,0 +1,6 @@
+org.omg.uml.foundation.datatypes.VisibilityKindEnum
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.omg.uml.foundation.datatypes.AggregationKindEnum
+org.omg.uml.foundation.datatypes.ChangeableKindEnum
+org.omg.uml.foundation.datatypes.ScopeKindEnum
+org.omg.uml.foundation.datatypes.OrderingKindEnum
