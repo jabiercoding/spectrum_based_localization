@@ -121,7 +121,7 @@ public class Main_SBLforDynamicScenariosManual {
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		for (File scenario : scenarios) {
-			if (!scenario.getName().equals("ScenarioOriginalVariant")) {
+			// if (!scenario.getName().equals("ScenarioOriginalVariant")) {
 				System.out.println("Current scenario: " + scenario.getName());
 
 				// check if it was built
@@ -135,17 +135,19 @@ public class Main_SBLforDynamicScenariosManual {
 				// for each feature transform from executed lines to JDT
 				// elements
 				for (String feature : mapFeatureJavaLines.keySet()) {
-					String xmlfile = feature + ".xml";
-					File featureExecutions = new File(jacocoExecutions, xmlfile);
-					Multimap<String, Integer> elementsJacoco = ArrayListMultimap.create();
-					Main.adapt(featureExecutions, elementsJacoco);
+//					String xmlfile = feature + ".xml";
+//					File featureExecutions = new File(jacocoExecutions, xmlfile);
+//					Multimap<String, Integer> elementsJacoco = ArrayListMultimap.create();
+//					Main.adapt(featureExecutions, elementsJacoco);
 					ArrayList<IElement> jdtElementsJacoco = new ArrayList<>();
 
 					Set<String> benchmarkResultsCurrentFeature = new LinkedHashSet<String>();
 
 					System.out.println("Feature: " + feature);
 
-					for (String javaFile : elementsJacoco.keySet()) {
+					Map<String, List<Integer>> featureJava = mapFeatureJavaLines.get(feature);
+//					for (String javaFile : elementsJacoco.keySet()) {
+					for (String javaFile : featureJava.keySet()) {
 						CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
 						if (compUnit == null) {
 							System.out.println("Not found: " + javaFile);
@@ -154,11 +156,13 @@ public class Main_SBLforDynamicScenariosManual {
 						CompilationUnit cu = (CompilationUnit) compUnit.node;
 
 						// to remove repetitive jdt elements
-						for (Integer line : elementsJacoco.get(javaFile)) {
+//						for (Integer line : elementsJacoco.get(javaFile)) {
+						for (Integer line : featureJava.get(javaFile)) {
 							// System.out.println(line);
 							IElement element = getJDTElement(cu, line, javaFile);
-							if (element != null && !jdtElementsJacoco.contains(element))
+							if (element != null && !jdtElementsJacoco.contains(element)) {
 								jdtElementsJacoco.add(element);
+							}
 						}
 					}
 
@@ -178,8 +182,9 @@ public class Main_SBLforDynamicScenariosManual {
 
 						List<String> lines = FileUtils.getLinesOfFile(configFile[i]);
 						if (lines.size() > 0) {
-							for (int n = 0; n < lines.size(); n++)
+							for (int n = 0; n < lines.size(); n++) {
 								featuresVariant.add(lines.get(n));
+							}
 						}
 
 						// if the variant does not contain the feature of the
@@ -305,7 +310,7 @@ public class Main_SBLforDynamicScenariosManual {
 				mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
 				HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 			}
-		}
+		//}
 	}
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
