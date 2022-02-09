@@ -20,7 +20,6 @@ import org.but4reuse.adapters.jacoco.JacocoAdapter;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.FieldElement;
-import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.adapters.javajdt.elements.MethodElement;
 import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.Artefact;
@@ -49,9 +48,9 @@ import utils.ScenarioUtils;
 
 public class Main_SBLforDynamicScenariosManual {
 
-	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
-	// static File benchmarkFolder = new
-	// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+	// static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	 static File benchmarkFolder = new
+	 File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 	static File originalVariantSrc = new File(benchmarkFolder,
 			"scenarios/ScenarioOriginalVariant/variants/Original.config/src/org");
@@ -118,15 +117,9 @@ public class Main_SBLforDynamicScenariosManual {
 			if (element instanceof CompilationUnitElement) {
 				compilationUnits.add((CompilationUnitElement) element);
 			}
-			if (element instanceof MethodBodyElement) {
-				// MethodBodyElement methodBody = (MethodBodyElement) element;
-				// System.out.println("Method body of " +
-				// methodBody.getDependencies().get("methodBody").get(0));
-			} else if (element instanceof MethodElement) {
-				// System.out.println(element);
-			}
 		}
 
+		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		for (File scenario : scenarios) {
 			if (!scenario.getName().equals("ScenarioOriginalVariant")) {
 				System.out.println("Current scenario: " + scenario.getName());
@@ -292,7 +285,7 @@ public class Main_SBLforDynamicScenariosManual {
 					benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 				}
 
-				File outputFolder = new File("output_DyamicScenariosManual");
+				File outputFolder = new File("output_DynamicScenariosManual");
 				File outputFolderScenario = new File(outputFolder, scenario.getName());
 				File resultsFolder = new File(outputFolderScenario, "location");
 				TransformFLResultsToBenchFormat.serializeResults(resultsFolder, benchmarkResults);
@@ -309,9 +302,8 @@ public class Main_SBLforDynamicScenariosManual {
 
 				// update html report
 				System.out.println("Update html report");
-				Map<String, File> mapScenarioMetricsFile = new HashMap<String, File>();
 				mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
-				HTMLReportUtils.create(outputFolderScenario, mapScenarioMetricsFile);
+				HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 			}
 		}
 	}

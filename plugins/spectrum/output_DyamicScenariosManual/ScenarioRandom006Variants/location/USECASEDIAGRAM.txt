@@ -1,5 +1,0 @@
-org.omg.uml.foundation.datatypes.VisibilityKindEnum
-org.omg.uml.foundation.datatypes.AggregationKindEnum
-org.omg.uml.foundation.datatypes.ChangeableKindEnum
-org.omg.uml.foundation.datatypes.ScopeKindEnum
-org.omg.uml.foundation.datatypes.OrderingKindEnum

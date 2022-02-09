@@ -1,2 +1,0 @@
-org.omg.uml.foundation.datatypes.VisibilityKindEnum
-org.omg.uml.foundation.datatypes.AggregationKindEnum
