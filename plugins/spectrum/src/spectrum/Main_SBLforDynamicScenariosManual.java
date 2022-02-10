@@ -35,10 +35,6 @@ import org.but4reuse.featurelist.FeatureList;
 import org.but4reuse.featurelist.FeatureListFactory;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.TypeDeclaration;
-
-import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.Multimap;
-
 import fk.stardust.localizer.IFaultLocalizer;
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
@@ -142,7 +138,7 @@ public class Main_SBLforDynamicScenariosManual {
 				List<IElement> elements = jdtAdapter.adapt(variantSrcURI, null);
 				mapVariantIElements.put(configId, elements);
 			}
-			
+
 			// for each feature
 			for (String feature : mapFeatureIElements.keySet()) {
 				System.out.println("Apply rules for feature: " + feature);
@@ -184,8 +180,8 @@ public class Main_SBLforDynamicScenariosManual {
 				// get all the jdt elements of the variants that contain a
 				// feature
 				for (String configIdContaining : configsContainingFeature) {
-						List<IElement> jdtElementsVariant = mapVariantIElements.get(configIdContaining);
-						elementsVariants.put(configIdContaining, jdtElementsVariant);
+					List<IElement> jdtElementsVariant = mapVariantIElements.get(configIdContaining);
+					elementsVariants.put(configIdContaining, jdtElementsVariant);
 				}
 
 				Map<IElement, Integer> countElementsVariants = new HashMap<IElement, Integer>();
@@ -272,7 +268,10 @@ public class Main_SBLforDynamicScenariosManual {
 			// update html report
 			System.out.println("Update html report");
 			mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
-			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
+			List<String> featuresBeingConsidered = featureUtils.getFeatureIds();
+			featuresBeingConsidered.remove("LOGGING");
+			featuresBeingConsidered.remove("COGNITIVE");
+			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile, featuresBeingConsidered);
 		}
 		// }
 	}
@@ -304,24 +303,6 @@ public class Main_SBLforDynamicScenariosManual {
 			System.out.println("Feature: " + feature);
 
 			Map<String, List<Integer>> featureJava = mapFeatureJavaLines.get(feature);
-
-			for (String javaFile : featureJava.keySet()) {
-				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
-				if (compUnit == null) {
-					System.out.println("Not found: " + javaFile);
-					continue;
-				}
-				CompilationUnit cu = (CompilationUnit) compUnit.node;
-
-				// to remove repetitive jdt elements
-				for (Integer line : featureJava.get(javaFile)) {
-					// System.out.println(line);
-					IElement element = getJDTElement(cu, line, javaFile);
-					if (element != null && !jdtElementsJacoco.contains(element)) {
-						jdtElementsJacoco.add(element);
-					}
-				}
-			}
 
 			for (String javaFile : featureJava.keySet()) {
 				CompilationUnitElement compUnit = getCompilationUnitElement(compilationUnits, javaFile);
