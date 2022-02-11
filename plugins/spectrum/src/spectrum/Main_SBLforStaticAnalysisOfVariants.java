@@ -44,6 +44,11 @@ public class Main_SBLforStaticAnalysisOfVariants {
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 
 		for (File scenario : scenarios) {
+			
+			if (scenario.getName().contains("Original")) {
+				continue;
+			}
+			
 			System.out.println("Current scenario: " + scenario.getName());
 
 			// check if it was built
@@ -91,6 +96,7 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			System.out.println("Calculating metrics");
 			String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
 			File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");
+			resultsFile.getParentFile().mkdirs();
 			try {
 				FileUtils.writeFile(resultsFile, results);
 			} catch (Exception e) {
