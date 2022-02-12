@@ -72,6 +72,8 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			adapters.add(jdtAdapter);
 			AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
 
+			long start = System.currentTimeMillis();
+			
 			// Get blocks
 			// Using similar elements we will get one block for each element
 			SimilarElementsBlockIdentification blockIdentificationAlgo = new SimilarElementsBlockIdentification();
@@ -84,6 +86,10 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			SpectrumBasedLocalization featureLocationAlgo = new SpectrumBasedLocalization();
 			List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(fl, adaptedModel, wong2, 1.0,
 					new ConsoleProgressMonitor());
+			
+			long finish = System.currentTimeMillis();
+			long elapsedTime = finish - start;
+			System.out.println("BI+FL Time in seconds: " + elapsedTime / 1000.0);
 
 			System.out.println("Transforming to benchmark format");
 			Map<String, Set<String>> benchmarkResults = TransformFLResultsToBenchFormat.transform(fl, adaptedModel,

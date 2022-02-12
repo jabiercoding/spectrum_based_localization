@@ -31,21 +31,26 @@ import utils.FileUtils;
 import utils.ScenarioUtils;
 
 public class Main_FCA_SFS {
-	
+
 	public static void main(String[] args) {
 
 		File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 		File scenariosFolder = new File(benchmarkFolder, "scenarios");
-		
+
 		File outputFolder = new File("output_FCA_SFS");
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
-		
-		Map<String,File> mapScenarioMetricsFile = new LinkedHashMap<String,File>();
-		
+
+		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
+
 		for (File scenario : scenarios) {
-			System.out.println("Current scenario: " + scenario.getName());
 			
+			if (scenario.getName().contains("Original")) {
+				continue;
+			}
+			
+			System.out.println("Current scenario: " + scenario.getName());
+
 			// check if it was built
 			if (!ScenarioUtils.isScenarioBuilt(scenario)) {
 				System.out.println("Skip: The scenario variants were not derived.");
@@ -67,6 +72,8 @@ public class Main_FCA_SFS {
 			adapters.add(jdtAdapter);
 			AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
 
+			long start = System.currentTimeMillis();
+			
 			// Get blocks
 			IBlockIdentification blockIdentificationAlgo = new FCABlockIdentification();
 			List<Block> blocks = blockIdentificationAlgo.identifyBlocks(adaptedModel.getOwnedAdaptedArtefacts(),
@@ -77,6 +84,10 @@ public class Main_FCA_SFS {
 			IFeatureLocation featureLocationAlgo = new StrictFeatureSpecificFeatureLocation();
 			List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(fl, adaptedModel,
 					new ConsoleProgressMonitor());
+			
+			long finish = System.currentTimeMillis();
+			long elapsedTime = finish - start;
+			System.out.println("BI+FL Time in seconds: " + elapsedTime / 1000.0);
 
 			// Transform the results to the benchmark format
 			System.out.println("Transforming to benchmark format");
@@ -85,7 +96,7 @@ public class Main_FCA_SFS {
 			File resultsFolder = new File(outputFolder, scenario.getName());
 			File locationFolder = new File(resultsFolder, "location");
 			TransformFLResultsToBenchFormat.serializeResults(locationFolder, benchmarkResults);
-			
+
 			// Metrics calculation
 			System.out.println("Calculating metrics");
 			String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
@@ -95,7 +106,7 @@ public class Main_FCA_SFS {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			
+
 			// update html report
 			System.out.println("Update html report");
 			mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
