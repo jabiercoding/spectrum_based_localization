@@ -7,6 +7,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
@@ -146,8 +147,33 @@ public class Main_FCA_SFS {
 							String featureName = located.getFeature().getId();
 							if (featureName.startsWith("I_"))
 								featureName = featureName.replace("I_", "");
-							featureName = featureName.replaceAll("_", "_and_");
-							resultsFeatures.put(featureName,
+							
+							// Create the name of the file based on the features
+							String fileName = "";
+							
+							// Check if the feature has interactions
+							if (featureName.contains("_")) {
+								Set<String> orderedNames = new TreeSet<>();
+								// Get all the features that have interacted
+								for (String interactedFeature : featureName.split("_")) {
+									orderedNames.add(interactedFeature);
+								}
+
+								// Add the features found to a String with its names
+								for (String orderedFeatures : orderedNames) {
+									fileName += orderedFeatures + "_and_";
+								}
+								// remove last "and"
+								fileName = fileName.substring(0, fileName.length() - "_and_".length());
+								// Check if it is a negation feature
+							} else if (located.getFeature().getNegationFeatureOf() != null) {
+								fileName = "not_" + featureName;
+							} else {
+								fileName = featureName;
+							}
+							
+							
+							resultsFeatures.put(fileName,
 									org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
 						}
 					}
