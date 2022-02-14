@@ -39,6 +39,7 @@ import fk.stardust.localizer.IFaultLocalizer;
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
 import spectrum.utils.HTMLReportUtils;
+import spectrum.utils.TypeLevelMetricsCalculation;
 import utils.FeatureUtils;
 import utils.FileUtils;
 import utils.ScenarioUtils;
@@ -272,6 +273,23 @@ public class Main_SBLforDynamicScenariosManual {
 			featuresBeingConsidered.remove("LOGGING");
 			featuresBeingConsidered.remove("COGNITIVE");
 			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile, featuresBeingConsidered);
+			
+			
+			// Metrics calculation with type level ground truth 
+			System.out.println("Calculating metrics with type level ground truth");
+			String resultsTypeLevel = TypeLevelMetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), resultsFolder);
+			File resultsFileTypeLevel = new File(outputFolderScenario, "resultPrecisionRecallTypeLevel.csv");
+			try {
+				FileUtils.writeFile(resultsFileTypeLevel, resultsTypeLevel);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			// update html report type level ground truth
+			System.out.println("Update html report type level ground truth");
+			Map<String, File> mapScenarioMetricsFileTypeLevel = new HashMap<String, File>();
+			mapScenarioMetricsFileTypeLevel.put("Original", resultsFileTypeLevel);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileTypeLevel,featuresBeingConsidered, "reportTypeLevel");
 		}
 		// }
 	}

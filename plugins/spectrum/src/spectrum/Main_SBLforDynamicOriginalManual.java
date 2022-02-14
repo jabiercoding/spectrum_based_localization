@@ -41,6 +41,7 @@ import fk.stardust.localizer.IFaultLocalizer;
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
 import spectrum.utils.HTMLReportUtils;
+import spectrum.utils.TypeLevelMetricsCalculation;
 import utils.FileUtils;
 
 public class Main_SBLforDynamicOriginalManual {
@@ -106,7 +107,7 @@ public class Main_SBLforDynamicOriginalManual {
 				compilationUnits.add((CompilationUnitElement) element);
 			}
 			if (element instanceof MethodBodyElement) {
-				//MethodBodyElement methodBody = (MethodBodyElement) element;
+				// MethodBodyElement methodBody = (MethodBodyElement) element;
 				// System.out.println("Method body of " +
 				// methodBody.getDependencies().get("methodBody").get(0));
 			} else if (element instanceof MethodElement) {
@@ -138,8 +139,8 @@ public class Main_SBLforDynamicOriginalManual {
 				}
 
 				CompilationUnit cu = (CompilationUnit) compUnit.node;
-				
-				//get percentage of coverage for each method executed
+
+				// get percentage of coverage for each method executed
 				List<Integer> lines = javaFiles.get(javaFile);
 				Collections.sort(lines);
 				float count = 0;
@@ -175,7 +176,7 @@ public class Main_SBLforDynamicOriginalManual {
 					System.out.println(percentageCovered + "%" + " " + previous);
 				}
 			}
-			
+
 			benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 		}
 
@@ -198,6 +199,22 @@ public class Main_SBLforDynamicOriginalManual {
 		Map<String, File> mapScenarioMetricsFile = new HashMap<String, File>();
 		mapScenarioMetricsFile.put("Original", resultsFile);
 		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
+
+		// Metrics calculation with type level ground truth 
+		System.out.println("Calculating metrics with type level ground truth");
+		String resultsTypeLevel = TypeLevelMetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), resultsFolder);
+		File resultsFileTypeLevel = new File(outputFolder, "resultPrecisionRecallTypeLevel.csv");
+		try {
+			FileUtils.writeFile(resultsFileTypeLevel, resultsTypeLevel);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		// update html report type level ground truth
+		System.out.println("Update html report type level ground truth");
+		Map<String, File> mapScenarioMetricsFileTypeLevel = new HashMap<String, File>();
+		mapScenarioMetricsFileTypeLevel.put("Original", resultsFileTypeLevel);
+		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFileTypeLevel);
 	}
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {

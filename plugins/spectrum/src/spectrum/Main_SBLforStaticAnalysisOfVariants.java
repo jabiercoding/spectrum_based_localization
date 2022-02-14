@@ -27,6 +27,7 @@ import fk.stardust.localizer.IFaultLocalizer;
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
 import spectrum.utils.HTMLReportUtils;
+import spectrum.utils.TypeLevelMetricsCalculation;
 import utils.FileUtils;
 import utils.ScenarioUtils;
 
@@ -42,13 +43,14 @@ public class Main_SBLforStaticAnalysisOfVariants {
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
+		Map<String, File> mapScenarioMetricsFileTypeLevel = new LinkedHashMap<String, File>();
 
 		for (File scenario : scenarios) {
-			
+
 			if (scenario.getName().contains("Original")) {
 				continue;
 			}
-			
+
 			System.out.println("Current scenario: " + scenario.getName());
 
 			// check if it was built
@@ -73,7 +75,7 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
 
 			long start = System.currentTimeMillis();
-			
+
 			// Get blocks
 			// Using similar elements we will get one block for each element
 			SimilarElementsBlockIdentification blockIdentificationAlgo = new SimilarElementsBlockIdentification();
@@ -86,7 +88,7 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			SpectrumBasedLocalization featureLocationAlgo = new SpectrumBasedLocalization();
 			List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(fl, adaptedModel, wong2, 1.0,
 					new ConsoleProgressMonitor());
-			
+
 			long finish = System.currentTimeMillis();
 			long elapsedTime = finish - start;
 			System.out.println("BI+FL Time in seconds: " + elapsedTime / 1000.0);
@@ -112,6 +114,21 @@ public class Main_SBLforStaticAnalysisOfVariants {
 			System.out.println("Update html report");
 			mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
 			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
+
+			// Metrics calculation with type level ground truth
+			System.out.println("Calculating metrics with type level ground truth");
+			String resultsTypeLevel = TypeLevelMetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
+			File resultsFileTypeLevel = new File(resultsFolder, "resultPrecisionRecallTypeLevel.csv");
+			resultsFileTypeLevel.getParentFile().mkdirs();
+			try {
+				FileUtils.writeFile(resultsFileTypeLevel, resultsTypeLevel);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			System.out.println("Update html report with type level ground truth");
+			mapScenarioMetricsFileTypeLevel.put(scenario.getName(), resultsFileTypeLevel);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileTypeLevel,"reportTypeLevel");
 		}
 	}
 }

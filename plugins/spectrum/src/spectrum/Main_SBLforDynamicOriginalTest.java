@@ -197,7 +197,7 @@ public class Main_SBLforDynamicOriginalTest {
 		System.out.println("Update html report");
 		Map<String, File> mapScenarioMetricsFile = new HashMap<String, File>();
 		mapScenarioMetricsFile.put("Original", resultsFile);
-		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
+		HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFile, "reportTypeLevel");
 	}
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {
