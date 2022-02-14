@@ -175,7 +175,7 @@ public class Main_FCA_SFS {
 			// Metrics calculation naive solution
 			System.out.println("Calculating metrics naive solution");
 			String resultsNaive = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"),
-					locationFolder);
+					resultsFolderNaive);
 			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");
 			try {
 				FileUtils.writeFile(resultsFileNaive, resultsNaive);
