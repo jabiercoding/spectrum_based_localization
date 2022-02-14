@@ -14,7 +14,8 @@ public class HTMLReportUtils {
 	 * 
 	 * @param outputFolder
 	 * @param mapScenarioMetricsFile
-	 * @param features,              use null for all
+	 * @param features,
+	 *            use null for all
 	 */
 	public static void create(File outputFolder, Map<String, File> mapScenarioMetricsFile, List<String> features) {
 		// Copy the report template
@@ -161,23 +162,24 @@ public class HTMLReportUtils {
 		}
 	}
 
-	
-	
 	/**
 	 * Create html report naive results
 	 * 
 	 * @param outputFolder
 	 * @param mapScenarioMetricsFile
-	 * @param features,              use null for all
+	 * @param features,
+	 *            use null for all
 	 */
-	public static void createReportNaiveResults(File outputFolder, Map<String, File> mapScenarioMetricsFile, List<String> features) {
-		// Copy the report template
-		File report = new File(outputFolder, "reportNaive/report.html");
+	public static void createReportNaiveResults(File outputFolder, Map<String, File> mapScenarioMetricsFile,
+			List<String> features, String path) {
+		File report = new File(outputFolder, path + "/report.html");
+		
+
 		FileUtils.copyFile(new File("reportTemplate/report.html"), report);
 		FileUtils.copyFile(new File("reportTemplate/libs_js/Chart.bundle.js"),
-				new File(outputFolder, "reportNaive/libs_js/Chart.bundle.js"));
+				new File(outputFolder, path+"/libs_js/Chart.bundle.js"));
 		FileUtils.copyFile(new File("reportTemplate/libs_js/utils.js"),
-				new File(outputFolder, "reportNaive/libs_js/utils.js"));
+				new File(outputFolder, path+"/libs_js/utils.js"));
 
 		// Get the positions of the parts to replace from the template
 		List<String> lines = FileUtils.getLinesOfFile(report);
@@ -315,20 +317,18 @@ public class HTMLReportUtils {
 		}
 	}
 
-	
-	
 	/**
 	 * Create html report naive results
 	 * 
 	 * @param outputFolder
 	 * @param mapScenarioMetricsFile
 	 */
-	public static void createReportNaiveResults(File outputFolder, Map<String, File> mapScenarioMetricsFile) {
+	public static void createReportNaiveResults(File outputFolder, Map<String, File> mapScenarioMetricsFile,
+			String path) {
 		// null means all features
-		createReportNaiveResults(outputFolder, mapScenarioMetricsFile, null);
+		createReportNaiveResults(outputFolder, mapScenarioMetricsFile, null, path);
 	}
 
-	
 	/**
 	 * Create html report
 	 * 

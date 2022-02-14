@@ -17,6 +17,7 @@ import org.but4reuse.adapters.IElement;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.FieldElement;
+import org.but4reuse.adapters.javajdt.elements.ImportElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.adapters.javajdt.elements.MethodElement;
 import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
@@ -39,6 +40,7 @@ import com.google.common.collect.Sets;
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
 import spectrum.utils.HTMLReportUtils;
+import spectrum.utils.TypeLevelMetricsCalculation;
 import utils.FileUtils;
 import utils.ScenarioUtils;
 
@@ -57,6 +59,8 @@ public class Main_FCA_SFS {
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsFileNaive = new LinkedHashMap<String, File>();
+		Map<String, File> mapScenarioMetricsTypeLevelNaive = new LinkedHashMap<String, File>();
+		Map<String, File> mapScenarioMetricsTypeLevelBench = new LinkedHashMap<String, File>();
 
 		for (File scenario : scenarios) {
 
@@ -119,14 +123,10 @@ public class Main_FCA_SFS {
 						compUnit = JDTElementUtils
 								.getCompilationUnit((org.but4reuse.adapters.javajdt.elements.TypeElement) e);
 					} else if (e instanceof org.but4reuse.adapters.javajdt.elements.ImportElement) {
-						// compUnit =
-						// JDTElementUtils.getCompilationUnit((ImportElement)
-						// element);
+						 compUnit = JDTElementUtils.getCompilationUnit((ImportElement) e);
 						//System.out.println(e);
 					} else if (e instanceof MethodBodyElement) {
-						// compUnit =
-						// JDTElementUtils.getCompilationUnit((MethodBodyElement)
-						// e);
+						compUnit = JDTElementUtils.getCompilationUnit((MethodBodyElement) e);
 						//System.out.println(e);
 					} else if (e instanceof CompilationUnitElement) {
 						// compUnit =
@@ -198,36 +198,70 @@ public class Main_FCA_SFS {
 			File locationFolder = new File(resultsFolder, "location");
 			TransformFLResultsToBenchFormat.serializeResults(locationFolder, benchmarkResults);
 
-			// Metrics calculation naive solution
+			// Metrics calculation naive solution with benchmark ground truth
 			System.out.println("Calculating metrics naive solution");
 			String resultsNaive = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"),
 					resultsFolderNaive);
-			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");
+			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecallBenchLevel.csv");
 			try {
 				FileUtils.writeFile(resultsFileNaive, resultsNaive);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
+			
+			// Metrics calculation naive solution with type, i.e., class level ground truth
+			System.out.println("Calculating metrics naive solution");
+			String resultsTypeLevelNaive = TypeLevelMetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"),
+								resultsFolderNaive);
+			File resultsFileTypeLevelNaive = new File(resultsFolderNaive, "resultPrecisionRecallTypeLevel.csv");
+			try {
+				FileUtils.writeFile(resultsFileTypeLevelNaive, resultsTypeLevelNaive);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
 
-			// Metrics calculation benchmark format
+			// Metrics calculation benchmark format with benchmark ground truth
 			System.out.println("Calculating metrics benchmark format");
 			String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
-			File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");
+			File resultsFile = new File(resultsFolder, "resultPrecisionRecallBenchLevel.csv");
 			try {
 				FileUtils.writeFile(resultsFile, results);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
+			// Metrics calculation benchmark format with type, i.e., class level ground truth
+			System.out.println("Calculating metrics type level");
+			String resultsTypeLevel = TypeLevelMetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
+			File resultsFileTypeLevel = new File(resultsFolder, "resultPrecisionRecallTypeLevel.csv");
+			try {
+				FileUtils.writeFile(resultsFileTypeLevel, resultsTypeLevel);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
 
-			// update html report naive solution at the class level
+			// update html report naive solution with benchmark groundtruth
 			System.out.println("Update html report naive solution at the class level");
 			mapScenarioMetricsFileNaive.put(scenario.getName(), resultsFileNaive);
-			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileNaive);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileNaive, "reportNaive");
 
-			// update html report benchmark format
+			// update html report benchmark format with benchmark groundtruth
 			System.out.println("Update html report benchmark formart");
 			mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
 			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
+			
+			// update html report benchmark format with class level
+			System.out.println("Update html report type level");
+			mapScenarioMetricsTypeLevelBench.put(scenario.getName(), resultsFileTypeLevel);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsTypeLevelBench, "reportTypeLevelBench");
+			
+			// update html report naive solution with class level
+			System.out.println("Update html report naive solution at the class level");
+			mapScenarioMetricsTypeLevelNaive.put(scenario.getName(), resultsFileTypeLevelNaive);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsTypeLevelNaive, "reportTypeLevelNaive");
 		}
 
 	}
