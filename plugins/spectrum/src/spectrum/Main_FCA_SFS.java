@@ -2,16 +2,29 @@ package spectrum;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
+import org.but4reuse.adapters.IElement;
+import org.but4reuse.adapters.jacoco.CoveredLineElement;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
+import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
+import org.but4reuse.adapters.javajdt.elements.FieldElement;
+import org.but4reuse.adapters.javajdt.elements.ImportElement;
+import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
+import org.but4reuse.adapters.javajdt.elements.MethodElement;
+import org.but4reuse.adapters.javajdt.elements.TypeElement;
+import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.benchmarks.argoumlspl.utils.GenerateScenarioResources;
 import org.but4reuse.benchmarks.argoumlspl.utils.TransformFLResultsToBenchFormat;
@@ -23,6 +36,12 @@ import org.but4reuse.feature.location.impl.StrictFeatureSpecificFeatureLocation;
 import org.but4reuse.featurelist.Feature;
 import org.but4reuse.featurelist.FeatureList;
 import org.but4reuse.featurelist.helpers.FeatureListHelper;
+import org.eclipse.jdt.core.dom.TypeDeclaration;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
 
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
@@ -34,7 +53,9 @@ public class Main_FCA_SFS {
 
 	public static void main(String[] args) {
 
-		File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+		File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+		// File benchmarkFolder = new
+		// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 		File scenariosFolder = new File(benchmarkFolder, "scenarios");
 
@@ -44,11 +65,11 @@ public class Main_FCA_SFS {
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 
 		for (File scenario : scenarios) {
-			
+
 			if (scenario.getName().contains("Original")) {
 				continue;
 			}
-			
+
 			System.out.println("Current scenario: " + scenario.getName());
 
 			// check if it was built
@@ -73,7 +94,7 @@ public class Main_FCA_SFS {
 			AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
 
 			long start = System.currentTimeMillis();
-			
+
 			// Get blocks
 			IBlockIdentification blockIdentificationAlgo = new FCABlockIdentification();
 			List<Block> blocks = blockIdentificationAlgo.identifyBlocks(adaptedModel.getOwnedAdaptedArtefacts(),
@@ -84,10 +105,72 @@ public class Main_FCA_SFS {
 			IFeatureLocation featureLocationAlgo = new StrictFeatureSpecificFeatureLocation();
 			List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(fl, adaptedModel,
 					new ConsoleProgressMonitor());
-			
+
 			long finish = System.currentTimeMillis();
 			long elapsedTime = finish - start;
 			System.out.println("BI+FL Time in seconds: " + elapsedTime / 1000.0);
+
+			// Transform the results with the naive technique
+
+			Multimap<String, String> resultsFeatures = ArrayListMultimap.create();
+			for (LocatedFeature located : flResult) {
+				System.out.println(located.getFeature().getName());
+				List<IElement> elements = AdaptedModelHelper.getElementsOfBlock(located.getBlocks().get(0));
+				for (IElement e : elements) {
+					CompilationUnitElement compUnit = null;
+					if (e instanceof FieldElement) {
+						compUnit = JDTElementUtils.getCompilationUnit((FieldElement) e);
+					} else if (e instanceof MethodElement) {
+						compUnit = JDTElementUtils.getCompilationUnit((MethodElement) e);
+					} else if (e instanceof org.but4reuse.adapters.javajdt.elements.TypeElement) {
+						compUnit = JDTElementUtils
+								.getCompilationUnit((org.but4reuse.adapters.javajdt.elements.TypeElement) e);
+					} else if (e instanceof org.but4reuse.adapters.javajdt.elements.ImportElement) {
+						// compUnit =
+						// JDTElementUtils.getCompilationUnit((ImportElement)
+						// element);
+						//System.out.println(e);
+					} else if (e instanceof MethodBodyElement) {
+						// compUnit =
+						// JDTElementUtils.getCompilationUnit((MethodBodyElement)
+						// e);
+						//System.out.println(e);
+					} else if (e instanceof CompilationUnitElement) {
+						// compUnit =
+						// JDTElementUtils.getCompilationUnit((CompilationUnitElement)
+						// e);
+						//System.out.println(e);
+					} else {
+						//System.out.println(e);
+					}
+
+					if (compUnit != null) {
+						for (org.but4reuse.adapters.javajdt.elements.TypeElement typeElement : JDTElementUtils
+								.getTypes(compUnit)) {
+							// naive solution: adding a class-level localization
+							// when
+							// there is at least one line in the class.
+							TypeDeclaration type = (TypeDeclaration) typeElement.node;
+							String featureName = located.getFeature().getId();
+							if (featureName.startsWith("I_"))
+								featureName = featureName.replace("I_", "");
+							featureName = featureName.replaceAll("_", "_and_");
+							resultsFeatures.put(featureName,
+									org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils.getId(type));
+						}
+					}
+				}
+			}
+
+			Map<String, Set<String>> naiveResults = new HashMap<>();
+			for (String feature : resultsFeatures.keySet()) {
+				naiveResults.put(feature, Sets.newHashSet(resultsFeatures.get(feature)));
+			}
+
+			// results using naive technique at the class level
+			File outputFolderNaive = new File(outputFolder, scenario.getName());
+			File resultsFolderNaive = new File(outputFolderNaive, "locationNaive");
+			TransformFLResultsToBenchFormat.serializeResults(resultsFolderNaive, naiveResults);
 
 			// Transform the results to the benchmark format
 			System.out.println("Transforming to benchmark format");
@@ -97,8 +180,19 @@ public class Main_FCA_SFS {
 			File locationFolder = new File(resultsFolder, "location");
 			TransformFLResultsToBenchFormat.serializeResults(locationFolder, benchmarkResults);
 
-			// Metrics calculation
-			System.out.println("Calculating metrics");
+			// Metrics calculation naive solution
+			System.out.println("Calculating metrics naive solution");
+			String resultsNaive = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"),
+					locationFolder);
+			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");
+			try {
+				FileUtils.writeFile(resultsFileNaive, resultsNaive);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+			// Metrics calculation benchmark format
+			System.out.println("Calculating metrics benchmark format");
 			String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
 			File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");
 			try {
@@ -107,10 +201,17 @@ public class Main_FCA_SFS {
 				e.printStackTrace();
 			}
 
-			// update html report
-			System.out.println("Update html report");
+			// update html report naive solution at the class level
+			System.out.println("Update html report naive solution at the class level");
+			mapScenarioMetricsFile.put(scenario.getName(), resultsFileNaive);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFile);
+
+			// update html report benchmark format
+			System.out.println("Update html report benchmark formart");
 			mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
 			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile);
 		}
+
 	}
+
 }

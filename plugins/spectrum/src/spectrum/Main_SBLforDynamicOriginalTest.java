@@ -26,7 +26,6 @@ import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.Artefact;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.artefactmodel.ArtefactModelFactory;
-import org.but4reuse.benchmarks.argoumlspl.utils.TraceIdUtils;
 import org.but4reuse.benchmarks.argoumlspl.utils.TransformFLResultsToBenchFormat;
 import org.but4reuse.block.identification.impl.SimilarElementsBlockIdentification;
 import org.but4reuse.feature.location.LocatedFeature;
@@ -35,8 +34,6 @@ import org.but4reuse.feature.location.spectrum.SpectrumBasedLocalization;
 import org.but4reuse.featurelist.Feature;
 import org.but4reuse.featurelist.FeatureList;
 import org.but4reuse.featurelist.FeatureListFactory;
-import org.eclipse.jdt.core.dom.AST;
-import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.TypeDeclaration;
 
