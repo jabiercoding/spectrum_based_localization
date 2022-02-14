@@ -63,6 +63,7 @@ public class Main_FCA_SFS {
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
+		Map<String, File> mapScenarioMetricsFileNaive = new LinkedHashMap<String, File>();
 
 		for (File scenario : scenarios) {
 
@@ -72,7 +73,7 @@ public class Main_FCA_SFS {
 
 			System.out.println("Current scenario: " + scenario.getName());
 
-			// check if it was built
+		/*	// check if it was built
 			if (!ScenarioUtils.isScenarioBuilt(scenario)) {
 				System.out.println("Skip: The scenario variants were not derived.");
 				continue;
@@ -168,23 +169,23 @@ public class Main_FCA_SFS {
 			}
 
 			// results using naive technique at the class level
-			File outputFolderNaive = new File(outputFolder, scenario.getName());
-			File resultsFolderNaive = new File(outputFolderNaive, "locationNaive");
+			*/File outputFolderNaive = new File(outputFolder, scenario.getName());
+			File resultsFolderNaive = new File(outputFolderNaive, "locationNaive");/*
 			TransformFLResultsToBenchFormat.serializeResults(resultsFolderNaive, naiveResults);
 
 			// Transform the results to the benchmark format
 			System.out.println("Transforming to benchmark format");
 			Map<String, Set<String>> benchmarkResults = TransformFLResultsToBenchFormat.transform(fl, adaptedModel,
 					flResult);
-			File resultsFolder = new File(outputFolder, scenario.getName());
+			*/File resultsFolder = new File(outputFolder, scenario.getName());/*
 			File locationFolder = new File(resultsFolder, "location");
 			TransformFLResultsToBenchFormat.serializeResults(locationFolder, benchmarkResults);
 
 			// Metrics calculation naive solution
 			System.out.println("Calculating metrics naive solution");
 			String resultsNaive = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"),
-					locationFolder);
-			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");
+					locationFolder);*/
+			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");/*
 			try {
 				FileUtils.writeFile(resultsFileNaive, resultsNaive);
 			} catch (Exception e) {
@@ -194,17 +195,17 @@ public class Main_FCA_SFS {
 			// Metrics calculation benchmark format
 			System.out.println("Calculating metrics benchmark format");
 			String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
-			File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");
+			*/File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");/*
 			try {
 				FileUtils.writeFile(resultsFile, results);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
+			}*/
 
 			// update html report naive solution at the class level
 			System.out.println("Update html report naive solution at the class level");
-			mapScenarioMetricsFile.put(scenario.getName(), resultsFileNaive);
-			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFile);
+			mapScenarioMetricsFileNaive.put(scenario.getName(), resultsFileNaive);
+			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileNaive);
 
 			// update html report benchmark format
 			System.out.println("Update html report benchmark formart");

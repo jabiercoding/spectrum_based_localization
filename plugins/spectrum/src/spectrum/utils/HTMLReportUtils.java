@@ -175,9 +175,9 @@ public class HTMLReportUtils {
 		File report = new File(outputFolder, "reportNaive/report.html");
 		FileUtils.copyFile(new File("reportTemplate/report.html"), report);
 		FileUtils.copyFile(new File("reportTemplate/libs_js/Chart.bundle.js"),
-				new File(outputFolder, "report/libs_js/Chart.bundle.js"));
+				new File(outputFolder, "reportNaive/libs_js/Chart.bundle.js"));
 		FileUtils.copyFile(new File("reportTemplate/libs_js/utils.js"),
-				new File(outputFolder, "report/libs_js/utils.js"));
+				new File(outputFolder, "reportNaive/libs_js/utils.js"));
 
 		// Get the positions of the parts to replace from the template
 		List<String> lines = FileUtils.getLinesOfFile(report);
@@ -325,7 +325,7 @@ public class HTMLReportUtils {
 	 */
 	public static void createReportNaiveResults(File outputFolder, Map<String, File> mapScenarioMetricsFile) {
 		// null means all features
-		create(outputFolder, mapScenarioMetricsFile, null);
+		createReportNaiveResults(outputFolder, mapScenarioMetricsFile, null);
 	}
 
 	
