@@ -2,13 +2,10 @@ package spectrum;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import org.but4reuse.adaptedmodel.AdaptedModel;
@@ -16,14 +13,11 @@ import org.but4reuse.adaptedmodel.Block;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
 import org.but4reuse.adapters.IElement;
-import org.but4reuse.adapters.jacoco.CoveredLineElement;
 import org.but4reuse.adapters.javajdt.JavaJDTAdapter;
 import org.but4reuse.adapters.javajdt.elements.CompilationUnitElement;
 import org.but4reuse.adapters.javajdt.elements.FieldElement;
-import org.but4reuse.adapters.javajdt.elements.ImportElement;
 import org.but4reuse.adapters.javajdt.elements.MethodBodyElement;
 import org.but4reuse.adapters.javajdt.elements.MethodElement;
-import org.but4reuse.adapters.javajdt.elements.TypeElement;
 import org.but4reuse.adapters.javajdt.utils.JDTElementUtils;
 import org.but4reuse.artefactmodel.ArtefactModel;
 import org.but4reuse.benchmarks.argoumlspl.utils.GenerateScenarioResources;
@@ -41,8 +35,6 @@ import org.eclipse.jdt.core.dom.TypeDeclaration;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
 import metricsCalculation.MetricsCalculation;
 import spectrum.utils.ConsoleProgressMonitor;
 import spectrum.utils.HTMLReportUtils;
@@ -73,7 +65,7 @@ public class Main_FCA_SFS {
 
 			System.out.println("Current scenario: " + scenario.getName());
 
-		/*	// check if it was built
+			// check if it was built
 			if (!ScenarioUtils.isScenarioBuilt(scenario)) {
 				System.out.println("Skip: The scenario variants were not derived.");
 				continue;
@@ -112,7 +104,6 @@ public class Main_FCA_SFS {
 			System.out.println("BI+FL Time in seconds: " + elapsedTime / 1000.0);
 
 			// Transform the results with the naive technique
-
 			Multimap<String, String> resultsFeatures = ArrayListMultimap.create();
 			for (LocatedFeature located : flResult) {
 				System.out.println(located.getFeature().getName());
@@ -169,23 +160,23 @@ public class Main_FCA_SFS {
 			}
 
 			// results using naive technique at the class level
-			*/File outputFolderNaive = new File(outputFolder, scenario.getName());
-			File resultsFolderNaive = new File(outputFolderNaive, "locationNaive");/*
+			File outputFolderNaive = new File(outputFolder, scenario.getName());
+			File resultsFolderNaive = new File(outputFolderNaive, "locationNaive");
 			TransformFLResultsToBenchFormat.serializeResults(resultsFolderNaive, naiveResults);
 
 			// Transform the results to the benchmark format
 			System.out.println("Transforming to benchmark format");
 			Map<String, Set<String>> benchmarkResults = TransformFLResultsToBenchFormat.transform(fl, adaptedModel,
 					flResult);
-			*/File resultsFolder = new File(outputFolder, scenario.getName());/*
+			File resultsFolder = new File(outputFolder, scenario.getName());
 			File locationFolder = new File(resultsFolder, "location");
 			TransformFLResultsToBenchFormat.serializeResults(locationFolder, benchmarkResults);
 
 			// Metrics calculation naive solution
 			System.out.println("Calculating metrics naive solution");
 			String resultsNaive = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"),
-					locationFolder);*/
-			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");/*
+					locationFolder);
+			File resultsFileNaive = new File(resultsFolderNaive, "resultPrecisionRecall.csv");
 			try {
 				FileUtils.writeFile(resultsFileNaive, resultsNaive);
 			} catch (Exception e) {
@@ -195,12 +186,12 @@ public class Main_FCA_SFS {
 			// Metrics calculation benchmark format
 			System.out.println("Calculating metrics benchmark format");
 			String results = MetricsCalculation.getResults(new File(benchmarkFolder, "groundTruth"), locationFolder);
-			*/File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");/*
+			File resultsFile = new File(resultsFolder, "resultPrecisionRecall.csv");
 			try {
 				FileUtils.writeFile(resultsFile, results);
 			} catch (Exception e) {
 				e.printStackTrace();
-			}*/
+			}
 
 			// update html report naive solution at the class level
 			System.out.println("Update html report naive solution at the class level");
