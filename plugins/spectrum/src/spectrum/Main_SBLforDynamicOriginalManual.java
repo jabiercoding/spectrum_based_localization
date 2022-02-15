@@ -214,7 +214,7 @@ public class Main_SBLforDynamicOriginalManual {
 		System.out.println("Update html report type level ground truth");
 		Map<String, File> mapScenarioMetricsFileTypeLevel = new HashMap<String, File>();
 		mapScenarioMetricsFileTypeLevel.put("Original", resultsFileTypeLevel);
-		HTMLReportUtils.create(outputFolder, mapScenarioMetricsFileTypeLevel);
+		HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileTypeLevel,"reportTypeLevel");
 	}
 
 	private static IElement getJDTElement(CompilationUnit cu, Integer lineNumber, String fileName) {

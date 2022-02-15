@@ -19,20 +19,20 @@
 new Chart(document.getElementById("bar-chart-precisionRecallF1"), {
     type: 'bar',
     data: {
-labels: ["Original",],
+labels: ["Original","Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009","Random010","Traditional",],
 
       datasets: [
         {
           backgroundColor: "#89138A",
-label: "Precision", data: [0.8333333333333334,]
+label: "Precision", data: [0.5511904761904761,0.6761904761904761,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,0.8333333333333334,]
 
         }, {
           backgroundColor: "#018080",
-label: "Recall", data: [0.04442845758950372,]
+label: "Recall", data: [0.054845124256170386,0.054845124256170386,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,0.04442845758950372,]
 
         }, {
           backgroundColor: "#E6BB18",
-label: "F1", data: [0.08166243549879228,]
+label: "F1", data: [0.09626386186165094,0.09636289137244515,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,0.08166243549879228,]
 
         }
       ]
@@ -55,16 +55,16 @@ text: 'Feature location metrics [STATEDIAGRAM, ACTIVITYDIAGRAM, USECASEDIAGRAM, 
 new Chart(document.getElementById("bar-chart-featureIssues"), {
     type: 'bar',
     data: {
-labels: ["Original",],
+labels: ["Original","Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009","Random010","Traditional",],
 
       datasets: [
         {
           backgroundColor: "#73203c",
-label: "FeaturesWithoutRetrieved", data: [18.0,]
+label: "FeaturesWithoutRetrieved", data: [18.0,18.0,18.0,18.0,18.0,18.0,18.0,18.0,18.0,18.0,18.0,18.0,]
 
         }, {
           backgroundColor: "#207357",
-label: "InexistentFeaturesRetrieved", data: [0,]
+label: "InexistentFeaturesRetrieved", data: [0,0,0,0,0,0,0,0,0,0,0,0,]
 
         }
       ]

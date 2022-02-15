@@ -35,7 +35,8 @@ public class Main_SBLforStaticAnalysisOfVariants {
 
 	public static void main(String[] args) {
 
-		File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+		File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+		//File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 		File scenariosFolder = new File(benchmarkFolder, "scenarios");
 
