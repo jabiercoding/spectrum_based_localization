@@ -1,0 +1,80 @@
+org.argouml.application.Main Refinement
+org.argouml.notation.providers.uml.ExtensionPointNotationUml parseExtensionPoint(String)
+org.argouml.notation.providers.uml.ExtensionPointNotationUml parseExtensionPointFig(Object,String) Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram doesAccept(Object) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram doesAccept(Object) Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.ui.ActionAddExtensionPoint actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.ActionCompartmentDisplay Refinement
+org.argouml.uml.diagram.ui.ActionCompartmentDisplay actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel
+org.argouml.uml.diagram.use_case.ui.ActorPortFigRect Refinement
+org.argouml.uml.diagram.use_case.ui.FigActor
+org.argouml.uml.diagram.use_case.ui.FigExtend
+org.argouml.uml.diagram.use_case.ui.FigInclude
+org.argouml.uml.diagram.use_case.ui.FigMyCircle Refinement
+org.argouml.uml.diagram.use_case.ui.FigUseCase
+org.argouml.uml.diagram.use_case.ui.InitUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.PropPanelUMLUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.SelectionActor
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase
+org.argouml.uml.diagram.use_case.ui.StylePanelFigUseCase
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramPropPanelFactory
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer
+org.argouml.uml.ui.ActionUseCaseDiagram
+org.argouml.uml.ui.ElementPropPanelFactory Refinement
+org.argouml.uml.ui.ElementPropPanelFactory createPropPanel(Object) Refinement
+org.argouml.uml.ui.ElementPropPanelFactory getClassifierPropPanel(Object) Refinement
+org.argouml.uml.ui.ElementPropPanelFactory getRelationshipPropPanel(Object) Refinement
+org.argouml.uml.ui.UMLConditionExpressionModel setExpression(Object) Refinement
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewActor
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase
+org.argouml.uml.ui.behavior.use_cases.PropPanelActor
+org.argouml.uml.ui.behavior.use_cases.PropPanelExtend
+org.argouml.uml.ui.behavior.use_cases.PropPanelExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude
+org.argouml.uml.ui.behavior.use_cases.PropPanelUseCase
+org.argouml.uml.ui.behavior.use_cases.UMLExtendBaseListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel UMLExtendExtensionPointListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel moveDown(int)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel moveToBottom(int)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel moveToTop(int)
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointExtendListModel UMLExtensionPointExtendListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointExtendListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointExtendListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointLocationDocument UMLExtensionPointLocationDocument()
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointLocationDocument getProperty()
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointLocationDocument setProperty(String)
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointUseCaseListModel UMLExtensionPointUseCaseListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointUseCaseListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointUseCaseListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeAdditionListModel
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeBaseListModel
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeListModel
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel UMLUseCaseExtendListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel UMLUseCaseExtensionPointListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel moveDown(int)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel moveToBottom(int)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel moveToTop(int)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel UMLUseCaseIncludeListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel isValidElement(Object)

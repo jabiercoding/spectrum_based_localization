@@ -1,0 +1,12 @@
+org.argouml.application.Main main(String[]) Refinement
+org.argouml.kernel.MemberList clear() Refinement
+org.argouml.kernel.MemberList remove(Object) Refinement
+org.argouml.kernel.ProjectImpl addMember(Object) Refinement
+org.argouml.moduleloader.ModuleLoader2 huntForModules() Refinement
+org.argouml.persistence.XmiFilePersister parseXmiExtensions(Project) Refinement
+org.argouml.profile.UserDefinedProfile finishLoading() Refinement
+org.argouml.profile.init.ProfileLoader loadProfilesFromJarFile(Manifest,File,ClassLoader) Refinement
+org.argouml.profile.internal.ProfileManagerImpl loadDefaultProfilesfromConfiguration() Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement getTipString(MouseEvent) Refinement

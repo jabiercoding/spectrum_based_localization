@@ -1,0 +1,9 @@
+org.argouml.sequence2.diagram.ActionAddClassifierRole makeNode()
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel getCollaboration()
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel setCollaboration(Object)
+org.argouml.sequence2.diagram.UMLSequenceDiagram getCollaboration()
+org.argouml.sequence2.diagram.UMLSequenceDiagram initialize(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram makeNewCR(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram relocate(Object) Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram getChildren(Object) Refinement

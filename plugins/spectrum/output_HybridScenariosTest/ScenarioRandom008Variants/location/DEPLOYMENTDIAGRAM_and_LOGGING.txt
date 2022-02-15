@@ -1,0 +1,25 @@
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel connect(Object,Object,Object,Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram UMLSequenceDiagram(Object) Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCreate() Refinement
+org.argouml.ui.explorer.ExplorerPopup initMenuCreateDiagrams() Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
+org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigEdgeFor(Object,Map) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigNodeFor(Object,int,int,Map) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addEdge(Object) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addNode(Object) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel vetoableChange(PropertyChangeEvent) Refinement
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer Refinement
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer getFigNodeFor(GraphModel,Layer,Object,Map) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram setModelElementNamespace(Object,Object) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram setNamespace(Object) Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram drop(Object,Point) Refinement
+org.argouml.uml.ui.ActionDeploymentDiagram Refinement
+org.argouml.uml.ui.ActionDeploymentDiagram createDiagram(Object) Refinement
+org.argouml.uml.ui.ActionDeploymentDiagram isValidNamespace(Object) Refinement

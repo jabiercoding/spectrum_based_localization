@@ -98,9 +98,11 @@ public class Main_SBLforDynamicScenariosTest {
 		adaptedModel.getOwnedBlocks().addAll(blocks);
 
 		// Launch feature location
-		IFaultLocalizer<Block> wong2 = RankingMetrics.getRankingMetricByName("Wong2");
+		//IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("Wong2");
+		//IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("tarantula");
+		IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("ochiai");
 		SpectrumBasedLocalization featureLocationAlgo = new SpectrumBasedLocalization();
-		List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(featureList, adaptedModel, wong2, 1.0,
+		List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(featureList, adaptedModel, rankingMetric, 1.0,
 				new ConsoleProgressMonitor());
 		Map<String, Map<String, List<Integer>>> mapFeatureJavaLines = getResults(flResult);
 
@@ -253,7 +255,9 @@ public class Main_SBLforDynamicScenariosTest {
 				benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 			}
 
-			File outputFolder = new File("output_DynamicScenariosTest");
+			//File outputFolder = new File("outputTarantula_DynamicScenariosTest");
+			File outputFolder = new File("outputOchiai_DynamicScenariosTest");
+			//File outputFolder = new File("outputWong_DynamicScenariosTest");
 			File outputFolderScenario = new File(outputFolder, scenario.getName());
 			File resultsFolder = new File(outputFolderScenario, "location");
 			TransformFLResultsToBenchFormat.serializeResults(resultsFolder, benchmarkResults);

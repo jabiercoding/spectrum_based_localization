@@ -1,0 +1,248 @@
+org.argouml.application.Main Refinement
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.moduleloader.ModuleLoader2 huntForModules() Refinement
+org.argouml.persistence.ModelMemberFilePersister registerDiagramsInternal(Project,Collection,boolean) Refinement
+org.argouml.sequence2.PropPanelUMLSequenceDiagram Refinement
+org.argouml.sequence2.SequenceDiagramModule
+org.argouml.sequence2.SequenceDiagramPropPanelFactory
+org.argouml.sequence2.diagram.ActionAddClassifierRole
+org.argouml.sequence2.diagram.ActionSetAddMessageMode
+org.argouml.sequence2.diagram.ActionSetOperation
+org.argouml.sequence2.diagram.FigActivation
+org.argouml.sequence2.diagram.FigClassifierRole
+org.argouml.sequence2.diagram.FigDestroy
+org.argouml.sequence2.diagram.FigHead
+org.argouml.sequence2.diagram.FigLifeLine
+org.argouml.sequence2.diagram.FigMessage
+org.argouml.sequence2.diagram.ModeBroomMessages
+org.argouml.sequence2.diagram.ModeCreateMessage
+org.argouml.sequence2.diagram.ModePlaceClassifierRole
+org.argouml.sequence2.diagram.SelectionClassifierRole
+org.argouml.sequence2.diagram.SelectionMessage
+org.argouml.sequence2.diagram.SequenceDiagramFactory
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel
+org.argouml.sequence2.diagram.SequenceDiagramRenderer
+org.argouml.sequence2.diagram.UMLSequenceDiagram
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCreate() Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup ExplorerPopup(Object,MouseEvent) Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.ui.explorer.ExplorerPopup initMenuCreateDiagrams() Refinement
+org.argouml.ui.explorer.PerspectiveManager Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.ui.explorer.rules.GoClassifierToSequenceDiagram
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram Refinement
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram getChildren(Object) Refinement
+org.argouml.ui.explorer.rules.GoOperationToSequenceDiagram
+org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
+org.argouml.uml.diagram.DiagramFactory createInternal(DiagramType,Object,Object,DiagramSettings) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigNodeFor(Object,int,int,Map) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addEdge(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addNode(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addNodeRelatedEdges(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel canAddEdge(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel canAddNode(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel getInEdges(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel getOutEdges(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel getOwner(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel getPorts(Object)
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel vetoableChange(PropertyChangeEvent)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent AbstractFigComponent()
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent AbstractFigComponent(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent AbstractFigComponent(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent clone()
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent getHandleBox()
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent getMinimumSize()
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent getUseTrapRect()
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent initFigs()
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent modelChanged(PropertyChangeEvent)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent setHandleBox(int,int,int,int)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent setLineColor(Color)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent setStandardBounds(int,int,int,int)
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent updateListeners(Object,Object)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode AbstractFigNode()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode AbstractFigNode(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode AbstractFigNode(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode AbstractFigNode(Object,int,int)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode clone()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode getClosestPoint(Point)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode getMinimumSize()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode getUseTrapRect()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode initFigs()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode isFilled()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode makeSelection()
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode modelChanged(PropertyChangeEvent)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode mouseClicked(MouseEvent)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode setEnclosingFig(Fig)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode setFilled(boolean)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode setLineColor(Color)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode setLineWidth(int)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode setStandardBounds(int,int,int,int)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode updateListeners(Object,Object)
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode updateStereotypeText()
+org.argouml.uml.diagram.deployment.ui.CubePortFigRect CubePortFigRect(int,int,int,int,int)
+org.argouml.uml.diagram.deployment.ui.CubePortFigRect getClosestPoint(Point)
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramPropPanelFactory createPropPanel(Object)
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer getFigEdgeFor(GraphModel,Layer,Object,Map)
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer getFigNodeFor(GraphModel,Layer,Object,Map)
+org.argouml.uml.diagram.deployment.ui.FigComponent FigComponent()
+org.argouml.uml.diagram.deployment.ui.FigComponent FigComponent(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.FigComponent FigComponent(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.FigComponent getPopUpActions(MouseEvent)
+org.argouml.uml.diagram.deployment.ui.FigComponent makeSelection()
+org.argouml.uml.diagram.deployment.ui.FigComponent setEnclosingFig(Fig)
+org.argouml.uml.diagram.deployment.ui.FigComponent textEditStarted(FigText)
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance FigComponentInstance()
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance FigComponentInstance(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance FigComponentInstance(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance clone()
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance getNotationProviderType()
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance makeSelection()
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance mouseClicked(MouseEvent)
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance mousePressed(MouseEvent)
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance setEnclosingFig(Fig)
+org.argouml.uml.diagram.deployment.ui.FigComponentInstance updateListeners(Object,Object)
+org.argouml.uml.diagram.deployment.ui.FigMNode FigMNode()
+org.argouml.uml.diagram.deployment.ui.FigMNode FigMNode(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.FigMNode FigMNode(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.FigMNode getPopUpActions(MouseEvent)
+org.argouml.uml.diagram.deployment.ui.FigMNode textEditStarted(FigText)
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance FigNodeInstance()
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance FigNodeInstance(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance FigNodeInstance(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance clone()
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance getNotationProviderType()
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance makeSelection()
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance setEnclosingFig(Fig)
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance updateListeners(Object,Object)
+org.argouml.uml.diagram.deployment.ui.FigObject FigObject()
+org.argouml.uml.diagram.deployment.ui.FigObject FigObject(GraphModel,Object)
+org.argouml.uml.diagram.deployment.ui.FigObject FigObject(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.deployment.ui.FigObject clone()
+org.argouml.uml.diagram.deployment.ui.FigObject getFillColor()
+org.argouml.uml.diagram.deployment.ui.FigObject getLineColor()
+org.argouml.uml.diagram.deployment.ui.FigObject getLineWidth()
+org.argouml.uml.diagram.deployment.ui.FigObject getMinimumSize()
+org.argouml.uml.diagram.deployment.ui.FigObject getNotationProviderType()
+org.argouml.uml.diagram.deployment.ui.FigObject initFigs()
+org.argouml.uml.diagram.deployment.ui.FigObject isFilled()
+org.argouml.uml.diagram.deployment.ui.FigObject makeSelection()
+org.argouml.uml.diagram.deployment.ui.FigObject setEnclosingFig(Fig)
+org.argouml.uml.diagram.deployment.ui.FigObject setFillColor(Color)
+org.argouml.uml.diagram.deployment.ui.FigObject setFilled(boolean)
+org.argouml.uml.diagram.deployment.ui.FigObject setLineColor(Color)
+org.argouml.uml.diagram.deployment.ui.FigObject setLineWidth(int)
+org.argouml.uml.diagram.deployment.ui.FigObject setStandardBounds(int,int,int,int)
+org.argouml.uml.diagram.deployment.ui.InitDeploymentDiagram
+org.argouml.uml.diagram.deployment.ui.PropPanelUMLDeploymentDiagram PropPanelUMLDeploymentDiagram()
+org.argouml.uml.diagram.deployment.ui.SelectionComponent SelectionComponent(Fig)
+org.argouml.uml.diagram.deployment.ui.SelectionComponent getIcons()
+org.argouml.uml.diagram.deployment.ui.SelectionComponent getInstructions(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponent getNewEdgeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponent getNewNode(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponent getNewNodeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponent isReverseEdge(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance SelectionComponentInstance(Fig)
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance getIcons()
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance getInstructions(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance getNewEdgeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance getNewNode(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance getNewNodeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionComponentInstance isReverseEdge(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNode SelectionNode(Fig)
+org.argouml.uml.diagram.deployment.ui.SelectionNode getIcons()
+org.argouml.uml.diagram.deployment.ui.SelectionNode getInstructions(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNode getNewEdgeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNode getNewNode(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNode getNewNodeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNode isReverseEdge(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance SelectionNodeInstance(Fig)
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance getIcons()
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance getInstructions(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance getNewEdgeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance getNewNode(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance getNewNodeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionNodeInstance isReverseEdge(int)
+org.argouml.uml.diagram.deployment.ui.SelectionObject SelectionObject(Fig)
+org.argouml.uml.diagram.deployment.ui.SelectionObject getIcons()
+org.argouml.uml.diagram.deployment.ui.SelectionObject getInstructions(int)
+org.argouml.uml.diagram.deployment.ui.SelectionObject getNewEdgeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionObject getNewNode(int)
+org.argouml.uml.diagram.deployment.ui.SelectionObject getNewNodeType(int)
+org.argouml.uml.diagram.deployment.ui.SelectionObject isReverseEdge(int)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram UMLDeploymentDiagram()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram UMLDeploymentDiagram(Object)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram createGraphModel()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram doesAccept(Object)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram drop(Object,Point)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram encloserChanged(FigNode,FigNode,FigNode)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionAggregation()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionAssociation()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionComposition()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMAbstraction()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMAssociation()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMClass()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMComponent()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMComponentInstance()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMDependency()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMGeneralization()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMInterface()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMLink()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMNode()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMNodeInstance()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionMObject()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionUniAggregation()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionUniAssociation()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getActionUniComposition()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getAssociationActions()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getLabelName()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getRelocationCandidates(Object)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram getUmlActions()
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram isRelocationAllowed(Object)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram relocate(Object)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram setModelElementNamespace(Object,Object)
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram setNamespace(Object)
+org.argouml.uml.diagram.sequence.MessageNode
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel
+org.argouml.uml.diagram.sequence.ui.ActionAddClassifierRole
+org.argouml.uml.diagram.sequence.ui.FigActivation
+org.argouml.uml.diagram.sequence.ui.FigBirthActivation
+org.argouml.uml.diagram.sequence.ui.FigCallActionMessage
+org.argouml.uml.diagram.sequence.ui.FigClassifierRole
+org.argouml.uml.diagram.sequence.ui.FigCreateActionMessage
+org.argouml.uml.diagram.sequence.ui.FigDestroyActionMessage
+org.argouml.uml.diagram.sequence.ui.FigHead
+org.argouml.uml.diagram.sequence.ui.FigLifeLine
+org.argouml.uml.diagram.sequence.ui.FigMessage
+org.argouml.uml.diagram.sequence.ui.FigReturnActionMessage
+org.argouml.uml.diagram.sequence.ui.InitSequenceDiagram
+org.argouml.uml.diagram.sequence.ui.ModeChangeHeight
+org.argouml.uml.diagram.sequence.ui.ModeContract
+org.argouml.uml.diagram.sequence.ui.ModeCreateMessage
+org.argouml.uml.diagram.sequence.ui.ModeExpand
+org.argouml.uml.diagram.sequence.ui.PropPanelUMLSequenceDiagram
+org.argouml.uml.diagram.sequence.ui.SelectionClassifierRole
+org.argouml.uml.diagram.sequence.ui.SelectionMessage
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramLayer
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramPropPanelFactory
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramRenderer
+org.argouml.uml.diagram.sequence.ui.TempFig Refinement
+org.argouml.uml.diagram.sequence.ui.UMLSequenceDiagram
+org.argouml.uml.diagram.static_structure.ui.SelectionClass Refinement
+org.argouml.uml.diagram.static_structure.ui.SelectionClass getIcons() Refinement
+org.argouml.uml.diagram.static_structure.ui.SelectionGeneralizableElement Refinement
+org.argouml.uml.diagram.static_structure.ui.SelectionGeneralizableElement getIcons() Refinement
+org.argouml.uml.diagram.static_structure.ui.SelectionStereotype Refinement
+org.argouml.uml.diagram.static_structure.ui.SelectionStereotype getIcons() Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.ui.ActionSetAddMessageMode
+org.argouml.uml.ui.ActionDeploymentDiagram ActionDeploymentDiagram()
+org.argouml.uml.ui.ActionDeploymentDiagram createDiagram(Object)
+org.argouml.uml.ui.ActionDeploymentDiagram findNamespace()
+org.argouml.uml.ui.ActionDeploymentDiagram isValidNamespace(Object)
+org.argouml.uml.ui.ActionSequenceDiagram

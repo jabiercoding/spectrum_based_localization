@@ -1,0 +1,56 @@
+org.argouml.application.Main main(String[]) Refinement
+org.argouml.kernel.MemberList clear() Refinement
+org.argouml.kernel.MemberList remove(Object) Refinement
+org.argouml.kernel.ProjectImpl addMember(Object) Refinement
+org.argouml.moduleloader.ModuleLoader2 huntForModules() Refinement
+org.argouml.persistence.ModelMemberFilePersister registerDiagramsInternal(Project,Collection,boolean) Refinement
+org.argouml.persistence.XmiFilePersister parseXmiExtensions(Project) Refinement
+org.argouml.profile.UserDefinedProfile UserDefinedProfile(String,URL,Set<String>) Refinement
+org.argouml.profile.UserDefinedProfile finishLoading() Refinement
+org.argouml.profile.init.ProfileLoader loadProfilesFromJarFile(Manifest,File,ClassLoader) Refinement
+org.argouml.profile.internal.ProfileManagerImpl loadDefaultProfilesfromConfiguration() Refinement
+org.argouml.sequence2.SequenceDiagramModule Refinement
+org.argouml.sequence2.SequenceDiagramModule disable() Refinement
+org.argouml.sequence2.SequenceDiagramModule enable() Refinement
+org.argouml.sequence2.diagram.FigClassifierRole Refinement
+org.argouml.sequence2.diagram.FigMessage Refinement
+org.argouml.sequence2.diagram.FigMessage updateListeners(Object,Object) Refinement
+org.argouml.sequence2.diagram.ModeCreateMessage ModeCreateMessage() Refinement
+org.argouml.sequence2.diagram.ModeCreateMessage ModeCreateMessage(Editor) Refinement
+org.argouml.sequence2.diagram.ModeCreateMessage Refinement
+org.argouml.sequence2.diagram.ModeCreateMessage ensureSpace(FigMessage) Refinement
+org.argouml.sequence2.diagram.SelectionMessage Refinement
+org.argouml.sequence2.diagram.SequenceDiagramFactory Refinement
+org.argouml.sequence2.diagram.SequenceDiagramFactory createDiagram(Object,String,DiagramSettings) Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel getInteraction() Refinement
+org.argouml.sequence2.diagram.SequenceDiagramRenderer Refinement
+org.argouml.sequence2.diagram.SequenceDiagramRenderer getFigNodeFor(GraphModel,Layer,Object,Map) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram UMLSequenceDiagram() Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.ArgoDiagramImpl repairFig(Fig,StringBuffer) Refinement
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel Refinement
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel connect(Object,Object,Object) Refinement
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel vetoableChange(PropertyChangeEvent) Refinement
+org.argouml.uml.diagram.sequence.ui.FigClassifierRole Refinement
+org.argouml.uml.diagram.sequence.ui.FigClassifierRole getPortFig(Object) Refinement
+org.argouml.uml.diagram.sequence.ui.FigClassifierRole updateActivations() Refinement
+org.argouml.uml.diagram.sequence.ui.FigLifeLine Refinement
+org.argouml.uml.diagram.sequence.ui.FigLifeLine removeFig(Fig) Refinement
+org.argouml.uml.diagram.sequence.ui.FigMessagePort Refinement
+org.argouml.uml.diagram.sequence.ui.ModeCreateMessage Refinement
+org.argouml.uml.diagram.sequence.ui.ModeCreateMessage mouseReleased(MouseEvent) Refinement
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramLayer Refinement
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramLayer remove(Fig) Refinement
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramRenderer Refinement
+org.argouml.uml.diagram.state.ui.FigStubState Refinement
+org.argouml.uml.diagram.state.ui.FigStubState updateReferenceText() Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram nameDiagram(Object) Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement getTipString(MouseEvent) Refinement
+org.argouml.uml.ui.TabProps setTarget(Object) Refinement

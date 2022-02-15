@@ -1,0 +1,3 @@
+org.argouml.uml.ui.ActionSequenceDiagram
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel
+org.argouml.sequence2.diagram.UMLSequenceDiagram

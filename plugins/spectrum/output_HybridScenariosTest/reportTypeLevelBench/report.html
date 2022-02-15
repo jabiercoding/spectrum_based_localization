@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Report</title>
+  <meta charset="utf-8">
+  
+  <!--  for the charts -->
+  <script src="libs_js/Chart.bundle.js"></script>
+  <script src="libs_js/utils.js"></script>
+</head>
+
+<body id="mainPage">
+
+	<canvas id="bar-chart-precisionRecallF1" width="600" height="250"></canvas>
+	
+	<canvas id="bar-chart-featureIssues" width="600" height="250"></canvas>
+	
+<script>
+new Chart(document.getElementById("bar-chart-precisionRecallF1"), {
+    type: 'bar',
+    data: {
+labels: ["Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009","Random010","Traditional",],
+
+      datasets: [
+        {
+          backgroundColor: "#89138A",
+label: "Precision", data: [0.06833658681562634,0.21057901921954983,0.271877729546245,0.4180850474773657,0.3731801059890931,0.5566316690808167,0.5515083678525058,0.587502378732394,0.6031515187836215,0.7188949974438893,0.7900215820085092,]
+
+        }, {
+          backgroundColor: "#018080",
+label: "Recall", data: [0.8236550210037895,0.39160972241284747,0.6369505264922534,0.7033081798547233,0.5117549436218984,0.7094625165894173,0.7272511299250467,0.6800289077028245,0.7063664063504498,0.7066982453096622,0.6503414077028246,]
+
+        }, {
+          backgroundColor: "#E6BB18",
+label: "F1", data: [0.0796698249630479,0.2187027291604744,0.2668194721665322,0.4101227468400563,0.35266546749320743,0.5515735499344437,0.551558805507688,0.5645287164382752,0.5652753554122969,0.6679752602993262,0.7027419306640942,]
+
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Feature location metrics'
+      },
+       scales: {
+        	yAxes: [{
+            	ticks: {
+                	beginAtZero: true
+            	}
+        	}]
+    	}
+    }
+});
+
+new Chart(document.getElementById("bar-chart-featureIssues"), {
+    type: 'bar',
+    data: {
+labels: ["Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009","Random010","Traditional",],
+
+      datasets: [
+        {
+          backgroundColor: "#73203c",
+label: "FeaturesWithoutRetrieved", data: [3.0,13.0,7.0,4.0,10.0,4.0,3.0,4.0,4.0,3.0,4.0,]
+
+        }, {
+          backgroundColor: "#207357",
+label: "InexistentFeaturesRetrieved", data: [15,11,10,13,9,11,8,11,11,11,1,]
+
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Feature issues'
+      },
+      scales: {
+        	yAxes: [{
+            	ticks: {
+                	beginAtZero: true
+            	}
+        	}]
+    	}
+    }
+});
+</script>
+
+</body>
+</html>

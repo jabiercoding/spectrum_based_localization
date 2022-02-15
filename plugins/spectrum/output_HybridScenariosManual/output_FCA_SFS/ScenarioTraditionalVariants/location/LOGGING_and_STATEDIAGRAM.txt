@@ -1,0 +1,5 @@
+org.argouml.uml.diagram.state.ui.FigStubState Refinement
+org.argouml.uml.diagram.state.ui.FigStubState updateReferenceText() Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram nameDiagram(Object) Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement

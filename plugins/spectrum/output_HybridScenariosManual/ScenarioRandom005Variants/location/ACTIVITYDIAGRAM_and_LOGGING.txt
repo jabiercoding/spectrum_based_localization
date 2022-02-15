@@ -1,0 +1,29 @@
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.kernel.ProjectManager createDefaultDiagrams(Project) Refinement
+org.argouml.persistence.ModelMemberFilePersister registerDiagramsInternal(Project,Collection,boolean) Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel connect(Object,Object,Object,Object) Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel getCollaboration() Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel setCollaboration(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram UMLSequenceDiagram(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram postLoad() Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCreate() Refinement
+org.argouml.ui.explorer.ExplorerPopup ExplorerPopup(Object,MouseEvent) Refinement
+org.argouml.ui.explorer.ExplorerPopup initMenuCreateDiagrams() Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.uml.cognitive.critics.CrNodesOverlap Refinement
+org.argouml.uml.cognitive.critics.CrNodesOverlap predicate2(Object,Designer) Refinement
+org.argouml.uml.cognitive.critics.CrSeqInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.ProfileGoodPractices ProfileGoodPractices() Refinement
+org.argouml.uml.diagram.ArgoDiagramImpl repairFig(Fig,StringBuffer) Refinement
+org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
+org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
+org.argouml.uml.diagram.DiagramFactory createInternal(DiagramType,Object,Object,DiagramSettings) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigNodeFor(Object,int,int,Map) Refinement
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram Refinement
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram doesAccept(Object) Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewCallEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewChangeEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewSignalEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewTimeEvent Refinement
+org.argouml.uml.diagram.state.ui.FigFinalState Refinement

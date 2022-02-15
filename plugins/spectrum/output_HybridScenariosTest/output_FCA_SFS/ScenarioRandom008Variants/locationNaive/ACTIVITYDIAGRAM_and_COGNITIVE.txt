@@ -1,0 +1,2 @@
+org.argouml.uml.cognitive.critics.CrNodesOverlap
+org.argouml.uml.cognitive.critics.ProfileCodeGeneration

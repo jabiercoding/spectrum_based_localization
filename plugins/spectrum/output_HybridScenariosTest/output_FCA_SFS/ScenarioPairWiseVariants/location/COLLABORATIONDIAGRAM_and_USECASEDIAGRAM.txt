@@ -1,0 +1,29 @@
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.kernel.ProjectManager createDefaultDiagrams(Project) Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCreate() Refinement
+org.argouml.ui.explorer.ExplorerPopup initMenuCreateDiagrams() Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
+org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigEdgeFor(Object,Map) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigNodeFor(Object,int,int,Map) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram doesAccept(Object) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel Refinement
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel addEdge(Object) Refinement
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel addNode(Object) Refinement
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel vetoableChange(PropertyChangeEvent) Refinement
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram Refinement
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram setNamespace(Object) Refinement
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer Refinement
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer getFigEdgeFor(GraphModel,Layer,Object,Map) Refinement
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer getFigNodeFor(GraphModel,Layer,Object,Map) Refinement
+org.argouml.uml.ui.ActionUseCaseDiagram Refinement
+org.argouml.uml.ui.ActionUseCaseDiagram createDiagram(Object) Refinement
+org.argouml.uml.ui.ActionUseCaseDiagram createDiagram(Object,DiagramSettings) Refinement
+org.argouml.uml.ui.behavior.common_behavior.ActionNewAction actionPerformed(ActionEvent) Refinement

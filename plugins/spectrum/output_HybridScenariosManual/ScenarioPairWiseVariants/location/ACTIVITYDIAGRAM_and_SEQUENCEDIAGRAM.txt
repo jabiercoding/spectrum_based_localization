@@ -1,0 +1,4 @@
+org.argouml.moduleloader.ModuleLoader2 huntForModules() Refinement
+org.argouml.uml.cognitive.critics.CrNodesOverlap Refinement
+org.argouml.uml.cognitive.critics.CrNodesOverlap predicate2(Object,Designer) Refinement
+org.argouml.uml.cognitive.critics.CrSeqInstanceWithoutClassifier

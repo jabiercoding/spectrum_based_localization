@@ -1,0 +1,3060 @@
+org.argouml.application.ArgoVersion
+org.argouml.application.LoadModules
+org.argouml.application.Main
+org.argouml.application.PostLoad
+org.argouml.application.StartCritics
+org.argouml.application.SubsystemUtility
+org.argouml.application.api.AbstractArgoJPanel
+org.argouml.application.api.Argo
+org.argouml.application.api.CommandLineInterface
+org.argouml.application.api.GUISettingsTabInterface
+org.argouml.application.api.InitSubsystem
+org.argouml.application.api.Predicate
+org.argouml.application.events.ArgoDiagramAppearanceEvent
+org.argouml.application.events.ArgoEvent
+org.argouml.application.events.ArgoGeneratorEvent
+org.argouml.application.events.ArgoHelpEvent
+org.argouml.application.events.ArgoNotationEvent
+org.argouml.application.events.ArgoProfileEvent
+org.argouml.application.events.ArgoStatusEvent
+org.argouml.application.helpers.ApplicationVersion
+org.argouml.application.helpers.ResourceLoader
+org.argouml.application.security.ArgoAwtExceptionHandler
+org.argouml.cognitive.AbstractCognitiveTranslator
+org.argouml.cognitive.Agency
+org.argouml.cognitive.AndCM
+org.argouml.cognitive.CompositeCM
+org.argouml.cognitive.CompoundCritic
+org.argouml.cognitive.ControlMech
+org.argouml.cognitive.Critic
+org.argouml.cognitive.CurDecisionCM
+org.argouml.cognitive.Decision
+org.argouml.cognitive.DesignGoalsCM
+org.argouml.cognitive.Designer
+org.argouml.cognitive.EmptyChildGenerator Refinement
+org.argouml.cognitive.EnabledCM
+org.argouml.cognitive.Goal
+org.argouml.cognitive.Highlightable
+org.argouml.cognitive.ListSet
+org.argouml.cognitive.NotSnoozedCM
+org.argouml.cognitive.Offender
+org.argouml.cognitive.OrCM
+org.argouml.cognitive.Poster
+org.argouml.cognitive.ResolvedCritic
+org.argouml.cognitive.StandardCM
+org.argouml.cognitive.ToDoItem
+org.argouml.cognitive.ToDoList
+org.argouml.cognitive.Translator
+org.argouml.cognitive.UnresolvableException
+org.argouml.cognitive.checklist.CheckItem
+org.argouml.cognitive.checklist.CheckManager
+org.argouml.cognitive.checklist.Checklist
+org.argouml.cognitive.checklist.ui.InitCheckListUI
+org.argouml.cognitive.checklist.ui.TabChecklist
+org.argouml.cognitive.checklist.ui.TableModelChecklist
+org.argouml.cognitive.critics.SnoozeOrder
+org.argouml.cognitive.critics.Wizard
+org.argouml.cognitive.critics.ui.ActionOpenCritics
+org.argouml.cognitive.critics.ui.CriticBrowserDialog
+org.argouml.cognitive.critics.ui.TableCritics
+org.argouml.cognitive.critics.ui.TableModelCritics
+org.argouml.cognitive.ui.AbstractGoList
+org.argouml.cognitive.ui.ActionAutoCritique
+org.argouml.cognitive.ui.ActionGoToCritique
+org.argouml.cognitive.ui.ActionNewToDoItem
+org.argouml.cognitive.ui.ActionOpenDecisions
+org.argouml.cognitive.ui.ActionOpenGoals
+org.argouml.cognitive.ui.ActionResolve
+org.argouml.cognitive.ui.ActionSnooze
+org.argouml.cognitive.ui.AddToDoItemDialog
+org.argouml.cognitive.ui.DesignIssuesDialog
+org.argouml.cognitive.ui.DismissToDoItemDialog
+org.argouml.cognitive.ui.GoListToDecisionsToItems
+org.argouml.cognitive.ui.GoListToGoalsToItems
+org.argouml.cognitive.ui.GoListToOffenderToItem
+org.argouml.cognitive.ui.GoListToPosterToItem
+org.argouml.cognitive.ui.GoListToPriorityToItem
+org.argouml.cognitive.ui.GoListToTypeToItem
+org.argouml.cognitive.ui.GoalsDialog
+org.argouml.cognitive.ui.InitCognitiveUI
+org.argouml.cognitive.ui.KnowledgeTypeNode
+org.argouml.cognitive.ui.PriorityNode
+org.argouml.cognitive.ui.TabToDo
+org.argouml.cognitive.ui.ToDoByDecision
+org.argouml.cognitive.ui.ToDoByGoal
+org.argouml.cognitive.ui.ToDoByOffender
+org.argouml.cognitive.ui.ToDoByPoster
+org.argouml.cognitive.ui.ToDoByPriority
+org.argouml.cognitive.ui.ToDoByType
+org.argouml.cognitive.ui.ToDoItemAction
+org.argouml.cognitive.ui.ToDoPane
+org.argouml.cognitive.ui.ToDoPerspective
+org.argouml.cognitive.ui.ToDoTreeRenderer
+org.argouml.cognitive.ui.WizDescription
+org.argouml.cognitive.ui.WizStep
+org.argouml.configuration.Configuration
+org.argouml.configuration.IConfigurationFactory
+org.argouml.gefext.ArgoFigCircle
+org.argouml.gefext.ArgoFigInk
+org.argouml.gefext.ArgoFigLine
+org.argouml.gefext.ArgoFigPoly
+org.argouml.gefext.ArgoFigRRect
+org.argouml.gefext.ArgoFigRect
+org.argouml.gefext.ArgoFigSpline
+org.argouml.gefext.ArgoModeCreateFigCircle
+org.argouml.gefext.ArgoModeCreateFigInk
+org.argouml.gefext.ArgoModeCreateFigLine
+org.argouml.gefext.ArgoModeCreateFigPoly
+org.argouml.gefext.ArgoModeCreateFigRRect
+org.argouml.gefext.ArgoModeCreateFigRect
+org.argouml.gefext.ArgoModeCreateFigSpline
+org.argouml.gefext.DeferredBufferedImage
+org.argouml.i18n.Translator
+org.argouml.kernel.AbstractCommand
+org.argouml.kernel.AbstractProjectMember
+org.argouml.kernel.Command
+org.argouml.kernel.DefaultUndoManager
+org.argouml.kernel.DelayedChangeNotify
+org.argouml.kernel.DelayedVChangeListener
+org.argouml.kernel.Interaction Refinement
+org.argouml.kernel.InteractionStack Refinement
+org.argouml.kernel.MemberList
+org.argouml.kernel.NamePCL Refinement
+org.argouml.kernel.NonUndoableCommand
+org.argouml.kernel.ProfileConfiguration
+org.argouml.kernel.Project
+org.argouml.kernel.RedoStack Refinement
+org.argouml.kernel.UmlModelMutator Refinement
+org.argouml.kernel.UndoManager
+org.argouml.kernel.UndoStack Refinement
+org.argouml.language.ui.LanguageComboBox
+org.argouml.model.AbstractActivityGraphsHelperDecorator
+org.argouml.model.AbstractCollaborationsHelperDecorator
+org.argouml.model.AbstractCommonBehaviorHelperDecorator
+org.argouml.model.AbstractCoreHelperDecorator
+org.argouml.model.AbstractDataTypesHelperDecorator
+org.argouml.model.AbstractExtensionMechanismsHelperDecorator
+org.argouml.model.AbstractModelEventPump
+org.argouml.model.AbstractModelFactory
+org.argouml.model.AbstractStateMachinesHelperDecorator
+org.argouml.model.AbstractUmlHelperDecorator
+org.argouml.model.AbstractUseCasesHelperDecorator
+org.argouml.model.ActivityDiagram
+org.argouml.model.ActivityGraphsFactory
+org.argouml.model.ActivityGraphsHelper
+org.argouml.model.AddAssociationEvent
+org.argouml.model.AggregationKind
+org.argouml.model.AssociationChangeEvent
+org.argouml.model.AttributeChangeEvent
+org.argouml.model.ChangeableKind
+org.argouml.model.ClassDiagram
+org.argouml.model.CollaborationDiagram
+org.argouml.model.CollaborationsFactory
+org.argouml.model.CollaborationsHelper
+org.argouml.model.CommonBehaviorFactory
+org.argouml.model.CommonBehaviorHelper
+org.argouml.model.ConcurrencyKind
+org.argouml.model.CopyHelper
+org.argouml.model.CoreFactory
+org.argouml.model.CoreHelper
+org.argouml.model.DataTypesFactory
+org.argouml.model.DataTypesHelper
+org.argouml.model.DeleteInstanceEvent
+org.argouml.model.DeploymentDiagram
+org.argouml.model.DiDiagram
+org.argouml.model.DiElement
+org.argouml.model.DiagramInterchangeFactory
+org.argouml.model.DiagramInterchangeModel
+org.argouml.model.DirectionKind
+org.argouml.model.DummyModelCommand
+org.argouml.model.DummyModelMemento
+org.argouml.model.ExtensionMechanismsFactory
+org.argouml.model.ExtensionMechanismsHelper
+org.argouml.model.Facade
+org.argouml.model.Factory
+org.argouml.model.IllegalModelElementConnectionException
+org.argouml.model.InstanceChangeEvent
+org.argouml.model.InvalidElementException
+org.argouml.model.MetaTypes
+org.argouml.model.Model
+org.argouml.model.NotImplementedException
+org.argouml.model.OrderingKind
+org.argouml.model.PseudostateKind
+org.argouml.model.RemoveAssociationEvent
+org.argouml.model.ScopeKind
+org.argouml.model.SequenceDiagram
+org.argouml.model.StateDiagram
+org.argouml.model.StateMachinesFactory
+org.argouml.model.StateMachinesHelper
+org.argouml.model.UUIDManager
+org.argouml.model.UmlChangeEvent
+org.argouml.model.UmlException
+org.argouml.model.UmlFactory
+org.argouml.model.UmlHelper
+org.argouml.model.UseCaseDiagram
+org.argouml.model.UseCasesFactory
+org.argouml.model.UseCasesHelper
+org.argouml.model.VisibilityKind
+org.argouml.model.XmiException
+org.argouml.model.XmiExtensionWriter
+org.argouml.model.XmiReader
+org.argouml.model.XmiReferenceException
+org.argouml.model.XmiWriter
+org.argouml.model.euml.ActivityGraphsFactoryEUMLlImpl
+org.argouml.model.euml.ActivityGraphsHelperEUMLImpl
+org.argouml.model.euml.AggregationKindEUMLImpl
+org.argouml.model.euml.ChangeCommand
+org.argouml.model.euml.ChangeableKindEUMLImpl
+org.argouml.model.euml.CollaborationsFactoryEUMLImpl
+org.argouml.model.euml.CollaborationsHelperEUMLImpl
+org.argouml.model.euml.CommandStackImpl
+org.argouml.model.euml.CommonBehaviorFactoryEUMLImpl
+org.argouml.model.euml.CommonBehaviorHelperEUMLImpl
+org.argouml.model.euml.ConcurrencyKindEUMLImpl
+org.argouml.model.euml.CopyHelperEUMLImpl
+org.argouml.model.euml.CoreFactoryEUMLImpl
+org.argouml.model.euml.CoreHelperEUMLImpl
+org.argouml.model.euml.DataTypesFactoryEUMLImpl
+org.argouml.model.euml.DataTypesHelperEUMLImpl
+org.argouml.model.euml.DirectionKindEUMLImpl
+org.argouml.model.euml.EUMLModelImplementation
+org.argouml.model.euml.EventAndListeners
+org.argouml.model.euml.ExtensionMechanismsFactoryEUMLImpl
+org.argouml.model.euml.ExtensionMechanismsHelperEUMLImpl
+org.argouml.model.euml.FacadeEUMLImpl
+org.argouml.model.euml.MetaTypesEUMLImpl
+org.argouml.model.euml.ModelEventPumpEUMLImpl
+org.argouml.model.euml.ModelManagementFactoryEUMLImpl
+org.argouml.model.euml.ModelManagementHelperEUMLImpl
+org.argouml.model.euml.NotYetImplementedException
+org.argouml.model.euml.OrderingKindEUMLImpl
+org.argouml.model.euml.PseudostateKindEUMLImpl
+org.argouml.model.euml.RootContainerAdapter
+org.argouml.model.euml.RunnableClass
+org.argouml.model.euml.ScopeKindEUMLImpl
+org.argouml.model.euml.StateMachinesFactoryEUMLImpl
+org.argouml.model.euml.StateMachinesHelperEUMLImpl
+org.argouml.model.euml.UMLUtil
+org.argouml.model.euml.UmlFactoryEUMLImpl
+org.argouml.model.euml.UmlHelperEUMLImpl
+org.argouml.model.euml.UseCasesFactoryEUMLImpl
+org.argouml.model.euml.UseCasesHelperEUMLImpl
+org.argouml.model.euml.VisibilityKindEUMLImpl
+org.argouml.model.euml.XmiReaderEUMLImpl
+org.argouml.model.euml.XmiWriterEUMLImpl
+org.argouml.model.mdr.AbstractUmlModelFactoryMDR
+org.argouml.model.mdr.ActivityGraphsFactoryMDRImpl
+org.argouml.model.mdr.ActivityGraphsHelperMDRImpl
+org.argouml.model.mdr.CollaborationsFactoryMDRImpl
+org.argouml.model.mdr.CollaborationsHelperMDRImpl
+org.argouml.model.mdr.CollectionHelper
+org.argouml.model.mdr.CommonBehaviorFactoryMDRImpl
+org.argouml.model.mdr.CommonBehaviorHelperMDRImpl
+org.argouml.model.mdr.CopyHelper
+org.argouml.model.mdr.CoreFactoryMDRImpl CoreFactoryMDRImpl(MDRModelImplementation)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAbstraction(String,Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociation(Classifier,boolean,AggregationKind,Classifier,boolean,AggregationKind)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociation(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociation(Object,Object,Object,Object,Boolean)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociation(Object,Object,Object,Object,boolean)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociation(Object,boolean,Object,boolean,String)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociationClass(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociationEnd(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAssociationEnd(Object,String,Object,Object,Object,boolean,Object,Object,Object,Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAttribute()
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAttribute(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAttribute2(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildAttribute2(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildBinding(Object,Object,List)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildClass()
+org.argouml.model.mdr.CoreFactoryMDRImpl buildClass(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildClass(String)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildClass(String,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildComment(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildConstraint(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildConstraint(String,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildDataType(String,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildDependency(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildElementResidence(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildEnumeration(String,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildEnumerationLiteral(String,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildGeneralization(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildInterface()
+org.argouml.model.mdr.CoreFactoryMDRImpl buildInterface(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildInterface(String)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildInterface(String,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildMethod(String)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildOperation(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildOperation2(Object,Object,String)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildPackageAccess(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildPackageImport(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildParameter(Classifier,javax.jmi.reflect.RefObject)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildParameter(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildPermissionInternal(ModelElement,ModelElement)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildRealization(Object,Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildTemplateArgument(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl buildUsage(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl compareMultiplicity(int,int)
+org.argouml.model.mdr.CoreFactoryMDRImpl copyClass(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl copyDataType(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl copyEnumeration(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl copyFeature(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl copyInterface(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl createAbstraction()
+org.argouml.model.mdr.CoreFactoryMDRImpl createArtifact()
+org.argouml.model.mdr.CoreFactoryMDRImpl createAssociation()
+org.argouml.model.mdr.CoreFactoryMDRImpl createAssociation(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl createAssociationClass()
+org.argouml.model.mdr.CoreFactoryMDRImpl createAssociationEnd()
+org.argouml.model.mdr.CoreFactoryMDRImpl createAttribute()
+org.argouml.model.mdr.CoreFactoryMDRImpl createBinding()
+org.argouml.model.mdr.CoreFactoryMDRImpl createClass()
+org.argouml.model.mdr.CoreFactoryMDRImpl createClass(org.omg.uml.UmlPackage)
+org.argouml.model.mdr.CoreFactoryMDRImpl createComment()
+org.argouml.model.mdr.CoreFactoryMDRImpl createComponent()
+org.argouml.model.mdr.CoreFactoryMDRImpl createConstraint()
+org.argouml.model.mdr.CoreFactoryMDRImpl createDataType()
+org.argouml.model.mdr.CoreFactoryMDRImpl createDependency()
+org.argouml.model.mdr.CoreFactoryMDRImpl createElementResidence()
+org.argouml.model.mdr.CoreFactoryMDRImpl createEnumeration()
+org.argouml.model.mdr.CoreFactoryMDRImpl createEnumerationLiteral()
+org.argouml.model.mdr.CoreFactoryMDRImpl createFlow()
+org.argouml.model.mdr.CoreFactoryMDRImpl createGeneralization()
+org.argouml.model.mdr.CoreFactoryMDRImpl createGeneralization(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl createInterface()
+org.argouml.model.mdr.CoreFactoryMDRImpl createMethod()
+org.argouml.model.mdr.CoreFactoryMDRImpl createNode()
+org.argouml.model.mdr.CoreFactoryMDRImpl createOperation()
+org.argouml.model.mdr.CoreFactoryMDRImpl createPackageImport()
+org.argouml.model.mdr.CoreFactoryMDRImpl createParameter()
+org.argouml.model.mdr.CoreFactoryMDRImpl createPermission()
+org.argouml.model.mdr.CoreFactoryMDRImpl createPrimitiveType()
+org.argouml.model.mdr.CoreFactoryMDRImpl createTemplateArgument()
+org.argouml.model.mdr.CoreFactoryMDRImpl createTemplateParameter()
+org.argouml.model.mdr.CoreFactoryMDRImpl createUsage()
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteAbstraction(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteArtifact(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteAssociation(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteAssociationClass(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteAssociationEnd(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteAttribute(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteBehavioralFeature(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteBinding(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteClass(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteClassifier(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteComment(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteComponent(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteConstraint(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteDataType(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteDependency(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteElement(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteElementResidence(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteEnumeration(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteEnumerationLiteral(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteFeature(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteFlow(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteGeneralizableElement(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteGeneralization(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteInterface(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteMethod(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteModelElement(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteNamespace(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteNode(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteOperation(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteParameter(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deletePermission(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deletePresentationElement(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deletePrimitive(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteProgrammingLanguageDataType(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteRelationship(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteStructuralFeature(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteTemplateArgument(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteTemplateParameter(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl deleteUsage(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyAttribute(Attribute,Attribute)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyBehavioralFeature(BehavioralFeature,BehavioralFeature)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyClass(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyClassifier(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyDataType(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyElement(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyFeature(Feature,Feature)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyGeneralizableElement(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyInterface(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyMethod(Method,Method)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyModelElement(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyNamespace(Object,Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyOperation(Operation,Operation)
+org.argouml.model.mdr.CoreFactoryMDRImpl doCopyReception(Reception,Reception)
+org.argouml.model.mdr.CoreFactoryMDRImpl getCorePackage()
+org.argouml.model.mdr.CoreFactoryMDRImpl getExtent(Object)
+org.argouml.model.mdr.CoreFactoryMDRImpl getMaxUpper(Multiplicity)
+org.argouml.model.mdr.CoreFactoryMDRImpl getMultiplicity11()
+org.argouml.model.mdr.CoreFactoryMDRImpl initClass(UmlClass)
+org.argouml.model.mdr.CoreHelperMDRImpl CoreHelperMDRImpl(MDRModelImplementation)
+org.argouml.model.mdr.CoreHelperMDRImpl addAllStereotypes(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl addAnnotatedElement(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addClient(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addClientDependency(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addComment(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addConnection(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addConnection(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addConstraint(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addDeploymentLocation(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addElementResidence(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addFeature(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addFeature(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addLink(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addLiteral(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addMethod(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addOwnedElement(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addParameter(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addParameter(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addQualifier(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addRaisedSignal(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addSourceFlow(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addStereotype(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addSupplier(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addSupplierDependency(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addTargetFlow(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addTemplateArgument(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addTemplateArgument(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addTemplateParameter(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl addTemplateParameter(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl clearStereotypes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl createCommand(StringSetter,String,String,String)
+org.argouml.model.mdr.CoreHelperMDRImpl equalsAggregationKind(Object,String)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllAttributes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllBehavioralFeatures(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllClasses(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllClassifiers(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllComponents(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllDataTypes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllInterfaces(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllMetaDatatypeNames()
+org.argouml.model.mdr.CoreHelperMDRImpl getAllMetatypeNames()
+org.argouml.model.mdr.CoreHelperMDRImpl getAllNodes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllParents(Collection<GeneralizableElement>,GeneralizableElement)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllParents(GeneralizableElement)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllPossibleNamespaces(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllRealizedInterfaces(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllSupertypes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllVisibleElements(Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl getAllVisibleElements(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAssociateEndsInh(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAssociatedClassifiers(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAssociationEnd(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAssociations(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAssociations(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getAttributesInh(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getBehavioralFeatures(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getBody(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getChildren(Collection<GeneralizableElement>,Generalization,Collection<Generalization>)
+org.argouml.model.mdr.CoreHelperMDRImpl getChildren(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getDependencies(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getDestination(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getElementResidence(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getExtendedClassifiers(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getExtendingClassifiers(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getExtendingElements(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getFirstItemOrNull(Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl getFirstSharedNamespace(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getFlows(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getFullName(ModelElement)
+org.argouml.model.mdr.CoreHelperMDRImpl getGeneralization(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getOperationsInh(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getPackageImport(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getPackageImports(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getParents(GeneralizableElement)
+org.argouml.model.mdr.CoreHelperMDRImpl getParents(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getPath(Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl getRealizedInterfaces(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getRelationships(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getReturnParameters(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getSource(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getSpecification(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getSubtypes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl getSupertypes(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl hasCompositeEnd(Object)
+org.argouml.model.mdr.CoreHelperMDRImpl hasImportStereotype(Permission)
+org.argouml.model.mdr.CoreHelperMDRImpl internalGetAllRealizedInterfaces(Object,Collection,Set)
+org.argouml.model.mdr.CoreHelperMDRImpl isProfilePackage(Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isSubType(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl isValidNamespace(Collaboration,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isValidNamespace(GeneralizableElement,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isValidNamespace(Generalization,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isValidNamespace(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl isValidNamespace(StructuralFeature,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isValidNamespace(UmlAssociation,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isVisible(ModelElement,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl isVisiblyOwned(ModelElement,GeneralizableElement,Set<ModelElement>)
+org.argouml.model.mdr.CoreHelperMDRImpl isVisiblyOwned(ModelElement,Namespace)
+org.argouml.model.mdr.CoreHelperMDRImpl removeAnnotatedElement(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeClientDependency(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeConnection(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeConstraint(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeDeploymentLocation(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeElementResidence(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeFeature(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeLiteral(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeOwnedElement(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeParameter(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeQualifier(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeSourceFlow(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeStereotype(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeSupplierDependency(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeTargetFlow(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeTemplateArgument(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl removeTemplateParameter(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setAbstract(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setActive(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setAggregation(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setAnnotatedElements(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setAssociation(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setAttributes(Object,List)
+org.argouml.model.mdr.CoreHelperMDRImpl setBody(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setBody(Object,String)
+org.argouml.model.mdr.CoreHelperMDRImpl setChangeability(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setChild(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setConcurrency(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setConnections(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setContainer(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setDefaultElement(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setDefaultValue(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setDiscriminator(Object,String)
+org.argouml.model.mdr.CoreHelperMDRImpl setEnumerationLiterals(Object,List)
+org.argouml.model.mdr.CoreHelperMDRImpl setFeature(Object,int,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setFeatures(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setInitialValue(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setKind(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setLeaf(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setModelElementContainer(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setMultiplicity(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setName(Object,String)
+org.argouml.model.mdr.CoreHelperMDRImpl setNamespace(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setNavigable(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setOperations(Object,List)
+org.argouml.model.mdr.CoreHelperMDRImpl setOrdering(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setOwner(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setParameter(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setParameters(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setParent(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setPowertype(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setQualifiers(Object,List)
+org.argouml.model.mdr.CoreHelperMDRImpl setQuery(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setRaisedSignals(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setReadOnly(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setResident(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setResidents(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setRoot(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setSources(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setSpecification(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setSpecification(Object,String)
+org.argouml.model.mdr.CoreHelperMDRImpl setSpecification(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setSpecifications(Object,Collection)
+org.argouml.model.mdr.CoreHelperMDRImpl setStatic(Object,boolean)
+org.argouml.model.mdr.CoreHelperMDRImpl setTaggedValue(Object,String,String)
+org.argouml.model.mdr.CoreHelperMDRImpl setTargetScope(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setType(Object,Object)
+org.argouml.model.mdr.CoreHelperMDRImpl setVisibility(Object,Object)
+org.argouml.model.mdr.DataTypesFactoryMDRImpl
+org.argouml.model.mdr.DataTypesHelperMDRImpl
+org.argouml.model.mdr.ExtensionMechanismsFactoryMDRImpl
+org.argouml.model.mdr.ExtensionMechanismsHelperMDRImpl
+org.argouml.model.mdr.FacadeMDRImpl FacadeMDRImpl(MDRModelImplementation)
+org.argouml.model.mdr.FacadeMDRImpl equalsPseudostateKind(Object,Object)
+org.argouml.model.mdr.FacadeMDRImpl getAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl getActionSequence(Object)
+org.argouml.model.mdr.FacadeMDRImpl getActions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getActivatedMessages(Object)
+org.argouml.model.mdr.FacadeMDRImpl getActivator(Object)
+org.argouml.model.mdr.FacadeMDRImpl getActivityGraph(Object)
+org.argouml.model.mdr.FacadeMDRImpl getActualArguments(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAddition(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAggregation(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAlias(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAnnotatedElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getArguments(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAssociatedClasses(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAssociation(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAssociationEnd(Object,Object)
+org.argouml.model.mdr.FacadeMDRImpl getAssociationEnds(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAssociationRoles(Object)
+org.argouml.model.mdr.FacadeMDRImpl getAttributes(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBase(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBaseClasses(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBases(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBehavioralFeature(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBehaviors(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBinding(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBody(Object)
+org.argouml.model.mdr.FacadeMDRImpl getBound(Object)
+org.argouml.model.mdr.FacadeMDRImpl getChangeExpression(Object)
+org.argouml.model.mdr.FacadeMDRImpl getChangeability(Object)
+org.argouml.model.mdr.FacadeMDRImpl getChildren(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClassNull(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClassifier(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClassifierRoles(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClassifiers(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClassifiersInState(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClientDependencies(Object)
+org.argouml.model.mdr.FacadeMDRImpl getClients(Object)
+org.argouml.model.mdr.FacadeMDRImpl getCollaborations(Object)
+org.argouml.model.mdr.FacadeMDRImpl getComments(Object)
+org.argouml.model.mdr.FacadeMDRImpl getCommunicationConnection(Object)
+org.argouml.model.mdr.FacadeMDRImpl getCommunicationLink(Object)
+org.argouml.model.mdr.FacadeMDRImpl getComponentInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl getConcurrency(Object)
+org.argouml.model.mdr.FacadeMDRImpl getCondition(Object)
+org.argouml.model.mdr.FacadeMDRImpl getConnections(Object)
+org.argouml.model.mdr.FacadeMDRImpl getConstrainedElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getConstrainingElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getConstraints(Object)
+org.argouml.model.mdr.FacadeMDRImpl getContainer(Object)
+org.argouml.model.mdr.FacadeMDRImpl getContents(Object)
+org.argouml.model.mdr.FacadeMDRImpl getContext(Object)
+org.argouml.model.mdr.FacadeMDRImpl getContexts(Object)
+org.argouml.model.mdr.FacadeMDRImpl getCreateActions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDataValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDefaultElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDefaultValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDeferrableEvents(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDeployedComponents(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDeploymentLocations(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDiscriminator(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDispatchAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl getDoActivity(Object)
+org.argouml.model.mdr.FacadeMDRImpl getEffect(Object)
+org.argouml.model.mdr.FacadeMDRImpl getElementImports(Object)
+org.argouml.model.mdr.FacadeMDRImpl getElementImports2(Object)
+org.argouml.model.mdr.FacadeMDRImpl getElementResidences(Object)
+org.argouml.model.mdr.FacadeMDRImpl getEntry(Object)
+org.argouml.model.mdr.FacadeMDRImpl getEnumeration(Object)
+org.argouml.model.mdr.FacadeMDRImpl getEnumerationLiterals(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExit(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExpression(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExtendedElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExtenders(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExtends(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExtension(Object)
+org.argouml.model.mdr.FacadeMDRImpl getExtensionPoint(Object,int)
+org.argouml.model.mdr.FacadeMDRImpl getExtensionPoints(Object)
+org.argouml.model.mdr.FacadeMDRImpl getFeatures(Object)
+org.argouml.model.mdr.FacadeMDRImpl getGeneral(Object)
+org.argouml.model.mdr.FacadeMDRImpl getGeneralization(Object,Object)
+org.argouml.model.mdr.FacadeMDRImpl getGeneralizations(Object)
+org.argouml.model.mdr.FacadeMDRImpl getGuard(Object)
+org.argouml.model.mdr.FacadeMDRImpl getIcon(Object)
+org.argouml.model.mdr.FacadeMDRImpl getImportedElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl getImportedElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInStates(Object)
+org.argouml.model.mdr.FacadeMDRImpl getIncluders(Object)
+org.argouml.model.mdr.FacadeMDRImpl getIncludes(Object)
+org.argouml.model.mdr.FacadeMDRImpl getIncomings(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInitialValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInstances(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInteraction(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInteractions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getInternalTransitions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getKind(Object)
+org.argouml.model.mdr.FacadeMDRImpl getLink(Object)
+org.argouml.model.mdr.FacadeMDRImpl getLinkEnds(Object)
+org.argouml.model.mdr.FacadeMDRImpl getLinks(Object)
+org.argouml.model.mdr.FacadeMDRImpl getLocation(Object)
+org.argouml.model.mdr.FacadeMDRImpl getLower(Object)
+org.argouml.model.mdr.FacadeMDRImpl getMessages(Object)
+org.argouml.model.mdr.FacadeMDRImpl getMetaClasses()
+org.argouml.model.mdr.FacadeMDRImpl getMetatypeNames()
+org.argouml.model.mdr.FacadeMDRImpl getMethods(Object)
+org.argouml.model.mdr.FacadeMDRImpl getModel(Object)
+org.argouml.model.mdr.FacadeMDRImpl getModelElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl getModelElementAssociated(Object)
+org.argouml.model.mdr.FacadeMDRImpl getModelElementAssociated(Object,boolean)
+org.argouml.model.mdr.FacadeMDRImpl getModelElementContainer(Object)
+org.argouml.model.mdr.FacadeMDRImpl getModelElementContents(Object)
+org.argouml.model.mdr.FacadeMDRImpl getMofClass(String)
+org.argouml.model.mdr.FacadeMDRImpl getMultiplicity(Object)
+org.argouml.model.mdr.FacadeMDRImpl getName(Object)
+org.argouml.model.mdr.FacadeMDRImpl getNamespace(Object)
+org.argouml.model.mdr.FacadeMDRImpl getNextEnd(Object)
+org.argouml.model.mdr.FacadeMDRImpl getNodeInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl getObjectFlowStates(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOccurrences(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOperation(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOperations(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOperationsAndReceptions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOrdering(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOtherAssociationEnds(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOtherLinkEnds(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOutgoings(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOwnedElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getOwner(Object)
+org.argouml.model.mdr.FacadeMDRImpl getPackage(Object)
+org.argouml.model.mdr.FacadeMDRImpl getParameter(Object)
+org.argouml.model.mdr.FacadeMDRImpl getParameter(Object,int)
+org.argouml.model.mdr.FacadeMDRImpl getParameters(Object)
+org.argouml.model.mdr.FacadeMDRImpl getParametersList(Object)
+org.argouml.model.mdr.FacadeMDRImpl getPartitions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getPowertype(Object)
+org.argouml.model.mdr.FacadeMDRImpl getPowertypeRanges(Object)
+org.argouml.model.mdr.FacadeMDRImpl getPredecessors(Object)
+org.argouml.model.mdr.FacadeMDRImpl getProxy(String,RefPackage)
+org.argouml.model.mdr.FacadeMDRImpl getQualifiers(Object)
+org.argouml.model.mdr.FacadeMDRImpl getRaisedSignals(Object)
+org.argouml.model.mdr.FacadeMDRImpl getReceivedMessages(Object)
+org.argouml.model.mdr.FacadeMDRImpl getReceivedStimuli(Object)
+org.argouml.model.mdr.FacadeMDRImpl getReceiver(Object)
+org.argouml.model.mdr.FacadeMDRImpl getReceptions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getRecurrence(Object)
+org.argouml.model.mdr.FacadeMDRImpl getReferenceOrAttribute(RefFeatured,Object,Collection<RefBaseObject>,boolean)
+org.argouml.model.mdr.FacadeMDRImpl getReferenceState(Object)
+org.argouml.model.mdr.FacadeMDRImpl getReferenceValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl getRepresentedClassifier(Object)
+org.argouml.model.mdr.FacadeMDRImpl getRepresentedOperation(Object)
+org.argouml.model.mdr.FacadeMDRImpl getResident(Object)
+org.argouml.model.mdr.FacadeMDRImpl getResidentElements(Object)
+org.argouml.model.mdr.FacadeMDRImpl getResidents(Object)
+org.argouml.model.mdr.FacadeMDRImpl getRoot(Object)
+org.argouml.model.mdr.FacadeMDRImpl getRootElements()
+org.argouml.model.mdr.FacadeMDRImpl getScript(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSender(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSentMessages(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSentStimuli(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSignal(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSource(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSourceFlows(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSources(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSpecializations(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSpecific(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSpecification(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSpecifications(Object)
+org.argouml.model.mdr.FacadeMDRImpl getState(Object)
+org.argouml.model.mdr.FacadeMDRImpl getStateMachine(Object)
+org.argouml.model.mdr.FacadeMDRImpl getStates(Object)
+org.argouml.model.mdr.FacadeMDRImpl getStereotypes(Object)
+org.argouml.model.mdr.FacadeMDRImpl getStimuli(Object)
+org.argouml.model.mdr.FacadeMDRImpl getStructuralFeatures(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSubmachine(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSubmachineStates(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSubvertices(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSuccessors(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSupplierDependencies(Object)
+org.argouml.model.mdr.FacadeMDRImpl getSuppliers(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTag(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTagDefinition(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTagDefinitions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTagOfTag(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTaggedValue(Object,String)
+org.argouml.model.mdr.FacadeMDRImpl getTaggedValueValue(Object,String)
+org.argouml.model.mdr.FacadeMDRImpl getTaggedValues(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTaggedValuesCollection(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTarget(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTargetFlows(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTargetScope(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTemplate(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTemplateParameters(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTipString(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTop(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTransition(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTransitions(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTrigger(Object)
+org.argouml.model.mdr.FacadeMDRImpl getType(Object)
+org.argouml.model.mdr.FacadeMDRImpl getTypedValues(Object)
+org.argouml.model.mdr.FacadeMDRImpl getUMLClassName(Object)
+org.argouml.model.mdr.FacadeMDRImpl getUUID(Object)
+org.argouml.model.mdr.FacadeMDRImpl getUmlVersion()
+org.argouml.model.mdr.FacadeMDRImpl getUpper(Object)
+org.argouml.model.mdr.FacadeMDRImpl getUseCase(Object)
+org.argouml.model.mdr.FacadeMDRImpl getValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl getValueOfTag(Object)
+org.argouml.model.mdr.FacadeMDRImpl getVisibility(Object)
+org.argouml.model.mdr.FacadeMDRImpl getWhen(Object)
+org.argouml.model.mdr.FacadeMDRImpl hasReturnParameterDirectionKind(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgument(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgumentBoolean(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgumentCollection(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgumentInt(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgumentList(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgumentObject(Object)
+org.argouml.model.mdr.FacadeMDRImpl illegalArgumentString(Object)
+org.argouml.model.mdr.FacadeMDRImpl isA(String,Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAbstraction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAActionExpression(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAActionSequence(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAActionState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAActivityGraph(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAActor(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAggregationKind(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAArgument(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAArtifact(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAssociation(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAssociationClass(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAssociationEnd(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAssociationEndRole(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAssociationRole(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAttribute(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAAttributeLink(Object)
+org.argouml.model.mdr.FacadeMDRImpl isABehavioralFeature(Object)
+org.argouml.model.mdr.FacadeMDRImpl isABinding(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACallAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACallEvent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACallState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAChangeEvent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAClass(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAClassifier(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAClassifierInState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAClassifierRole(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACollaboration(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACollaborationInstanceSet(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAComment(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAComponent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAComponentInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACompositeState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAConcurrentRegion(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAConstraint(Object)
+org.argouml.model.mdr.FacadeMDRImpl isACreateAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isADataType(Object)
+org.argouml.model.mdr.FacadeMDRImpl isADataValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl isADependency(Object)
+org.argouml.model.mdr.FacadeMDRImpl isADestroyAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAElementImport(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAElementResidence(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAEnumeration(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAEnumerationLiteral(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAEvent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAException(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAExpression(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAExtend(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAExtensionPoint(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAFeature(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAFinalState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAFlow(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAGeneralizableElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAGeneralization(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAGuard(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAInclude(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAInteraction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAInteractionInstanceSet(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAInterface(Object)
+org.argouml.model.mdr.FacadeMDRImpl isALink(Object)
+org.argouml.model.mdr.FacadeMDRImpl isALinkEnd(Object)
+org.argouml.model.mdr.FacadeMDRImpl isALinkObject(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAMessage(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAMethod(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAModel(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAModelElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAMultiplicity(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAMultiplicityRange(Object)
+org.argouml.model.mdr.FacadeMDRImpl isANamedElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl isANamespace(Object)
+org.argouml.model.mdr.FacadeMDRImpl isANaryAssociation(Object)
+org.argouml.model.mdr.FacadeMDRImpl isANode(Object)
+org.argouml.model.mdr.FacadeMDRImpl isANodeInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAObject(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAObjectFlowState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAOperation(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAPackage(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAPackageImport(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAParameter(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAPartition(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAPrimitiveType(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAPseudostate(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAPseudostateKind(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAReception(Object)
+org.argouml.model.mdr.FacadeMDRImpl isARelationship(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAReturnAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASendAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASignal(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASignalEvent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASimpleState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAStateMachine(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAStateVertex(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAStereotype(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAStimulus(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAStructuralFeature(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAStubState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASubactivityState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASubmachineState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASubsystem(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASubsystemInstance(Object)
+org.argouml.model.mdr.FacadeMDRImpl isASynchState(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATagDefinition(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATaggedValue(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATemplateArgument(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATemplateParameter(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATerminateAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATimeEvent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isATransition(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAUMLElement(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAUninterpretedAction(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAUsage(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAUseCase(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAVisibilityKind(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAbstract(Object)
+org.argouml.model.mdr.FacadeMDRImpl isActive(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAggregate(Object)
+org.argouml.model.mdr.FacadeMDRImpl isAsynchronous(Object)
+org.argouml.model.mdr.FacadeMDRImpl isComposite(Object)
+org.argouml.model.mdr.FacadeMDRImpl isConcurrent(Object)
+org.argouml.model.mdr.FacadeMDRImpl isConstructor(Object)
+org.argouml.model.mdr.FacadeMDRImpl isFrozen(Object)
+org.argouml.model.mdr.FacadeMDRImpl isInitialized(Object)
+org.argouml.model.mdr.FacadeMDRImpl isInternal(Object)
+org.argouml.model.mdr.FacadeMDRImpl isLeaf(Object)
+org.argouml.model.mdr.FacadeMDRImpl isNavigable(Object)
+org.argouml.model.mdr.FacadeMDRImpl isPackage(Object)
+org.argouml.model.mdr.FacadeMDRImpl isPrimaryObject(Object)
+org.argouml.model.mdr.FacadeMDRImpl isPrivate(Object)
+org.argouml.model.mdr.FacadeMDRImpl isProtected(Object)
+org.argouml.model.mdr.FacadeMDRImpl isPublic(Object)
+org.argouml.model.mdr.FacadeMDRImpl isQuery(Object)
+org.argouml.model.mdr.FacadeMDRImpl isReadOnly(Object)
+org.argouml.model.mdr.FacadeMDRImpl isRealize(Object)
+org.argouml.model.mdr.FacadeMDRImpl isReturn(Object)
+org.argouml.model.mdr.FacadeMDRImpl isRoot(Object)
+org.argouml.model.mdr.FacadeMDRImpl isSingleton(Object)
+org.argouml.model.mdr.FacadeMDRImpl isSpecification(Object)
+org.argouml.model.mdr.FacadeMDRImpl isStatic(Object)
+org.argouml.model.mdr.FacadeMDRImpl isStereotype(Object,String)
+org.argouml.model.mdr.FacadeMDRImpl isSynch(Object)
+org.argouml.model.mdr.FacadeMDRImpl isTop(Object)
+org.argouml.model.mdr.FacadeMDRImpl isType(Object)
+org.argouml.model.mdr.FacadeMDRImpl isUtility(Object)
+org.argouml.model.mdr.FacadeMDRImpl lookup(Namespace,String)
+org.argouml.model.mdr.FacadeMDRImpl lookupIn(Object,String)
+org.argouml.model.mdr.FacadeMDRImpl toString(Object)
+org.argouml.model.mdr.KindsMDRImpl
+org.argouml.model.mdr.MDRModelImplementation MDRModelImplementation()
+org.argouml.model.mdr.MDRModelImplementation MDRModelImplementation(MDRepository)
+org.argouml.model.mdr.MDRModelImplementation addSearchPath(String)
+org.argouml.model.mdr.MDRModelImplementation createDefaultExtent()
+org.argouml.model.mdr.MDRModelImplementation createExtent(String,boolean)
+org.argouml.model.mdr.MDRModelImplementation deleteExtent(UmlPackage)
+org.argouml.model.mdr.MDRModelImplementation deleteExtentUnchecked(UmlPackage)
+org.argouml.model.mdr.MDRModelImplementation getActivityGraphsFactory()
+org.argouml.model.mdr.MDRModelImplementation getActivityGraphsHelper()
+org.argouml.model.mdr.MDRModelImplementation getAggregationKind()
+org.argouml.model.mdr.MDRModelImplementation getChangeableKind()
+org.argouml.model.mdr.MDRModelImplementation getCollaborationsFactory()
+org.argouml.model.mdr.MDRModelImplementation getCollaborationsHelper()
+org.argouml.model.mdr.MDRModelImplementation getCommonBehaviorFactory()
+org.argouml.model.mdr.MDRModelImplementation getCommonBehaviorHelper()
+org.argouml.model.mdr.MDRModelImplementation getConcurrencyKind()
+org.argouml.model.mdr.MDRModelImplementation getCopyHelper()
+org.argouml.model.mdr.MDRModelImplementation getCoreFactory()
+org.argouml.model.mdr.MDRModelImplementation getCoreHelper()
+org.argouml.model.mdr.MDRModelImplementation getDataTypesFactory()
+org.argouml.model.mdr.MDRModelImplementation getDataTypesHelper()
+org.argouml.model.mdr.MDRModelImplementation getDefaultRepository()
+org.argouml.model.mdr.MDRModelImplementation getDiagramInterchangeModel()
+org.argouml.model.mdr.MDRModelImplementation getDirectionKind()
+org.argouml.model.mdr.MDRModelImplementation getExtensionMechanismsFactory()
+org.argouml.model.mdr.MDRModelImplementation getExtensionMechanismsHelper()
+org.argouml.model.mdr.MDRModelImplementation getExtents()
+org.argouml.model.mdr.MDRModelImplementation getFacade()
+org.argouml.model.mdr.MDRModelImplementation getMetaTypes()
+org.argouml.model.mdr.MDRModelImplementation getModelEventPump()
+org.argouml.model.mdr.MDRModelImplementation getModelManagementFactory()
+org.argouml.model.mdr.MDRModelImplementation getModelManagementHelper()
+org.argouml.model.mdr.MDRModelImplementation getModelPackage()
+org.argouml.model.mdr.MDRModelImplementation getMofPackage()
+org.argouml.model.mdr.MDRModelImplementation getObjectToId()
+org.argouml.model.mdr.MDRModelImplementation getOrderingKind()
+org.argouml.model.mdr.MDRModelImplementation getPseudostateKind()
+org.argouml.model.mdr.MDRModelImplementation getPublic2SystemIds()
+org.argouml.model.mdr.MDRModelImplementation getRepository()
+org.argouml.model.mdr.MDRModelImplementation getScopeKind()
+org.argouml.model.mdr.MDRModelImplementation getSearchPath()
+org.argouml.model.mdr.MDRModelImplementation getStateMachinesFactory()
+org.argouml.model.mdr.MDRModelImplementation getStateMachinesHelper()
+org.argouml.model.mdr.MDRModelImplementation getUmlFactory()
+org.argouml.model.mdr.MDRModelImplementation getUmlHelper()
+org.argouml.model.mdr.MDRModelImplementation getUmlPackage()
+org.argouml.model.mdr.MDRModelImplementation getUseCasesFactory()
+org.argouml.model.mdr.MDRModelImplementation getUseCasesHelper()
+org.argouml.model.mdr.MDRModelImplementation getVisibilityKind()
+org.argouml.model.mdr.MDRModelImplementation getXmiReader()
+org.argouml.model.mdr.MDRModelImplementation getXmiWriter(Object,OutputStream,String)
+org.argouml.model.mdr.MDRModelImplementation initializeFactories(UmlPackage)
+org.argouml.model.mdr.MDRModelImplementation initializeM2()
+org.argouml.model.mdr.MDRModelImplementation isReadOnly(Object)
+org.argouml.model.mdr.MDRModelImplementation removeSearchPath(String)
+org.argouml.model.mdr.MDRModelImplementation shutdown()
+org.argouml.model.mdr.MetaTypesMDRImpl
+org.argouml.model.mdr.ModelEventPumpMDRImpl
+org.argouml.model.mdr.ModelManagementFactoryMDRImpl
+org.argouml.model.mdr.ModelManagementHelperMDRImpl
+org.argouml.model.mdr.Registry
+org.argouml.model.mdr.StateMachinesFactoryMDRImpl
+org.argouml.model.mdr.StateMachinesHelperMDRImpl
+org.argouml.model.mdr.UmlFactoryMDRImpl UmlFactoryMDRImpl(MDRModelImplementation)
+org.argouml.model.mdr.UmlFactoryMDRImpl buildConnection(Object,Object,Object,Object,Object,Object,Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl buildNode(Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl buildNode(Object,Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl buildValidConnectionMap()
+org.argouml.model.mdr.UmlFactoryMDRImpl buildValidContainmentMap()
+org.argouml.model.mdr.UmlFactoryMDRImpl delete(Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteAction(Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteExtent(Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteFeature(Feature)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteInstance(Instance)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteNamespace(Namespace)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteRelationship(Relationship)
+org.argouml.model.mdr.UmlFactoryMDRImpl deleteStateVertex(StateVertex)
+org.argouml.model.mdr.UmlFactoryMDRImpl getActivityGraphs()
+org.argouml.model.mdr.UmlFactoryMDRImpl getCollaborations()
+org.argouml.model.mdr.UmlFactoryMDRImpl getCommonBehavior()
+org.argouml.model.mdr.UmlFactoryMDRImpl getCore()
+org.argouml.model.mdr.UmlFactoryMDRImpl getExtensionMechanisms()
+org.argouml.model.mdr.UmlFactoryMDRImpl getModelManagement()
+org.argouml.model.mdr.UmlFactoryMDRImpl getStateMachines()
+org.argouml.model.mdr.UmlFactoryMDRImpl getUseCases()
+org.argouml.model.mdr.UmlFactoryMDRImpl isConnectionType(Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl isConnectionValid(Object,Object,Object,boolean)
+org.argouml.model.mdr.UmlFactoryMDRImpl isConnectionWellformed(Class<?>,ModelElement,ModelElement)
+org.argouml.model.mdr.UmlFactoryMDRImpl isContainmentValid(Object,Object)
+org.argouml.model.mdr.UmlFactoryMDRImpl isRemoved(Object)
+org.argouml.model.mdr.UmlHelperMDRImpl
+org.argouml.model.mdr.UndoActivityGraphsHelperDecorator
+org.argouml.model.mdr.UndoCollaborationsHelperDecorator
+org.argouml.model.mdr.UndoCommonBehaviorHelperDecorator
+org.argouml.model.mdr.UndoCoreHelperDecorator
+org.argouml.model.mdr.UndoDataTypesHelperDecorator
+org.argouml.model.mdr.UndoExtensionMechanismsHelperDecorator
+org.argouml.model.mdr.UndoStateMachinesHelperDecorator
+org.argouml.model.mdr.UndoUmlHelperDecorator
+org.argouml.model.mdr.UndoUseCasesHelperDecorator
+org.argouml.model.mdr.UseCasesFactoryMDRImpl UseCasesFactoryMDRImpl(MDRModelImplementation)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl buildActor(Namespace,Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl buildActor(Object,Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl buildExtend(Object,Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl buildExtend(Object,Object,Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl buildExtensionPoint(Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl buildInclude(Object,Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl createActor()
+org.argouml.model.mdr.UseCasesFactoryMDRImpl createExtend()
+org.argouml.model.mdr.UseCasesFactoryMDRImpl createExtensionPoint()
+org.argouml.model.mdr.UseCasesFactoryMDRImpl createInclude()
+org.argouml.model.mdr.UseCasesFactoryMDRImpl createUseCase()
+org.argouml.model.mdr.UseCasesFactoryMDRImpl deleteActor(Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl deleteExtend(Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl deleteExtensionPoint(Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl deleteInclude(Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl deleteUseCase(Object)
+org.argouml.model.mdr.UseCasesFactoryMDRImpl deleteUseCaseInstance(Object)
+org.argouml.model.mdr.UseCasesHelperMDRImpl
+org.argouml.model.mdr.XmiHeaderProviderImpl
+org.argouml.model.mdr.XmiReaderImpl
+org.argouml.model.mdr.XmiReference
+org.argouml.model.mdr.XmiWriterMDRImpl
+org.argouml.moduleloader.DetailsTabProvider
+org.argouml.moduleloader.InitModuleLoader
+org.argouml.moduleloader.JarFileFilter Refinement
+org.argouml.moduleloader.ModuleInterface
+org.argouml.moduleloader.ModuleLoader2
+org.argouml.moduleloader.ModuleStatus
+org.argouml.moduleloader.ModuleTableModel Refinement
+org.argouml.moduleloader.SettingsTabModules
+org.argouml.notation.InitNotation
+org.argouml.notation.Notation
+org.argouml.notation.SDNotationSettings
+org.argouml.notation.providers.ActionStateNotation
+org.argouml.notation.providers.AssociationEndNameNotation
+org.argouml.notation.providers.AssociationNameNotation
+org.argouml.notation.providers.AssociationRoleNotation
+org.argouml.notation.providers.AttributeNotation
+org.argouml.notation.providers.CallStateNotation
+org.argouml.notation.providers.ClassifierRoleNotation
+org.argouml.notation.providers.ComponentInstanceNotation
+org.argouml.notation.providers.EnumerationLiteralNotation
+org.argouml.notation.providers.ExtensionPointNotation
+org.argouml.notation.providers.MessageNotation
+org.argouml.notation.providers.ModelElementNameNotation
+org.argouml.notation.providers.MultiplicityNotation
+org.argouml.notation.providers.NodeInstanceNotation
+org.argouml.notation.providers.ObjectFlowStateStateNotation
+org.argouml.notation.providers.ObjectFlowStateTypeNotation
+org.argouml.notation.providers.ObjectNotation
+org.argouml.notation.providers.OperationNotation
+org.argouml.notation.providers.StateBodyNotation
+org.argouml.notation.providers.TransitionNotation
+org.argouml.notation.providers.java.AssociationEndNameNotationJava
+org.argouml.notation.providers.java.AssociationNameNotationJava
+org.argouml.notation.providers.java.AttributeNotationJava
+org.argouml.notation.providers.java.InitNotationJava
+org.argouml.notation.providers.java.ModelElementNameNotationJava
+org.argouml.notation.providers.java.NotationUtilityJava
+org.argouml.notation.providers.java.OperationNotationJava
+org.argouml.notation.providers.uml.AbstractMessageNotationUml
+org.argouml.notation.providers.uml.ActionStateNotationUml
+org.argouml.notation.providers.uml.AssociationEndNameNotationUml
+org.argouml.notation.providers.uml.AssociationNameNotationUml
+org.argouml.notation.providers.uml.AssociationRoleNotationUml
+org.argouml.notation.providers.uml.AttributeNotationUml
+org.argouml.notation.providers.uml.CallStateNotationUml
+org.argouml.notation.providers.uml.ClassifierRoleNotationUml
+org.argouml.notation.providers.uml.ComponentInstanceNotationUml
+org.argouml.notation.providers.uml.EnumerationLiteralNotationUml
+org.argouml.notation.providers.uml.ExtensionPointNotationUml
+org.argouml.notation.providers.uml.InitNotationUml
+org.argouml.notation.providers.uml.MessageNotationUml
+org.argouml.notation.providers.uml.ModelElementNameNotationUml ModelElementNameNotationUml(Object)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml generatePath(Object,Map)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml generateStereotypes(Object,Map)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml generateVisibility(Object)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml generateVisibility(Object,Map)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml getParsingHelp()
+org.argouml.notation.providers.uml.ModelElementNameNotationUml parse(Object,String)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml toString(Object,Map)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml toString(Object,NotationSettings)
+org.argouml.notation.providers.uml.ModelElementNameNotationUml toString(Object,boolean,boolean,boolean,boolean)
+org.argouml.notation.providers.uml.MultiplicityNotationUml
+org.argouml.notation.providers.uml.NodeInstanceNotationUml
+org.argouml.notation.providers.uml.NotationUtilityUml NotationUtilityUml()
+org.argouml.notation.providers.uml.NotationUtilityUml formatSingleStereotype(String,Map)
+org.argouml.notation.providers.uml.NotationUtilityUml formatStereotype(String,boolean)
+org.argouml.notation.providers.uml.NotationUtilityUml generateAction(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateActionSequence(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateClassifierRef(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateExpression(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateKind(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateMultiplicity(Object,Map)
+org.argouml.notation.providers.uml.NotationUtilityUml generateMultiplicity(Object,boolean)
+org.argouml.notation.providers.uml.NotationUtilityUml generateParameter(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generatePath(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateStereotype(Object,Map)
+org.argouml.notation.providers.uml.NotationUtilityUml generateStereotype(Object,boolean)
+org.argouml.notation.providers.uml.NotationUtilityUml generateTaggedValue(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateUninterpreted(String)
+org.argouml.notation.providers.uml.NotationUtilityUml generateVisibility(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml generateVisibility(Object,Map)
+org.argouml.notation.providers.uml.NotationUtilityUml generateVisibility2(Object)
+org.argouml.notation.providers.uml.NotationUtilityUml getType(String,Object)
+org.argouml.notation.providers.uml.NotationUtilityUml getVisibility(String)
+org.argouml.notation.providers.uml.NotationUtilityUml indexOfNextCheckedSemicolon(String,int)
+org.argouml.notation.providers.uml.NotationUtilityUml init()
+org.argouml.notation.providers.uml.NotationUtilityUml isValue(String,Map)
+org.argouml.notation.providers.uml.NotationUtilityUml parseModelElement(Object,String)
+org.argouml.notation.providers.uml.NotationUtilityUml parseParamList(Object,String,int)
+org.argouml.notation.providers.uml.NotationUtilityUml setParamKind(Object,String)
+org.argouml.notation.providers.uml.NotationUtilityUml setProperties(Object,List<String>,PropertySpecialString[])
+org.argouml.notation.providers.uml.NotationUtilityUml.PropertyOperation
+org.argouml.notation.providers.uml.NotationUtilityUml.PropertySpecialString
+org.argouml.notation.providers.uml.ObjectFlowStateStateNotationUml
+org.argouml.notation.providers.uml.ObjectFlowStateTypeNotationUml
+org.argouml.notation.providers.uml.ObjectNotationUml
+org.argouml.notation.providers.uml.OperationNotationUml
+org.argouml.notation.providers.uml.SDMessageNotationUml
+org.argouml.notation.providers.uml.StateBodyNotationUml
+org.argouml.notation.providers.uml.TransitionNotationUml
+org.argouml.notation.ui.InitNotationUI
+org.argouml.notation.ui.NotationComboBox
+org.argouml.notation.ui.SettingsTabNotation
+org.argouml.ocl.ArgoAny
+org.argouml.ocl.ArgoFacade
+org.argouml.ocl.CriticOclEvaluator
+org.argouml.ocl.OCLEvaluator
+org.argouml.ocl.OCLExpander
+org.argouml.ocl.OCLUtil
+org.argouml.pattern.cognitive.critics.CrConsiderFacade
+org.argouml.pattern.cognitive.critics.CrConsiderSingleton
+org.argouml.pattern.cognitive.critics.CrSingletonViolatedMissingStaticAttr
+org.argouml.pattern.cognitive.critics.CrSingletonViolatedOnlyPrivateConstructors
+org.argouml.pattern.cognitive.critics.InitPatternCritics
+org.argouml.persistence.AbstractFilePersister
+org.argouml.persistence.ArgoParser
+org.argouml.persistence.ArgoTokenTable
+org.argouml.persistence.DiagramMemberFilePersister
+org.argouml.persistence.FigEdgeHandler
+org.argouml.persistence.InterruptedIOException
+org.argouml.persistence.MemberFilePersister
+org.argouml.persistence.ModelMemberFilePersister
+org.argouml.persistence.MultitypeFileFilter
+org.argouml.persistence.OffenderXMLHelper
+org.argouml.persistence.OldModelMemberFilePersister
+org.argouml.persistence.OldZargoFilePersister
+org.argouml.persistence.OpenException
+org.argouml.persistence.PGMLStackParser
+org.argouml.persistence.PersistenceException
+org.argouml.persistence.PersistenceManager
+org.argouml.persistence.PgmlUtility
+org.argouml.persistence.PrivateHandler
+org.argouml.persistence.ProfileConfigurationFilePersister
+org.argouml.persistence.ProfileConfigurationParser
+org.argouml.persistence.ProfileConfigurationTokenTable Refinement
+org.argouml.persistence.ProgressMgr Refinement
+org.argouml.persistence.ProjectFilePersister
+org.argouml.persistence.ProjectFileView
+org.argouml.persistence.ResolvedCriticXMLHelper
+org.argouml.persistence.SAXParserBase
+org.argouml.persistence.SaveException
+org.argouml.persistence.SubInputStream Refinement
+org.argouml.persistence.ToDoItemXMLHelper
+org.argouml.persistence.TodoListMemberFilePersister
+org.argouml.persistence.TodoParser
+org.argouml.persistence.TodoTokenTable
+org.argouml.persistence.UmlFilePersister
+org.argouml.persistence.UmlVersionException
+org.argouml.persistence.VersionException
+org.argouml.persistence.XMLElement
+org.argouml.persistence.XMLTokenTableBase
+org.argouml.persistence.XmiExtensionParser
+org.argouml.persistence.XmiFilePersister
+org.argouml.persistence.XmiFormatException
+org.argouml.persistence.XmiInputStream
+org.argouml.persistence.XmlFilePersister
+org.argouml.persistence.XmlFilterOutputStream Refinement
+org.argouml.persistence.XmlInputStream
+org.argouml.persistence.ZargoFilePersister
+org.argouml.persistence.ZipFilePersister
+org.argouml.profile.CoreProfileReference
+org.argouml.profile.DefaultTypeStrategy
+org.argouml.profile.FigNodeStrategy
+org.argouml.profile.FileModelLoader
+org.argouml.profile.FormatingStrategy
+org.argouml.profile.Profile
+org.argouml.profile.ReaderModelLoader
+org.argouml.profile.ResourceModelLoader
+org.argouml.profile.StreamModelLoader
+org.argouml.profile.URLModelLoader
+org.argouml.profile.UserDefinedFigNodeStrategy Refinement
+org.argouml.profile.UserDefinedProfile
+org.argouml.profile.UserProfileReference
+org.argouml.profile.ZipModelLoader
+org.argouml.profile.init.InitProfileSubsystem
+org.argouml.profile.init.JarFileFilter Refinement
+org.argouml.profile.init.ProfileLoader
+org.argouml.profile.internal.JavaFormatingStrategy
+org.argouml.profile.internal.ModelUtils
+org.argouml.profile.internal.ProfileJava
+org.argouml.profile.internal.ProfileManagerImpl
+org.argouml.profile.internal.ProfileMeta
+org.argouml.profile.internal.ProfileUML
+org.argouml.profile.internal.ocl.CompositeModelInterpreter
+org.argouml.profile.internal.ocl.ComputeDesignMaterials
+org.argouml.profile.internal.ocl.ComputeTriggers
+org.argouml.profile.internal.ocl.ContextApplicable
+org.argouml.profile.internal.ocl.CrOCL
+org.argouml.profile.internal.ocl.DefaultOclEvaluator
+org.argouml.profile.internal.ocl.EvaluateExpression
+org.argouml.profile.internal.ocl.EvaluateInvariant
+org.argouml.profile.internal.ocl.InvalidOclException
+org.argouml.profile.internal.ocl.LambdaEvaluator
+org.argouml.profile.internal.ocl.ModelInterpreter
+org.argouml.profile.internal.ocl.OclExpressionEvaluator
+org.argouml.profile.internal.ocl.OclInterpreter
+org.argouml.profile.internal.ocl.uml14.Bag
+org.argouml.profile.internal.ocl.uml14.CollectionsModelInterpreter
+org.argouml.profile.internal.ocl.uml14.HashBag
+org.argouml.profile.internal.ocl.uml14.ModelAccessModelInterpreter
+org.argouml.profile.internal.ocl.uml14.OclAPIModelInterpreter
+org.argouml.profile.internal.ocl.uml14.OclEnumLiteral
+org.argouml.profile.internal.ocl.uml14.OclType
+org.argouml.profile.internal.ocl.uml14.Uml14ModelInterpreter
+org.argouml.profile.internal.ui.ProfilePropPanelFactory
+org.argouml.profile.internal.ui.PropPanelCritic
+org.argouml.sequence2.PropPanelUMLSequenceDiagram Refinement
+org.argouml.sequence2.SequenceDiagramModule
+org.argouml.sequence2.SequenceDiagramPropPanelFactory
+org.argouml.sequence2.diagram.ActionAddClassifierRole
+org.argouml.sequence2.diagram.ActionSetAddMessageMode
+org.argouml.sequence2.diagram.ActionSetOperation
+org.argouml.sequence2.diagram.FigActivation
+org.argouml.sequence2.diagram.FigClassifierRole
+org.argouml.sequence2.diagram.FigDestroy
+org.argouml.sequence2.diagram.FigHead
+org.argouml.sequence2.diagram.FigLifeLine
+org.argouml.sequence2.diagram.FigMessage
+org.argouml.sequence2.diagram.ModeBroomMessages
+org.argouml.sequence2.diagram.ModeCreateMessage
+org.argouml.sequence2.diagram.ModePlaceClassifierRole
+org.argouml.sequence2.diagram.SelectionClassifierRole
+org.argouml.sequence2.diagram.SelectionMessage
+org.argouml.sequence2.diagram.SequenceDiagramFactory
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel
+org.argouml.sequence2.diagram.SequenceDiagramRenderer
+org.argouml.sequence2.diagram.UMLSequenceDiagram
+org.argouml.swingext.BasicLinkButtonUI
+org.argouml.swingext.GlassPane
+org.argouml.swingext.JLinkButton
+org.argouml.swingext.LeftArrowIcon
+org.argouml.swingext.SpacerPanel
+org.argouml.swingext.UpArrowIcon
+org.argouml.taskmgmt.ProgressEvent
+org.argouml.taskmgmt.ProgressListener
+org.argouml.taskmgmt.ProgressMonitor
+org.argouml.ui.AboutBox
+org.argouml.ui.AbstractArgoJPanel
+org.argouml.ui.ActionCreateContainedModelElement
+org.argouml.ui.ActionCreateEdgeModelElement
+org.argouml.ui.ActionExportXMI
+org.argouml.ui.ActionImportXMI
+org.argouml.ui.ActionProjectSettings
+org.argouml.ui.ActionRedo
+org.argouml.ui.ActionSettings
+org.argouml.ui.ActionUndo
+org.argouml.ui.ArgoJFontChooser
+org.argouml.ui.ArgoJMenu
+org.argouml.ui.ArgoStatusBar
+org.argouml.ui.ArgoToolbarManager
+org.argouml.ui.CheckboxTableModel
+org.argouml.ui.ChildGenSearch
+org.argouml.ui.Clarifier
+org.argouml.ui.ClipboardObserver Refinement
+org.argouml.ui.CmdCreateNode
+org.argouml.ui.DetailsPane DetailsPane(String,Orientation)
+org.argouml.ui.DetailsPane addTab(AbstractArgoJPanel,boolean)
+org.argouml.ui.DetailsPane addTargetListener(TargetListener)
+org.argouml.ui.DetailsPane addToPropTab(Class,PropPanel)
+org.argouml.ui.DetailsPane enableTabs(Object)
+org.argouml.ui.DetailsPane fireTargetAdded(TargetEvent)
+org.argouml.ui.DetailsPane fireTargetRemoved(TargetEvent)
+org.argouml.ui.DetailsPane fireTargetSet(TargetEvent)
+org.argouml.ui.DetailsPane getIndexOfNamedTab(String)
+org.argouml.ui.DetailsPane getMinimumSize()
+org.argouml.ui.DetailsPane getTab(Class<? extends AbstractArgoJPanel>)
+org.argouml.ui.DetailsPane getTabCount()
+org.argouml.ui.DetailsPane getTabProps()
+org.argouml.ui.DetailsPane getTabs()
+org.argouml.ui.DetailsPane getTarget()
+org.argouml.ui.DetailsPane hasTabs()
+org.argouml.ui.DetailsPane loadTabs(String,Orientation)
+org.argouml.ui.DetailsPane mouseClicked(MouseEvent)
+org.argouml.ui.DetailsPane mouseEntered(MouseEvent)
+org.argouml.ui.DetailsPane mouseExited(MouseEvent)
+org.argouml.ui.DetailsPane mousePressed(MouseEvent)
+org.argouml.ui.DetailsPane mouseReleased(MouseEvent)
+org.argouml.ui.DetailsPane myDoubleClick(int)
+org.argouml.ui.DetailsPane mySingleClick(int)
+org.argouml.ui.DetailsPane removeTargetListener(TargetListener)
+org.argouml.ui.DetailsPane selectPropsTab(Object)
+org.argouml.ui.DetailsPane selectTabNamed(String)
+org.argouml.ui.DetailsPane setOrientation(Orientation)
+org.argouml.ui.DetailsPane setTarget(Object,boolean)
+org.argouml.ui.DetailsPane setToDoItem(Object)
+org.argouml.ui.DetailsPane stateChanged(ChangeEvent)
+org.argouml.ui.DetailsPane targetAdded(TargetEvent)
+org.argouml.ui.DetailsPane targetRemoved(TargetEvent)
+org.argouml.ui.DetailsPane targetSet(TargetEvent)
+org.argouml.ui.DisplayTextTree
+org.argouml.ui.ExceptionDialog
+org.argouml.ui.FindDialog
+org.argouml.ui.GResolution
+org.argouml.ui.GUI
+org.argouml.ui.GotoDialog
+org.argouml.ui.HeapMonitor
+org.argouml.ui.HelpBox
+org.argouml.ui.HelpListener
+org.argouml.ui.JasonsBigTheme
+org.argouml.ui.JasonsHugeTheme
+org.argouml.ui.JasonsTheme
+org.argouml.ui.LoadSwingWorker
+org.argouml.ui.LookAndFeelMgr
+org.argouml.ui.MultiEditorPane
+org.argouml.ui.MyLocale
+org.argouml.ui.MyMouseListener Refinement
+org.argouml.ui.MyPopupMenuListener Refinement
+org.argouml.ui.NavigatorPane
+org.argouml.ui.PerspectiveSupport
+org.argouml.ui.PredicateMType
+org.argouml.ui.ProgressMonitorWindow
+org.argouml.ui.ProjectActions
+org.argouml.ui.ProjectBrowser
+org.argouml.ui.ProjectSettingsDialog
+org.argouml.ui.ProjectSettingsTabProfile
+org.argouml.ui.ProjectSettingsTabProperties
+org.argouml.ui.SaveSwingWorker
+org.argouml.ui.SettingsDialog
+org.argouml.ui.SettingsTabAppearance
+org.argouml.ui.SettingsTabEnvironment
+org.argouml.ui.SettingsTabLayout
+org.argouml.ui.SettingsTabPreferences
+org.argouml.ui.SettingsTabProfile
+org.argouml.ui.SettingsTabUser
+org.argouml.ui.ShadowComboBox
+org.argouml.ui.ShadowFig Refinement
+org.argouml.ui.ShadowRenderer Refinement
+org.argouml.ui.SplashPanel
+org.argouml.ui.SplashScreen
+org.argouml.ui.StatusBar
+org.argouml.ui.StylePanel StylePanel(String)
+org.argouml.ui.StylePanel actionPerformed(ActionEvent)
+org.argouml.ui.StylePanel addSeperator()
+org.argouml.ui.StylePanel changedUpdate(DocumentEvent)
+org.argouml.ui.StylePanel getPanelTarget()
+org.argouml.ui.StylePanel getTarget()
+org.argouml.ui.StylePanel insertUpdate(DocumentEvent)
+org.argouml.ui.StylePanel itemStateChanged(ItemEvent)
+org.argouml.ui.StylePanel refresh()
+org.argouml.ui.StylePanel refresh(PropertyChangeEvent)
+org.argouml.ui.StylePanel removeUpdate(DocumentEvent)
+org.argouml.ui.StylePanel setTarget(Object)
+org.argouml.ui.StylePanel shouldBeEnabled(Object)
+org.argouml.ui.StylePanel targetAdded(TargetEvent)
+org.argouml.ui.StylePanel targetRemoved(TargetEvent)
+org.argouml.ui.StylePanel targetSet(TargetEvent)
+org.argouml.ui.StylePanel valueChanged(ListSelectionEvent)
+org.argouml.ui.StylePanelFig StylePanelFig()
+org.argouml.ui.StylePanelFig StylePanelFig(String)
+org.argouml.ui.StylePanelFig focusGained(FocusEvent)
+org.argouml.ui.StylePanelFig focusLost(FocusEvent)
+org.argouml.ui.StylePanelFig getBBoxField()
+org.argouml.ui.StylePanelFig getBBoxLabel()
+org.argouml.ui.StylePanelFig getCustomItemName()
+org.argouml.ui.StylePanelFig getFillField()
+org.argouml.ui.StylePanelFig getFillLabel()
+org.argouml.ui.StylePanelFig getLineField()
+org.argouml.ui.StylePanelFig getLineLabel()
+org.argouml.ui.StylePanelFig getSpacer()
+org.argouml.ui.StylePanelFig getSpacer2()
+org.argouml.ui.StylePanelFig getSpacer3()
+org.argouml.ui.StylePanelFig handleCustomColor(JComboBox,String,Color)
+org.argouml.ui.StylePanelFig hasEditableBoundingBox(boolean)
+org.argouml.ui.StylePanelFig initChoices()
+org.argouml.ui.StylePanelFig itemStateChanged(ItemEvent)
+org.argouml.ui.StylePanelFig keyPressed(KeyEvent)
+org.argouml.ui.StylePanelFig keyReleased(KeyEvent)
+org.argouml.ui.StylePanelFig keyTyped(KeyEvent)
+org.argouml.ui.StylePanelFig parseBBox()
+org.argouml.ui.StylePanelFig refresh()
+org.argouml.ui.StylePanelFig setTargetBBox()
+org.argouml.ui.StylePanelFig setTargetFill()
+org.argouml.ui.StylePanelFig setTargetLine()
+org.argouml.ui.StylePanelFigNodeModelElement StylePanelFigNodeModelElement()
+org.argouml.ui.StylePanelFigNodeModelElement addToDisplayPane(JCheckBox)
+org.argouml.ui.StylePanelFigNodeModelElement itemStateChanged(ItemEvent)
+org.argouml.ui.StylePanelFigNodeModelElement propertyChange(PropertyChangeEvent)
+org.argouml.ui.StylePanelFigNodeModelElement refresh()
+org.argouml.ui.StylePanelFigNodeModelElement setTarget(Object)
+org.argouml.ui.StylePanelFigRRect
+org.argouml.ui.StylePanelFigText
+org.argouml.ui.SwingWorker
+org.argouml.ui.SystemInfoDialog
+org.argouml.ui.TabFigTarget
+org.argouml.ui.TabModelTarget
+org.argouml.ui.TabResults
+org.argouml.ui.TabTarget
+org.argouml.ui.TabText
+org.argouml.ui.TabToDoTarget
+org.argouml.ui.TimerListener Refinement
+org.argouml.ui.TitleHandler Refinement
+org.argouml.ui.ToolbarManagerMenuItemAction Refinement
+org.argouml.ui.TransferableModelElements
+org.argouml.ui.TreeModelComposite
+org.argouml.ui.TreeModelSupport
+org.argouml.ui.UndoableAction
+org.argouml.ui.WindowCloser Refinement
+org.argouml.ui.ZoomSliderButton
+org.argouml.ui.cmd.ActionAboutArgoUML
+org.argouml.ui.cmd.ActionAdjustGrid
+org.argouml.ui.cmd.ActionAdjustPageBreaks
+org.argouml.ui.cmd.ActionAdjustSnap
+org.argouml.ui.cmd.ActionExit
+org.argouml.ui.cmd.ActionFind
+org.argouml.ui.cmd.ActionGotoDiagram
+org.argouml.ui.cmd.ActionHelp
+org.argouml.ui.cmd.ActionNew
+org.argouml.ui.cmd.ActionNotation
+org.argouml.ui.cmd.ActionPageSetup
+org.argouml.ui.cmd.ActionPrint
+org.argouml.ui.cmd.ActionSelectAll
+org.argouml.ui.cmd.ActionSelectInvert
+org.argouml.ui.cmd.ActionShowXMLDump
+org.argouml.ui.cmd.ActionSystemInfo
+org.argouml.ui.cmd.ActionWrapper
+org.argouml.ui.cmd.CmdSetPreferredSize
+org.argouml.ui.cmd.GenericArgoMenuBar
+org.argouml.ui.cmd.InitUiCmdSubsystem
+org.argouml.ui.cmd.KeyStrokeCellRenderer
+org.argouml.ui.cmd.LastRecentlyUsedMenuList
+org.argouml.ui.cmd.NavigateTargetBackAction
+org.argouml.ui.cmd.NavigateTargetForwardAction
+org.argouml.ui.cmd.PrintManager
+org.argouml.ui.cmd.SettingsTabShortcuts
+org.argouml.ui.cmd.ShortcutChangedEvent
+org.argouml.ui.cmd.ShortcutChangedListener
+org.argouml.ui.cmd.ShortcutField
+org.argouml.ui.cmd.ShortcutMgr
+org.argouml.ui.cmd.ShortcutTableModel Refinement
+org.argouml.ui.cmd.ZoomActionProxy
+org.argouml.ui.explorer.ActionAddExistingRelatedNode Refinement
+org.argouml.ui.explorer.ActionCreateAssociation Refinement
+org.argouml.ui.explorer.ActionCreateAssociationRole Refinement
+org.argouml.ui.explorer.ActionExportProfileXMI
+org.argouml.ui.explorer.ActionManageProfiles
+org.argouml.ui.explorer.ActionPerspectiveConfig
+org.argouml.ui.explorer.ArgoDropTargetListener Refinement
+org.argouml.ui.explorer.DnDExplorerTree
+org.argouml.ui.explorer.DnDTreeSelectionListener Refinement
+org.argouml.ui.explorer.DuplicatePerspectiveListener Refinement
+org.argouml.ui.explorer.ExplorerEventAdaptor
+org.argouml.ui.explorer.ExplorerMouseListener Refinement
+org.argouml.ui.explorer.ExplorerPerspective
+org.argouml.ui.explorer.ExplorerPopup
+org.argouml.ui.explorer.ExplorerTargetListener Refinement
+org.argouml.ui.explorer.ExplorerTree
+org.argouml.ui.explorer.ExplorerUpdater Refinement
+org.argouml.ui.explorer.LibraryListSelectionListener Refinement
+org.argouml.ui.explorer.MoveDownListener Refinement
+org.argouml.ui.explorer.MoveUpListener Refinement
+org.argouml.ui.explorer.NameOrder
+org.argouml.ui.explorer.NewPerspectiveListener Refinement
+org.argouml.ui.explorer.OkListener Refinement
+org.argouml.ui.explorer.OrderedMenu Refinement
+org.argouml.ui.explorer.OrderedMenuItem Refinement
+org.argouml.ui.explorer.PerspectiveComboBox
+org.argouml.ui.explorer.PerspectiveConfigurator
+org.argouml.ui.explorer.PerspectiveListSelectionListener Refinement
+org.argouml.ui.explorer.PerspectiveManager
+org.argouml.ui.explorer.ProfileChangeListener Refinement
+org.argouml.ui.explorer.RemovePerspectiveListener Refinement
+org.argouml.ui.explorer.RenameDocumentListener Refinement
+org.argouml.ui.explorer.RenameListener Refinement
+org.argouml.ui.explorer.ResetListener Refinement
+org.argouml.ui.explorer.RuleListMouseListener Refinement
+org.argouml.ui.explorer.RuleListener Refinement
+org.argouml.ui.explorer.RulesListSelectionListener Refinement
+org.argouml.ui.explorer.TreeModelUMLEventListener
+org.argouml.ui.explorer.TypeThenNameOrder
+org.argouml.ui.explorer.WeakExplorerNode
+org.argouml.ui.explorer.rules.AbstractPerspectiveRule
+org.argouml.ui.explorer.rules.AssociationsNode
+org.argouml.ui.explorer.rules.AttributesNode
+org.argouml.ui.explorer.rules.GoAssocRoleToMessages
+org.argouml.ui.explorer.rules.GoBehavioralFeatureToStateMachine
+org.argouml.ui.explorer.rules.GoClassToAssociatedClass
+org.argouml.ui.explorer.rules.GoClassToNavigableClass
+org.argouml.ui.explorer.rules.GoClassToSummary
+org.argouml.ui.explorer.rules.GoClassifierToBehavioralFeature
+org.argouml.ui.explorer.rules.GoClassifierToCollaboration
+org.argouml.ui.explorer.rules.GoClassifierToInstance
+org.argouml.ui.explorer.rules.GoClassifierToSequenceDiagram
+org.argouml.ui.explorer.rules.GoClassifierToStructuralFeature
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram
+org.argouml.ui.explorer.rules.GoCollaborationToInteraction
+org.argouml.ui.explorer.rules.GoComponentToResidentModelElement
+org.argouml.ui.explorer.rules.GoCriticsToCritic
+org.argouml.ui.explorer.rules.GoDiagramToEdge getChildren(Object)
+org.argouml.ui.explorer.rules.GoDiagramToEdge getDependencies(Object)
+org.argouml.ui.explorer.rules.GoDiagramToEdge getRuleName()
+org.argouml.ui.explorer.rules.GoDiagramToNode getChildren(Object)
+org.argouml.ui.explorer.rules.GoDiagramToNode getDependencies(Object)
+org.argouml.ui.explorer.rules.GoDiagramToNode getRuleName()
+org.argouml.ui.explorer.rules.GoElementToMachine
+org.argouml.ui.explorer.rules.GoEnumerationToLiterals
+org.argouml.ui.explorer.rules.GoGeneralizableElementToSpecialized
+org.argouml.ui.explorer.rules.GoInteractionToMessages
+org.argouml.ui.explorer.rules.GoLinkToStimuli
+org.argouml.ui.explorer.rules.GoMessageToAction
+org.argouml.ui.explorer.rules.GoModelElementToBehavior
+org.argouml.ui.explorer.rules.GoModelElementToComment
+org.argouml.ui.explorer.rules.GoModelElementToContainedDiagrams
+org.argouml.ui.explorer.rules.GoModelElementToContainedLostElements
+org.argouml.ui.explorer.rules.GoModelElementToContents
+org.argouml.ui.explorer.rules.GoModelToBaseElements
+org.argouml.ui.explorer.rules.GoModelToCollaboration
+org.argouml.ui.explorer.rules.GoModelToDiagrams getChildren(Object)
+org.argouml.ui.explorer.rules.GoModelToDiagrams getDependencies(Object)
+org.argouml.ui.explorer.rules.GoModelToDiagrams getRuleName()
+org.argouml.ui.explorer.rules.GoModelToDiagrams isInPath(Object,Object)
+org.argouml.ui.explorer.rules.GoModelToElements
+org.argouml.ui.explorer.rules.GoModelToNode
+org.argouml.ui.explorer.rules.GoNamespaceToClassifierAndPackage
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram
+org.argouml.ui.explorer.rules.GoNamespaceToOwnedElements
+org.argouml.ui.explorer.rules.GoNodeToResidentComponent
+org.argouml.ui.explorer.rules.GoOperationToCollaboration
+org.argouml.ui.explorer.rules.GoOperationToSequenceDiagram
+org.argouml.ui.explorer.rules.GoPackageToClass
+org.argouml.ui.explorer.rules.GoPackageToElementImport
+org.argouml.ui.explorer.rules.GoProfileConfigurationToProfile
+org.argouml.ui.explorer.rules.GoProfileToCritics
+org.argouml.ui.explorer.rules.GoProfileToModel
+org.argouml.ui.explorer.rules.GoProjectToCollaboration
+org.argouml.ui.explorer.rules.GoProjectToDiagram
+org.argouml.ui.explorer.rules.GoProjectToModel
+org.argouml.ui.explorer.rules.GoProjectToProfileConfiguration
+org.argouml.ui.explorer.rules.GoProjectToRoots
+org.argouml.ui.explorer.rules.GoSignalToReception
+org.argouml.ui.explorer.rules.GoStateToDoActivity
+org.argouml.ui.explorer.rules.GoStateToDownstream
+org.argouml.ui.explorer.rules.GoStateToEntry
+org.argouml.ui.explorer.rules.GoStateToExit
+org.argouml.ui.explorer.rules.GoStateToInternalTrans
+org.argouml.ui.explorer.rules.GoStereotypeToTagDefinition
+org.argouml.ui.explorer.rules.GoStimulusToAction
+org.argouml.ui.explorer.rules.GoSubmachineStateToStateMachine
+org.argouml.ui.explorer.rules.GoSummaryToAssociation
+org.argouml.ui.explorer.rules.GoSummaryToAttribute
+org.argouml.ui.explorer.rules.GoSummaryToIncomingDependency
+org.argouml.ui.explorer.rules.GoSummaryToInheritance
+org.argouml.ui.explorer.rules.GoSummaryToOperation
+org.argouml.ui.explorer.rules.GoSummaryToOutgoingDependency
+org.argouml.ui.explorer.rules.GoTransitionToGuard
+org.argouml.ui.explorer.rules.GoTransitionToSource
+org.argouml.ui.explorer.rules.GoTransitionToTarget
+org.argouml.ui.explorer.rules.GoTransitiontoEffect
+org.argouml.ui.explorer.rules.GoUseCaseToExtensionPoint
+org.argouml.ui.explorer.rules.IncomingDependencyNode
+org.argouml.ui.explorer.rules.InheritanceNode
+org.argouml.ui.explorer.rules.OperationsNode
+org.argouml.ui.explorer.rules.OutgoingDependencyNode
+org.argouml.ui.explorer.rules.PerspectiveRule
+org.argouml.ui.targetmanager.HistoryManager Refinement
+org.argouml.ui.targetmanager.HistoryRemover Refinement
+org.argouml.ui.targetmanager.Remover Refinement
+org.argouml.ui.targetmanager.TargetEvent
+org.argouml.ui.targetmanager.TargetListener
+org.argouml.ui.targetmanager.TargetManager
+org.argouml.ui.targetmanager.TargetRemover Refinement
+org.argouml.ui.targetmanager.TargettableModelView
+org.argouml.uml.ActionAddStereotype
+org.argouml.uml.ChildGenRelated
+org.argouml.uml.CommentEdge
+org.argouml.uml.DocumentationManager
+org.argouml.uml.GenAncestorClasses
+org.argouml.uml.GenCompositeClasses
+org.argouml.uml.GenDescendantClasses
+org.argouml.uml.PredicateNotInTrash
+org.argouml.uml.PredicateSearch
+org.argouml.uml.ProjectMemberModel
+org.argouml.uml.StereotypeUtility
+org.argouml.uml.TMResults TMResults()
+org.argouml.uml.TMResults TMResults(boolean)
+org.argouml.uml.TMResults countNodesAndEdges(Diagram)
+org.argouml.uml.TMResults getColumnClass(int)
+org.argouml.uml.TMResults getColumnCount()
+org.argouml.uml.TMResults getColumnName(int)
+org.argouml.uml.TMResults getRowCount()
+org.argouml.uml.TMResults getValueAt(int,int)
+org.argouml.uml.TMResults isCellEditable(int,int)
+org.argouml.uml.TMResults setTarget(List,List)
+org.argouml.uml.TMResults setValueAt(Object,int,int)
+org.argouml.uml.UUIDHelper
+org.argouml.uml.cognitive.ChildGenFind
+org.argouml.uml.cognitive.ChildGenSearch
+org.argouml.uml.cognitive.ProjectMemberTodoList
+org.argouml.uml.cognitive.UMLDecision
+org.argouml.uml.cognitive.UMLToDoItem
+org.argouml.uml.cognitive.checklist.Init
+org.argouml.uml.cognitive.checklist.UMLCheckItem
+org.argouml.uml.cognitive.critics.AbstractCrTooMany
+org.argouml.uml.cognitive.critics.AbstractCrUnconventionalName
+org.argouml.uml.cognitive.critics.ChildGenDerivedClasses
+org.argouml.uml.cognitive.critics.ChildGenUML
+org.argouml.uml.cognitive.critics.ClAttributeCompartment
+org.argouml.uml.cognitive.critics.ClClassName
+org.argouml.uml.cognitive.critics.ClOperationCompartment
+org.argouml.uml.cognitive.critics.CrAlreadyRealizes
+org.argouml.uml.cognitive.critics.CrAssocNameConflict
+org.argouml.uml.cognitive.critics.CrAttrNameConflict
+org.argouml.uml.cognitive.critics.CrCircularAssocClass
+org.argouml.uml.cognitive.critics.CrCircularComposition
+org.argouml.uml.cognitive.critics.CrCircularInheritance
+org.argouml.uml.cognitive.critics.CrClassMustBeAbstract
+org.argouml.uml.cognitive.critics.CrClassWithoutComponent
+org.argouml.uml.cognitive.critics.CrCompInstanceWithoutNode
+org.argouml.uml.cognitive.critics.CrComponentInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrComponentWithoutNode
+org.argouml.uml.cognitive.critics.CrConflictingComposites
+org.argouml.uml.cognitive.critics.CrConstructorNeeded
+org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
+org.argouml.uml.cognitive.critics.CrDisambigClassName
+org.argouml.uml.cognitive.critics.CrDisambigStateName
+org.argouml.uml.cognitive.critics.CrDupParamName
+org.argouml.uml.cognitive.critics.CrDupRoleNames
+org.argouml.uml.cognitive.critics.CrEmptyPackage
+org.argouml.uml.cognitive.critics.CrFinalSubclassed CrFinalSubclassed()
+org.argouml.uml.cognitive.critics.CrFinalSubclassed getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrFinalSubclassed predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrForkOutgoingTransition
+org.argouml.uml.cognitive.critics.CrIllegalGeneralization
+org.argouml.uml.cognitive.critics.CrIllegalName
+org.argouml.uml.cognitive.critics.CrInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrInterfaceAllPublic
+org.argouml.uml.cognitive.critics.CrInterfaceOperOnly
+org.argouml.uml.cognitive.critics.CrInterfaceWithoutComponent
+org.argouml.uml.cognitive.critics.CrInvalidBranch
+org.argouml.uml.cognitive.critics.CrInvalidFork
+org.argouml.uml.cognitive.critics.CrInvalidHistory
+org.argouml.uml.cognitive.critics.CrInvalidInitial
+org.argouml.uml.cognitive.critics.CrInvalidJoin
+org.argouml.uml.cognitive.critics.CrInvalidPseudoStateTrigger
+org.argouml.uml.cognitive.critics.CrInvalidSynch
+org.argouml.uml.cognitive.critics.CrJoinIncomingTransition
+org.argouml.uml.cognitive.critics.CrMergeClasses
+org.argouml.uml.cognitive.critics.CrMissingAttrName
+org.argouml.uml.cognitive.critics.CrMissingClassName
+org.argouml.uml.cognitive.critics.CrMissingOperName
+org.argouml.uml.cognitive.critics.CrMissingStateName
+org.argouml.uml.cognitive.critics.CrMultiComposite
+org.argouml.uml.cognitive.critics.CrMultipleAgg
+org.argouml.uml.cognitive.critics.CrMultipleDeepHistoryStates
+org.argouml.uml.cognitive.critics.CrMultipleInitialStates
+org.argouml.uml.cognitive.critics.CrMultipleShallowHistoryStates
+org.argouml.uml.cognitive.critics.CrNWayAgg
+org.argouml.uml.cognitive.critics.CrNameConflict
+org.argouml.uml.cognitive.critics.CrNameConfusion
+org.argouml.uml.cognitive.critics.CrNavFromInterface
+org.argouml.uml.cognitive.critics.CrNoAssociations CrNoAssociations()
+org.argouml.uml.cognitive.critics.CrNoAssociations findAssociation(Object,int)
+org.argouml.uml.cognitive.critics.CrNoAssociations getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrNoAssociations predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrNoGuard
+org.argouml.uml.cognitive.critics.CrNoIncomingTransitions
+org.argouml.uml.cognitive.critics.CrNoInitialState
+org.argouml.uml.cognitive.critics.CrNoInstanceVariables
+org.argouml.uml.cognitive.critics.CrNoOperations
+org.argouml.uml.cognitive.critics.CrNoOutgoingTransitions
+org.argouml.uml.cognitive.critics.CrNoTransitions
+org.argouml.uml.cognitive.critics.CrNoTriggerOrGuard
+org.argouml.uml.cognitive.critics.CrNodeInsideElement
+org.argouml.uml.cognitive.critics.CrNodeInstanceInsideElement
+org.argouml.uml.cognitive.critics.CrNodeInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrNodesOverlap
+org.argouml.uml.cognitive.critics.CrNonAggDataType
+org.argouml.uml.cognitive.critics.CrObjectWithoutClassifier
+org.argouml.uml.cognitive.critics.CrObjectWithoutComponent
+org.argouml.uml.cognitive.critics.CrOperNameConflict
+org.argouml.uml.cognitive.critics.CrOppEndConflict
+org.argouml.uml.cognitive.critics.CrOppEndVsAttr
+org.argouml.uml.cognitive.critics.CrProfile
+org.argouml.uml.cognitive.critics.CrReservedName
+org.argouml.uml.cognitive.critics.CrSeqInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrSubclassReference
+org.argouml.uml.cognitive.critics.CrTooManyAssoc
+org.argouml.uml.cognitive.critics.CrTooManyAttr
+org.argouml.uml.cognitive.critics.CrTooManyClasses
+org.argouml.uml.cognitive.critics.CrTooManyOper
+org.argouml.uml.cognitive.critics.CrTooManyStates
+org.argouml.uml.cognitive.critics.CrTooManyTransitions
+org.argouml.uml.cognitive.critics.CrUML
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName
+org.argouml.uml.cognitive.critics.CrUnnavigableAssoc
+org.argouml.uml.cognitive.critics.CrUselessAbstract
+org.argouml.uml.cognitive.critics.CrUselessInterface
+org.argouml.uml.cognitive.critics.CrUtilityViolated
+org.argouml.uml.cognitive.critics.CrWrongDepEnds
+org.argouml.uml.cognitive.critics.CrWrongLinkEnds
+org.argouml.uml.cognitive.critics.CrZeroLengthEdge
+org.argouml.uml.cognitive.critics.InitCognitiveCritics
+org.argouml.uml.cognitive.critics.ProfileCodeGeneration
+org.argouml.uml.cognitive.critics.ProfileGoodPractices
+org.argouml.uml.cognitive.critics.UMLWizard
+org.argouml.uml.cognitive.critics.WizAddConstructor
+org.argouml.uml.cognitive.critics.WizAddInstanceVariable
+org.argouml.uml.cognitive.critics.WizAddOperation
+org.argouml.uml.cognitive.critics.WizAssocComposite
+org.argouml.uml.cognitive.critics.WizBreakCircularComp
+org.argouml.uml.cognitive.critics.WizCueCards
+org.argouml.uml.cognitive.critics.WizMEName
+org.argouml.uml.cognitive.critics.WizManyNames
+org.argouml.uml.cognitive.critics.WizNavigable
+org.argouml.uml.cognitive.critics.WizOperName
+org.argouml.uml.cognitive.critics.WizTooMany
+org.argouml.uml.diagram.ArgoDiagram
+org.argouml.uml.diagram.AttributesCompartmentContainer
+org.argouml.uml.diagram.DiagramAppearance
+org.argouml.uml.diagram.DiagramCommand Refinement
+org.argouml.uml.diagram.DiagramFactory
+org.argouml.uml.diagram.DiagramSettings DiagramSettings()
+org.argouml.uml.diagram.DiagramSettings DiagramSettings(DiagramSettings)
+org.argouml.uml.diagram.DiagramSettings StereotypeStyle(int)
+org.argouml.uml.diagram.DiagramSettings doUndoable(Memento)
+org.argouml.uml.diagram.DiagramSettings getDefaultShadowWidth()
+org.argouml.uml.diagram.DiagramSettings getDefaultStereotypeView()
+org.argouml.uml.diagram.DiagramSettings getDefaultStereotypeViewInt()
+org.argouml.uml.diagram.DiagramSettings getEnum(int)
+org.argouml.uml.diagram.DiagramSettings getFont(int)
+org.argouml.uml.diagram.DiagramSettings getFontBold()
+org.argouml.uml.diagram.DiagramSettings getFontBoldItalic()
+org.argouml.uml.diagram.DiagramSettings getFontItalic()
+org.argouml.uml.diagram.DiagramSettings getFontName()
+org.argouml.uml.diagram.DiagramSettings getFontPlain()
+org.argouml.uml.diagram.DiagramSettings getFontSize()
+org.argouml.uml.diagram.DiagramSettings getNotationSettings()
+org.argouml.uml.diagram.DiagramSettings isShowBidirectionalArrows()
+org.argouml.uml.diagram.DiagramSettings isShowBoldNames()
+org.argouml.uml.diagram.DiagramSettings recomputeFonts()
+org.argouml.uml.diagram.DiagramSettings setDefaultShadowWidth(int)
+org.argouml.uml.diagram.DiagramSettings setDefaultStereotypeView(StereotypeStyle)
+org.argouml.uml.diagram.DiagramSettings setDefaultStereotypeView(int)
+org.argouml.uml.diagram.DiagramSettings setFontName(String)
+org.argouml.uml.diagram.DiagramSettings setFontSize(int)
+org.argouml.uml.diagram.DiagramSettings setNotationSettings(NotationSettings)
+org.argouml.uml.diagram.DiagramSettings setShowBidirectionalArrows(boolean)
+org.argouml.uml.diagram.DiagramSettings setShowBoldNames(boolean)
+org.argouml.uml.diagram.DiagramUndoManager
+org.argouml.uml.diagram.DiagramUtils
+org.argouml.uml.diagram.ExtensionsCompartmentContainer
+org.argouml.uml.diagram.GraphChangeAdapter GraphChangeAdapter()
+org.argouml.uml.diagram.GraphChangeAdapter createDiagram(Class,Object)
+org.argouml.uml.diagram.GraphChangeAdapter createElement(GraphModel,Object)
+org.argouml.uml.diagram.GraphChangeAdapter edgeAdded(GraphEvent)
+org.argouml.uml.diagram.GraphChangeAdapter edgeRemoved(GraphEvent)
+org.argouml.uml.diagram.GraphChangeAdapter getInstance()
+org.argouml.uml.diagram.GraphChangeAdapter graphChanged(GraphEvent)
+org.argouml.uml.diagram.GraphChangeAdapter nodeAdded(GraphEvent)
+org.argouml.uml.diagram.GraphChangeAdapter nodeRemoved(GraphEvent)
+org.argouml.uml.diagram.GraphChangeAdapter removeDiagram(DiDiagram)
+org.argouml.uml.diagram.GraphChangeAdapter removeElement(DiElement)
+org.argouml.uml.diagram.OperationsCompartmentContainer
+org.argouml.uml.diagram.PathContainer
+org.argouml.uml.diagram.ProjectMemberDiagram
+org.argouml.uml.diagram.Relocatable
+org.argouml.uml.diagram.StereotypeContainer
+org.argouml.uml.diagram.UMLMutableGraphSupport UMLMutableGraphSupport()
+org.argouml.uml.diagram.UMLMutableGraphSupport addNodeRelatedEdges(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport buildCommentConnection(Object,Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport buildConnection(Object,Object,Object,Object,Object,Object,Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport canAddEdge(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport canAddNode(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport canConnect(Object,Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport connect(Object,Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport connect(Object,Object,Class)
+org.argouml.uml.diagram.UMLMutableGraphSupport connect(Object,Object,Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport connect(Object,Object,Object,Map)
+org.argouml.uml.diagram.UMLMutableGraphSupport constainsEdge(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport containsNode(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport getDestPort(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport getDiDiagram()
+org.argouml.uml.diagram.UMLMutableGraphSupport getEdges()
+org.argouml.uml.diagram.UMLMutableGraphSupport getHomeModel()
+org.argouml.uml.diagram.UMLMutableGraphSupport getNodes()
+org.argouml.uml.diagram.UMLMutableGraphSupport getProject()
+org.argouml.uml.diagram.UMLMutableGraphSupport getSourcePort(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport isConnectionValid(Object,Object,Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport isRemoveFromDiagramAllowed(Collection)
+org.argouml.uml.diagram.UMLMutableGraphSupport removeEdge(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport removeNode(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport setDiDiagram(DiDiagram)
+org.argouml.uml.diagram.UMLMutableGraphSupport setHomeModel(Object)
+org.argouml.uml.diagram.UMLMutableGraphSupport setProject(Project)
+org.argouml.uml.diagram.UmlDiagramRenderer
+org.argouml.uml.diagram.VisibilityContainer
+org.argouml.uml.diagram.activity.ActivityDiagramGraphModel
+org.argouml.uml.diagram.activity.layout.ActivityDiagramLayouter
+org.argouml.uml.diagram.activity.ui.ActionCreatePartition
+org.argouml.uml.diagram.activity.ui.ActivityDiagramPropPanelFactory
+org.argouml.uml.diagram.activity.ui.ActivityDiagramRenderer
+org.argouml.uml.diagram.activity.ui.FigActionState
+org.argouml.uml.diagram.activity.ui.FigCallState
+org.argouml.uml.diagram.activity.ui.FigObjectFlowState
+org.argouml.uml.diagram.activity.ui.FigPartition
+org.argouml.uml.diagram.activity.ui.FigPool
+org.argouml.uml.diagram.activity.ui.FigSubactivityState
+org.argouml.uml.diagram.activity.ui.InitActivityDiagram
+org.argouml.uml.diagram.activity.ui.ModePlacePartition
+org.argouml.uml.diagram.activity.ui.PropPanelUMLActivityDiagram
+org.argouml.uml.diagram.activity.ui.SelectionActionState
+org.argouml.uml.diagram.activity.ui.SelectionCallState
+org.argouml.uml.diagram.activity.ui.SelectionPartition Refinement
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel
+org.argouml.uml.diagram.collaboration.ui.ActionAddClassifierRole
+org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
+org.argouml.uml.diagram.collaboration.ui.CollaborationDiagramPropPanelFactory
+org.argouml.uml.diagram.collaboration.ui.FigAssociationRole
+org.argouml.uml.diagram.collaboration.ui.FigClassifierRole
+org.argouml.uml.diagram.collaboration.ui.FigMessageGroup
+org.argouml.uml.diagram.collaboration.ui.InitCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.PropPanelUMLCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel
+org.argouml.uml.diagram.deployment.ui.AbstractFigComponent
+org.argouml.uml.diagram.deployment.ui.AbstractFigNode
+org.argouml.uml.diagram.deployment.ui.CubePortFigRect
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramPropPanelFactory
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer
+org.argouml.uml.diagram.deployment.ui.FigComponent
+org.argouml.uml.diagram.deployment.ui.FigMNode
+org.argouml.uml.diagram.deployment.ui.FigNodeInstance
+org.argouml.uml.diagram.deployment.ui.FigObject
+org.argouml.uml.diagram.deployment.ui.InitDeploymentDiagram
+org.argouml.uml.diagram.deployment.ui.PropPanelUMLDeploymentDiagram
+org.argouml.uml.diagram.deployment.ui.SelectionComponent
+org.argouml.uml.diagram.deployment.ui.SelectionNode
+org.argouml.uml.diagram.deployment.ui.SelectionObject
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram
+org.argouml.uml.diagram.layout.LayoutHelper
+org.argouml.uml.diagram.layout.LayoutedContainer
+org.argouml.uml.diagram.layout.LayoutedEdge
+org.argouml.uml.diagram.layout.LayoutedNode
+org.argouml.uml.diagram.layout.LayoutedObject
+org.argouml.uml.diagram.layout.Layouter
+org.argouml.uml.diagram.sequence.MessageNode
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel
+org.argouml.uml.diagram.sequence.ui.ActionAddClassifierRole
+org.argouml.uml.diagram.sequence.ui.FigActivation
+org.argouml.uml.diagram.sequence.ui.FigBirthActivation
+org.argouml.uml.diagram.sequence.ui.FigCallActionMessage
+org.argouml.uml.diagram.sequence.ui.FigClassifierRole
+org.argouml.uml.diagram.sequence.ui.FigCreateActionMessage
+org.argouml.uml.diagram.sequence.ui.FigDestroyActionMessage
+org.argouml.uml.diagram.sequence.ui.FigHead
+org.argouml.uml.diagram.sequence.ui.FigLifeLine
+org.argouml.uml.diagram.sequence.ui.FigMessage
+org.argouml.uml.diagram.sequence.ui.FigReturnActionMessage
+org.argouml.uml.diagram.sequence.ui.InitSequenceDiagram
+org.argouml.uml.diagram.sequence.ui.ModeChangeHeight
+org.argouml.uml.diagram.sequence.ui.ModeContract
+org.argouml.uml.diagram.sequence.ui.ModeCreateMessage
+org.argouml.uml.diagram.sequence.ui.ModeExpand
+org.argouml.uml.diagram.sequence.ui.PropPanelUMLSequenceDiagram
+org.argouml.uml.diagram.sequence.ui.SelectionClassifierRole
+org.argouml.uml.diagram.sequence.ui.SelectionMessage
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramLayer
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramPropPanelFactory
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramRenderer
+org.argouml.uml.diagram.sequence.ui.TempFig Refinement
+org.argouml.uml.diagram.sequence.ui.UMLSequenceDiagram
+org.argouml.uml.diagram.state.StateDiagramGraphModel
+org.argouml.uml.diagram.state.ui.ButtonActionNewCallEvent
+org.argouml.uml.diagram.state.ui.ButtonActionNewChangeEvent
+org.argouml.uml.diagram.state.ui.ButtonActionNewEvent
+org.argouml.uml.diagram.state.ui.ButtonActionNewSignalEvent
+org.argouml.uml.diagram.state.ui.ButtonActionNewTimeEvent
+org.argouml.uml.diagram.state.ui.FigFinalState
+org.argouml.uml.diagram.state.ui.FigStateVertex
+org.argouml.uml.diagram.state.ui.FigTransition
+org.argouml.uml.diagram.state.ui.StateDiagramRenderer
+org.argouml.uml.diagram.static_structure.ClassDiagramGraphModel
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramAssociationEdge
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramEdge
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramGeneralizationEdge
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramInheritanceEdge
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramLayouter
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramModelElementFactory
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramNode
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramNote
+org.argouml.uml.diagram.static_structure.layout.ClassdiagramRealizationEdge
+org.argouml.uml.diagram.static_structure.layout.NodeRow Refinement
+org.argouml.uml.diagram.static_structure.ui.ClassDiagramPropPanelFactory
+org.argouml.uml.diagram.static_structure.ui.ClassDiagramRenderer
+org.argouml.uml.diagram.static_structure.ui.FigAttribute
+org.argouml.uml.diagram.static_structure.ui.FigClass
+org.argouml.uml.diagram.static_structure.ui.FigComment
+org.argouml.uml.diagram.static_structure.ui.FigDataType
+org.argouml.uml.diagram.static_structure.ui.FigEdgeNote
+org.argouml.uml.diagram.static_structure.ui.FigEnumeration
+org.argouml.uml.diagram.static_structure.ui.FigException
+org.argouml.uml.diagram.static_structure.ui.FigFeature
+org.argouml.uml.diagram.static_structure.ui.FigInterface
+org.argouml.uml.diagram.static_structure.ui.FigLink
+org.argouml.uml.diagram.static_structure.ui.FigModel
+org.argouml.uml.diagram.static_structure.ui.FigOperation
+org.argouml.uml.diagram.static_structure.ui.FigPackage
+org.argouml.uml.diagram.static_structure.ui.FigSignal
+org.argouml.uml.diagram.static_structure.ui.FigStereotypeDeclaration
+org.argouml.uml.diagram.static_structure.ui.FigSubsystem
+org.argouml.uml.diagram.static_structure.ui.HideStereotypeAction Refinement
+org.argouml.uml.diagram.static_structure.ui.HideVisibilityAction Refinement
+org.argouml.uml.diagram.static_structure.ui.InitClassDiagram
+org.argouml.uml.diagram.static_structure.ui.PackagePortFigRect
+org.argouml.uml.diagram.static_structure.ui.PropPanelUMLClassDiagram
+org.argouml.uml.diagram.static_structure.ui.SelectionClass
+org.argouml.uml.diagram.static_structure.ui.SelectionComment
+org.argouml.uml.diagram.static_structure.ui.SelectionDataType
+org.argouml.uml.diagram.static_structure.ui.SelectionEnumeration
+org.argouml.uml.diagram.static_structure.ui.SelectionException
+org.argouml.uml.diagram.static_structure.ui.SelectionFeature Refinement
+org.argouml.uml.diagram.static_structure.ui.SelectionGeneralizableElement
+org.argouml.uml.diagram.static_structure.ui.SelectionInterface
+org.argouml.uml.diagram.static_structure.ui.SelectionSignal
+org.argouml.uml.diagram.static_structure.ui.SelectionStereotype
+org.argouml.uml.diagram.static_structure.ui.ShowStereotypeAction Refinement
+org.argouml.uml.diagram.static_structure.ui.ShowVisibilityAction Refinement
+org.argouml.uml.diagram.static_structure.ui.StylePanelFigClass
+org.argouml.uml.diagram.static_structure.ui.StylePanelFigInterface
+org.argouml.uml.diagram.static_structure.ui.StylePanelFigPackage
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram
+org.argouml.uml.diagram.ui.AbstractActionCheckBoxMenuItem AbstractActionCheckBoxMenuItem(String)
+org.argouml.uml.diagram.ui.AbstractActionCheckBoxMenuItem actionPerformed(ActionEvent)
+org.argouml.uml.diagram.ui.AbstractActionCheckBoxMenuItem isEnabled()
+org.argouml.uml.diagram.ui.AbstractActionCheckBoxMenuItem toggleValueOfTarget(Object)
+org.argouml.uml.diagram.ui.AbstractActionCheckBoxMenuItem valueOfTarget(Object)
+org.argouml.uml.diagram.ui.AbstractActionRadioMenuItem
+org.argouml.uml.diagram.ui.ActionAddAllClassesFromModel
+org.argouml.uml.diagram.ui.ActionAddAssociationRole
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion
+org.argouml.uml.diagram.ui.ActionAddExistingEdge
+org.argouml.uml.diagram.ui.ActionAddExistingNode
+org.argouml.uml.diagram.ui.ActionAddExtensionPoint
+org.argouml.uml.diagram.ui.ActionAddMessage
+org.argouml.uml.diagram.ui.ActionAddNote
+org.argouml.uml.diagram.ui.ActionAddStereotype
+org.argouml.uml.diagram.ui.ActionAggregation
+org.argouml.uml.diagram.ui.ActionCompartmentDisplay
+org.argouml.uml.diagram.ui.ActionEdgesDisplay
+org.argouml.uml.diagram.ui.ActionList
+org.argouml.uml.diagram.ui.ActionModifierAbstract ActionModifierAbstract(Object)
+org.argouml.uml.diagram.ui.ActionModifierAbstract toggleValueOfTarget(Object)
+org.argouml.uml.diagram.ui.ActionModifierAbstract valueOfTarget(Object)
+org.argouml.uml.diagram.ui.ActionModifierActive
+org.argouml.uml.diagram.ui.ActionModifierLeaf ActionModifierLeaf(Object)
+org.argouml.uml.diagram.ui.ActionModifierLeaf toggleValueOfTarget(Object)
+org.argouml.uml.diagram.ui.ActionModifierLeaf valueOfTarget(Object)
+org.argouml.uml.diagram.ui.ActionModifierRoot ActionModifierRoot(Object)
+org.argouml.uml.diagram.ui.ActionModifierRoot toggleValueOfTarget(Object)
+org.argouml.uml.diagram.ui.ActionModifierRoot valueOfTarget(Object)
+org.argouml.uml.diagram.ui.ActionMultiplicity
+org.argouml.uml.diagram.ui.ActionNavigability
+org.argouml.uml.diagram.ui.ActionNavigateUpFromDiagram
+org.argouml.uml.diagram.ui.ActionRemoveFromDiagram
+org.argouml.uml.diagram.ui.ActionSaveDiagramToClipboard
+org.argouml.uml.diagram.ui.ActionSetAddAssociationClassMode
+org.argouml.uml.diagram.ui.ActionSetAddAssociationEndMode
+org.argouml.uml.diagram.ui.ActionSetAddAssociationMode
+org.argouml.uml.diagram.ui.ActionSetAddCommentLinkMode
+org.argouml.uml.diagram.ui.ActionSetAddMessageMode
+org.argouml.uml.diagram.ui.ActionSetDiagramHomeModel
+org.argouml.uml.diagram.ui.ActionSetMode
+org.argouml.uml.diagram.ui.ActionSetPath
+org.argouml.uml.diagram.ui.ActionStereotypeView
+org.argouml.uml.diagram.ui.ActionVisibilityPackage
+org.argouml.uml.diagram.ui.ActionVisibilityPrivate
+org.argouml.uml.diagram.ui.ActionVisibilityProtected
+org.argouml.uml.diagram.ui.ActionVisibilityPublic
+org.argouml.uml.diagram.ui.AddExistingNodeCommand
+org.argouml.uml.diagram.ui.AddToDiagramMemento
+org.argouml.uml.diagram.ui.ArgoEditor
+org.argouml.uml.diagram.ui.ArgoFig
+org.argouml.uml.diagram.ui.ArgoModeCreateFigText
+org.argouml.uml.diagram.ui.Clarifiable
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(Object,Rectangle,DiagramSettings,NotationProvider)
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(Object,Rectangle,DiagramSettings,String)
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(Object,Rectangle,DiagramSettings,String[])
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(int,int,int,int,Fig,NotationProvider)
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(int,int,int,int,Fig,String)
+org.argouml.uml.diagram.ui.CompartmentFigText CompartmentFigText(int,int,int,int,Fig,String[])
+org.argouml.uml.diagram.ui.CompartmentFigText getLineColor()
+org.argouml.uml.diagram.ui.CompartmentFigText isFilled()
+org.argouml.uml.diagram.ui.CompartmentFigText isHighlighted()
+org.argouml.uml.diagram.ui.CompartmentFigText paint(Graphics)
+org.argouml.uml.diagram.ui.CompartmentFigText removeFromDiagram()
+org.argouml.uml.diagram.ui.CompartmentFigText setHighlighted(boolean)
+org.argouml.uml.diagram.ui.CompartmentFigText targetAdded(TargetEvent)
+org.argouml.uml.diagram.ui.CompartmentFigText targetRemoved(TargetEvent)
+org.argouml.uml.diagram.ui.CompartmentFigText targetSet(TargetEvent)
+org.argouml.uml.diagram.ui.CompartmentFigText textEdited()
+org.argouml.uml.diagram.ui.DiagramNameDocument
+org.argouml.uml.diagram.ui.DnDJGraph
+org.argouml.uml.diagram.ui.EnumLiteralsCompartmentContainer
+org.argouml.uml.diagram.ui.FeaturesCompartmentContainer
+org.argouml.uml.diagram.ui.FigAbstraction
+org.argouml.uml.diagram.ui.FigAssociation
+org.argouml.uml.diagram.ui.FigAttributesCompartment
+org.argouml.uml.diagram.ui.FigClassAssociationClass
+org.argouml.uml.diagram.ui.FigCompartment
+org.argouml.uml.diagram.ui.FigDependency
+org.argouml.uml.diagram.ui.FigEdgeAssociationClass
+org.argouml.uml.diagram.ui.FigEdgeModelElement
+org.argouml.uml.diagram.ui.FigEdgePort
+org.argouml.uml.diagram.ui.FigEditableCompartment
+org.argouml.uml.diagram.ui.FigEmptyRect
+org.argouml.uml.diagram.ui.FigEnumLiteralsCompartment
+org.argouml.uml.diagram.ui.FigGeneralization
+org.argouml.uml.diagram.ui.FigKeyword
+org.argouml.uml.diagram.ui.FigMessage
+org.argouml.uml.diagram.ui.FigMultiLineText
+org.argouml.uml.diagram.ui.FigMultiplicity
+org.argouml.uml.diagram.ui.FigNameWithAbstract
+org.argouml.uml.diagram.ui.FigNodeAssociation
+org.argouml.uml.diagram.ui.FigNodeModelElement FigNodeModelElement()
+org.argouml.uml.diagram.ui.FigNodeModelElement FigNodeModelElement(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.ui.FigNodeModelElement FigNodeModelElement(Object,int,int)
+org.argouml.uml.diagram.ui.FigNodeModelElement addElementListener(Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement addElementListener(Object,String)
+org.argouml.uml.diagram.ui.FigNodeModelElement addElementListener(Object,String[])
+org.argouml.uml.diagram.ui.FigNodeModelElement addElementListeners(Set<Object[]>)
+org.argouml.uml.diagram.ui.FigNodeModelElement addEnclosedFig(Fig)
+org.argouml.uml.diagram.ui.FigNodeModelElement allowRemoveFromDiagram(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement buildModifierPopUp(int)
+org.argouml.uml.diagram.ui.FigNodeModelElement buildShowPopUp()
+org.argouml.uml.diagram.ui.FigNodeModelElement buildVisibilityPopUp()
+org.argouml.uml.diagram.ui.FigNodeModelElement calcBounds()
+org.argouml.uml.diagram.ui.FigNodeModelElement classNameAndBounds()
+org.argouml.uml.diagram.ui.FigNodeModelElement clone()
+org.argouml.uml.diagram.ui.FigNodeModelElement constructFigs()
+org.argouml.uml.diagram.ui.FigNodeModelElement createContainedModelElement(FigGroup,InputEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement createStereotypeFig()
+org.argouml.uml.diagram.ui.FigNodeModelElement deepUpdateFont(FigGroup)
+org.argouml.uml.diagram.ui.FigNodeModelElement delayedVetoableChange(PropertyChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement deleteFromModel()
+org.argouml.uml.diagram.ui.FigNodeModelElement determineDefaultPathVisible()
+org.argouml.uml.diagram.ui.FigNodeModelElement diagramFontChanged(ArgoDiagramAppearanceEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement displace(int,int)
+org.argouml.uml.diagram.ui.FigNodeModelElement enableSizeChecking(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement formatEvent(PropertyChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement getBigPort()
+org.argouml.uml.diagram.ui.FigNodeModelElement getDiElement()
+org.argouml.uml.diagram.ui.FigNodeModelElement getEnclosedFigs()
+org.argouml.uml.diagram.ui.FigNodeModelElement getEncloser()
+org.argouml.uml.diagram.ui.FigNodeModelElement getEnclosingFig()
+org.argouml.uml.diagram.ui.FigNodeModelElement getItemUID()
+org.argouml.uml.diagram.ui.FigNodeModelElement getName()
+org.argouml.uml.diagram.ui.FigNodeModelElement getNameBounds()
+org.argouml.uml.diagram.ui.FigNodeModelElement getNameFig()
+org.argouml.uml.diagram.ui.FigNodeModelElement getNameFigFontStyle()
+org.argouml.uml.diagram.ui.FigNodeModelElement getNotationArguments()
+org.argouml.uml.diagram.ui.FigNodeModelElement getNotationProviderType()
+org.argouml.uml.diagram.ui.FigNodeModelElement getNotationSettings()
+org.argouml.uml.diagram.ui.FigNodeModelElement getPopUpActions(MouseEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement getPopupAddOffset()
+org.argouml.uml.diagram.ui.FigNodeModelElement getPracticalView()
+org.argouml.uml.diagram.ui.FigNodeModelElement getProject()
+org.argouml.uml.diagram.ui.FigNodeModelElement getRemoveDelegate()
+org.argouml.uml.diagram.ui.FigNodeModelElement getSettings()
+org.argouml.uml.diagram.ui.FigNodeModelElement getStereotypeCount()
+org.argouml.uml.diagram.ui.FigNodeModelElement getStereotypeFig()
+org.argouml.uml.diagram.ui.FigNodeModelElement getStereotypeStyle()
+org.argouml.uml.diagram.ui.FigNodeModelElement getStereotypeView()
+org.argouml.uml.diagram.ui.FigNodeModelElement getTipString(MouseEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement hit(Rectangle)
+org.argouml.uml.diagram.ui.FigNodeModelElement hitClarifier(int,int)
+org.argouml.uml.diagram.ui.FigNodeModelElement initNotationProviders(Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement isCheckSize()
+org.argouml.uml.diagram.ui.FigNodeModelElement isDragConnectable()
+org.argouml.uml.diagram.ui.FigNodeModelElement isEditable()
+org.argouml.uml.diagram.ui.FigNodeModelElement isPartlyOwner(Fig,Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement isPartlyOwner(Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement isPathVisible()
+org.argouml.uml.diagram.ui.FigNodeModelElement isReadOnly()
+org.argouml.uml.diagram.ui.FigNodeModelElement isReadyToEdit()
+org.argouml.uml.diagram.ui.FigNodeModelElement isSingleTarget()
+org.argouml.uml.diagram.ui.FigNodeModelElement keyPressed(KeyEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement keyReleased(KeyEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement keyTyped(KeyEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement makeSelection()
+org.argouml.uml.diagram.ui.FigNodeModelElement modelChanged(PropertyChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement mouseClicked(MouseEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement moveIntoComponent(Fig)
+org.argouml.uml.diagram.ui.FigNodeModelElement notationAdded(ArgoNotationEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement notationChanged(ArgoNotationEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement notationProviderAdded(ArgoNotationEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement notationProviderRemoved(ArgoNotationEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement notationRemoved(ArgoNotationEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement paintClarifiers(Graphics)
+org.argouml.uml.diagram.ui.FigNodeModelElement placeString()
+org.argouml.uml.diagram.ui.FigNodeModelElement propertyChange(PropertyChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement putNotationArgument(String,Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement removeAllElementListeners()
+org.argouml.uml.diagram.ui.FigNodeModelElement removeElementListener(Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement removeElementListeners(Set<Object[]>)
+org.argouml.uml.diagram.ui.FigNodeModelElement removeEnclosedFig(Fig)
+org.argouml.uml.diagram.ui.FigNodeModelElement removeFromDiagram()
+org.argouml.uml.diagram.ui.FigNodeModelElement removeFromDiagramImpl()
+org.argouml.uml.diagram.ui.FigNodeModelElement renderingChanged()
+org.argouml.uml.diagram.ui.FigNodeModelElement setBigPort(Fig)
+org.argouml.uml.diagram.ui.FigNodeModelElement setBoundsImpl(int,int,int,int)
+org.argouml.uml.diagram.ui.FigNodeModelElement setDiElement(DiElement)
+org.argouml.uml.diagram.ui.FigNodeModelElement setEditable(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement setEncloser(Fig)
+org.argouml.uml.diagram.ui.FigNodeModelElement setEnclosingFig(Fig)
+org.argouml.uml.diagram.ui.FigNodeModelElement setItemUID(ItemUID)
+org.argouml.uml.diagram.ui.FigNodeModelElement setLayer(Layer)
+org.argouml.uml.diagram.ui.FigNodeModelElement setLineWidth(int)
+org.argouml.uml.diagram.ui.FigNodeModelElement setName(String)
+org.argouml.uml.diagram.ui.FigNodeModelElement setNameFig(FigText)
+org.argouml.uml.diagram.ui.FigNodeModelElement setOwner(Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement setPathVisible(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement setProject(Project)
+org.argouml.uml.diagram.ui.FigNodeModelElement setReadyToEdit(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement setSettings(DiagramSettings)
+org.argouml.uml.diagram.ui.FigNodeModelElement setStandardBounds(int,int,int,int)
+org.argouml.uml.diagram.ui.FigNodeModelElement setStereotypeStyle(StereotypeStyle)
+org.argouml.uml.diagram.ui.FigNodeModelElement setStereotypeView(int)
+org.argouml.uml.diagram.ui.FigNodeModelElement setSuppressCalcBounds(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement setVisible(boolean)
+org.argouml.uml.diagram.ui.FigNodeModelElement showHelp(String)
+org.argouml.uml.diagram.ui.FigNodeModelElement stereotypeChanged(UmlChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement textEditStarted(FigText)
+org.argouml.uml.diagram.ui.FigNodeModelElement textEdited(FigText)
+org.argouml.uml.diagram.ui.FigNodeModelElement updateBounds()
+org.argouml.uml.diagram.ui.FigNodeModelElement updateElementListeners(Set<Object[]>)
+org.argouml.uml.diagram.ui.FigNodeModelElement updateFont()
+org.argouml.uml.diagram.ui.FigNodeModelElement updateLayout(UmlChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement updateListeners(Object,Object)
+org.argouml.uml.diagram.ui.FigNodeModelElement updateNameText()
+org.argouml.uml.diagram.ui.FigNodeModelElement updateSmallIcons(int)
+org.argouml.uml.diagram.ui.FigNodeModelElement updateStereotypeIcon()
+org.argouml.uml.diagram.ui.FigNodeModelElement updateStereotypeText()
+org.argouml.uml.diagram.ui.FigNodeModelElement vetoableChange(PropertyChangeEvent)
+org.argouml.uml.diagram.ui.FigNodeModelElement.SelectionDefaultClarifiers
+org.argouml.uml.diagram.ui.FigOperationsCompartment
+org.argouml.uml.diagram.ui.FigOrdering
+org.argouml.uml.diagram.ui.FigPermission
+org.argouml.uml.diagram.ui.FigProfileIcon
+org.argouml.uml.diagram.ui.FigRole
+org.argouml.uml.diagram.ui.FigSeperator Refinement
+org.argouml.uml.diagram.ui.FigSingleLineText
+org.argouml.uml.diagram.ui.FigStereotype
+org.argouml.uml.diagram.ui.FigTextGroup
+org.argouml.uml.diagram.ui.FigTrace
+org.argouml.uml.diagram.ui.FigUsage
+org.argouml.uml.diagram.ui.ImageSelection
+org.argouml.uml.diagram.ui.InitDiagramAppearanceUI
+org.argouml.uml.diagram.ui.ModeAddToDiagram
+org.argouml.uml.diagram.ui.ModeCreateAssociationClass
+org.argouml.uml.diagram.ui.ModeCreateAssociationEnd
+org.argouml.uml.diagram.ui.ModeCreateCommentEdge
+org.argouml.uml.diagram.ui.ModeCreateDependency
+org.argouml.uml.diagram.ui.ModeCreateGeneralization
+org.argouml.uml.diagram.ui.ModeCreateGraphEdge
+org.argouml.uml.diagram.ui.ModeCreatePermission
+org.argouml.uml.diagram.ui.ModeCreateUsage
+org.argouml.uml.diagram.ui.ModeLabelDrag
+org.argouml.uml.diagram.ui.PathConvPercent2
+org.argouml.uml.diagram.ui.PathItemPlacement
+org.argouml.uml.diagram.ui.PropPanelDiagram
+org.argouml.uml.diagram.ui.PropPanelString
+org.argouml.uml.diagram.ui.RadioAction
+org.argouml.uml.diagram.ui.SPFigEdgeModelElement
+org.argouml.uml.diagram.ui.SelectionDefaultClarifiers Refinement
+org.argouml.uml.diagram.ui.SelectionEdgeClarifiers
+org.argouml.uml.diagram.ui.SelectionMoveClarifiers
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 SelectionNodeClarifiers2(Fig)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 buttonClicked(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 createEdge(MutableGraphModel,Object,int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 createEdgeAbove(MutableGraphModel,Object)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 createEdgeLeft(MutableGraphModel,Object)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 createEdgeRight(MutableGraphModel,Object)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 createEdgeToSelf(MutableGraphModel)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 createEdgeUnder(MutableGraphModel,Object)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 dragHandle(int,int,int,int,Handle)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 getButton()
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 getIcons()
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 getInstructions(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 getNewEdgeType(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 getNewNode(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 getNewNodeType(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 hitHandle(Rectangle,Handle)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 isDraggableHandle(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 isEdgePostProcessRequested()
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 isReverseEdge(int)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 paint(Graphics)
+org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 paintButtons(Graphics)
+org.argouml.uml.diagram.ui.SelectionRerouteEdge
+org.argouml.uml.diagram.ui.SettingsTabDiagramAppearance
+org.argouml.uml.diagram.ui.StatusBarAdapter
+org.argouml.uml.diagram.ui.StereotypeStyled
+org.argouml.uml.diagram.ui.StylePanelFigAssociationClass
+org.argouml.uml.diagram.ui.StylePanelFigMessage
+org.argouml.uml.diagram.ui.TabDiagram
+org.argouml.uml.diagram.ui.UMLDiagram
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel addEdge(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel addNode(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel addNodeRelatedEdges(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel canAddEdge(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel canAddNode(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel canConnect(Object,Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel getInEdges(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel getOutEdges(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel getOwner(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel getPorts(Object)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel vetoableChange(PropertyChangeEvent)
+org.argouml.uml.diagram.use_case.ui.ActorPortFigRect Refinement
+org.argouml.uml.diagram.use_case.ui.FigActor FigActor()
+org.argouml.uml.diagram.use_case.ui.FigActor FigActor(GraphModel,Object)
+org.argouml.uml.diagram.use_case.ui.FigActor FigActor(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.use_case.ui.FigActor constructFigs()
+org.argouml.uml.diagram.use_case.ui.FigActor deepHitPort(int,int)
+org.argouml.uml.diagram.use_case.ui.FigActor getGravityPoints()
+org.argouml.uml.diagram.use_case.ui.FigActor getMinimumSize()
+org.argouml.uml.diagram.use_case.ui.FigActor getNameFigFontStyle()
+org.argouml.uml.diagram.use_case.ui.FigActor getPopUpActions(MouseEvent)
+org.argouml.uml.diagram.use_case.ui.FigActor isResizable()
+org.argouml.uml.diagram.use_case.ui.FigActor makeSelection()
+org.argouml.uml.diagram.use_case.ui.FigActor modelChanged(PropertyChangeEvent)
+org.argouml.uml.diagram.use_case.ui.FigActor setBoundsImpl(int,int,int,int)
+org.argouml.uml.diagram.use_case.ui.FigActor setFilled(boolean)
+org.argouml.uml.diagram.use_case.ui.FigActor setLineWidth(int)
+org.argouml.uml.diagram.use_case.ui.FigActor updateBounds()
+org.argouml.uml.diagram.use_case.ui.FigActor.ActorPortFigRect
+org.argouml.uml.diagram.use_case.ui.FigExtend FigExtend()
+org.argouml.uml.diagram.use_case.ui.FigExtend FigExtend(Object)
+org.argouml.uml.diagram.use_case.ui.FigExtend FigExtend(Object,DiagramSettings)
+org.argouml.uml.diagram.use_case.ui.FigExtend canEdit(Fig)
+org.argouml.uml.diagram.use_case.ui.FigExtend getLabel()
+org.argouml.uml.diagram.use_case.ui.FigExtend initialize(Object)
+org.argouml.uml.diagram.use_case.ui.FigExtend modelChanged(PropertyChangeEvent)
+org.argouml.uml.diagram.use_case.ui.FigExtend paint(Graphics)
+org.argouml.uml.diagram.use_case.ui.FigExtend renderingChanged()
+org.argouml.uml.diagram.use_case.ui.FigExtend setFig(Fig)
+org.argouml.uml.diagram.use_case.ui.FigExtend updateConditionText()
+org.argouml.uml.diagram.use_case.ui.FigExtend updateLabel()
+org.argouml.uml.diagram.use_case.ui.FigExtend updateListeners(Object,Object)
+org.argouml.uml.diagram.use_case.ui.FigInclude FigInclude()
+org.argouml.uml.diagram.use_case.ui.FigInclude FigInclude(Object)
+org.argouml.uml.diagram.use_case.ui.FigInclude FigInclude(Object,DiagramSettings)
+org.argouml.uml.diagram.use_case.ui.FigInclude canEdit(Fig)
+org.argouml.uml.diagram.use_case.ui.FigInclude initialize()
+org.argouml.uml.diagram.use_case.ui.FigInclude paint(Graphics)
+org.argouml.uml.diagram.use_case.ui.FigInclude setFig(Fig)
+org.argouml.uml.diagram.use_case.ui.FigMyCircle Refinement
+org.argouml.uml.diagram.use_case.ui.FigUseCase FigUseCase()
+org.argouml.uml.diagram.use_case.ui.FigUseCase FigUseCase(GraphModel,Object)
+org.argouml.uml.diagram.use_case.ui.FigUseCase FigUseCase(Object,Rectangle,DiagramSettings)
+org.argouml.uml.diagram.use_case.ui.FigUseCase buildShowPopUp()
+org.argouml.uml.diagram.use_case.ui.FigUseCase calcEllipse(Dimension,int)
+org.argouml.uml.diagram.use_case.ui.FigUseCase calcX(double,double,double)
+org.argouml.uml.diagram.use_case.ui.FigUseCase classNameAndBounds()
+org.argouml.uml.diagram.use_case.ui.FigUseCase clone()
+org.argouml.uml.diagram.use_case.ui.FigUseCase createContainedModelElement(FigGroup,InputEvent)
+org.argouml.uml.diagram.use_case.ui.FigUseCase getEPFigs()
+org.argouml.uml.diagram.use_case.ui.FigUseCase getFillColor()
+org.argouml.uml.diagram.use_case.ui.FigUseCase getGravityPoints()
+org.argouml.uml.diagram.use_case.ui.FigUseCase getLineColor()
+org.argouml.uml.diagram.use_case.ui.FigUseCase getLineWidth()
+org.argouml.uml.diagram.use_case.ui.FigUseCase getMinimumSize()
+org.argouml.uml.diagram.use_case.ui.FigUseCase getPopUpActions(MouseEvent)
+org.argouml.uml.diagram.use_case.ui.FigUseCase getTextSize()
+org.argouml.uml.diagram.use_case.ui.FigUseCase initialize()
+org.argouml.uml.diagram.use_case.ui.FigUseCase isExtensionPointVisible()
+org.argouml.uml.diagram.use_case.ui.FigUseCase isFilled()
+org.argouml.uml.diagram.use_case.ui.FigUseCase makeSelection()
+org.argouml.uml.diagram.use_case.ui.FigUseCase modelChanged(PropertyChangeEvent)
+org.argouml.uml.diagram.use_case.ui.FigUseCase mouseClicked(MouseEvent)
+org.argouml.uml.diagram.use_case.ui.FigUseCase mouseExited(MouseEvent)
+org.argouml.uml.diagram.use_case.ui.FigUseCase mousePressed(MouseEvent)
+org.argouml.uml.diagram.use_case.ui.FigUseCase placeString()
+org.argouml.uml.diagram.use_case.ui.FigUseCase positionStereotypes()
+org.argouml.uml.diagram.use_case.ui.FigUseCase renderingChanged()
+org.argouml.uml.diagram.use_case.ui.FigUseCase setBoundsImpl(int,int,int,int)
+org.argouml.uml.diagram.use_case.ui.FigUseCase setExtensionPointVisible(boolean)
+org.argouml.uml.diagram.use_case.ui.FigUseCase setExtensionPointVisibleInternal(boolean)
+org.argouml.uml.diagram.use_case.ui.FigUseCase setFillColor(Color)
+org.argouml.uml.diagram.use_case.ui.FigUseCase setFilled(boolean)
+org.argouml.uml.diagram.use_case.ui.FigUseCase setLineColor(Color)
+org.argouml.uml.diagram.use_case.ui.FigUseCase setLineWidth(int)
+org.argouml.uml.diagram.use_case.ui.FigUseCase unhighlight()
+org.argouml.uml.diagram.use_case.ui.FigUseCase updateExtensionPoint()
+org.argouml.uml.diagram.use_case.ui.FigUseCase updateFigGroupSize(int,int,int,int)
+org.argouml.uml.diagram.use_case.ui.FigUseCase updateListeners(Object,Object)
+org.argouml.uml.diagram.use_case.ui.FigUseCase updateNameText()
+org.argouml.uml.diagram.use_case.ui.FigUseCase updateStereotypeText()
+org.argouml.uml.diagram.use_case.ui.FigUseCase.FigMyCircle
+org.argouml.uml.diagram.use_case.ui.InitUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.PropPanelUMLUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.SelectionActor SelectionActor(Fig)
+org.argouml.uml.diagram.use_case.ui.SelectionActor getIcons()
+org.argouml.uml.diagram.use_case.ui.SelectionActor getInstructions(int)
+org.argouml.uml.diagram.use_case.ui.SelectionActor getNewEdgeType(int)
+org.argouml.uml.diagram.use_case.ui.SelectionActor getNewNode(int)
+org.argouml.uml.diagram.use_case.ui.SelectionActor getNewNodeType(int)
+org.argouml.uml.diagram.use_case.ui.SelectionActor isReverseEdge(int)
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase SelectionUseCase(Fig)
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase getIcons()
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase getInstructions(int)
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase getNewEdgeType(int)
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase getNewNode(int)
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase getNewNodeType(int)
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase isReverseEdge(int)
+org.argouml.uml.diagram.use_case.ui.StylePanelFigUseCase StylePanelFigUseCase()
+org.argouml.uml.diagram.use_case.ui.StylePanelFigUseCase itemStateChanged(ItemEvent)
+org.argouml.uml.diagram.use_case.ui.StylePanelFigUseCase refresh()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram UMLUseCaseDiagram()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram UMLUseCaseDiagram(Object)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram UMLUseCaseDiagram(String,Object)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram doesAccept(Object)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram drop(Object,Point)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram encloserChanged(FigNode,FigNode,FigNode)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionActor()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionAggregation()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionAssociation()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionComposition()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionDependency()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionExtend()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionExtensionPoint()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionGeneralize()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionInclude()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionUniAggregation()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionUniAssociation()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionUniComposition()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getActionUseCase()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getAssociationActions()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getLabelName()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getRelocationCandidates(Object)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram getUmlActions()
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram isRelocationAllowed(Object)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram relocate(Object)
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram setNamespace(Object)
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramPropPanelFactory
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer getFigEdgeFor(GraphModel,Layer,Object,Map)
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer getFigNodeFor(GraphModel,Layer,Object,Map)
+org.argouml.uml.generator.AbstractSection
+org.argouml.uml.generator.CodeGenerator
+org.argouml.uml.generator.GeneratorHelper
+org.argouml.uml.generator.GeneratorManager
+org.argouml.uml.generator.Language
+org.argouml.uml.generator.SourceUnit
+org.argouml.uml.generator.TempFileUtils
+org.argouml.uml.generator.ui.ClassGenerationDialog
+org.argouml.uml.generator.ui.TableModelClassChecks Refinement
+org.argouml.uml.reveng.BooleanSelection Refinement
+org.argouml.uml.reveng.BooleanSelection2 Refinement
+org.argouml.uml.reveng.ConfigPanelExtension
+org.argouml.uml.reveng.DiagramInterface
+org.argouml.uml.reveng.FileImportUtils
+org.argouml.uml.reveng.Import
+org.argouml.uml.reveng.MethodImportInterface
+org.argouml.uml.reveng.PathListSelection Refinement
+org.argouml.uml.reveng.PathSelection Refinement
+org.argouml.uml.reveng.SelectedLanguageListener Refinement
+org.argouml.uml.reveng.Setting
+org.argouml.uml.reveng.UniqueSelection Refinement
+org.argouml.uml.reveng.UniqueSelection2 Refinement
+org.argouml.uml.reveng.UserString Refinement
+org.argouml.uml.reveng.UserString2 Refinement
+org.argouml.uml.reveng.ui.AddListener Refinement
+org.argouml.uml.reveng.ui.ImportClasspathDialog
+org.argouml.uml.reveng.ui.ImportStatusScreen
+org.argouml.uml.reveng.ui.ProblemsDialog
+org.argouml.uml.reveng.ui.RemoveListener Refinement
+org.argouml.uml.ui.AbstractActionAddModelElement2
+org.argouml.uml.ui.AbstractActionNavigate
+org.argouml.uml.ui.AbstractActionNewModelElement
+org.argouml.uml.ui.AbstractActionRemoveElement
+org.argouml.uml.ui.ActionActivityDiagram
+org.argouml.uml.ui.ActionAddDiagram
+org.argouml.uml.ui.ActionAddPackage
+org.argouml.uml.ui.ActionAddTopLevelPackage
+org.argouml.uml.ui.ActionBooleanTaggedValue
+org.argouml.uml.ui.ActionClassDiagram
+org.argouml.uml.ui.ActionCollaborationDiagram
+org.argouml.uml.ui.ActionCopy
+org.argouml.uml.ui.ActionCut
+org.argouml.uml.ui.ActionDeleteModelElements
+org.argouml.uml.ui.ActionDeploymentDiagram
+org.argouml.uml.ui.ActionGenerateAll
+org.argouml.uml.ui.ActionGenerateOne
+org.argouml.uml.ui.ActionGenerateProjectCode
+org.argouml.uml.ui.ActionGenerationSettings
+org.argouml.uml.ui.ActionImportFromSources
+org.argouml.uml.ui.ActionLayout
+org.argouml.uml.ui.ActionNavigateAction
+org.argouml.uml.ui.ActionNavigateAssociation
+org.argouml.uml.ui.ActionNavigateContainerElement
+org.argouml.uml.ui.ActionNavigateContext
+org.argouml.uml.ui.ActionNavigateNamespace
+org.argouml.uml.ui.ActionNavigateOppositeAssocEnd
+org.argouml.uml.ui.ActionNavigateOwner
+org.argouml.uml.ui.ActionNavigateTransition
+org.argouml.uml.ui.ActionNavigateUpNextDown
+org.argouml.uml.ui.ActionNavigateUpPreviousDown
+org.argouml.uml.ui.ActionNewDiagram
+org.argouml.uml.ui.ActionOpenProject
+org.argouml.uml.ui.ActionPaste
+org.argouml.uml.ui.ActionRemoveModelElement
+org.argouml.uml.ui.ActionRemoveTaggedValue
+org.argouml.uml.ui.ActionReopenProject
+org.argouml.uml.ui.ActionRevertToSaved
+org.argouml.uml.ui.ActionSaveAllGraphics
+org.argouml.uml.ui.ActionSaveGraphics
+org.argouml.uml.ui.ActionSaveProject
+org.argouml.uml.ui.ActionSequenceDiagram
+org.argouml.uml.ui.ActionSetMultiplicity
+org.argouml.uml.ui.ActionSetSourcePath
+org.argouml.uml.ui.ActionUseCaseDiagram ActionUseCaseDiagram()
+org.argouml.uml.ui.ActionUseCaseDiagram createDiagram(Object)
+org.argouml.uml.ui.ActionUseCaseDiagram createDiagram(Object,DiagramSettings)
+org.argouml.uml.ui.ActionUseCaseDiagram isValidNamespace(Object)
+org.argouml.uml.ui.AddRemoveListener Refinement
+org.argouml.uml.ui.Anonymous1 Refinement
+org.argouml.uml.ui.AvailableListSelectionListener Refinement
+org.argouml.uml.ui.CR Refinement
+org.argouml.uml.ui.ConstraintModel Refinement
+org.argouml.uml.ui.DefaultPredicate Refinement
+org.argouml.uml.ui.ElementPropPanelFactory createPropPanel(Object)
+org.argouml.uml.ui.ElementPropPanelFactory getActionPropPanel(Object)
+org.argouml.uml.ui.ElementPropPanelFactory getClassifierPropPanel(Object)
+org.argouml.uml.ui.ElementPropPanelFactory getRelationshipPropPanel(Object)
+org.argouml.uml.ui.ElementPropPanelFactory getStateVertexPropPanel(Object)
+org.argouml.uml.ui.FileFilterChangedListener Refinement
+org.argouml.uml.ui.GroupPanel Refinement
+org.argouml.uml.ui.InitUmlUI
+org.argouml.uml.ui.LabelledLayout
+org.argouml.uml.ui.MoveDownAction
+org.argouml.uml.ui.MoveToBottomAction
+org.argouml.uml.ui.MoveToTopAction
+org.argouml.uml.ui.MoveUpAction
+org.argouml.uml.ui.MultiplicityCheckBox Refinement
+org.argouml.uml.ui.MultiplicityComboBox Refinement
+org.argouml.uml.ui.MultiplicityComboBoxModel Refinement
+org.argouml.uml.ui.PopupMenu Refinement
+org.argouml.uml.ui.PropPanel
+org.argouml.uml.ui.SaveGIFAction2
+org.argouml.uml.ui.SaveGraphicsManager
+org.argouml.uml.ui.SavePNGAction2
+org.argouml.uml.ui.SaveScaledEPSAction
+org.argouml.uml.ui.ScrollList ScrollList(JList)
+org.argouml.uml.ui.ScrollList ScrollList(ListModel)
+org.argouml.uml.ui.ScrollList ScrollList(ListModel,boolean,boolean)
+org.argouml.uml.ui.ScrollList ScrollList(ListModel,int)
+org.argouml.uml.ui.ScrollList addNotify()
+org.argouml.uml.ui.ScrollList keyPressed(KeyEvent)
+org.argouml.uml.ui.ScrollList keyReleased(KeyEvent)
+org.argouml.uml.ui.ScrollList keyTyped(KeyEvent)
+org.argouml.uml.ui.ScrollList removeNotify()
+org.argouml.uml.ui.SelectedListSelectionListener Refinement
+org.argouml.uml.ui.SelectionListener Refinement
+org.argouml.uml.ui.Seperator
+org.argouml.uml.ui.SourcePathController
+org.argouml.uml.ui.SourcePathDialog
+org.argouml.uml.ui.SourcePathTableModel
+org.argouml.uml.ui.TabConstraints
+org.argouml.uml.ui.TabDocumentation
+org.argouml.uml.ui.TabProps
+org.argouml.uml.ui.TabSrc
+org.argouml.uml.ui.TabStereotype
+org.argouml.uml.ui.TabStyle
+org.argouml.uml.ui.TabTaggedValues
+org.argouml.uml.ui.TargettableButton Refinement
+org.argouml.uml.ui.UMLAddDialog
+org.argouml.uml.ui.UMLChangeDispatch
+org.argouml.uml.ui.UMLCheckBox2
+org.argouml.uml.ui.UMLComboBox2
+org.argouml.uml.ui.UMLComboBoxEditor Refinement
+org.argouml.uml.ui.UMLComboBoxModel2
+org.argouml.uml.ui.UMLComboBoxNavigator
+org.argouml.uml.ui.UMLConditionExpressionModel UMLConditionExpressionModel(UMLUserInterfaceContainer,String)
+org.argouml.uml.ui.UMLConditionExpressionModel getExpression()
+org.argouml.uml.ui.UMLConditionExpressionModel newExpression()
+org.argouml.uml.ui.UMLConditionExpressionModel setExpression(Object)
+org.argouml.uml.ui.UMLDeprecatedCheckBox
+org.argouml.uml.ui.UMLDerivedCheckBox
+org.argouml.uml.ui.UMLDocument
+org.argouml.uml.ui.UMLEditableComboBox
+org.argouml.uml.ui.UMLExpressionBodyField
+org.argouml.uml.ui.UMLExpressionExpressionModel
+org.argouml.uml.ui.UMLExpressionLanguageField
+org.argouml.uml.ui.UMLExpressionModel2
+org.argouml.uml.ui.UMLImagePanel Refinement
+org.argouml.uml.ui.UMLLinkMouseListener
+org.argouml.uml.ui.UMLLinkedList
+org.argouml.uml.ui.UMLList2
+org.argouml.uml.ui.UMLListCellRenderer2
+org.argouml.uml.ui.UMLModelElementCommentDocument
+org.argouml.uml.ui.UMLModelElementElementResidenceListModel
+org.argouml.uml.ui.UMLModelElementListModel2
+org.argouml.uml.ui.UMLModelElementOrderedListModel2
+org.argouml.uml.ui.UMLModelElementTaggedValueDocument
+org.argouml.uml.ui.UMLModelElementTaggedValueProxy
+org.argouml.uml.ui.UMLModelStereotypeListModel Refinement
+org.argouml.uml.ui.UMLMultiplicityPanel
+org.argouml.uml.ui.UMLMutableLinkedList
+org.argouml.uml.ui.UMLPlainTextDocument
+org.argouml.uml.ui.UMLRadioButtonPanel
+org.argouml.uml.ui.UMLRecurrenceExpressionModel
+org.argouml.uml.ui.UMLScriptExpressionModel
+org.argouml.uml.ui.UMLSearchableComboBox
+org.argouml.uml.ui.UMLSingleRowSelector
+org.argouml.uml.ui.UMLStimulusActionTextField
+org.argouml.uml.ui.UMLStimulusActionTextProperty
+org.argouml.uml.ui.UMLTableCellRenderer
+org.argouml.uml.ui.UMLTaggedValueCheckBox
+org.argouml.uml.ui.UMLTextArea2
+org.argouml.uml.ui.UMLTextField2
+org.argouml.uml.ui.UMLTimeExpressionModel
+org.argouml.uml.ui.UMLTreeCellRenderer
+org.argouml.uml.ui.UMLUserInterfaceComponent
+org.argouml.uml.ui.UMLUserInterfaceContainer
+org.argouml.uml.ui.UmlObjectPropPanelFactory
+org.argouml.uml.ui.behavior.activity_graphs.ActionAddCISState
+org.argouml.uml.ui.behavior.activity_graphs.ActionAddEventAsTrigger
+org.argouml.uml.ui.behavior.activity_graphs.ActionAddOFSParameter Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionAddOFSState Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionAddPartitionContent Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionNewClassifierInState
+org.argouml.uml.ui.behavior.activity_graphs.ActionNewEntryCallAction
+org.argouml.uml.ui.behavior.activity_graphs.ActionNewOFSParameter Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionRemoveCISState
+org.argouml.uml.ui.behavior.activity_graphs.ActionRemoveOFSParameter Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionRemoveOFSState Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionSetClassifierInStateType
+org.argouml.uml.ui.behavior.activity_graphs.ActionSetObjectFlowStateClassifier
+org.argouml.uml.ui.behavior.activity_graphs.ActionSetSynch
+org.argouml.uml.ui.behavior.activity_graphs.PopupMenuNewCallAction Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelActionState
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelActivityGraph
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelCallState
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelClassifierInState
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelPartition
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelSubactivityState
+org.argouml.uml.ui.behavior.activity_graphs.UMLActionSynchCheckBox
+org.argouml.uml.ui.behavior.activity_graphs.UMLActivityGraphContextComboBoxModel
+org.argouml.uml.ui.behavior.activity_graphs.UMLActivityGraphPartiitionListModel Refinement
+org.argouml.uml.ui.behavior.activity_graphs.UMLCISStateListModel
+org.argouml.uml.ui.behavior.activity_graphs.UMLCallStateEntryList
+org.argouml.uml.ui.behavior.activity_graphs.UMLClassifierInStateTypeComboBoxModel
+org.argouml.uml.ui.behavior.activity_graphs.UMLOFSStateListModel Refinement
+org.argouml.uml.ui.behavior.activity_graphs.UMLObjectFlowStateClassifierComboBoxModel
+org.argouml.uml.ui.behavior.activity_graphs.UMLObjectFlowStateParameterListModel Refinement
+org.argouml.uml.ui.behavior.activity_graphs.UMLPartitionActivityGraphListModel
+org.argouml.uml.ui.behavior.activity_graphs.UMLPartitionContentListModel
+org.argouml.uml.ui.behavior.collaborations.ActionAddClassifierRoleBase
+org.argouml.uml.ui.behavior.collaborations.ActionAddMessagePredecessor
+org.argouml.uml.ui.behavior.collaborations.ActionNewActionForMessage
+org.argouml.uml.ui.behavior.collaborations.ActionRemoveClassifierRoleBase
+org.argouml.uml.ui.behavior.collaborations.ActionSetAssociationRoleBase
+org.argouml.uml.ui.behavior.collaborations.ActionSetClassifierRoleMultiplicity
+org.argouml.uml.ui.behavior.collaborations.ActionSetRepresentedClassifierCollaboration
+org.argouml.uml.ui.behavior.collaborations.ActionSetRepresentedOperationCollaboration
+org.argouml.uml.ui.behavior.collaborations.ActionToolNewAction Refinement
+org.argouml.uml.ui.behavior.collaborations.PropPanelAssociationEndRole
+org.argouml.uml.ui.behavior.collaborations.PropPanelAssociationRole
+org.argouml.uml.ui.behavior.collaborations.PropPanelClassifierRole
+org.argouml.uml.ui.behavior.collaborations.PropPanelCollaboration
+org.argouml.uml.ui.behavior.collaborations.PropPanelInteraction
+org.argouml.uml.ui.behavior.collaborations.PropPanelMessage
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationEndRoleBaseListModel
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleAssociationEndRoleListModel
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleBaseComboBoxModel
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleMessageListModel
+org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableContentsListModel
+org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableFeaturesListModel
+org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleBaseListModel
+org.argouml.uml.ui.behavior.collaborations.UMLCollaborationConstrainingElementListModel
+org.argouml.uml.ui.behavior.collaborations.UMLCollaborationInteractionListModel
+org.argouml.uml.ui.behavior.collaborations.UMLCollaborationRepresentedClassifierComboBoxModel
+org.argouml.uml.ui.behavior.collaborations.UMLCollaborationRepresentedOperationComboBoxModel
+org.argouml.uml.ui.behavior.collaborations.UMLInteractionContextListModel
+org.argouml.uml.ui.behavior.collaborations.UMLInteractionMessagesListModel
+org.argouml.uml.ui.behavior.collaborations.UMLMessageActionListModel
+org.argouml.uml.ui.behavior.collaborations.UMLMessageActivatorComboBox
+org.argouml.uml.ui.behavior.collaborations.UMLMessageInteractionListModel
+org.argouml.uml.ui.behavior.collaborations.UMLMessagePredecessorListModel
+org.argouml.uml.ui.behavior.collaborations.UMLMessageReceiverListModel
+org.argouml.uml.ui.behavior.collaborations.UMLMessageSenderListModel
+org.argouml.uml.ui.behavior.common_behavior.ActionAddContextSignal
+org.argouml.uml.ui.behavior.common_behavior.ActionAddCreateActionInstantiation
+org.argouml.uml.ui.behavior.common_behavior.ActionAddInstanceClassifier
+org.argouml.uml.ui.behavior.common_behavior.ActionAddReceptionSignal
+org.argouml.uml.ui.behavior.common_behavior.ActionAddSendActionSignal
+org.argouml.uml.ui.behavior.common_behavior.ActionCreateArgument
+org.argouml.uml.ui.behavior.common_behavior.ActionNavigateOppositeLinkEnd
+org.argouml.uml.ui.behavior.common_behavior.ActionNewAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewArgument
+org.argouml.uml.ui.behavior.common_behavior.ActionNewCallAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewCreateAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewDestroyAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewException
+org.argouml.uml.ui.behavior.common_behavior.ActionNewReception
+org.argouml.uml.ui.behavior.common_behavior.ActionNewReturnAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewSendAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewSignal
+org.argouml.uml.ui.behavior.common_behavior.ActionNewTerminateAction
+org.argouml.uml.ui.behavior.common_behavior.ActionNewUninterpretedAction
+org.argouml.uml.ui.behavior.common_behavior.ActionRemoveAction
+org.argouml.uml.ui.behavior.common_behavior.ActionRemoveArgument
+org.argouml.uml.ui.behavior.common_behavior.ActionRemoveContextSignal
+org.argouml.uml.ui.behavior.common_behavior.ActionRemoveReceptionSignal
+org.argouml.uml.ui.behavior.common_behavior.ActionSetActionAsynchronous
+org.argouml.uml.ui.behavior.common_behavior.ActionSetLinkAssociation
+org.argouml.uml.ui.behavior.common_behavior.PopupMenuNewAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelArgument
+org.argouml.uml.ui.behavior.common_behavior.PropPanelCallAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelComponentInstance
+org.argouml.uml.ui.behavior.common_behavior.PropPanelCreateAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelDestroyAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelException
+org.argouml.uml.ui.behavior.common_behavior.PropPanelInstance
+org.argouml.uml.ui.behavior.common_behavior.PropPanelLink
+org.argouml.uml.ui.behavior.common_behavior.PropPanelNodeInstance
+org.argouml.uml.ui.behavior.common_behavior.PropPanelObject
+org.argouml.uml.ui.behavior.common_behavior.PropPanelReception
+org.argouml.uml.ui.behavior.common_behavior.PropPanelReturnAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelSendAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelSignal
+org.argouml.uml.ui.behavior.common_behavior.PropPanelStimulus
+org.argouml.uml.ui.behavior.common_behavior.PropPanelTerminateAction
+org.argouml.uml.ui.behavior.common_behavior.PropPanelUninterpretedAction
+org.argouml.uml.ui.behavior.common_behavior.SetActionOperationAction Refinement
+org.argouml.uml.ui.behavior.common_behavior.UMLActionArgumentListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLActionAsynchronousCheckBox
+org.argouml.uml.ui.behavior.common_behavior.UMLActionSequenceActionList
+org.argouml.uml.ui.behavior.common_behavior.UMLCallActionOperationComboBox2 Refinement
+org.argouml.uml.ui.behavior.common_behavior.UMLCallActionOperationComboBoxModel Refinement
+org.argouml.uml.ui.behavior.common_behavior.UMLCreateActionClassifierListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLInstanceClassifierListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLInstanceLinkEndListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLInstanceReceiverStimulusListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLInstanceSenderStimulusListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLLinkAssociationComboBoxModel
+org.argouml.uml.ui.behavior.common_behavior.UMLLinkConnectionListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLReceptionSignalComboBox
+org.argouml.uml.ui.behavior.common_behavior.UMLReceptionSpecificationDocument
+org.argouml.uml.ui.behavior.common_behavior.UMLSendActionSignalListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLSignalContextListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLSignalReceptionListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLStimulusReceiverListModel
+org.argouml.uml.ui.behavior.common_behavior.UMLStimulusSenderListModel
+org.argouml.uml.ui.behavior.state_machines.AbstractPropPanelState
+org.argouml.uml.ui.behavior.state_machines.ActionAddEventAsDeferrableEvent
+org.argouml.uml.ui.behavior.state_machines.ActionAddSignalsToSignalEvent
+org.argouml.uml.ui.behavior.state_machines.ActionNewCallEvent
+org.argouml.uml.ui.behavior.state_machines.ActionNewChangeEvent
+org.argouml.uml.ui.behavior.state_machines.ActionNewCompositeState
+org.argouml.uml.ui.behavior.state_machines.ActionNewEvent
+org.argouml.uml.ui.behavior.state_machines.ActionNewFinalState
+org.argouml.uml.ui.behavior.state_machines.ActionNewGuard
+org.argouml.uml.ui.behavior.state_machines.ActionNewPseudoState
+org.argouml.uml.ui.behavior.state_machines.ActionNewSignalEvent
+org.argouml.uml.ui.behavior.state_machines.ActionNewSimpleState
+org.argouml.uml.ui.behavior.state_machines.ActionNewStubState
+org.argouml.uml.ui.behavior.state_machines.ActionNewSubmachineState
+org.argouml.uml.ui.behavior.state_machines.ActionNewSynchState
+org.argouml.uml.ui.behavior.state_machines.ActionNewTimeEvent
+org.argouml.uml.ui.behavior.state_machines.ActionNewTransition
+org.argouml.uml.ui.behavior.state_machines.ActionSetCompositeStateConcurrent
+org.argouml.uml.ui.behavior.state_machines.ActionSetContextStateMachine
+org.argouml.uml.ui.behavior.state_machines.ActionSetStubStateReferenceState
+org.argouml.uml.ui.behavior.state_machines.ActionSetSubmachineStateSubmachine
+org.argouml.uml.ui.behavior.state_machines.ButtonActionNewGuard
+org.argouml.uml.ui.behavior.state_machines.PopupMenu Refinement
+org.argouml.uml.ui.behavior.state_machines.PopupMenuNewEvent
+org.argouml.uml.ui.behavior.state_machines.PropPanelCallEvent
+org.argouml.uml.ui.behavior.state_machines.PropPanelChangeEvent
+org.argouml.uml.ui.behavior.state_machines.PropPanelCompositeState
+org.argouml.uml.ui.behavior.state_machines.PropPanelEvent
+org.argouml.uml.ui.behavior.state_machines.PropPanelFinalState
+org.argouml.uml.ui.behavior.state_machines.PropPanelGuard
+org.argouml.uml.ui.behavior.state_machines.PropPanelPseudostate
+org.argouml.uml.ui.behavior.state_machines.PropPanelSignalEvent
+org.argouml.uml.ui.behavior.state_machines.PropPanelSimpleState
+org.argouml.uml.ui.behavior.state_machines.PropPanelStateMachine
+org.argouml.uml.ui.behavior.state_machines.PropPanelStateVertex
+org.argouml.uml.ui.behavior.state_machines.PropPanelStubState
+org.argouml.uml.ui.behavior.state_machines.PropPanelSubmachineState
+org.argouml.uml.ui.behavior.state_machines.PropPanelSynchState
+org.argouml.uml.ui.behavior.state_machines.PropPanelTimeEvent
+org.argouml.uml.ui.behavior.state_machines.PropPanelTransition
+org.argouml.uml.ui.behavior.state_machines.UMLCallEventOperationComboBox2
+org.argouml.uml.ui.behavior.state_machines.UMLCallEventOperationComboBoxModel
+org.argouml.uml.ui.behavior.state_machines.UMLChangeExpressionModel
+org.argouml.uml.ui.behavior.state_machines.UMLCompositeStateConcurrentCheckBox
+org.argouml.uml.ui.behavior.state_machines.UMLCompositeStateSubvertexList
+org.argouml.uml.ui.behavior.state_machines.UMLEventParameterListModel
+org.argouml.uml.ui.behavior.state_machines.UMLEventTransitionListModel
+org.argouml.uml.ui.behavior.state_machines.UMLGuardTransitionListModel
+org.argouml.uml.ui.behavior.state_machines.UMLSignalEventSignalList
+org.argouml.uml.ui.behavior.state_machines.UMLStateDeferrableEventList
+org.argouml.uml.ui.behavior.state_machines.UMLStateDoActivityList
+org.argouml.uml.ui.behavior.state_machines.UMLStateEntryList
+org.argouml.uml.ui.behavior.state_machines.UMLStateExitList
+org.argouml.uml.ui.behavior.state_machines.UMLStateInternalTransition
+org.argouml.uml.ui.behavior.state_machines.UMLStateMachineContextComboBoxModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateMachineContextListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateMachineSubmachineStateListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateMachineTopListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateMachineTransitionListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateVertexContainerListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateVertexIncomingListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStateVertexOutgoingListModel
+org.argouml.uml.ui.behavior.state_machines.UMLStubStateComboBoxModel
+org.argouml.uml.ui.behavior.state_machines.UMLSubmachineStateComboBoxModel
+org.argouml.uml.ui.behavior.state_machines.UMLSynchStateBoundDocument
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionEffectList
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionGuardListModel
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionSourceListModel
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionStateListModel
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionStatemachineListModel
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionTargetListModel
+org.argouml.uml.ui.behavior.state_machines.UMLTransitionTriggerList
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint ActionAddExtendExtensionPoint()
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint doIt(Collection)
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint getChoices()
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint getDialogTitle()
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint getInstance()
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint getSelected()
+org.argouml.uml.ui.behavior.use_cases.ActionNewActor ActionNewActor()
+org.argouml.uml.ui.behavior.use_cases.ActionNewActor actionPerformed(ActionEvent)
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint ActionNewExtendExtensionPoint()
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint actionPerformed(ActionEvent)
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase ActionNewUseCase()
+org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase actionPerformed(ActionEvent)
+org.argouml.uml.ui.behavior.use_cases.ActionNewUseCaseExtensionPoint ActionNewUseCaseExtensionPoint()
+org.argouml.uml.ui.behavior.use_cases.ActionNewUseCaseExtensionPoint actionPerformed(ActionEvent)
+org.argouml.uml.ui.behavior.use_cases.PropPanelActor PropPanelActor()
+org.argouml.uml.ui.behavior.use_cases.PropPanelExtend PropPanelExtend()
+org.argouml.uml.ui.behavior.use_cases.PropPanelExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude PropPanelInclude()
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude getAddition()
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude getBase()
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude isAcceptableUseCase(Object)
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude setAddition(Object)
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude setBase(Object)
+org.argouml.uml.ui.behavior.use_cases.PropPanelUseCase PropPanelUseCase()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendBaseListModel UMLExtendBaseListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendBaseListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendBaseListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionListModel UMLExtendExtensionListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel UMLExtendExtensionPointListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel moveDown(int)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel moveToBottom(int)
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel moveToTop(int)
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointExtendListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointLocationDocument
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointUseCaseListModel
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeAdditionListModel UMLIncludeAdditionListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeAdditionListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeBaseListModel UMLIncludeBaseListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeBaseListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeListModel UMLIncludeListModel(String)
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel UMLUseCaseExtendListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel UMLUseCaseExtensionPointListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel isValidElement(Object)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel moveDown(int)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel moveToBottom(int)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel moveToTop(int)
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel UMLUseCaseIncludeListModel()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel buildModelList()
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel isValidElement(Object)
+org.argouml.uml.ui.foundation.core.ActionAddAssociationSpecification
+org.argouml.uml.ui.foundation.core.ActionAddAttribute
+org.argouml.uml.ui.foundation.core.ActionAddClientDependencyAction
+org.argouml.uml.ui.foundation.core.ActionAddDataType
+org.argouml.uml.ui.foundation.core.ActionAddEnumeration
+org.argouml.uml.ui.foundation.core.ActionAddLiteral
+org.argouml.uml.ui.foundation.core.ActionAddOperation
+org.argouml.uml.ui.foundation.core.ActionAddQueryOperation Refinement
+org.argouml.uml.ui.foundation.core.ActionAddSupplierDependencyAction
+org.argouml.uml.ui.foundation.core.ActionDeleteAnnotatedElement
+org.argouml.uml.ui.foundation.core.ActionNewClass
+org.argouml.uml.ui.foundation.core.ActionNewInnerClass
+org.argouml.uml.ui.foundation.core.ActionNewInterface
+org.argouml.uml.ui.foundation.core.ActionNewMethod Refinement
+org.argouml.uml.ui.foundation.core.ActionNewModelElementConstraint
+org.argouml.uml.ui.foundation.core.ActionNewParameter
+org.argouml.uml.ui.foundation.core.ActionNewRaisedSignal Refinement
+org.argouml.uml.ui.foundation.core.ActionSetAssociationEndAggregation
+org.argouml.uml.ui.foundation.core.ActionSetAssociationEndMultiplicity
+org.argouml.uml.ui.foundation.core.ActionSetAssociationEndNavigable
+org.argouml.uml.ui.foundation.core.ActionSetAssociationEndOrdering
+org.argouml.uml.ui.foundation.core.ActionSetAssociationEndTargetScope
+org.argouml.uml.ui.foundation.core.ActionSetAssociationEndType
+org.argouml.uml.ui.foundation.core.ActionSetBehavioralFeatureQuery
+org.argouml.uml.ui.foundation.core.ActionSetChangeability
+org.argouml.uml.ui.foundation.core.ActionSetClassActive
+org.argouml.uml.ui.foundation.core.ActionSetElementOwnershipSpecification
+org.argouml.uml.ui.foundation.core.ActionSetFeatureOwner
+org.argouml.uml.ui.foundation.core.ActionSetFlowSource
+org.argouml.uml.ui.foundation.core.ActionSetGeneralizableElementAbstract
+org.argouml.uml.ui.foundation.core.ActionSetGeneralizableElementLeaf
+org.argouml.uml.ui.foundation.core.ActionSetGeneralizableElementRoot
+org.argouml.uml.ui.foundation.core.ActionSetGeneralizationPowertype
+org.argouml.uml.ui.foundation.core.ActionSetMethodSpecification Refinement
+org.argouml.uml.ui.foundation.core.ActionSetModelElementNamespace
+org.argouml.uml.ui.foundation.core.ActionSetModelElementStereotype
+org.argouml.uml.ui.foundation.core.ActionSetModelElementVisibility
+org.argouml.uml.ui.foundation.core.ActionSetOperationConcurrencyKind
+org.argouml.uml.ui.foundation.core.ActionSetParameterDirectionKind
+org.argouml.uml.ui.foundation.core.ActionSetParameterType
+org.argouml.uml.ui.foundation.core.ActionSetStructuralFeatureMultiplicity
+org.argouml.uml.ui.foundation.core.ActionSetStructuralFeatureTargetScope
+org.argouml.uml.ui.foundation.core.ActionSetStructuralFeatureType
+org.argouml.uml.ui.foundation.core.ElementResidenceContainerListModel
+org.argouml.uml.ui.foundation.core.ElementResidenceResidentListModel
+org.argouml.uml.ui.foundation.core.EnumerationListModel
+org.argouml.uml.ui.foundation.core.PropPanelAbstraction
+org.argouml.uml.ui.foundation.core.PropPanelAssociation
+org.argouml.uml.ui.foundation.core.PropPanelAttribute
+org.argouml.uml.ui.foundation.core.PropPanelClass
+org.argouml.uml.ui.foundation.core.PropPanelComment
+org.argouml.uml.ui.foundation.core.PropPanelComponent
+org.argouml.uml.ui.foundation.core.PropPanelConstraint
+org.argouml.uml.ui.foundation.core.PropPanelDataType
+org.argouml.uml.ui.foundation.core.PropPanelDependency
+org.argouml.uml.ui.foundation.core.PropPanelElementResidence
+org.argouml.uml.ui.foundation.core.PropPanelEnumeration
+org.argouml.uml.ui.foundation.core.PropPanelFeature
+org.argouml.uml.ui.foundation.core.PropPanelFlow
+org.argouml.uml.ui.foundation.core.PropPanelGeneralization
+org.argouml.uml.ui.foundation.core.PropPanelInterface
+org.argouml.uml.ui.foundation.core.PropPanelMethod
+org.argouml.uml.ui.foundation.core.PropPanelModelElement
+org.argouml.uml.ui.foundation.core.PropPanelNamespace
+org.argouml.uml.ui.foundation.core.PropPanelNode
+org.argouml.uml.ui.foundation.core.PropPanelOperation
+org.argouml.uml.ui.foundation.core.PropPanelParameter
+org.argouml.uml.ui.foundation.core.PropPanelPermission
+org.argouml.uml.ui.foundation.core.PropPanelRelationship
+org.argouml.uml.ui.foundation.core.PropPanelStructuralFeature
+org.argouml.uml.ui.foundation.core.PropPanelUsage
+org.argouml.uml.ui.foundation.core.UMLAssociationAssociationRoleListModel
+org.argouml.uml.ui.foundation.core.UMLAssociationConnectionListModel
+org.argouml.uml.ui.foundation.core.UMLAssociationEndAggregationRadioButtonPanel
+org.argouml.uml.ui.foundation.core.UMLAssociationEndAssociationListModel
+org.argouml.uml.ui.foundation.core.UMLAssociationEndChangeabilityRadioButtonPanel
+org.argouml.uml.ui.foundation.core.UMLAssociationEndNavigableCheckBox
+org.argouml.uml.ui.foundation.core.UMLAssociationEndOrderingCheckBox
+org.argouml.uml.ui.foundation.core.UMLAssociationEndQualifiersListModel
+org.argouml.uml.ui.foundation.core.UMLAssociationEndSpecificationListModel
+org.argouml.uml.ui.foundation.core.UMLAssociationEndTargetScopeCheckbox
+org.argouml.uml.ui.foundation.core.UMLAssociationEndTypeComboBoxModel
+org.argouml.uml.ui.foundation.core.UMLAssociationLinkListModel
+org.argouml.uml.ui.foundation.core.UMLAttributeInitialValueListModel
+org.argouml.uml.ui.foundation.core.UMLBehavioralFeatureQueryCheckBox
+org.argouml.uml.ui.foundation.core.UMLClassActiveCheckBox
+org.argouml.uml.ui.foundation.core.UMLClassAttributeListModel UMLClassAttributeListModel()
+org.argouml.uml.ui.foundation.core.UMLClassAttributeListModel buildModelList()
+org.argouml.uml.ui.foundation.core.UMLClassAttributeListModel isValidElement(Object)
+org.argouml.uml.ui.foundation.core.UMLClassAttributeListModel moveDown(int)
+org.argouml.uml.ui.foundation.core.UMLClassAttributeListModel moveToBottom(int)
+org.argouml.uml.ui.foundation.core.UMLClassAttributeListModel moveToTop(int)
+org.argouml.uml.ui.foundation.core.UMLClassOperationListModel UMLClassOperationListModel()
+org.argouml.uml.ui.foundation.core.UMLClassOperationListModel buildModelList()
+org.argouml.uml.ui.foundation.core.UMLClassOperationListModel isValidElement(Object)
+org.argouml.uml.ui.foundation.core.UMLClassOperationListModel moveDown(int)
+org.argouml.uml.ui.foundation.core.UMLClassOperationListModel moveToBottom(int)
+org.argouml.uml.ui.foundation.core.UMLClassOperationListModel moveToTop(int)
+org.argouml.uml.ui.foundation.core.UMLClassifierAssociationEndListModel
+org.argouml.uml.ui.foundation.core.UMLClassifierCreateActionListModel
+org.argouml.uml.ui.foundation.core.UMLClassifierFeatureListModel
+org.argouml.uml.ui.foundation.core.UMLClassifierParameterListModel
+org.argouml.uml.ui.foundation.core.UMLClassifierPowertypeRangeListModel
+org.argouml.uml.ui.foundation.core.UMLCommentAnnotatedElementListModel
+org.argouml.uml.ui.foundation.core.UMLCommentBodyDocument
+org.argouml.uml.ui.foundation.core.UMLComponentResidentListModel
+org.argouml.uml.ui.foundation.core.UMLConstraintBodyDocument
+org.argouml.uml.ui.foundation.core.UMLConstraintConstrainedElementListModel
+org.argouml.uml.ui.foundation.core.UMLContainerResidentListModel
+org.argouml.uml.ui.foundation.core.UMLDefaultValueExpressionModel
+org.argouml.uml.ui.foundation.core.UMLDependencyClientListModel
+org.argouml.uml.ui.foundation.core.UMLDependencySupplierListModel
+org.argouml.uml.ui.foundation.core.UMLDiagramNameDocument
+org.argouml.uml.ui.foundation.core.UMLDiscriminatorNameDocument
+org.argouml.uml.ui.foundation.core.UMLEnumerationLiteralsListModel
+org.argouml.uml.ui.foundation.core.UMLFeatureOwnerListModel
+org.argouml.uml.ui.foundation.core.UMLFeatureOwnerScopeCheckBox
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementAbstractCheckBox
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementGeneralizationListModel
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementLeafCheckBox
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementRootCheckBox
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementSpecializationListModel UMLGeneralizableElementSpecializationListModel()
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementSpecializationListModel buildModelList()
+org.argouml.uml.ui.foundation.core.UMLGeneralizableElementSpecializationListModel isValidElement(Object)
+org.argouml.uml.ui.foundation.core.UMLGeneralizationChildListModel
+org.argouml.uml.ui.foundation.core.UMLGeneralizationParentListModel
+org.argouml.uml.ui.foundation.core.UMLGeneralizationPowertypeComboBoxModel
+org.argouml.uml.ui.foundation.core.UMLInitialValueExpressionModel Refinement
+org.argouml.uml.ui.foundation.core.UMLMethodProcedureExpressionModel
+org.argouml.uml.ui.foundation.core.UMLMethodSpecificationComboBoxModel Refinement
+org.argouml.uml.ui.foundation.core.UMLModelElementClientDependencyListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementConstraintListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementElementResidenceListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementNameDocument
+org.argouml.uml.ui.foundation.core.UMLModelElementNamespaceComboBoxModel
+org.argouml.uml.ui.foundation.core.UMLModelElementNamespaceListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementSourceFlowListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementStereotypeListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementSupplierDependencyListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementTargetFlowListModel
+org.argouml.uml.ui.foundation.core.UMLModelElementVisibilityRadioButtonPanel
+org.argouml.uml.ui.foundation.core.UMLNamespaceOwnedElementListModel
+org.argouml.uml.ui.foundation.core.UMLNodeDeployedComponentListModel
+org.argouml.uml.ui.foundation.core.UMLOperationConcurrencyRadioButtonPanel
+org.argouml.uml.ui.foundation.core.UMLOperationMethodsListModel
+org.argouml.uml.ui.foundation.core.UMLOperationRaisedSignalsListModel
+org.argouml.uml.ui.foundation.core.UMLOperationSpecificationDocument
+org.argouml.uml.ui.foundation.core.UMLParameterBehavioralFeatListModel
+org.argouml.uml.ui.foundation.core.UMLParameterDirectionKindRadioButtonPanel
+org.argouml.uml.ui.foundation.core.UMLParameterTypeComboBoxModel
+org.argouml.uml.ui.foundation.core.UMLStructuralFeatureChangeabilityRadioButtonPanel
+org.argouml.uml.ui.foundation.core.UMLStructuralFeatureTargetScopeCheckBox
+org.argouml.uml.ui.foundation.core.UMLStructuralFeatureTypeComboBoxModel
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionAddStereotypeBaseClass Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionDeleteStereotypeBaseClass Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionNewStereotype
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionNewTagDefinition
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetMetaClass
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionMultiplicity
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionNamespace
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionOwner
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionType
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTaggedValueModelElement Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTaggedValueType Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.PropPanelStereotype
+org.argouml.uml.ui.foundation.extension_mechanisms.PropPanelTagDefinition
+org.argouml.uml.ui.foundation.extension_mechanisms.PropPanelTaggedValue
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLDataValueListModel Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLExtendedElementsListModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLMetaClassComboBoxModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLReferenceValueListModel Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLStereotypeBaseClassListModel Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLStereotypeTagDefinitionListModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLTagDefinitionComboBoxModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLTagDefinitionNamespaceComboBoxModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLTagDefinitionOwnerComboBoxModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLTagDefinitionTypedValuesListModel
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLTaggedValueModelElementComboBoxModel Refinement
+org.argouml.uml.ui.foundation.extension_mechanisms.UMLTaggedValueTypeComboBoxModel Refinement
+org.argouml.uml.ui.model_management.ActionAddPackage
+org.argouml.uml.ui.model_management.ActionDialogElementImport
+org.argouml.uml.ui.model_management.ActionNewOperation Refinement
+org.argouml.uml.ui.model_management.ActionRemovePackageImport
+org.argouml.uml.ui.model_management.ElementImportImportedElementListModel
+org.argouml.uml.ui.model_management.ElementImportPackageListModel
+org.argouml.uml.ui.model_management.PropPanelElementImport
+org.argouml.uml.ui.model_management.PropPanelModel
+org.argouml.uml.ui.model_management.PropPanelPackage
+org.argouml.uml.ui.model_management.PropPanelSubsystem
+org.argouml.uml.ui.model_management.UMLClassifierPackageImportsListModel
+org.argouml.uml.ui.model_management.UMLElementImportAliasDocument
+org.argouml.uml.ui.model_management.UMLElementImportIsSpecificationCheckbox
+org.argouml.uml.util.PathComparator
+org.argouml.uml.util.SortedListModel
+org.argouml.uml.util.namespace.Namespace
+org.argouml.uml.util.namespace.StringNamespace
+org.argouml.util.ArgoDialog
+org.argouml.util.ArgoFrame
+org.argouml.util.ChildGenerator
+org.argouml.util.CollectionUtil
+org.argouml.util.CustomSeparator
+org.argouml.util.EnumerationIterator
+org.argouml.util.ExprSeparatorWithStrings
+org.argouml.util.FileConstants
+org.argouml.util.FileFilters
+org.argouml.util.IItemUID
+org.argouml.util.ItemUID
+org.argouml.util.IteratorEnumeration
+org.argouml.util.JavaRuntimeUtility
+org.argouml.util.KeyEventUtils
+org.argouml.util.LineSeparator
+org.argouml.util.MyTokenizer
+org.argouml.util.PopupActionsListener Refinement
+org.argouml.util.Predicate
+org.argouml.util.QuotedStringSeparator
+org.argouml.util.SingleElementIterator
+org.argouml.util.SuffixFilter
+org.argouml.util.ThreadUtils
+org.argouml.util.TokenSep
+org.argouml.util.ToolBarUtility
+org.argouml.util.Tools
+org.argouml.util.UIUtils
+org.argouml.util.logging.AwtExceptionHandler
+org.argouml.util.logging.SimpleTimer
+org.argouml.util.osdep.OSXAdapter
+org.argouml.util.osdep.OsUtil
+org.argouml.util.osdep.StartBrowser

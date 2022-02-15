@@ -1,0 +1,783 @@
+org.argouml.application.Main Refinement
+org.argouml.application.Main initTranslator() Refinement
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.application.Main main(String[]) Refinement
+org.argouml.application.Main openProject(SimpleTimer,SplashScreen,ProjectBrowser,URL) Refinement
+org.argouml.application.StartCritics
+org.argouml.application.helpers.ApplicationVersion getManualForCritic()
+org.argouml.cognitive.AbstractCognitiveTranslator
+org.argouml.cognitive.Agency
+org.argouml.cognitive.AndCM
+org.argouml.cognitive.CompositeCM
+org.argouml.cognitive.CompoundCritic
+org.argouml.cognitive.ControlMech
+org.argouml.cognitive.Critic Critic()
+org.argouml.cognitive.Critic addControlRec(String,Object)
+org.argouml.cognitive.Critic addKnowledgeType(String)
+org.argouml.cognitive.Critic addSupportedDecision(Decision)
+org.argouml.cognitive.Critic addSupportedGoal(Goal)
+org.argouml.cognitive.Critic addTrigger(String)
+org.argouml.cognitive.Critic beActive()
+org.argouml.cognitive.Critic beInactive()
+org.argouml.cognitive.Critic canFixIt(ToDoItem)
+org.argouml.cognitive.Critic containsKnowledgeType(String)
+org.argouml.cognitive.Critic critique(Object,Designer)
+org.argouml.cognitive.Critic defaultMoreInfoURL()
+org.argouml.cognitive.Critic expand(String,ListSet)
+org.argouml.cognitive.Critic fixIt(ToDoItem,Object)
+org.argouml.cognitive.Critic getArg(String)
+org.argouml.cognitive.Critic getArgs()
+org.argouml.cognitive.Critic getClarifier()
+org.argouml.cognitive.Critic getControlRec(String)
+org.argouml.cognitive.Critic getCriticCategory()
+org.argouml.cognitive.Critic getCriticKey()
+org.argouml.cognitive.Critic getCriticName()
+org.argouml.cognitive.Critic getCriticType()
+org.argouml.cognitive.Critic getCriticizedDesignMaterials()
+org.argouml.cognitive.Critic getDecisionCategory()
+org.argouml.cognitive.Critic getDescription(ListSet,Designer)
+org.argouml.cognitive.Critic getDescriptionTemplate()
+org.argouml.cognitive.Critic getHeadline()
+org.argouml.cognitive.Critic getHeadline(ListSet,Designer)
+org.argouml.cognitive.Critic getHeadline(Object,Designer)
+org.argouml.cognitive.Critic getKnowledgeTypes()
+org.argouml.cognitive.Critic getMoreInfoURL()
+org.argouml.cognitive.Critic getMoreInfoURL(ListSet,Designer)
+org.argouml.cognitive.Critic getPriority()
+org.argouml.cognitive.Critic getPriority(ListSet,Designer)
+org.argouml.cognitive.Critic getSupportedDecisions()
+org.argouml.cognitive.Critic getSupportedGoals()
+org.argouml.cognitive.Critic getTriggerMask()
+org.argouml.cognitive.Critic getWizardClass(ToDoItem)
+org.argouml.cognitive.Critic initWizard(Wizard)
+org.argouml.cognitive.Critic isActive()
+org.argouml.cognitive.Critic isEnabled()
+org.argouml.cognitive.Critic isRelevantToDecisions(Designer)
+org.argouml.cognitive.Critic isRelevantToGoals(Designer)
+org.argouml.cognitive.Critic isSnoozed()
+org.argouml.cognitive.Critic makeWizard(ToDoItem)
+org.argouml.cognitive.Critic matchReason(long)
+org.argouml.cognitive.Critic postItem(ToDoItem,Object,Designer)
+org.argouml.cognitive.Critic predicate(Object,Designer)
+org.argouml.cognitive.Critic reasonCodeFor(String)
+org.argouml.cognitive.Critic setArg(String,Object)
+org.argouml.cognitive.Critic setArgs(Hashtable<String,Object>)
+org.argouml.cognitive.Critic setDecisionCategory(String)
+org.argouml.cognitive.Critic setDescription(String)
+org.argouml.cognitive.Critic setEnabled(boolean)
+org.argouml.cognitive.Critic setHeadline(String)
+org.argouml.cognitive.Critic setKnowledgeTypes(ListSet<String>)
+org.argouml.cognitive.Critic setKnowledgeTypes(String)
+org.argouml.cognitive.Critic setKnowledgeTypes(String,String)
+org.argouml.cognitive.Critic setKnowledgeTypes(String,String,String)
+org.argouml.cognitive.Critic setMoreInfoURL(String)
+org.argouml.cognitive.Critic setPriority(int)
+org.argouml.cognitive.Critic snooze()
+org.argouml.cognitive.Critic snoozeOrder()
+org.argouml.cognitive.Critic stillValid(ToDoItem,Designer)
+org.argouml.cognitive.Critic supports(Decision)
+org.argouml.cognitive.Critic supports(Goal)
+org.argouml.cognitive.Critic toDoItem(Object,Designer)
+org.argouml.cognitive.Critic toString()
+org.argouml.cognitive.Critic unsnooze()
+org.argouml.cognitive.CurDecisionCM
+org.argouml.cognitive.Decision Decision(String,int)
+org.argouml.cognitive.Decision equals(Object)
+org.argouml.cognitive.Decision getName()
+org.argouml.cognitive.Decision getPriority()
+org.argouml.cognitive.Decision hashCode()
+org.argouml.cognitive.Decision setName(String)
+org.argouml.cognitive.Decision setPriority(int)
+org.argouml.cognitive.Decision toString()
+org.argouml.cognitive.DecisionModel
+org.argouml.cognitive.DesignGoalsCM
+org.argouml.cognitive.Designer Designer()
+org.argouml.cognitive.Designer addListener(PropertyChangeListener)
+org.argouml.cognitive.Designer canFixIt(ToDoItem)
+org.argouml.cognitive.Designer clearCritiquing()
+org.argouml.cognitive.Designer containsKnowledgeType(String)
+org.argouml.cognitive.Designer critique(Object)
+org.argouml.cognitive.Designer critiqueASAP(Object,String)
+org.argouml.cognitive.Designer determineActiveCritics()
+org.argouml.cognitive.Designer disableCritiquing()
+org.argouml.cognitive.Designer enableCritiquing()
+org.argouml.cognitive.Designer expand(String,ListSet)
+org.argouml.cognitive.Designer firePropertyChange(String,Object,Object)
+org.argouml.cognitive.Designer fixIt(ToDoItem,Object)
+org.argouml.cognitive.Designer getAgency()
+org.argouml.cognitive.Designer getAutoCritique()
+org.argouml.cognitive.Designer getChildGenerator()
+org.argouml.cognitive.Designer getClarifier()
+org.argouml.cognitive.Designer getCritiquingInterval()
+org.argouml.cognitive.Designer getCritiquingRoot()
+org.argouml.cognitive.Designer getDecisionModel()
+org.argouml.cognitive.Designer getDesignerName()
+org.argouml.cognitive.Designer getGoalList()
+org.argouml.cognitive.Designer getGoalModel()
+org.argouml.cognitive.Designer getPrefs()
+org.argouml.cognitive.Designer getSupportedDecisions()
+org.argouml.cognitive.Designer getSupportedGoals()
+org.argouml.cognitive.Designer getToDoList()
+org.argouml.cognitive.Designer hasGoal(String)
+org.argouml.cognitive.Designer inform(ToDoItem)
+org.argouml.cognitive.Designer isConsidering(Decision)
+org.argouml.cognitive.Designer isUserWorking()
+org.argouml.cognitive.Designer propertyChange(PropertyChangeEvent)
+org.argouml.cognitive.Designer removeListener(PropertyChangeListener)
+org.argouml.cognitive.Designer removeToDoItems(ToDoList)
+org.argouml.cognitive.Designer run()
+org.argouml.cognitive.Designer setAutoCritique(boolean)
+org.argouml.cognitive.Designer setChildGenerator(ChildGenerator)
+org.argouml.cognitive.Designer setClarifier(Icon)
+org.argouml.cognitive.Designer setCritiquingInterval(int)
+org.argouml.cognitive.Designer setCritiquingRoot(Object)
+org.argouml.cognitive.Designer setDecisionPriority(String,int)
+org.argouml.cognitive.Designer setDesignerName(String)
+org.argouml.cognitive.Designer setGoalPriority(String,int)
+org.argouml.cognitive.Designer setSaveAction(Action)
+org.argouml.cognitive.Designer setUserWorking(boolean)
+org.argouml.cognitive.Designer snooze()
+org.argouml.cognitive.Designer spawnCritiquer(Object)
+org.argouml.cognitive.Designer startDesiring(String)
+org.argouml.cognitive.Designer stillValid(ToDoItem,Designer)
+org.argouml.cognitive.Designer stopDesiring(String)
+org.argouml.cognitive.Designer supports(Decision)
+org.argouml.cognitive.Designer supports(Goal)
+org.argouml.cognitive.Designer theDesigner()
+org.argouml.cognitive.Designer toString()
+org.argouml.cognitive.Designer unsnooze()
+org.argouml.cognitive.Designer.EmptyChildGenerator
+org.argouml.cognitive.EmptyChildGenerator Refinement
+org.argouml.cognitive.EnabledCM
+org.argouml.cognitive.Goal Goal(String,int)
+org.argouml.cognitive.Goal equals(Object)
+org.argouml.cognitive.Goal getName()
+org.argouml.cognitive.Goal getPriority()
+org.argouml.cognitive.Goal getUnspecifiedGoal()
+org.argouml.cognitive.Goal hashCode()
+org.argouml.cognitive.Goal setName(String)
+org.argouml.cognitive.Goal setPriority(int)
+org.argouml.cognitive.Goal toString()
+org.argouml.cognitive.GoalModel GoalModel()
+org.argouml.cognitive.GoalModel addGoal(Goal)
+org.argouml.cognitive.GoalModel getGoalList()
+org.argouml.cognitive.GoalModel hasGoal(String)
+org.argouml.cognitive.GoalModel removeGoal(Goal)
+org.argouml.cognitive.GoalModel setGoalPriority(String,int)
+org.argouml.cognitive.GoalModel startDesiring(String)
+org.argouml.cognitive.GoalModel stopDesiring(String)
+org.argouml.cognitive.Highlightable
+org.argouml.cognitive.ListSet ListSet()
+org.argouml.cognitive.ListSet ListSet(T)
+org.argouml.cognitive.ListSet ListSet(int)
+org.argouml.cognitive.ListSet add(T)
+org.argouml.cognitive.ListSet add(int,T)
+org.argouml.cognitive.ListSet addAll(Collection<? extends T>)
+org.argouml.cognitive.ListSet addAll(int,Collection<? extends T>)
+org.argouml.cognitive.ListSet addAllElements(Enumeration<T>)
+org.argouml.cognitive.ListSet addAllElements(Iterator<T>)
+org.argouml.cognitive.ListSet addAllElementsSuchThat(Iterator<T>,org.argouml.util.Predicate)
+org.argouml.cognitive.ListSet addAllElementsSuchThat(ListSet<T>,org.argouml.util.Predicate)
+org.argouml.cognitive.ListSet clear()
+org.argouml.cognitive.ListSet contains(Object)
+org.argouml.cognitive.ListSet containsAll(Collection)
+org.argouml.cognitive.ListSet containsSuchThat(org.argouml.util.Predicate)
+org.argouml.cognitive.ListSet equals(Object)
+org.argouml.cognitive.ListSet findSuchThat(org.argouml.util.Predicate)
+org.argouml.cognitive.ListSet get(int)
+org.argouml.cognitive.ListSet hashCode()
+org.argouml.cognitive.ListSet indexOf(Object)
+org.argouml.cognitive.ListSet isEmpty()
+org.argouml.cognitive.ListSet iterator()
+org.argouml.cognitive.ListSet lastIndexOf(Object)
+org.argouml.cognitive.ListSet listIterator()
+org.argouml.cognitive.ListSet listIterator(int)
+org.argouml.cognitive.ListSet mutex()
+org.argouml.cognitive.ListSet reachable(org.argouml.util.ChildGenerator)
+org.argouml.cognitive.ListSet reachable(org.argouml.util.ChildGenerator,int,org.argouml.util.Predicate)
+org.argouml.cognitive.ListSet remove(Object)
+org.argouml.cognitive.ListSet remove(int)
+org.argouml.cognitive.ListSet removeAll(Collection)
+org.argouml.cognitive.ListSet removeAllElements()
+org.argouml.cognitive.ListSet removeElement(Object)
+org.argouml.cognitive.ListSet retainAll(Collection<?>)
+org.argouml.cognitive.ListSet set(int,T)
+org.argouml.cognitive.ListSet size()
+org.argouml.cognitive.ListSet subList(int,int)
+org.argouml.cognitive.ListSet toArray()
+org.argouml.cognitive.ListSet toArray(A[])
+org.argouml.cognitive.ListSet toString()
+org.argouml.cognitive.ListSet transitiveClosure(org.argouml.util.ChildGenerator)
+org.argouml.cognitive.ListSet transitiveClosure(org.argouml.util.ChildGenerator,int,org.argouml.util.Predicate)
+org.argouml.cognitive.NotSnoozedCM
+org.argouml.cognitive.Offender
+org.argouml.cognitive.OrCM
+org.argouml.cognitive.Poster
+org.argouml.cognitive.ResolvedCritic ResolvedCritic(Critic,ListSet)
+org.argouml.cognitive.ResolvedCritic ResolvedCritic(Critic,ListSet,boolean)
+org.argouml.cognitive.ResolvedCritic ResolvedCritic(String,List<String>)
+org.argouml.cognitive.ResolvedCritic equals(Object)
+org.argouml.cognitive.ResolvedCritic getCritic()
+org.argouml.cognitive.ResolvedCritic getCriticString(Critic)
+org.argouml.cognitive.ResolvedCritic getOffenderList()
+org.argouml.cognitive.ResolvedCritic hashCode()
+org.argouml.cognitive.ResolvedCritic importOffenders(ListSet,boolean)
+org.argouml.cognitive.ResolvedCritic toString()
+org.argouml.cognitive.StandardCM StandardCM()
+org.argouml.cognitive.ToDoItem ToDoItem(Critic)
+org.argouml.cognitive.ToDoItem ToDoItem(Critic,ListSet,Designer)
+org.argouml.cognitive.ToDoItem ToDoItem(Critic,Object,Designer)
+org.argouml.cognitive.ToDoItem ToDoItem(Poster,String,int,String,String)
+org.argouml.cognitive.ToDoItem ToDoItem(Poster,String,int,String,String,ListSet)
+org.argouml.cognitive.ToDoItem action()
+org.argouml.cognitive.ToDoItem canFixIt()
+org.argouml.cognitive.ToDoItem changed()
+org.argouml.cognitive.ToDoItem checkArgument(Object)
+org.argouml.cognitive.ToDoItem checkOffs(ListSet)
+org.argouml.cognitive.ToDoItem containsKnowledgeType(String)
+org.argouml.cognitive.ToDoItem deselect()
+org.argouml.cognitive.ToDoItem equals(Object)
+org.argouml.cognitive.ToDoItem fixIt()
+org.argouml.cognitive.ToDoItem getClarifier()
+org.argouml.cognitive.ToDoItem getDescription()
+org.argouml.cognitive.ToDoItem getHeadline()
+org.argouml.cognitive.ToDoItem getMoreInfoURL()
+org.argouml.cognitive.ToDoItem getOffenders()
+org.argouml.cognitive.ToDoItem getPoster()
+org.argouml.cognitive.ToDoItem getPriority()
+org.argouml.cognitive.ToDoItem getProgress()
+org.argouml.cognitive.ToDoItem getWizard()
+org.argouml.cognitive.ToDoItem hashCode()
+org.argouml.cognitive.ToDoItem select()
+org.argouml.cognitive.ToDoItem setDescription(String)
+org.argouml.cognitive.ToDoItem setHeadline(String)
+org.argouml.cognitive.ToDoItem setMoreInfoURL(String)
+org.argouml.cognitive.ToDoItem setOffenders(ListSet)
+org.argouml.cognitive.ToDoItem setPriority(int)
+org.argouml.cognitive.ToDoItem stillValid(Designer)
+org.argouml.cognitive.ToDoItem supports(Decision)
+org.argouml.cognitive.ToDoItem supports(Goal)
+org.argouml.cognitive.ToDoItem toString()
+org.argouml.cognitive.ToDoList ToDoList()
+org.argouml.cognitive.ToDoList addE(ToDoItem)
+org.argouml.cognitive.ToDoList addElement(ToDoItem)
+org.argouml.cognitive.ToDoList addOffenders(ListSet)
+org.argouml.cognitive.ToDoList addPosters(Poster)
+org.argouml.cognitive.ToDoList addResolvedCritic(ResolvedCritic)
+org.argouml.cognitive.ToDoList addToDoListListener(ToDoListListener)
+org.argouml.cognitive.ToDoList elementListForOffender(Object)
+org.argouml.cognitive.ToDoList explicitlyResolve(ToDoItem,String)
+org.argouml.cognitive.ToDoList fireToDoItemAdded(ToDoItem)
+org.argouml.cognitive.ToDoList fireToDoItemChanged(ToDoItem)
+org.argouml.cognitive.ToDoList fireToDoItemRemoved(ToDoItem)
+org.argouml.cognitive.ToDoList fireToDoItemsAdded(List<ToDoItem>)
+org.argouml.cognitive.ToDoList fireToDoItemsRemoved(List<ToDoItem>)
+org.argouml.cognitive.ToDoList fireToDoListChanged()
+org.argouml.cognitive.ToDoList forceValidityCheck()
+org.argouml.cognitive.ToDoList forceValidityCheck(List<ToDoItem>)
+org.argouml.cognitive.ToDoList get(int)
+org.argouml.cognitive.ToDoList getDecisionList()
+org.argouml.cognitive.ToDoList getGoalList()
+org.argouml.cognitive.ToDoList getOffenders()
+org.argouml.cognitive.ToDoList getPosters()
+org.argouml.cognitive.ToDoList getResolvedItems()
+org.argouml.cognitive.ToDoList getToDoItemList()
+org.argouml.cognitive.ToDoList isPaused()
+org.argouml.cognitive.ToDoList notifyObservers()
+org.argouml.cognitive.ToDoList notifyObservers(Object)
+org.argouml.cognitive.ToDoList notifyObservers(String,Object)
+org.argouml.cognitive.ToDoList pause()
+org.argouml.cognitive.ToDoList recomputeAllOffenders()
+org.argouml.cognitive.ToDoList recomputeAllPosters()
+org.argouml.cognitive.ToDoList removeAll(ToDoList)
+org.argouml.cognitive.ToDoList removeAllElements()
+org.argouml.cognitive.ToDoList removeE(ToDoItem)
+org.argouml.cognitive.ToDoList removeElement(ToDoItem)
+org.argouml.cognitive.ToDoList removeToDoListListener(ToDoListListener)
+org.argouml.cognitive.ToDoList resolve(ToDoItem)
+org.argouml.cognitive.ToDoList resume()
+org.argouml.cognitive.ToDoList run()
+org.argouml.cognitive.ToDoList setPaused(boolean)
+org.argouml.cognitive.ToDoList size()
+org.argouml.cognitive.ToDoList spawnValidityChecker(Designer)
+org.argouml.cognitive.ToDoList toString()
+org.argouml.cognitive.ToDoListEvent
+org.argouml.cognitive.ToDoListListener
+org.argouml.cognitive.Translator
+org.argouml.cognitive.UnresolvableException
+org.argouml.cognitive.checklist.CheckItem CheckItem(String,String)
+org.argouml.cognitive.checklist.CheckItem CheckItem(String,String,String,Predicate)
+org.argouml.cognitive.checklist.CheckItem CheckItem(String,String,String,org.tigris.gef.util.Predicate)
+org.argouml.cognitive.checklist.CheckItem equals(Object)
+org.argouml.cognitive.checklist.CheckItem expand(String,Object)
+org.argouml.cognitive.checklist.CheckItem getCategory()
+org.argouml.cognitive.checklist.CheckItem getDescription()
+org.argouml.cognitive.checklist.CheckItem getDescription(Object)
+org.argouml.cognitive.checklist.CheckItem getMoreInfoURL()
+org.argouml.cognitive.checklist.CheckItem getPredicate()
+org.argouml.cognitive.checklist.CheckItem getPredicate2()
+org.argouml.cognitive.checklist.CheckItem hashCode()
+org.argouml.cognitive.checklist.CheckItem setCategory(String)
+org.argouml.cognitive.checklist.CheckItem setDescription(String)
+org.argouml.cognitive.checklist.CheckItem setMoreInfoURL(String)
+org.argouml.cognitive.checklist.CheckItem setPredicate(Predicate)
+org.argouml.cognitive.checklist.CheckItem setPredicate(org.tigris.gef.util.Predicate)
+org.argouml.cognitive.checklist.CheckItem toString()
+org.argouml.cognitive.checklist.CheckManager
+org.argouml.cognitive.checklist.Checklist Checklist()
+org.argouml.cognitive.checklist.Checklist addAll(Checklist)
+org.argouml.cognitive.checklist.Checklist addItem(String)
+org.argouml.cognitive.checklist.Checklist getCheckItemList()
+org.argouml.cognitive.checklist.Checklist setNextCategory(String)
+org.argouml.cognitive.checklist.Checklist toString()
+org.argouml.cognitive.checklist.ChecklistStatus ChecklistStatus()
+org.argouml.cognitive.checklist.ChecklistStatus add(CheckItem)
+org.argouml.cognitive.checklist.ui.InitCheckListUI
+org.argouml.cognitive.checklist.ui.TabChecklist
+org.argouml.cognitive.checklist.ui.TableModelChecklist
+org.argouml.cognitive.critics.SnoozeOrder SnoozeOrder()
+org.argouml.cognitive.critics.SnoozeOrder getNow()
+org.argouml.cognitive.critics.SnoozeOrder getSnoozed()
+org.argouml.cognitive.critics.SnoozeOrder nextInterval(long)
+org.argouml.cognitive.critics.SnoozeOrder setSnoozed(boolean)
+org.argouml.cognitive.critics.SnoozeOrder snooze()
+org.argouml.cognitive.critics.SnoozeOrder unsnooze()
+org.argouml.cognitive.critics.Wizard
+org.argouml.cognitive.critics.ui.ActionOpenCritics
+org.argouml.cognitive.critics.ui.CriticBrowserDialog
+org.argouml.cognitive.critics.ui.TableCritics
+org.argouml.cognitive.critics.ui.TableModelCritics
+org.argouml.cognitive.ui.AbstractGoList getListPredicate()
+org.argouml.cognitive.ui.AbstractGoList getRoot()
+org.argouml.cognitive.ui.AbstractGoList setListPredicate(Predicate)
+org.argouml.cognitive.ui.AbstractGoList setRoot(Object)
+org.argouml.cognitive.ui.AbstractGoList2 getPredicate()
+org.argouml.cognitive.ui.AbstractGoList2 getRoot()
+org.argouml.cognitive.ui.AbstractGoList2 setListPredicate(Predicate)
+org.argouml.cognitive.ui.AbstractGoList2 setRoot(Object)
+org.argouml.cognitive.ui.ActionAutoCritique
+org.argouml.cognitive.ui.ActionGoToCritique
+org.argouml.cognitive.ui.ActionNewToDoItem
+org.argouml.cognitive.ui.ActionOpenDecisions
+org.argouml.cognitive.ui.ActionOpenGoals
+org.argouml.cognitive.ui.ActionResolve
+org.argouml.cognitive.ui.ActionSnooze
+org.argouml.cognitive.ui.AddToDoItemDialog
+org.argouml.cognitive.ui.DesignIssuesDialog
+org.argouml.cognitive.ui.DismissToDoItemDialog
+org.argouml.cognitive.ui.GoListToDecisionsToItems addTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToDecisionsToItems getChild(Object,int)
+org.argouml.cognitive.ui.GoListToDecisionsToItems getChildCount(Object)
+org.argouml.cognitive.ui.GoListToDecisionsToItems getChildCountCond(Object,boolean)
+org.argouml.cognitive.ui.GoListToDecisionsToItems getDecisionList()
+org.argouml.cognitive.ui.GoListToDecisionsToItems getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.GoListToDecisionsToItems hasChildren(Object)
+org.argouml.cognitive.ui.GoListToDecisionsToItems isLeaf(Object)
+org.argouml.cognitive.ui.GoListToDecisionsToItems removeTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToDecisionsToItems valueForPathChanged(TreePath,Object)
+org.argouml.cognitive.ui.GoListToGoalsToItems addTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToGoalsToItems getChild(Object,int)
+org.argouml.cognitive.ui.GoListToGoalsToItems getChildCount(Object)
+org.argouml.cognitive.ui.GoListToGoalsToItems getGoalList()
+org.argouml.cognitive.ui.GoListToGoalsToItems getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.GoListToGoalsToItems isLeaf(Object)
+org.argouml.cognitive.ui.GoListToGoalsToItems removeTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToGoalsToItems valueForPathChanged(TreePath,Object)
+org.argouml.cognitive.ui.GoListToOffenderToItem GoListToOffenderToItem()
+org.argouml.cognitive.ui.GoListToOffenderToItem addTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToOffenderToItem getChild(Object,int)
+org.argouml.cognitive.ui.GoListToOffenderToItem getChildCount(Object)
+org.argouml.cognitive.ui.GoListToOffenderToItem getChildrenList(Object)
+org.argouml.cognitive.ui.GoListToOffenderToItem getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.GoListToOffenderToItem isLeaf(Object)
+org.argouml.cognitive.ui.GoListToOffenderToItem removeTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToOffenderToItem valueForPathChanged(TreePath,Object)
+org.argouml.cognitive.ui.GoListToPosterToItem addTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToPosterToItem getChild(Object,int)
+org.argouml.cognitive.ui.GoListToPosterToItem getChildCount(Object)
+org.argouml.cognitive.ui.GoListToPosterToItem getChildrenList(Object)
+org.argouml.cognitive.ui.GoListToPosterToItem getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.GoListToPosterToItem isLeaf(Object)
+org.argouml.cognitive.ui.GoListToPosterToItem removeTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToPosterToItem valueForPathChanged(TreePath,Object)
+org.argouml.cognitive.ui.GoListToPriorityToItem addTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToPriorityToItem getChild(Object,int)
+org.argouml.cognitive.ui.GoListToPriorityToItem getChildCount(Object)
+org.argouml.cognitive.ui.GoListToPriorityToItem getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.GoListToPriorityToItem isLeaf(Object)
+org.argouml.cognitive.ui.GoListToPriorityToItem removeTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToPriorityToItem valueForPathChanged(TreePath,Object)
+org.argouml.cognitive.ui.GoListToTypeToItem addTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToTypeToItem getChild(Object,int)
+org.argouml.cognitive.ui.GoListToTypeToItem getChildCount(Object)
+org.argouml.cognitive.ui.GoListToTypeToItem getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.GoListToTypeToItem isLeaf(Object)
+org.argouml.cognitive.ui.GoListToTypeToItem removeTreeModelListener(TreeModelListener)
+org.argouml.cognitive.ui.GoListToTypeToItem valueForPathChanged(TreePath,Object)
+org.argouml.cognitive.ui.GoalsDialog
+org.argouml.cognitive.ui.InitCognitiveUI
+org.argouml.cognitive.ui.KnowledgeTypeNode
+org.argouml.cognitive.ui.PriorityNode PriorityNode(String,int)
+org.argouml.cognitive.ui.PriorityNode getName()
+org.argouml.cognitive.ui.PriorityNode getPriority()
+org.argouml.cognitive.ui.PriorityNode getPriorityList()
+org.argouml.cognitive.ui.PriorityNode toString()
+org.argouml.cognitive.ui.TabToDo
+org.argouml.cognitive.ui.ToDoByDecision ToDoByDecision()
+org.argouml.cognitive.ui.ToDoByDecision toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByDecision toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByDecision toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByDecision toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByGoal ToDoByGoal()
+org.argouml.cognitive.ui.ToDoByGoal toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByGoal toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByGoal toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByGoal toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByOffender ToDoByOffender()
+org.argouml.cognitive.ui.ToDoByOffender toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByOffender toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByOffender toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByOffender toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPoster ToDoByPoster()
+org.argouml.cognitive.ui.ToDoByPoster toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPoster toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPoster toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPoster toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPriority ToDoByPriority()
+org.argouml.cognitive.ui.ToDoByPriority toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPriority toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPriority toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByPriority toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByType ToDoByType()
+org.argouml.cognitive.ui.ToDoByType toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByType toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByType toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoByType toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoItemAction
+org.argouml.cognitive.ui.ToDoPane ToDoPane(SplashScreen)
+org.argouml.cognitive.ui.ToDoPane buildPerspectives()
+org.argouml.cognitive.ui.ToDoPane formatCountLabel(int)
+org.argouml.cognitive.ui.ToDoPane getCurPerspective()
+org.argouml.cognitive.ui.ToDoPane getPerspectiveList()
+org.argouml.cognitive.ui.ToDoPane getRoot()
+org.argouml.cognitive.ui.ToDoPane getSelectedObject()
+org.argouml.cognitive.ui.ToDoPane itemStateChanged(ItemEvent)
+org.argouml.cognitive.ui.ToDoPane mouseClicked(MouseEvent)
+org.argouml.cognitive.ui.ToDoPane mouseEntered(MouseEvent)
+org.argouml.cognitive.ui.ToDoPane mouseExited(MouseEvent)
+org.argouml.cognitive.ui.ToDoPane mousePressed(MouseEvent)
+org.argouml.cognitive.ui.ToDoPane mouseReleased(MouseEvent)
+org.argouml.cognitive.ui.ToDoPane myDoubleClick(int,TreePath)
+org.argouml.cognitive.ui.ToDoPane mySingleClick(int,TreePath)
+org.argouml.cognitive.ui.ToDoPane selectItem(ToDoItem)
+org.argouml.cognitive.ui.ToDoPane setCurPerspective(TreeModel)
+org.argouml.cognitive.ui.ToDoPane setPerspectives(List<ToDoPerspective>)
+org.argouml.cognitive.ui.ToDoPane setRoot(ToDoList)
+org.argouml.cognitive.ui.ToDoPane swingInvoke(Runnable)
+org.argouml.cognitive.ui.ToDoPane toDoItemsAdded(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoPane toDoItemsChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoPane toDoItemsRemoved(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoPane toDoListChanged(ToDoListEvent)
+org.argouml.cognitive.ui.ToDoPane updateCountLabel()
+org.argouml.cognitive.ui.ToDoPane updateTree()
+org.argouml.cognitive.ui.ToDoPane valueChanged(TreeSelectionEvent)
+org.argouml.cognitive.ui.ToDoPerspective ToDoPerspective(String)
+org.argouml.cognitive.ui.ToDoPerspective addFlatChildren(Object)
+org.argouml.cognitive.ui.ToDoPerspective calcFlatChildren()
+org.argouml.cognitive.ui.ToDoPerspective getChild(Object,int)
+org.argouml.cognitive.ui.ToDoPerspective getChildCount(Object)
+org.argouml.cognitive.ui.ToDoPerspective getFlat()
+org.argouml.cognitive.ui.ToDoPerspective getIndexOfChild(Object,Object)
+org.argouml.cognitive.ui.ToDoPerspective setFlat(boolean)
+org.argouml.cognitive.ui.ToDoTreeRenderer getTreeCellRendererComponent(JTree,Object,boolean,boolean,boolean,int,boolean)
+org.argouml.cognitive.ui.ToDoTreeRenderer lookupIconResource(String)
+org.argouml.cognitive.ui.WizDescription
+org.argouml.cognitive.ui.WizStep
+org.argouml.kernel.MemberList Refinement
+org.argouml.kernel.MemberList add(ProjectMember) Refinement
+org.argouml.kernel.MemberList buildOrderedMemberList() Refinement
+org.argouml.kernel.MemberList clear() Refinement
+org.argouml.kernel.MemberList contains(Object) Refinement
+org.argouml.kernel.MemberList get(int) Refinement
+org.argouml.kernel.MemberList remove(Object) Refinement
+org.argouml.kernel.MemberList setTodoList(AbstractProjectMember)
+org.argouml.kernel.MemberList size() Refinement
+org.argouml.kernel.MemberList toArray() Refinement
+org.argouml.kernel.ProjectImpl Refinement
+org.argouml.kernel.ProjectImpl addMember(Object) Refinement
+org.argouml.kernel.ProjectImpl addTodoMember(ProjectMemberTodoList)
+org.argouml.kernel.ProjectManager Refinement
+org.argouml.kernel.ProjectManager createDefaultDiagrams(Project) Refinement
+org.argouml.kernel.ProjectManager setSaveAction(Action) Refinement
+org.argouml.pattern.cognitive.critics.CrConsiderFacade
+org.argouml.pattern.cognitive.critics.CrConsiderSingleton
+org.argouml.pattern.cognitive.critics.CrSingletonViolatedMissingStaticAttr
+org.argouml.pattern.cognitive.critics.CrSingletonViolatedOnlyPrivateConstructors
+org.argouml.pattern.cognitive.critics.InitPatternCritics
+org.argouml.persistence.AbstractFilePersister Refinement
+org.argouml.persistence.OffenderXMLHelper
+org.argouml.persistence.ResolvedCriticXMLHelper
+org.argouml.persistence.ToDoItemXMLHelper
+org.argouml.persistence.TodoListMemberFilePersister
+org.argouml.persistence.TodoParser
+org.argouml.persistence.TodoTokenTable
+org.argouml.persistence.XmiFilePersister Refinement
+org.argouml.persistence.XmiFilePersister parse(String,String) Refinement
+org.argouml.persistence.XmiFilePersister parseXmiExtensions(Project) Refinement
+org.argouml.profile.Profile Refinement
+org.argouml.profile.Profile getCritics()
+org.argouml.profile.Profile setCritics(Set<Critic>)
+org.argouml.profile.UserDefinedProfile Refinement
+org.argouml.profile.UserDefinedProfile UserDefinedProfile(String,URL,Set<Critic>,Set<String>)
+org.argouml.profile.UserDefinedProfile finishLoading() Refinement
+org.argouml.profile.UserDefinedProfile generateCriticFromComment(Object)
+org.argouml.profile.UserDefinedProfile getAllCritiquesInModel()
+org.argouml.profile.UserDefinedProfile str2Decision(String)
+org.argouml.profile.UserDefinedProfile str2KnowledgeType(String)
+org.argouml.profile.UserDefinedProfile str2Priority(String)
+org.argouml.profile.init.InitProfileSubsystem Refinement
+org.argouml.profile.init.InitProfileSubsystem init() Refinement
+org.argouml.profile.init.ProfileLoader Refinement
+org.argouml.profile.init.ProfileLoader loadJavaCriticsForProfile(Attributes,ClassLoader)
+org.argouml.profile.init.ProfileLoader loadProfilesFromJarFile(Manifest,File,ClassLoader) Refinement
+org.argouml.profile.internal.ProfileManagerImpl ProfileManagerImpl() Refinement
+org.argouml.profile.internal.ProfileManagerImpl Refinement
+org.argouml.profile.internal.ProfileManagerImpl applyConfiguration(ProfileConfiguration) Refinement
+org.argouml.profile.internal.ProfileManagerImpl loadDefaultProfilesfromConfiguration() Refinement
+org.argouml.profile.internal.ProfileManagerImpl registerProfile(Profile) Refinement
+org.argouml.profile.internal.ProfileMeta ProfileMeta() Refinement
+org.argouml.profile.internal.ProfileMeta Refinement
+org.argouml.profile.internal.ProfileMeta loadWellFormednessRules()
+org.argouml.profile.internal.ProfileUML ProfileUML() Refinement
+org.argouml.profile.internal.ProfileUML Refinement
+org.argouml.profile.internal.ProfileUML loadWellFormednessRules()
+org.argouml.profile.internal.ocl.CrOCL CrOCL(String,String,String,Integer,List<Decision>,List<String>,String)
+org.argouml.profile.internal.ocl.CrOCL getCriticizedDesignMaterials()
+org.argouml.profile.internal.ocl.CrOCL getOCL()
+org.argouml.profile.internal.ocl.CrOCL predicate2(Object,Designer)
+org.argouml.profile.internal.ui.ProfilePropPanelFactory
+org.argouml.profile.internal.ui.PropPanelCritic
+org.argouml.ui.Clarifier Refinement
+org.argouml.ui.Clarifier setToDoItem(ToDoItem)
+org.argouml.ui.DisplayTextTree Refinement
+org.argouml.ui.DisplayTextTree convertValueToText(Object,boolean,boolean,boolean,int,boolean) Refinement
+org.argouml.ui.ProjectBrowser Refinement
+org.argouml.ui.ProjectBrowser propertyChange(PropertyChangeEvent) Refinement
+org.argouml.ui.cmd.ActionNew Refinement
+org.argouml.ui.cmd.ActionNew actionPerformed(ActionEvent) Refinement
+org.argouml.ui.cmd.ActionSelectAll ActionSelectAll() Refinement
+org.argouml.ui.cmd.ActionSelectAll Refinement
+org.argouml.ui.cmd.ActionSelectInvert ActionSelectInvert() Refinement
+org.argouml.ui.cmd.ActionSelectInvert Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCritique()
+org.argouml.ui.cmd.GenericArgoMenuBar initMenus() Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup ExplorerPopup(Object,MouseEvent) Refinement
+org.argouml.ui.explorer.PerspectiveManager Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.ui.explorer.rules.GoCriticsToCritic
+org.argouml.ui.explorer.rules.GoProfileToCritics
+org.argouml.uml.cognitive.ChildGenFind
+org.argouml.uml.cognitive.ChildGenSearch
+org.argouml.uml.cognitive.ProjectMemberTodoList
+org.argouml.uml.cognitive.UMLDecision
+org.argouml.uml.cognitive.UMLToDoItem
+org.argouml.uml.cognitive.checklist.Init
+org.argouml.uml.cognitive.checklist.UMLCheckItem
+org.argouml.uml.cognitive.critics.AbstractCrTooMany getThreshold()
+org.argouml.uml.cognitive.critics.AbstractCrTooMany getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.AbstractCrTooMany setThreshold(int)
+org.argouml.uml.cognitive.critics.AbstractCrUnconventionalName
+org.argouml.uml.cognitive.critics.ChildGenDerivedClasses
+org.argouml.uml.cognitive.critics.ChildGenUML
+org.argouml.uml.cognitive.critics.ClAttributeCompartment
+org.argouml.uml.cognitive.critics.ClClassName
+org.argouml.uml.cognitive.critics.ClOperationCompartment
+org.argouml.uml.cognitive.critics.CrAlreadyRealizes
+org.argouml.uml.cognitive.critics.CrAssocNameConflict CrAssocNameConflict()
+org.argouml.uml.cognitive.critics.CrAssocNameConflict computeOffenders(Object)
+org.argouml.uml.cognitive.critics.CrAssocNameConflict getAllTypes(Object)
+org.argouml.uml.cognitive.critics.CrAssocNameConflict getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrAssocNameConflict predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrAssocNameConflict stillValid(ToDoItem,Designer)
+org.argouml.uml.cognitive.critics.CrAssocNameConflict toDoItem(Object,Designer)
+org.argouml.uml.cognitive.critics.CrAttrNameConflict
+org.argouml.uml.cognitive.critics.CrCircularAssocClass
+org.argouml.uml.cognitive.critics.CrCircularComposition
+org.argouml.uml.cognitive.critics.CrCircularInheritance
+org.argouml.uml.cognitive.critics.CrClassMustBeAbstract
+org.argouml.uml.cognitive.critics.CrConflictingComposites
+org.argouml.uml.cognitive.critics.CrConstructorNeeded
+org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
+org.argouml.uml.cognitive.critics.CrDisambigClassName
+org.argouml.uml.cognitive.critics.CrDisambigStateName
+org.argouml.uml.cognitive.critics.CrDupParamName CrDupParamName()
+org.argouml.uml.cognitive.critics.CrDupParamName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrDupParamName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrDupRoleNames
+org.argouml.uml.cognitive.critics.CrEmptyPackage
+org.argouml.uml.cognitive.critics.CrFinalSubclassed
+org.argouml.uml.cognitive.critics.CrForkOutgoingTransition
+org.argouml.uml.cognitive.critics.CrIllegalGeneralization
+org.argouml.uml.cognitive.critics.CrIllegalName
+org.argouml.uml.cognitive.critics.CrInterfaceAllPublic
+org.argouml.uml.cognitive.critics.CrInterfaceOperOnly
+org.argouml.uml.cognitive.critics.CrInvalidBranch
+org.argouml.uml.cognitive.critics.CrInvalidFork
+org.argouml.uml.cognitive.critics.CrInvalidHistory CrInvalidHistory()
+org.argouml.uml.cognitive.critics.CrInvalidHistory getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrInvalidHistory predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrInvalidInitial CrInvalidInitial()
+org.argouml.uml.cognitive.critics.CrInvalidInitial getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrInvalidInitial predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrInvalidJoin
+org.argouml.uml.cognitive.critics.CrInvalidPseudoStateTrigger
+org.argouml.uml.cognitive.critics.CrInvalidSynch
+org.argouml.uml.cognitive.critics.CrJoinIncomingTransition
+org.argouml.uml.cognitive.critics.CrMergeClasses
+org.argouml.uml.cognitive.critics.CrMissingAttrName CrMissingAttrName()
+org.argouml.uml.cognitive.critics.CrMissingAttrName getClarifier()
+org.argouml.uml.cognitive.critics.CrMissingAttrName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrMissingAttrName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrMissingAttrName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrMissingAttrName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrMissingClassName CrMissingClassName()
+org.argouml.uml.cognitive.critics.CrMissingClassName getClarifier()
+org.argouml.uml.cognitive.critics.CrMissingClassName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrMissingClassName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrMissingClassName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrMissingClassName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrMissingOperName CrMissingOperName()
+org.argouml.uml.cognitive.critics.CrMissingOperName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrMissingOperName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrMissingOperName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrMissingOperName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrMissingStateName CrMissingStateName()
+org.argouml.uml.cognitive.critics.CrMissingStateName getClarifier()
+org.argouml.uml.cognitive.critics.CrMissingStateName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrMissingStateName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrMissingStateName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrMissingStateName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrMultiComposite
+org.argouml.uml.cognitive.critics.CrMultipleAgg
+org.argouml.uml.cognitive.critics.CrMultipleDeepHistoryStates
+org.argouml.uml.cognitive.critics.CrMultipleInitialStates
+org.argouml.uml.cognitive.critics.CrMultipleShallowHistoryStates
+org.argouml.uml.cognitive.critics.CrNWayAgg
+org.argouml.uml.cognitive.critics.CrNameConflict CrNameConflict()
+org.argouml.uml.cognitive.critics.CrNameConflict computeOffenders(Object)
+org.argouml.uml.cognitive.critics.CrNameConflict getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrNameConflict predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrNameConflict stillValid(ToDoItem,Designer)
+org.argouml.uml.cognitive.critics.CrNameConflict toDoItem(Object,Designer)
+org.argouml.uml.cognitive.critics.CrNameConflictAC
+org.argouml.uml.cognitive.critics.CrNameConfusion
+org.argouml.uml.cognitive.critics.CrNavFromInterface
+org.argouml.uml.cognitive.critics.CrNoAssociations CrNoAssociations()
+org.argouml.uml.cognitive.critics.CrNoAssociations findAssociation(Object,int)
+org.argouml.uml.cognitive.critics.CrNoAssociations getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrNoAssociations predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrNoGuard
+org.argouml.uml.cognitive.critics.CrNoIncomingTransitions
+org.argouml.uml.cognitive.critics.CrNoInitialState CrNoInitialState()
+org.argouml.uml.cognitive.critics.CrNoInitialState getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrNoInitialState predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrNoInstanceVariables
+org.argouml.uml.cognitive.critics.CrNoOperations
+org.argouml.uml.cognitive.critics.CrNoOutgoingTransitions
+org.argouml.uml.cognitive.critics.CrNoTransitions
+org.argouml.uml.cognitive.critics.CrNoTriggerOrGuard
+org.argouml.uml.cognitive.critics.CrNodesOverlap
+org.argouml.uml.cognitive.critics.CrNonAggDataType
+org.argouml.uml.cognitive.critics.CrOperNameConflict
+org.argouml.uml.cognitive.critics.CrOppEndConflict
+org.argouml.uml.cognitive.critics.CrOppEndVsAttr
+org.argouml.uml.cognitive.critics.CrProfile
+org.argouml.uml.cognitive.critics.CrReservedName
+org.argouml.uml.cognitive.critics.CrSeqInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrSubclassReference
+org.argouml.uml.cognitive.critics.CrTooManyAssoc CrTooManyAssoc()
+org.argouml.uml.cognitive.critics.CrTooManyAssoc getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrTooManyAssoc predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrTooManyAttr CrTooManyAttr()
+org.argouml.uml.cognitive.critics.CrTooManyAttr getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrTooManyAttr predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrTooManyClasses
+org.argouml.uml.cognitive.critics.CrTooManyOper CrTooManyOper()
+org.argouml.uml.cognitive.critics.CrTooManyOper getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrTooManyOper predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrTooManyStates CrTooManyStates()
+org.argouml.uml.cognitive.critics.CrTooManyStates getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrTooManyStates predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrTooManyTransitions CrTooManyTransitions()
+org.argouml.uml.cognitive.critics.CrTooManyTransitions getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrTooManyTransitions predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUML
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName CrUnconventionalAttrName()
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName computeOffenders(Object)
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName computeSuggestion(String)
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName getClarifier()
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName stillValid(ToDoItem,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalAttrName toDoItem(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName CrUnconventionalClassName()
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName computeSuggestion(String)
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName getClarifier()
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrUnconventionalClassName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName CrUnconventionalOperName()
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName candidateForConstructor(Object)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName computeOffenders(Object)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName computeSuggestion(String)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName stillValid(ToDoItem,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalOperName toDoItem(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName CrUnconventionalPackName()
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName computeSuggestion(String)
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName getClarifier()
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName getCriticizedDesignMaterials()
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName getWizardClass(ToDoItem)
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName initWizard(Wizard)
+org.argouml.uml.cognitive.critics.CrUnconventionalPackName predicate2(Object,Designer)
+org.argouml.uml.cognitive.critics.CrUnnavigableAssoc
+org.argouml.uml.cognitive.critics.CrUselessAbstract
+org.argouml.uml.cognitive.critics.CrUselessInterface
+org.argouml.uml.cognitive.critics.CrUtilityViolated
+org.argouml.uml.cognitive.critics.CrZeroLengthEdge
+org.argouml.uml.cognitive.critics.InitCognitiveCritics
+org.argouml.uml.cognitive.critics.ProfileCodeGeneration
+org.argouml.uml.cognitive.critics.ProfileGoodPractices
+org.argouml.uml.cognitive.critics.UMLWizard
+org.argouml.uml.cognitive.critics.WizAddConstructor
+org.argouml.uml.cognitive.critics.WizAddInstanceVariable
+org.argouml.uml.cognitive.critics.WizAddOperation
+org.argouml.uml.cognitive.critics.WizAssocComposite
+org.argouml.uml.cognitive.critics.WizBreakCircularComp
+org.argouml.uml.cognitive.critics.WizCueCards
+org.argouml.uml.cognitive.critics.WizMEName
+org.argouml.uml.cognitive.critics.WizManyNames
+org.argouml.uml.cognitive.critics.WizNavigable
+org.argouml.uml.cognitive.critics.WizOperName
+org.argouml.uml.cognitive.critics.WizTooMany
+org.argouml.uml.diagram.ui.FigEdgeModelElement Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement getPopUpActions(MouseEvent) Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement getTipString(MouseEvent) Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement hitClarifier(int,int)
+org.argouml.uml.diagram.ui.FigEdgeModelElement paintClarifiers(Graphics) Refinement
+org.argouml.uml.diagram.ui.FigNodeModelElement Refinement
+org.argouml.uml.diagram.ui.FigNodeModelElement getPopUpActions(MouseEvent) Refinement
+org.argouml.uml.diagram.ui.FigNodeModelElement getTipString(MouseEvent) Refinement
+org.argouml.uml.diagram.ui.FigNodeModelElement hitClarifier(int,int)
+org.argouml.uml.diagram.ui.FigNodeModelElement paintClarifiers(Graphics) Refinement
+org.argouml.uml.reveng.ImportCommon Refinement
+org.argouml.uml.reveng.ImportCommon doImport(ProgressMonitor) Refinement
+org.argouml.uml.ui.TabProps Refinement

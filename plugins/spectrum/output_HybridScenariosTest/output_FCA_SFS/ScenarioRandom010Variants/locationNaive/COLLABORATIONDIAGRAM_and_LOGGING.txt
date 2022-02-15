@@ -1,0 +1,8 @@
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
+org.argouml.uml.ui.ActionSequenceDiagram
+org.argouml.sequence2.diagram.UMLSequenceDiagram
+org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel
+org.argouml.sequence2.diagram.ActionAddClassifierRole
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel

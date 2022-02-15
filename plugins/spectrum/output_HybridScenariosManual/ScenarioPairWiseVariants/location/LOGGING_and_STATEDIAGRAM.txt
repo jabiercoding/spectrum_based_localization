@@ -1,0 +1,15 @@
+org.argouml.uml.diagram.state.StateDiagramGraphModel Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel addEdge(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel addNode(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel canConnect(Object,Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel connect(Object,Object,Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel getInEdges(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel getOutEdges(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel vetoableChange(PropertyChangeEvent) Refinement
+org.argouml.uml.diagram.state.ui.FigStubState Refinement
+org.argouml.uml.diagram.state.ui.FigStubState updateReferenceText() Refinement
+org.argouml.uml.diagram.state.ui.StateDiagramRenderer Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram nameDiagram(Object) Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement

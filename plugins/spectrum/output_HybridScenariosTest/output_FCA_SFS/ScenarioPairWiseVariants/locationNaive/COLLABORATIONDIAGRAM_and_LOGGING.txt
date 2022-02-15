@@ -1,0 +1,4 @@
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram
+org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel

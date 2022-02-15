@@ -1,0 +1,70 @@
+org.argouml.application.Main Refinement
+org.argouml.profile.UserDefinedProfile UserDefinedProfile(String,URL,Set<String>)
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.ui.explorer.PerspectiveManager Refinement
+org.argouml.ui.explorer.rules.GoClassifierToCollaboration
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram
+org.argouml.ui.explorer.rules.GoCollaborationToInteraction
+org.argouml.ui.explorer.rules.GoModelToCollaboration
+org.argouml.ui.explorer.rules.GoOperationToCollaboration
+org.argouml.ui.explorer.rules.GoProjectToCollaboration
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer Refinement
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel addEdge(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel addNode(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel addNodeRelatedEdges(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel canAddEdge(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel canAddNode(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel canConnect(Object,Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel getInEdges(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel getOutEdges(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel getOwner(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel getPorts(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel setCollaboration(Object)
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel vetoableChange(PropertyChangeEvent)
+org.argouml.uml.diagram.collaboration.ui.ActionAddClassifierRole
+org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
+org.argouml.uml.diagram.collaboration.ui.CollaborationDiagramPropPanelFactory
+org.argouml.uml.diagram.collaboration.ui.FigAssociationRole
+org.argouml.uml.diagram.collaboration.ui.FigClassifierRole
+org.argouml.uml.diagram.collaboration.ui.FigMessageGroup
+org.argouml.uml.diagram.collaboration.ui.InitCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.PropPanelUMLCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram UMLCollaborationDiagram()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram UMLCollaborationDiagram(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram createGraphModel()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram doesAccept(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram drop(Object,Point)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram encloserChanged(FigNode,FigNode,FigNode)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionAggregation()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionAssociation()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionClassifierRole()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionComposition()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionDepend()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionGeneralize()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionMessage()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionUniAggregation()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionUniAssociation()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getActionUniComposition()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getAssociationActions()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getDependentElement()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getInstructions(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getLabelName()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getNumMessages()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getRelocationCandidates(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram getUmlActions()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram isRelocationAllowed(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram makeNewCR(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram makeNewFigCR(Object,Point)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram postLoad()
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram relocate(Object)
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram setNamespace(Object)
+org.argouml.uml.diagram.ui.ActionAddMessage addMessage(Object) Refinement
+org.argouml.uml.diagram.ui.FigMessage Refinement
+org.argouml.uml.diagram.ui.FigMessage addPathItemToFigAssociationRole(Layer)
+org.argouml.uml.ui.ActionCollaborationDiagram ActionCollaborationDiagram()
+org.argouml.uml.ui.ActionCollaborationDiagram createDiagram(Object)
+org.argouml.uml.ui.behavior.activity_graphs.ActionNewEntryCallAction actionPerformed(ActionEvent) Refinement

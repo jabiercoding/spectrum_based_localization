@@ -1,0 +1,71 @@
+org.argouml.application.Main Refinement
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.moduleloader.ModuleLoader2 huntForModules() Refinement
+org.argouml.persistence.ModelMemberFilePersister registerDiagramsInternal(Project,Collection,boolean) Refinement
+org.argouml.sequence2.PropPanelUMLSequenceDiagram Refinement
+org.argouml.sequence2.SequenceDiagramModule
+org.argouml.sequence2.SequenceDiagramPropPanelFactory
+org.argouml.sequence2.diagram.ActionAddClassifierRole
+org.argouml.sequence2.diagram.ActionSetAddMessageMode
+org.argouml.sequence2.diagram.ActionSetOperation
+org.argouml.sequence2.diagram.FigActivation
+org.argouml.sequence2.diagram.FigClassifierRole
+org.argouml.sequence2.diagram.FigDestroy
+org.argouml.sequence2.diagram.FigHead
+org.argouml.sequence2.diagram.FigLifeLine
+org.argouml.sequence2.diagram.FigMessage
+org.argouml.sequence2.diagram.ModeBroomMessages
+org.argouml.sequence2.diagram.ModeCreateMessage
+org.argouml.sequence2.diagram.ModePlaceClassifierRole
+org.argouml.sequence2.diagram.SelectionClassifierRole
+org.argouml.sequence2.diagram.SelectionMessage
+org.argouml.sequence2.diagram.SequenceDiagramFactory
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel
+org.argouml.sequence2.diagram.SequenceDiagramRenderer
+org.argouml.sequence2.diagram.UMLSequenceDiagram
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCreate() Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup ExplorerPopup(Object,MouseEvent) Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.ui.explorer.ExplorerPopup initMenuCreateDiagrams() Refinement
+org.argouml.ui.explorer.PerspectiveManager Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.ui.explorer.rules.GoClassifierToSequenceDiagram
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram getChildren(Object) Refinement
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram Refinement
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram getChildren(Object) Refinement
+org.argouml.ui.explorer.rules.GoOperationToSequenceDiagram
+org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigNodeFor(Object,int,int,Map) Refinement
+org.argouml.uml.diagram.sequence.MessageNode
+org.argouml.uml.diagram.sequence.SequenceDiagramGraphModel
+org.argouml.uml.diagram.sequence.ui.ActionAddClassifierRole
+org.argouml.uml.diagram.sequence.ui.FigActivation
+org.argouml.uml.diagram.sequence.ui.FigBirthActivation
+org.argouml.uml.diagram.sequence.ui.FigCallActionMessage
+org.argouml.uml.diagram.sequence.ui.FigClassifierRole
+org.argouml.uml.diagram.sequence.ui.FigCreateActionMessage
+org.argouml.uml.diagram.sequence.ui.FigDestroyActionMessage
+org.argouml.uml.diagram.sequence.ui.FigHead
+org.argouml.uml.diagram.sequence.ui.FigLifeLine
+org.argouml.uml.diagram.sequence.ui.FigMessage
+org.argouml.uml.diagram.sequence.ui.FigReturnActionMessage
+org.argouml.uml.diagram.sequence.ui.InitSequenceDiagram
+org.argouml.uml.diagram.sequence.ui.ModeChangeHeight
+org.argouml.uml.diagram.sequence.ui.ModeContract
+org.argouml.uml.diagram.sequence.ui.ModeCreateMessage
+org.argouml.uml.diagram.sequence.ui.ModeExpand
+org.argouml.uml.diagram.sequence.ui.PropPanelUMLSequenceDiagram
+org.argouml.uml.diagram.sequence.ui.SelectionClassifierRole
+org.argouml.uml.diagram.sequence.ui.SelectionMessage
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramLayer
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramPropPanelFactory
+org.argouml.uml.diagram.sequence.ui.SequenceDiagramRenderer
+org.argouml.uml.diagram.sequence.ui.TempFig Refinement
+org.argouml.uml.diagram.sequence.ui.UMLSequenceDiagram
+org.argouml.uml.diagram.ui.ActionSetAddMessageMode
+org.argouml.uml.ui.ActionSequenceDiagram

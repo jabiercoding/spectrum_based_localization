@@ -1,0 +1,4 @@
+org.argouml.uml.ui.ActionStateDiagram
+org.argouml.uml.diagram.DiagramUndoManager
+org.argouml.kernel.DefaultUndoManager
+org.argouml.model.mdr.UmlFactoryMDRImpl
