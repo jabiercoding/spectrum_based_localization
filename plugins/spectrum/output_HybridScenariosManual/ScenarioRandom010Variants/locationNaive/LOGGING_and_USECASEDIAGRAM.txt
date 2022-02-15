@@ -1,0 +1,4 @@
+org.argouml.uml.ui.ActionUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel
