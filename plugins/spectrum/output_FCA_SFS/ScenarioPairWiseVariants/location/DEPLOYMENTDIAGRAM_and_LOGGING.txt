@@ -1,0 +1,25 @@
+org.argouml.application.Main main(String[]) Refinement
+org.argouml.kernel.MemberList clear() Refinement
+org.argouml.kernel.MemberList remove(Object) Refinement
+org.argouml.kernel.ProjectImpl addMember(Object) Refinement
+org.argouml.persistence.XmiFilePersister parseXmiExtensions(Project) Refinement
+org.argouml.profile.UserDefinedProfile UserDefinedProfile(String,URL,Set<String>) Refinement
+org.argouml.profile.UserDefinedProfile finishLoading() Refinement
+org.argouml.profile.init.ProfileLoader loadProfilesFromJarFile(Manifest,File,ClassLoader) Refinement
+org.argouml.profile.internal.ProfileManagerImpl loadDefaultProfilesfromConfiguration() Refinement
+org.argouml.uml.diagram.ArgoDiagramImpl repairFig(Fig,StringBuffer) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addEdge(Object) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel addNode(Object) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel vetoableChange(PropertyChangeEvent) Refinement
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer Refinement
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer getFigNodeFor(GraphModel,Layer,Object,Map) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram setModelElementNamespace(Object,Object) Refinement
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram setNamespace(Object) Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement getTipString(MouseEvent) Refinement
+org.argouml.uml.ui.ActionDeploymentDiagram Refinement
+org.argouml.uml.ui.ActionDeploymentDiagram createDiagram(Object) Refinement
+org.argouml.uml.ui.ActionDeploymentDiagram isValidNamespace(Object) Refinement
+org.argouml.uml.ui.TabProps setTarget(Object) Refinement

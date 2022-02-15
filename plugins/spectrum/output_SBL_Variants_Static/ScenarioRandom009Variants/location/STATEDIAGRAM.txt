@@ -1,0 +1,55 @@
+org.argouml.application.Main Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.ui.explorer.PerspectiveManager Refinement
+org.argouml.ui.explorer.rules.GoBehavioralFeatureToStateDiagram
+org.argouml.ui.explorer.rules.GoClassifierToStateMachine
+org.argouml.ui.explorer.rules.GoCompositeStateToSubvertex
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram Refinement
+org.argouml.ui.explorer.rules.GoProjectToStateMachine
+org.argouml.ui.explorer.rules.GoStateMachineToState
+org.argouml.ui.explorer.rules.GoStateMachineToTop
+org.argouml.ui.explorer.rules.GoStateMachineToTransition
+org.argouml.ui.explorer.rules.GoStateToIncomingTrans
+org.argouml.ui.explorer.rules.GoStateToOutgoingTrans
+org.argouml.ui.explorer.rules.GoStatemachineToDiagram
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer Refinement
+org.argouml.uml.diagram.state.PredIsFinalState
+org.argouml.uml.diagram.state.PredIsStartState
+org.argouml.uml.diagram.state.StateDiagramGraphModel Refinement
+org.argouml.uml.diagram.state.ui.ActionCreatePseudostate
+org.argouml.uml.diagram.state.ui.ButtonActionNewCallEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewChangeEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewEffect
+org.argouml.uml.diagram.state.ui.ButtonActionNewEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewSignalEvent Refinement
+org.argouml.uml.diagram.state.ui.ButtonActionNewTimeEvent Refinement
+org.argouml.uml.diagram.state.ui.FigBranchState
+org.argouml.uml.diagram.state.ui.FigCompositeState
+org.argouml.uml.diagram.state.ui.FigConcurrentRegion
+org.argouml.uml.diagram.state.ui.FigDeepHistoryState
+org.argouml.uml.diagram.state.ui.FigFinalState Refinement
+org.argouml.uml.diagram.state.ui.FigFinalState makeSelection() Refinement
+org.argouml.uml.diagram.state.ui.FigForkState
+org.argouml.uml.diagram.state.ui.FigHistoryState
+org.argouml.uml.diagram.state.ui.FigInitialState
+org.argouml.uml.diagram.state.ui.FigJoinState
+org.argouml.uml.diagram.state.ui.FigJunctionState
+org.argouml.uml.diagram.state.ui.FigShallowHistoryState
+org.argouml.uml.diagram.state.ui.FigSimpleState
+org.argouml.uml.diagram.state.ui.FigState
+org.argouml.uml.diagram.state.ui.FigStubState
+org.argouml.uml.diagram.state.ui.FigSubmachineState
+org.argouml.uml.diagram.state.ui.FigSynchState
+org.argouml.uml.diagram.state.ui.InitStateDiagram
+org.argouml.uml.diagram.state.ui.PropPanelUMLStateDiagram
+org.argouml.uml.diagram.state.ui.SelectionState
+org.argouml.uml.diagram.state.ui.StateDiagramPropPanelFactory
+org.argouml.uml.diagram.state.ui.UMLStateDiagram
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion Refinement
+org.argouml.uml.ui.ActionStateDiagram
+org.argouml.uml.ui.behavior.state_machines.PropPanelTransition PropPanelTransition() Refinement
+org.argouml.uml.ui.behavior.state_machines.PropPanelTransition Refinement
+org.argouml.uml.ui.behavior.state_machines.PropPanelTransition getTriggerActions()

@@ -1,0 +1,3 @@
+org.argouml.uml.diagram.ArgoDiagramImpl repairFig(Fig,StringBuffer) Refinement
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram Refinement
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram doesAccept(Object) Refinement

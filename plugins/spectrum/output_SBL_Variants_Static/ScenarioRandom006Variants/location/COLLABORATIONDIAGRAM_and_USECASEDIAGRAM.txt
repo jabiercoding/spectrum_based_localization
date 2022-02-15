@@ -1,0 +1,105 @@
+org.argouml.application.Main Refinement
+org.argouml.kernel.ProjectManager createDefaultDiagrams(Project) Refinement
+org.argouml.notation.providers.uml.AbstractMessageNotationUml buildAction(Object) Refinement
+org.argouml.notation.providers.uml.AbstractMessageNotationUml handlePredecessors(Object,List<List>,boolean) Refinement
+org.argouml.notation.providers.uml.AbstractMessageNotationUml handleSequenceNumber(Object,List<Integer>,boolean) Refinement
+org.argouml.notation.providers.uml.AbstractMessageNotationUml insertSuccessor(Object,Object,int) Refinement
+org.argouml.notation.providers.uml.AssociationRoleNotationUml parseRole(Object,String) Refinement
+org.argouml.notation.providers.uml.ClassifierRoleNotationUml parseClassifierRole(Object,String) Refinement
+org.argouml.notation.providers.uml.ExtensionPointNotationUml parseExtensionPoint(String)
+org.argouml.notation.providers.uml.ExtensionPointNotationUml parseExtensionPointFig(Object,String) Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.ui.explorer.PerspectiveManager Refinement
+org.argouml.ui.explorer.rules.GoClassifierToCollaboration
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram
+org.argouml.ui.explorer.rules.GoCollaborationToInteraction
+org.argouml.ui.explorer.rules.GoModelToCollaboration
+org.argouml.ui.explorer.rules.GoOperationToCollaboration
+org.argouml.ui.explorer.rules.GoProjectToCollaboration
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigEdgeFor(Object,Map) Refinement
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel
+org.argouml.uml.diagram.collaboration.ui.ActionAddClassifierRole
+org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
+org.argouml.uml.diagram.collaboration.ui.CollaborationDiagramPropPanelFactory
+org.argouml.uml.diagram.collaboration.ui.FigAssociationRole
+org.argouml.uml.diagram.collaboration.ui.FigClassifierRole
+org.argouml.uml.diagram.collaboration.ui.FigMessageGroup
+org.argouml.uml.diagram.collaboration.ui.InitCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.PropPanelUMLCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram doesAccept(Object) Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram drop(Object,Point) Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.ActionAddExtensionPoint actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.ActionAddMessage addMessage(Object) Refinement
+org.argouml.uml.diagram.ui.ActionCompartmentDisplay Refinement
+org.argouml.uml.diagram.ui.ActionCompartmentDisplay actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.FigMessage Refinement
+org.argouml.uml.diagram.ui.FigMessage addPathItemToFigAssociationRole(Layer)
+org.argouml.uml.diagram.use_case.UseCaseDiagramGraphModel
+org.argouml.uml.diagram.use_case.ui.ActorPortFigRect Refinement
+org.argouml.uml.diagram.use_case.ui.FigActor
+org.argouml.uml.diagram.use_case.ui.FigExtend
+org.argouml.uml.diagram.use_case.ui.FigInclude
+org.argouml.uml.diagram.use_case.ui.FigMyCircle Refinement
+org.argouml.uml.diagram.use_case.ui.FigUseCase
+org.argouml.uml.diagram.use_case.ui.InitUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.PropPanelUMLUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.SelectionActor
+org.argouml.uml.diagram.use_case.ui.SelectionUseCase
+org.argouml.uml.diagram.use_case.ui.StylePanelFigUseCase
+org.argouml.uml.diagram.use_case.ui.UMLUseCaseDiagram
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramPropPanelFactory
+org.argouml.uml.diagram.use_case.ui.UseCaseDiagramRenderer
+org.argouml.uml.ui.ActionCollaborationDiagram
+org.argouml.uml.ui.ActionNewDiagram createCollaboration(Object)
+org.argouml.uml.ui.ActionUseCaseDiagram
+org.argouml.uml.ui.ElementPropPanelFactory Refinement
+org.argouml.uml.ui.ElementPropPanelFactory createPropPanel(Object) Refinement
+org.argouml.uml.ui.ElementPropPanelFactory getClassifierPropPanel(Object) Refinement
+org.argouml.uml.ui.ElementPropPanelFactory getRelationshipPropPanel(Object) Refinement
+org.argouml.uml.ui.UMLConditionExpressionModel setExpression(Object) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionNewEntryCallAction actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionAddClassifierRoleBase doIt(Collection) Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionAddClassifierRoleBase getChoices() Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionAddMessagePredecessor doIt(Collection) Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionAddMessagePredecessor getChoices() Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionRemoveClassifierRoleBase actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionSetAssociationRoleBase actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionSetRepresentedClassifierCollaboration actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.collaborations.ActionSetRepresentedOperationCollaboration actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleBaseComboBoxModel buildModelList() Refinement
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleBaseComboBoxModel isValidElement(Object) Refinement
+org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableContentsListModel buildModelList() Refinement
+org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableFeaturesListModel buildModelList() Refinement
+org.argouml.uml.ui.behavior.collaborations.UMLMessageActivatorComboBox doIt(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.collaborations.UMLMessageActivatorComboBoxModel buildModelList() Refinement
+org.argouml.uml.ui.behavior.common_behavior.PropPanelStimulus setSender(Object) Refinement
+org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewActor
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase
+org.argouml.uml.ui.behavior.use_cases.PropPanelActor
+org.argouml.uml.ui.behavior.use_cases.PropPanelExtend
+org.argouml.uml.ui.behavior.use_cases.PropPanelExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.PropPanelInclude
+org.argouml.uml.ui.behavior.use_cases.PropPanelUseCase
+org.argouml.uml.ui.behavior.use_cases.UMLExtendBaseListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointExtendListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointLocationDocument
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointUseCaseListModel
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeAdditionListModel
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeBaseListModel
+org.argouml.uml.ui.behavior.use_cases.UMLIncludeListModel
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel

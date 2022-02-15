@@ -1,0 +1,37 @@
+org.argouml.application.Main initializeSubsystems(SimpleTimer,SplashScreen) Refinement
+org.argouml.sequence2.diagram.ActionAddClassifierRole makeNode()
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel connect(Object,Object,Object,Object) Refinement
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel getCollaboration()
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel setCollaboration(Object)
+org.argouml.sequence2.diagram.UMLSequenceDiagram UMLSequenceDiagram(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram getCollaboration()
+org.argouml.sequence2.diagram.UMLSequenceDiagram initialize(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram makeNewCR(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram postLoad() Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram relocate(Object) Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar initMenuCreate() Refinement
+org.argouml.ui.explorer.ExplorerPopup initMenuCreateDiagrams() Refinement
+org.argouml.ui.explorer.PerspectiveManager getDefaultPerspectives() Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram getChildren(Object) Refinement
+org.argouml.uml.cognitive.critics.CrClassWithoutComponent
+org.argouml.uml.cognitive.critics.CrCompInstanceWithoutNode
+org.argouml.uml.cognitive.critics.CrComponentInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrComponentWithoutNode
+org.argouml.uml.cognitive.critics.CrInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrInterfaceWithoutComponent
+org.argouml.uml.cognitive.critics.CrNodeInsideElement
+org.argouml.uml.cognitive.critics.CrNodeInstanceInsideElement
+org.argouml.uml.cognitive.critics.CrNodeInstanceWithoutClassifier
+org.argouml.uml.cognitive.critics.CrNodesOverlap Refinement
+org.argouml.uml.cognitive.critics.CrNodesOverlap computeOffenders(Diagram) Refinement
+org.argouml.uml.cognitive.critics.CrObjectWithoutClassifier
+org.argouml.uml.cognitive.critics.CrObjectWithoutComponent
+org.argouml.uml.cognitive.critics.CrWrongDepEnds
+org.argouml.uml.cognitive.critics.CrWrongLinkEnds
+org.argouml.uml.cognitive.critics.ProfileCodeGeneration ProfileCodeGeneration(ProfileGoodPractices) Refinement
+org.argouml.uml.cognitive.critics.ProfileGoodPractices ProfileGoodPractices() Refinement
+org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
+org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer getFigNodeFor(Object,int,int,Map) Refinement
+org.argouml.uml.diagram.static_structure.ui.UMLClassDiagram drop(Object,Point) Refinement

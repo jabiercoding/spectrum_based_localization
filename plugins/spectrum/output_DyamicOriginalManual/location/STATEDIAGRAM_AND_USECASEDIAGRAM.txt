@@ -1,0 +1,9 @@
+org.argouml.ui.StylePanelFig
+org.argouml.uml.ui.TabStyle
+org.argouml.uml.util.namespace.StringNamespace
+org.argouml.uml.diagram.static_structure.ui.StylePanelFigClass
+org.argouml.uml.diagram.static_structure.ui.StylePanelFigInterface
+org.argouml.uml.util.namespace.StringNamespaceElement
+org.argouml.ui.StylePanel
+org.argouml.uml.diagram.use_case.ui.StylePanelFigUseCase
+org.argouml.uml.diagram.ui.SPFigEdgeModelElement

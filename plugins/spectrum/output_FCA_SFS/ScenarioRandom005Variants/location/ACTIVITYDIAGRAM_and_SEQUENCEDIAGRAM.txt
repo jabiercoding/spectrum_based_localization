@@ -1,0 +1,52 @@
+org.argouml.application.Main Refinement
+org.argouml.model.Model getActivityGraphsFactory()
+org.argouml.model.Model getActivityGraphsHelper()
+org.argouml.notation.providers.uml.ObjectFlowStateStateNotationUml parseObjectFlowState2(Object,String) Refinement
+org.argouml.notation.providers.uml.ObjectFlowStateTypeNotationUml parseObjectFlowState1(Object,String) Refinement
+org.argouml.sequence2.diagram.ActionAddClassifierRole makeNode()
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel getCollaboration()
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel setCollaboration(Object)
+org.argouml.sequence2.diagram.UMLSequenceDiagram getCollaboration()
+org.argouml.sequence2.diagram.UMLSequenceDiagram initialize(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram makeNewCR(Object) Refinement
+org.argouml.sequence2.diagram.UMLSequenceDiagram relocate(Object) Refinement
+org.argouml.ui.cmd.GenericArgoMenuBar Refinement
+org.argouml.ui.cmd.ShortcutMgr Refinement
+org.argouml.ui.explorer.ExplorerPopup Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram Refinement
+org.argouml.ui.explorer.rules.GoCollaborationToDiagram getChildren(Object) Refinement
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram Refinement
+org.argouml.uml.diagram.ArgoDiagramImpl Refinement
+org.argouml.uml.diagram.DiagramFactory Refinement
+org.argouml.uml.diagram.UmlDiagramRenderer Refinement
+org.argouml.uml.diagram.activity.ActivityDiagramGraphModel
+org.argouml.uml.diagram.activity.layout.ActivityDiagramLayouter
+org.argouml.uml.diagram.activity.ui.ActionCreatePartition
+org.argouml.uml.diagram.activity.ui.ActivityDiagramPropPanelFactory
+org.argouml.uml.diagram.activity.ui.ActivityDiagramRenderer
+org.argouml.uml.diagram.activity.ui.FigActionState
+org.argouml.uml.diagram.activity.ui.FigCallState
+org.argouml.uml.diagram.activity.ui.FigObjectFlowState
+org.argouml.uml.diagram.activity.ui.FigPartition
+org.argouml.uml.diagram.activity.ui.FigPool
+org.argouml.uml.diagram.activity.ui.FigSubactivityState
+org.argouml.uml.diagram.activity.ui.InitActivityDiagram
+org.argouml.uml.diagram.activity.ui.ModePlacePartition
+org.argouml.uml.diagram.activity.ui.PropPanelUMLActivityDiagram
+org.argouml.uml.diagram.activity.ui.SelectionActionState getNewNode(int)
+org.argouml.uml.diagram.activity.ui.SelectionCallState
+org.argouml.uml.diagram.activity.ui.SelectionPartition Refinement
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
+org.argouml.uml.ui.ActionActivityDiagram
+org.argouml.uml.ui.ActionLayout Refinement
+org.argouml.uml.ui.ActionLayout actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionAddCISState doIt(Collection) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionNewClassifierInState actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionRemoveCISState actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.ActionSetSynch actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState.ActionAddOFSParameter doIt(Collection) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState.ActionAddOFSState doIt(Collection) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState.ActionNewOFSParameter actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState.ActionRemoveOFSParameter actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState.ActionRemoveOFSState actionPerformed(ActionEvent) Refinement
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelPartition.ActionAddPartitionContent doIt(Collection) Refinement

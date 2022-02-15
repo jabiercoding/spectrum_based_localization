@@ -1,0 +1,26 @@
+org.argouml.application.Main main(String[]) Refinement
+org.argouml.kernel.MemberList clear() Refinement
+org.argouml.kernel.MemberList remove(Object) Refinement
+org.argouml.kernel.ProjectImpl addMember(Object) Refinement
+org.argouml.persistence.XmiFilePersister parseXmiExtensions(Project) Refinement
+org.argouml.profile.UserDefinedProfile UserDefinedProfile(String,URL,Set<String>) Refinement
+org.argouml.profile.UserDefinedProfile finishLoading() Refinement
+org.argouml.profile.init.ProfileLoader loadProfilesFromJarFile(Manifest,File,ClassLoader) Refinement
+org.argouml.profile.internal.ProfileManagerImpl loadDefaultProfilesfromConfiguration() Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel addEdge(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel addNode(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel canAddEdge(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel canConnect(Object,Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel connect(Object,Object,Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel getInEdges(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel getOutEdges(Object) Refinement
+org.argouml.uml.diagram.state.StateDiagramGraphModel vetoableChange(PropertyChangeEvent) Refinement
+org.argouml.uml.diagram.state.ui.FigStubState Refinement
+org.argouml.uml.diagram.state.ui.FigStubState updateReferenceText() Refinement
+org.argouml.uml.diagram.state.ui.StateDiagramRenderer Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram Refinement
+org.argouml.uml.diagram.state.ui.UMLStateDiagram nameDiagram(Object) Refinement
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion actionPerformed(ActionEvent) Refinement
+org.argouml.uml.diagram.ui.FigEdgeModelElement getTipString(MouseEvent) Refinement
+org.argouml.uml.ui.TabProps setTarget(Object) Refinement

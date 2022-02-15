@@ -1,0 +1,11 @@
+org.argouml.ui.explorer.ExplorerPopup.OrderedMenu
+org.argouml.ui.explorer.ExplorerPopup.ActionCreateAssociationRole
+org.argouml.ui.explorer.ExplorerPopup.OrderedMenuItem
+org.argouml.ui.explorer.ExplorerPopup.ActionCreateAssociation
+org.argouml.ui.explorer.rules.GoNamespaceToDiagram
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
+org.argouml.uml.diagram.state.ui.UMLStateDiagram
+org.argouml.ui.explorer.ExplorerPopup.ActionAddExistingRelatedNode
+org.argouml.ui.explorer.rules.GoStatemachineToDiagram
+org.argouml.ui.explorer.ExplorerPopup
+org.argouml.uml.diagram.DiagramFactory

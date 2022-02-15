@@ -1,0 +1,4 @@
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
+org.argouml.uml.diagram.ArgoDiagramImpl
+org.argouml.uml.diagram.state.ui.StateDiagramRenderer
+org.argouml.uml.diagram.state.StateDiagramGraphModel

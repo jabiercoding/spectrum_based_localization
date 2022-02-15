@@ -1,0 +1,5 @@
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram
+org.argouml.uml.ui.ActionDeploymentDiagram
+org.argouml.uml.diagram.DiagramFactory
+org.argouml.uml.ui.ActionAddDiagram
+org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer

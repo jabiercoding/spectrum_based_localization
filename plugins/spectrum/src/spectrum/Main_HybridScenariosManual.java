@@ -127,17 +127,8 @@ public class Main_HybridScenariosManual {
 								.getCompilationUnit((org.but4reuse.adapters.javajdt.elements.TypeElement) e);
 					} else if (e instanceof org.but4reuse.adapters.javajdt.elements.ImportElement) {
 						compUnit = JDTElementUtils.getCompilationUnit((ImportElement) e);
-						// System.out.println(e);
 					} else if (e instanceof MethodBodyElement) {
 						compUnit = JDTElementUtils.getCompilationUnit((MethodBodyElement) e);
-						// System.out.println(e);
-					} else if (e instanceof CompilationUnitElement) {
-						// compUnit =
-						// JDTElementUtils.getCompilationUnit((CompilationUnitElement)
-						// e);
-						// System.out.println(e);
-					} else {
-						// System.out.println(e);
 					}
 
 					if (compUnit != null) {
@@ -189,6 +180,13 @@ public class Main_HybridScenariosManual {
 			for (String feature : resultsFeatures.keySet()) {
 				naiveResults.put(feature, Sets.newHashSet(resultsFeatures.get(feature)));
 			}
+			
+			//add FLResults RQ2 when they are not there (HashMap naiveResults)
+			
+			
+			
+			
+			
 
 			// results using naive technique at the class level
 			File outputFolderNaive = new File(outputFolder, scenario.getName());
