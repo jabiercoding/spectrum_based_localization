@@ -1,0 +1,5 @@
+org.argouml.uml.diagram.state.ui.UMLStateDiagram
+org.argouml.uml.diagram.state.ui.StateDiagramRenderer
+org.argouml.uml.diagram.state.StateDiagramGraphModel
+org.argouml.uml.diagram.state.ui.FigStubState
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion

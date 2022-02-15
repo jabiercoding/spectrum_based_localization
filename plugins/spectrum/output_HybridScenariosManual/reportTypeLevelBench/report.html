@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Report</title>
+  <meta charset="utf-8">
+  
+  <!--  for the charts -->
+  <script src="libs_js/Chart.bundle.js"></script>
+  <script src="libs_js/utils.js"></script>
+</head>
+
+<body id="mainPage">
+
+	<canvas id="bar-chart-precisionRecallF1" width="600" height="250"></canvas>
+	
+	<canvas id="bar-chart-featureIssues" width="600" height="250"></canvas>
+	
+<script>
+new Chart(document.getElementById("bar-chart-precisionRecallF1"), {
+    type: 'bar',
+    data: {
+labels: ["Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009",],
+
+      datasets: [
+        {
+          backgroundColor: "#89138A",
+label: "Precision", data: [0.0,0.125,0.041666666666666664,0.041666666666666664,0.20833333333333334,0.25,0.16666666666666666,0.25,0.16666666666666666,]
+
+        }, {
+          backgroundColor: "#018080",
+label: "Recall", data: [0.0,0.016333993703864524,0.006205673758865248,0.024739583333333332,0.07007316787189508,0.08220396955965878,0.05088855877996229,0.08220396955965878,0.03422720673914597,]
+
+        }, {
+          backgroundColor: "#E6BB18",
+label: "F1", data: [0.0,0.02756785125206178,0.010802469135802469,0.03104575163398693,0.09837426998589709,0.1171651196590997,0.07379696517983411,0.1171651196590997,0.056283977078610714,]
+
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Feature location metrics'
+      },
+       scales: {
+        	yAxes: [{
+            	ticks: {
+                	beginAtZero: true
+            	}
+        	}]
+    	}
+    }
+});
+
+new Chart(document.getElementById("bar-chart-featureIssues"), {
+    type: 'bar',
+    data: {
+labels: ["Random002","Random003","Random004","Random005","Random006","Random007","Random008","PairWise","Random009",],
+
+      datasets: [
+        {
+          backgroundColor: "#73203c",
+label: "FeaturesWithoutRetrieved", data: [24.0,21.0,23.0,23.0,19.0,18.0,20.0,18.0,20.0,]
+
+        }, {
+          backgroundColor: "#207357",
+label: "InexistentFeaturesRetrieved", data: [0,0,0,0,0,0,0,0,0,]
+
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Feature issues'
+      },
+      scales: {
+        	yAxes: [{
+            	ticks: {
+                	beginAtZero: true
+            	}
+        	}]
+    	}
+    }
+});
+</script>
+
+</body>
+</html>

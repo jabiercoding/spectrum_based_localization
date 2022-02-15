@@ -1,0 +1,4 @@
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
+org.argouml.uml.diagram.state.ui.UMLStateDiagram
+org.argouml.ui.explorer.rules.GoStatemachineToDiagram
+org.argouml.uml.diagram.DiagramFactory

@@ -1,0 +1,2 @@
+org.argouml.kernel.ProjectManager
+org.argouml.uml.diagram.deployment.ui.UMLDeploymentDiagram
