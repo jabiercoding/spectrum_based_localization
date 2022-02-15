@@ -11,6 +11,7 @@ import java.util.TreeSet;
 
 import org.but4reuse.adaptedmodel.AdaptedModel;
 import org.but4reuse.adaptedmodel.Block;
+import org.but4reuse.adaptedmodel.helpers.AdaptConcurrently;
 import org.but4reuse.adaptedmodel.helpers.AdaptedModelHelper;
 import org.but4reuse.adapters.IAdapter;
 import org.but4reuse.adapters.IElement;
@@ -89,7 +90,8 @@ public class Main_FCA_SFS {
 			IAdapter jdtAdapter = new JavaJDTAdapter();
 			List<IAdapter> adapters = new ArrayList<IAdapter>();
 			adapters.add(jdtAdapter);
-			AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
+			AdaptedModel adaptedModel = AdaptConcurrently.adaptConcurrently(am, adapters, new ConsoleProgressMonitor());
+			//AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
 
 			long start = System.currentTimeMillis();
 
