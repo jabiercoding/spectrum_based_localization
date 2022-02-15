@@ -1,0 +1,10 @@
+org.argouml.uml.ui.UMLModelElementListModel2
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseIncludeListModel
+org.argouml.model.mdr.UseCasesHelperMDRImpl
+org.argouml.model.mdr.FacadeMDRImpl
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtensionPointListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointLocationDocument
+org.argouml.uml.ui.behavior.use_cases.UMLUseCaseExtendListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointExtendListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtendExtensionPointListModel
+org.argouml.uml.ui.behavior.use_cases.UMLExtensionPointUseCaseListModel

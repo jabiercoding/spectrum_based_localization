@@ -114,6 +114,7 @@ public class Main_SBLforDynamicScenariosManual {
 
 		// Apply rules to the JDT Elements
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
+		Map<String, File> mapScenarioMetricsFileTypeLevel = new HashMap<String, File>();
 
 		// For each scenario
 		for (File scenario : scenarios) {
@@ -287,7 +288,6 @@ public class Main_SBLforDynamicScenariosManual {
 
 			// update html report type level ground truth
 			System.out.println("Update html report type level ground truth");
-			Map<String, File> mapScenarioMetricsFileTypeLevel = new HashMap<String, File>();
 			mapScenarioMetricsFileTypeLevel.put("Original", resultsFileTypeLevel);
 			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileTypeLevel,featuresBeingConsidered, "reportTypeLevel");
 		}

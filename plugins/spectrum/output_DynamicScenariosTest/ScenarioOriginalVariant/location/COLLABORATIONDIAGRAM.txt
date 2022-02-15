@@ -1,0 +1,7 @@
+org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
+org.argouml.model.mdr.CollaborationsFactoryMDRImpl
+org.argouml.uml.ui.ActionNewDiagram
+org.argouml.uml.diagram.collaboration.CollabDiagramGraphModel
+org.argouml.uml.ui.ActionCollaborationDiagram
+org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
+org.argouml.uml.diagram.DiagramFactory
