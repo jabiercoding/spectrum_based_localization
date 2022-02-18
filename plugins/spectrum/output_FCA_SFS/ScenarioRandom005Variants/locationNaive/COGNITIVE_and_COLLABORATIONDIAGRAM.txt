@@ -2,8 +2,8 @@ org.argouml.uml.cognitive.critics.CrInterfaceWithoutComponent
 org.argouml.cognitive.ui.WizDescription
 org.argouml.uml.cognitive.critics.CrNameConfusion
 org.argouml.uml.cognitive.critics.CrClassMustBeAbstract
-org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
 org.argouml.application.PostLoad
+org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
 org.argouml.uml.cognitive.critics.WizMEName
 org.argouml.uml.reveng.ImportCommon
 org.argouml.uml.cognitive.critics.CrUnconventionalClassName
@@ -166,8 +166,8 @@ org.argouml.uml.cognitive.critics.UMLWizard
 org.argouml.uml.cognitive.critics.CrTooManyClasses
 org.argouml.uml.cognitive.critics.WizAssocComposite
 org.argouml.uml.cognitive.critics.CrNodesOverlap
-org.argouml.cognitive.ListSet
 org.argouml.cognitive.checklist.ui.InitCheckListUI
+org.argouml.cognitive.ListSet
 org.argouml.profile.UserDefinedProfile.FigNodeDescriptor
 org.argouml.cognitive.ui.WizStepTextField
 org.argouml.cognitive.ui.TabToDo

@@ -1139,7 +1139,11 @@ org.argouml.uml.generator.ui.ClassGenerationDialog
 org.argouml.uml.generator.ui.TableModelClassChecks Refinement
 org.argouml.uml.reveng.BooleanSelection Refinement
 org.argouml.uml.reveng.BooleanSelection2 Refinement
-org.argouml.uml.reveng.ConfigPanelExtension
+org.argouml.uml.reveng.ConfigPanelExtension ConfigPanelExtension()
+org.argouml.uml.reveng.ConfigPanelExtension Refinement
+org.argouml.uml.reveng.ConfigPanelExtension disposeDialog()
+org.argouml.uml.reveng.ConfigPanelExtension getAttribute()
+org.argouml.uml.reveng.ConfigPanelExtension getDatatype()
 org.argouml.uml.reveng.DiagramInterface
 org.argouml.uml.reveng.FileImportUtils
 org.argouml.uml.reveng.Import
@@ -1147,7 +1151,21 @@ org.argouml.uml.reveng.MethodImportInterface
 org.argouml.uml.reveng.PathListSelection Refinement
 org.argouml.uml.reveng.PathSelection Refinement
 org.argouml.uml.reveng.SelectedLanguageListener Refinement
-org.argouml.uml.reveng.Setting
+org.argouml.uml.reveng.Setting Refinement
+org.argouml.uml.reveng.Setting Setting(String)
+org.argouml.uml.reveng.Setting Setting(String,String)
+org.argouml.uml.reveng.Setting getDescription()
+org.argouml.uml.reveng.Setting.BooleanSelection BooleanSelection(String,boolean)
+org.argouml.uml.reveng.Setting.BooleanSelection Refinement
+org.argouml.uml.reveng.Setting.PathListSelection PathListSelection(String,String,List<String>)
+org.argouml.uml.reveng.Setting.PathListSelection Refinement
+org.argouml.uml.reveng.Setting.PathSelection PathSelection(String,String,String)
+org.argouml.uml.reveng.Setting.PathSelection Refinement
+org.argouml.uml.reveng.Setting.UniqueSelection Refinement
+org.argouml.uml.reveng.Setting.UniqueSelection UniqueSelection(String,List<String>,int)
+org.argouml.uml.reveng.Setting.UniqueSelection isOption(int)
+org.argouml.uml.reveng.Setting2 Refinement
+org.argouml.uml.reveng.SettingsTypes
 org.argouml.uml.reveng.UniqueSelection Refinement
 org.argouml.uml.reveng.UniqueSelection2 Refinement
 org.argouml.uml.reveng.UserString Refinement
@@ -1494,7 +1512,7 @@ org.argouml.uml.ui.behavior.state_machines.UMLTransitionTriggerList
 org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint
 org.argouml.uml.ui.behavior.use_cases.ActionNewActor
 org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint
-org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint Refinement
 org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase
 org.argouml.uml.ui.behavior.use_cases.PropPanelActor
 org.argouml.uml.ui.behavior.use_cases.PropPanelExtend

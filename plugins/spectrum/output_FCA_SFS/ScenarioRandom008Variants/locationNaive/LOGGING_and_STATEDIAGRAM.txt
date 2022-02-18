@@ -28,8 +28,8 @@ org.argouml.uml.diagram.sequence.ui.SequenceDiagramRenderer
 org.argouml.profile.init.ProfileLoader.JarFileFilter
 org.argouml.sequence2.diagram.SequenceDiagramFactory
 org.argouml.uml.diagram.sequence.ui.ModeCreateMessage
-org.argouml.sequence2.SequenceDiagramModule
 org.argouml.uml.diagram.state.ui.FigStubState
+org.argouml.sequence2.SequenceDiagramModule
 org.argouml.uml.diagram.ui.FigEdgeModelElement
 org.argouml.sequence2.diagram.FigClassifierRole
 org.argouml.uml.diagram.sequence.ui.FigClassifierRole.TempFig

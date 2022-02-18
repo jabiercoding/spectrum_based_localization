@@ -4,8 +4,8 @@ org.argouml.uml.ui.behavior.activity_graphs.PropPanelObjectFlowState
 org.argouml.application.PostLoad
 org.argouml.ui.explorer.ExplorerPopup.OrderedMenuItem
 org.argouml.uml.diagram.activity.ui.ActionCreatePartition
-org.argouml.uml.ui.ActionLayout
 org.argouml.uml.diagram.DiagramFactory
+org.argouml.uml.ui.ActionLayout
 org.argouml.uml.ui.ActionActivityDiagram
 org.argouml.uml.diagram.activity.ui.SelectionCallState
 org.argouml.uml.diagram.activity.ui.ActivityDiagramRenderer
@@ -25,8 +25,8 @@ org.argouml.uml.diagram.activity.ui.FigActionState
 org.argouml.uml.diagram.activity.ui.ModePlacePartition
 org.argouml.ui.explorer.ExplorerPopup.ActionCreateAssociationRole
 org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
-org.argouml.uml.ui.behavior.activity_graphs.UMLPartitionActivityGraphListModel
 org.argouml.uml.ui.behavior.activity_graphs.UMLClassifierInStateTypeComboBoxModel
+org.argouml.uml.ui.behavior.activity_graphs.UMLPartitionActivityGraphListModel
 org.argouml.ui.explorer.ExplorerPopup
 org.argouml.uml.diagram.activity.ActivityDiagramGraphModel
 org.argouml.uml.ui.behavior.activity_graphs.PropPanelPartition

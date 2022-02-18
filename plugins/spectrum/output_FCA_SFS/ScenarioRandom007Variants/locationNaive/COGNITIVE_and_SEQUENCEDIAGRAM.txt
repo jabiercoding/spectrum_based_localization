@@ -1,8 +1,8 @@
 org.argouml.cognitive.ui.WizDescription
 org.argouml.uml.cognitive.critics.CrNameConfusion
 org.argouml.uml.cognitive.critics.CrClassMustBeAbstract
-org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
 org.argouml.application.PostLoad
+org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
 org.argouml.uml.cognitive.critics.WizMEName
 org.argouml.uml.reveng.ImportCommon
 org.argouml.uml.cognitive.critics.CrUnconventionalClassName
@@ -19,8 +19,8 @@ org.argouml.uml.cognitive.critics.CrNonAggDataType
 org.argouml.uml.cognitive.critics.CrDupRoleNames
 org.argouml.cognitive.ui.ActionOpenGoals
 org.argouml.ui.cmd.ActionSelectAll
-org.argouml.uml.cognitive.critics.CrMissingClassName
 org.argouml.cognitive.DesignGoalsCM
+org.argouml.uml.cognitive.critics.CrMissingClassName
 org.argouml.uml.cognitive.critics.CrTooManyOper
 org.argouml.cognitive.ui.ToDoByType
 org.argouml.uml.cognitive.critics.CrInvalidHistory
@@ -154,8 +154,8 @@ org.argouml.uml.cognitive.critics.UMLWizard
 org.argouml.uml.cognitive.critics.CrTooManyClasses
 org.argouml.uml.cognitive.critics.WizAssocComposite
 org.argouml.uml.cognitive.critics.CrNodesOverlap
-org.argouml.cognitive.checklist.ui.InitCheckListUI
 org.argouml.cognitive.ListSet
+org.argouml.cognitive.checklist.ui.InitCheckListUI
 org.argouml.profile.UserDefinedProfile.FigNodeDescriptor
 org.argouml.cognitive.ui.WizStepTextField
 org.argouml.cognitive.ui.TabToDo

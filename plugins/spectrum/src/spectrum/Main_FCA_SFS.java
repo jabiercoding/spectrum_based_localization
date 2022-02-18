@@ -57,27 +57,13 @@ public class Main_FCA_SFS {
 
 		File outputFolder = new File("output_FCA_SFS");
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
-		List<File> warmScenarios = new ArrayList<File>();
-		
-		File firstScenario = null;
-		
-		for (File scenario1 : scenarios) {
-			if (scenario1.getName().contains("ScenarioRandom002Variants")) {
-				firstScenario = scenario1;
-				break;
-			}
-		}
-		
-		warmScenarios.add(firstScenario);
-		warmScenarios.add(firstScenario);
-		warmScenarios.add(firstScenario);
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsFileNaive = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsTypeLevelNaive = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsTypeLevelBench = new LinkedHashMap<String, File>();
 
-		for (File scenario : warmScenarios) {
+		for (File scenario : scenarios) {
 
 			if (scenario.getName().contains("Original")) {
 				continue;

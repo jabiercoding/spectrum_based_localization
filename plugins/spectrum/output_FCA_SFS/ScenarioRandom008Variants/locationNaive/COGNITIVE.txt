@@ -1,8 +1,8 @@
 org.argouml.cognitive.ui.WizDescription
 org.argouml.uml.cognitive.critics.CrNameConfusion
 org.argouml.uml.cognitive.critics.CrClassMustBeAbstract
-org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
 org.argouml.application.PostLoad
+org.argouml.uml.cognitive.critics.CrCrossNamespaceAssoc
 org.argouml.uml.cognitive.critics.WizMEName
 org.argouml.uml.reveng.ImportCommon
 org.argouml.uml.cognitive.critics.CrUnconventionalClassName

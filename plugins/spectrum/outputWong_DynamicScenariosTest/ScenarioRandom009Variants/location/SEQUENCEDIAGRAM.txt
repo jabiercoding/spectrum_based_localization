@@ -1,3 +1,5 @@
-org.argouml.sequence2.SequenceDiagramPropPanelFactory
+org.argouml.sequence2.diagram.UMLSequenceDiagram
 org.argouml.sequence2.diagram.FigMessageSpline
+org.argouml.sequence2.SequenceDiagramPropPanelFactory
 org.argouml.sequence2.SequenceDiagramModule
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel

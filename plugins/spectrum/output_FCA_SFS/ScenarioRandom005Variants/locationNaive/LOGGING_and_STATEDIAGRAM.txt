@@ -6,8 +6,8 @@ org.argouml.kernel.MemberList
 org.argouml.profile.UserDefinedProfile.UserDefinedFigNodeStrategy
 org.argouml.persistence.XmiFilePersister
 org.argouml.uml.diagram.ui.ActionAddConcurrentRegion
-org.argouml.profile.UserDefinedProfile
 org.argouml.persistence.ModelMemberFilePersister
+org.argouml.profile.UserDefinedProfile
 org.argouml.profile.init.ProfileLoader.JarFileFilter
 org.argouml.uml.diagram.state.ui.UMLStateDiagram
 org.argouml.kernel.ProjectImpl.NamePCL

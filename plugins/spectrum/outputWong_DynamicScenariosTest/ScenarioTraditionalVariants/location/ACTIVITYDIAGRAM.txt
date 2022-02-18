@@ -1,2 +1,3 @@
+org.argouml.uml.diagram.activity.ui.UMLActivityDiagram
 org.argouml.uml.ui.ActionActivityDiagram
 org.argouml.model.Model

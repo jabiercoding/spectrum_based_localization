@@ -366,8 +366,8 @@ org.argouml.uml.ui.foundation.core.ActionNewParameter
 org.argouml.uml.ui.ActionLayout
 org.argouml.model.PseudostateKind
 org.argouml.uml.ui.behavior.state_machines.ActionNewEvent
-org.argouml.model.StateMachinesHelper
 org.argouml.ui.AboutBox
+org.argouml.model.StateMachinesHelper
 org.argouml.uml.diagram.static_structure.ui.FigFeature.SelectionFeature
 org.argouml.ui.SystemInfoDialog.ClipboardObserver
 org.argouml.uml.ui.UMLModelElementTaggedValueProxy
@@ -1156,8 +1156,8 @@ org.argouml.uml.ui.TabConstraints
 org.argouml.model.mdr.UndoUseCasesHelperDecorator
 org.argouml.ui.explorer.rules.GoTransitionToGuard
 org.argouml.uml.ui.Seperator
-org.argouml.uml.ui.behavior.activity_graphs.PropPanelClassifierInState
 org.argouml.notation.providers.uml.NotationUtilityUml.PropertySpecialString
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelClassifierInState
 org.argouml.ui.explorer.PerspectiveConfigurator.RuleListener
 org.argouml.model.ActivityGraphsFactory
 org.argouml.uml.ui.behavior.state_machines.ActionNewTransition
@@ -1238,8 +1238,8 @@ org.argouml.ui.explorer.rules.GoModelElementToContainedLostElements
 org.argouml.uml.ui.behavior.state_machines.UMLStateMachineContextComboBoxModel
 org.argouml.uml.diagram.activity.ui.FigActionState
 org.argouml.uml.diagram.ui.FigOperationsCompartment
-org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleBaseComboBoxModel
 org.argouml.uml.ui.model_management.PropPanelPackage
+org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleBaseComboBoxModel
 org.argouml.ui.HelpListener
 org.argouml.uml.GenDescendantClasses
 org.argouml.ui.ArgoToolbarManager.ToolbarManagerMenuItemAction

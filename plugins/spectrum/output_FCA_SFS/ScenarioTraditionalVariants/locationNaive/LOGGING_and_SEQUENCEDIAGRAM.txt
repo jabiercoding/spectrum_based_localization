@@ -18,5 +18,5 @@ org.argouml.sequence2.diagram.SequenceDiagramRenderer
 org.argouml.uml.diagram.sequence.ui.FigClassifierRole
 org.argouml.sequence2.diagram.UMLSequenceDiagram
 org.argouml.sequence2.diagram.FigClassifierRole.FigClassifierRolePort
-org.argouml.sequence2.diagram.SelectionMessage
 org.argouml.sequence2.diagram.ModeCreateMessage
+org.argouml.sequence2.diagram.SelectionMessage

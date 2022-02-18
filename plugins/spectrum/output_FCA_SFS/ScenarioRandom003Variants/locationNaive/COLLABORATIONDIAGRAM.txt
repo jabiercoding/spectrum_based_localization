@@ -1,8 +1,8 @@
 org.argouml.uml.diagram.static_structure.ui.SelectionGeneralizableElement
 org.argouml.moduleloader.ModuleLoader2
 org.argouml.moduleloader.ModuleStatus
-org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
 org.argouml.application.PostLoad
+org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
 org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
 org.argouml.uml.diagram.ui.ActionAddMessage
 org.argouml.ui.explorer.ExplorerPopup.OrderedMenuItem

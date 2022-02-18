@@ -4,8 +4,8 @@ org.argouml.profile.internal.ProfileManagerImpl
 org.argouml.uml.cognitive.critics.CrMultipleInitialStates
 org.argouml.cognitive.ui.ToDoByPriority
 org.argouml.cognitive.ui.ToDoPane
-org.argouml.kernel.MemberList
 org.argouml.persistence.TodoListMemberFilePersister
+org.argouml.kernel.MemberList
 org.argouml.uml.cognitive.critics.ChildGenUML
 org.argouml.cognitive.ui.WizDescription
 org.argouml.cognitive.ui.DismissToDoItemDialog
@@ -19,8 +19,8 @@ org.argouml.cognitive.ui.ToDoByDecision
 org.argouml.cognitive.ui.ToDoByType
 org.argouml.application.Main
 org.argouml.cognitive.checklist.ui.TabChecklist
-org.argouml.application.PostLoad
 org.argouml.uml.cognitive.critics.WizBreakCircularComp
+org.argouml.application.PostLoad
 org.argouml.cognitive.ToDoList
 org.argouml.application.LoadModules
 org.argouml.cognitive.Agency

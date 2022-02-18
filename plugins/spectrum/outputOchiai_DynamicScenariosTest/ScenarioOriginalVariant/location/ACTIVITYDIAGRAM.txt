@@ -1,4 +1,4 @@
-org.argouml.uml.ui.ActionActivityDiagram
 org.argouml.model.mdr.FacadeMDRImpl
+org.argouml.uml.ui.ActionActivityDiagram
 org.argouml.model.mdr.ActivityGraphsHelperMDRImpl
 org.argouml.model.Model

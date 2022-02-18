@@ -57,8 +57,8 @@ org.argouml.uml.generator.GeneratorHelper
 org.argouml.uml.ui.behavior.activity_graphs.ActionSetSynch
 org.argouml.uml.ui.UMLMutableLinkedList
 org.argouml.uml.diagram.sequence.ui.FigBirthActivation
-org.argouml.uml.cognitive.critics.ClClassName
 org.argouml.uml.ui.foundation.core.UMLNamespaceOwnedElementListModel
+org.argouml.uml.cognitive.critics.ClClassName
 org.argouml.uml.ui.foundation.core.UMLAssociationEndAggregationRadioButtonPanel
 org.argouml.configuration.ConfigurationKey
 org.argouml.sequence2.diagram.FigLifeLine
@@ -494,8 +494,8 @@ org.argouml.uml.ui.behavior.common_behavior.UMLActionSequenceActionList
 org.argouml.uml.ui.behavior.state_machines.UMLTransitionGuardListModel
 org.argouml.cognitive.ui.GoListToTypeToItem
 org.argouml.model.ModelCommand
-org.argouml.sequence2.diagram.ModeCreateMessage
 org.argouml.uml.ui.behavior.common_behavior.PropPanelCallAction.UMLCallActionOperationComboBoxModel
+org.argouml.sequence2.diagram.ModeCreateMessage
 org.argouml.uml.diagram.ui.ArgoModeCreateFigText
 org.argouml.ui.explorer.rules.GoClassifierToBehavioralFeature
 org.argouml.uml.reveng.Setting.UniqueSelection
@@ -516,8 +516,8 @@ org.argouml.model.mdr.StateMachinesHelperMDRImpl
 org.argouml.model.InstanceChangeEvent
 org.argouml.uml.ui.behavior.collaborations.UMLAssociationEndRoleBaseListModel
 org.argouml.kernel.ProjectImpl.NamePCL
-org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionOwner
 org.argouml.kernel.DefaultUndoManager.Interaction
+org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionOwner
 org.argouml.uml.ui.UMLMultiplicityPanel
 org.argouml.model.mdr.CollaborationsHelperMDRImpl
 org.argouml.uml.ui.UMLPlainTextDocument
@@ -920,8 +920,8 @@ org.argouml.uml.ui.foundation.core.PropPanelDataType.ActionAddQueryOperation
 org.argouml.uml.diagram.sequence.ui.SequenceDiagramRenderer
 org.argouml.uml.diagram.activity.ui.FigPartition.SelectionPartition
 org.argouml.ui.explorer.rules.GoOperationToCollaboration
-org.argouml.uml.ui.AbstractActionRemoveElement
 org.argouml.uml.diagram.OperationsCompartmentContainer
+org.argouml.uml.ui.AbstractActionRemoveElement
 org.argouml.configuration.ConfigurationFactory
 org.argouml.notation.providers.AssociationEndNameNotation
 org.argouml.uml.cognitive.critics.CrInvalidInitial
@@ -937,8 +937,8 @@ org.argouml.uml.cognitive.critics.CrInvalidForkTriggerOrGuard
 org.argouml.uml.ui.behavior.state_machines.UMLCompositeStateConcurrentCheckBox
 org.argouml.ui.explorer.rules.GoSubmachineStateToStateMachine
 org.argouml.uml.diagram.sequence.ui.SelectionMessage
-org.argouml.model.UUIDManager
 org.argouml.uml.ui.foundation.core.UMLDependencyClientListModel
+org.argouml.model.UUIDManager
 org.argouml.model.mdr.UndoCoreHelperDecorator.BooleanSetter
 org.argouml.moduleloader.InitModuleLoader
 org.argouml.kernel.DefaultUndoManager.RedoStack
@@ -1020,8 +1020,8 @@ org.argouml.uml.diagram.ui.ModeCreateAssociationClass
 org.argouml.uml.diagram.ui.FigClassAssociationClass
 org.argouml.uml.ui.behavior.common_behavior.PropPanelException
 org.argouml.model.OrderingKind
-org.argouml.model.euml.UmlFactoryEUMLImpl
 org.argouml.uml.reveng.ImportInterface.ImportException
+org.argouml.model.euml.UmlFactoryEUMLImpl
 org.argouml.uml.ui.behavior.state_machines.UMLTransitionEffectListModel
 org.argouml.uml.diagram.ui.ActionVisibilityPrivate
 org.argouml.kernel.DelayedChangeNotify
@@ -1318,8 +1318,8 @@ org.argouml.uml.ui.behavior.state_machines.ActionNewFinalState
 org.argouml.ui.cmd.SettingsTabShortcuts
 org.argouml.uml.ui.behavior.collaborations.UMLMessageInteractionListModel
 org.argouml.gefext.ArgoFigRect
-org.argouml.sequence2.SequenceDiagramPropPanelFactory
 org.argouml.model.mdr.XmiReferenceProviderImpl
+org.argouml.sequence2.SequenceDiagramPropPanelFactory
 org.argouml.uml.ui.behavior.state_machines.PropPanelFinalState
 org.argouml.model.mdr.DataTypesHelperMDRImpl
 org.argouml.uml.ui.behavior.activity_graphs.UMLClassifierInStateTypeComboBoxModel
@@ -1529,8 +1529,8 @@ org.argouml.ui.explorer.rules.GoModelElementToContainedLostElements
 org.argouml.uml.ui.behavior.state_machines.UMLStateMachineContextComboBoxModel
 org.argouml.uml.diagram.activity.ui.FigActionState
 org.argouml.uml.diagram.ui.FigOperationsCompartment
-org.argouml.uml.ui.model_management.PropPanelPackage
 org.argouml.uml.ui.behavior.collaborations.UMLAssociationRoleBaseComboBoxModel
+org.argouml.uml.ui.model_management.PropPanelPackage
 org.argouml.ui.HelpListener
 org.argouml.uml.GenDescendantClasses
 org.argouml.ui.ArgoToolbarManager.ToolbarManagerMenuItemAction
@@ -1608,8 +1608,8 @@ org.argouml.model.euml.ModelEventPumpEUMLImpl
 org.argouml.uml.diagram.ui.ModeCreatePermission
 org.argouml.uml.ui.ActionNewDiagram
 org.argouml.uml.ui.behavior.common_behavior.ActionCreateArgument
-org.argouml.ui.UndoableAction
 org.argouml.cognitive.ui.WizStepConfirm
+org.argouml.ui.UndoableAction
 org.argouml.uml.reveng.ConfigPanelExtension
 org.argouml.cognitive.critics.ui.TableModelCritics
 org.argouml.uml.ui.UMLModelElementTaggedValueDocument

@@ -301,13 +301,11 @@ org.argouml.persistence.PgmlUtility
 org.argouml.persistence.PrivateHandler
 org.argouml.persistence.ProfileConfigurationFilePersister
 org.argouml.persistence.ProfileConfigurationParser
-org.argouml.persistence.ProfileConfigurationTokenTable Refinement
 org.argouml.persistence.ProgressMgr Refinement
 org.argouml.persistence.ProjectFilePersister
 org.argouml.persistence.ProjectFileView
 org.argouml.persistence.SAXParserBase
 org.argouml.persistence.SaveException
-org.argouml.persistence.SubInputStream Refinement
 org.argouml.persistence.UmlFilePersister
 org.argouml.persistence.UmlVersionException
 org.argouml.persistence.VersionException
@@ -318,7 +316,6 @@ org.argouml.persistence.XmiFilePersister
 org.argouml.persistence.XmiFormatException
 org.argouml.persistence.XmiInputStream
 org.argouml.persistence.XmlFilePersister
-org.argouml.persistence.XmlFilterOutputStream Refinement
 org.argouml.persistence.XmlInputStream
 org.argouml.persistence.ZargoFilePersister
 org.argouml.persistence.ZipFilePersister
@@ -833,7 +830,11 @@ org.argouml.uml.generator.ui.ClassGenerationDialog
 org.argouml.uml.generator.ui.TableModelClassChecks Refinement
 org.argouml.uml.reveng.BooleanSelection Refinement
 org.argouml.uml.reveng.BooleanSelection2 Refinement
-org.argouml.uml.reveng.ConfigPanelExtension
+org.argouml.uml.reveng.ConfigPanelExtension ConfigPanelExtension()
+org.argouml.uml.reveng.ConfigPanelExtension Refinement
+org.argouml.uml.reveng.ConfigPanelExtension disposeDialog()
+org.argouml.uml.reveng.ConfigPanelExtension getAttribute()
+org.argouml.uml.reveng.ConfigPanelExtension getDatatype()
 org.argouml.uml.reveng.DiagramInterface
 org.argouml.uml.reveng.FileImportUtils
 org.argouml.uml.reveng.Import
@@ -841,7 +842,21 @@ org.argouml.uml.reveng.MethodImportInterface
 org.argouml.uml.reveng.PathListSelection Refinement
 org.argouml.uml.reveng.PathSelection Refinement
 org.argouml.uml.reveng.SelectedLanguageListener Refinement
-org.argouml.uml.reveng.Setting
+org.argouml.uml.reveng.Setting Refinement
+org.argouml.uml.reveng.Setting Setting(String)
+org.argouml.uml.reveng.Setting Setting(String,String)
+org.argouml.uml.reveng.Setting getDescription()
+org.argouml.uml.reveng.Setting.BooleanSelection BooleanSelection(String,boolean)
+org.argouml.uml.reveng.Setting.BooleanSelection Refinement
+org.argouml.uml.reveng.Setting.PathListSelection PathListSelection(String,String,List<String>)
+org.argouml.uml.reveng.Setting.PathListSelection Refinement
+org.argouml.uml.reveng.Setting.PathSelection PathSelection(String,String,String)
+org.argouml.uml.reveng.Setting.PathSelection Refinement
+org.argouml.uml.reveng.Setting.UniqueSelection Refinement
+org.argouml.uml.reveng.Setting.UniqueSelection UniqueSelection(String,List<String>,int)
+org.argouml.uml.reveng.Setting.UniqueSelection isOption(int)
+org.argouml.uml.reveng.Setting2 Refinement
+org.argouml.uml.reveng.SettingsTypes
 org.argouml.uml.reveng.UniqueSelection Refinement
 org.argouml.uml.reveng.UniqueSelection2 Refinement
 org.argouml.uml.reveng.UserString Refinement

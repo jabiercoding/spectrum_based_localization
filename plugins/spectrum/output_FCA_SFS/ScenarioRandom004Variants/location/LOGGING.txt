@@ -14,12 +14,6 @@ org.argouml.application.api.AbstractArgoJPanel Refinement
 org.argouml.application.api.AbstractArgoJPanel clone() Refinement
 org.argouml.application.api.Argo Refinement
 org.argouml.application.events.ArgoEventPump Refinement
-org.argouml.application.events.ArgoEventPump fireDiagramAppearanceEventInternal(ArgoDiagramAppearanceEvent,ArgoDiagramAppearanceEventListener) Refinement
-org.argouml.application.events.ArgoEventPump fireNotationEventInternal(ArgoNotationEvent,ArgoNotationEventListener) Refinement
-org.argouml.application.events.ArgoEventPump handleFireGeneratorEvent(ArgoGeneratorEvent,ArgoGeneratorEventListener) Refinement
-org.argouml.application.events.ArgoEventPump handleFireHelpEvent(ArgoHelpEvent,ArgoHelpEventListener) Refinement
-org.argouml.application.events.ArgoEventPump handleFireProfileEvent(ArgoProfileEvent,ArgoProfileEventListener) Refinement
-org.argouml.application.events.ArgoEventPump handleFireStatusEvent(ArgoStatusEvent,ArgoStatusEventListener) Refinement
 org.argouml.application.helpers.ResourceLoaderWrapper Refinement
 org.argouml.application.helpers.ResourceLoaderWrapper lookupIcon(Object) Refinement
 org.argouml.configuration.ConfigurationFactory Refinement
@@ -200,9 +194,7 @@ org.argouml.ocl.ArgoFacade Refinement
 org.argouml.persistence.AbstractFilePersister Refinement
 org.argouml.persistence.AbstractFilePersister newPersister(Class<? extends MemberFilePersister>) Refinement
 org.argouml.persistence.ArgoParser Refinement
-org.argouml.persistence.ArgoParser handleEndElement(XMLElement) Refinement
 org.argouml.persistence.ArgoParser handleFontSize(XMLElement) Refinement
-org.argouml.persistence.ArgoParser handleStartElement(XMLElement) Refinement
 org.argouml.persistence.ArgoParser logError(String,SAXException)
 org.argouml.persistence.ArgoParser preRead(Project) Refinement
 org.argouml.persistence.ArgoParser readProject(Project,InputSource) Refinement
@@ -230,12 +222,10 @@ org.argouml.persistence.PrivateHandler startElement(String,String,String,Attribu
 org.argouml.persistence.ProfileConfigurationFilePersister Refinement
 org.argouml.persistence.ProfileConfigurationFilePersister addUserDefinedProfile(String,StringBuffer,ProfileManager) Refinement
 org.argouml.persistence.ProfileConfigurationParser Refinement
-org.argouml.persistence.ProfileConfigurationParser handleEndElement(XMLElement) Refinement
 org.argouml.persistence.ProfileConfigurationParser handleFilenameEnd(XMLElement) Refinement
 org.argouml.persistence.ProfileConfigurationParser handleModelEnd(XMLElement) Refinement
 org.argouml.persistence.ProfileConfigurationParser handlePluginEnd(XMLElement) Refinement
 org.argouml.persistence.ProfileConfigurationParser handleProfileEnd(XMLElement) Refinement
-org.argouml.persistence.ProfileConfigurationParser handleStartElement(XMLElement) Refinement
 org.argouml.persistence.ProfileConfigurationParser handleUserDefinedEnd(XMLElement) Refinement
 org.argouml.persistence.SAXParserBase Refinement
 org.argouml.persistence.SAXParserBase endElement(String,String,String) Refinement
@@ -535,7 +525,6 @@ org.argouml.uml.diagram.ui.PathItemPlacement Refinement
 org.argouml.uml.diagram.ui.PathItemPlacement getPosition(Point) Refinement
 org.argouml.uml.diagram.ui.PathItemPlacement getRectLineIntersection(Rectangle,Point,Point) Refinement
 org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 Refinement
-org.argouml.uml.diagram.ui.SelectionNodeClarifiers2 dragHandle(int,int,int,int,Handle) Refinement
 org.argouml.uml.diagram.ui.TabDiagram Refinement
 org.argouml.uml.diagram.ui.TabDiagram modeChange(ModeChangeEvent) Refinement
 org.argouml.uml.diagram.ui.TabDiagram propertyChange(PropertyChangeEvent) Refinement
@@ -668,7 +657,7 @@ org.argouml.uml.ui.behavior.state_machines.UMLChangeExpressionModel newExpressio
 org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint
 org.argouml.uml.ui.behavior.use_cases.ActionNewActor
 org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint
-org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint Refinement
 org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase
 org.argouml.uml.ui.behavior.use_cases.PropPanelActor
 org.argouml.uml.ui.behavior.use_cases.PropPanelExtend

@@ -1,7 +1,7 @@
 org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableContentsListModel
 org.argouml.uml.ui.behavior.collaborations.ActionSetAssociationRoleBase
-org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
 org.argouml.application.PostLoad
+org.argouml.uml.diagram.collaboration.ui.SelectionClassifierRole
 org.argouml.uml.ui.behavior.collaborations.ActionSetRepresentedClassifierCollaboration
 org.argouml.uml.diagram.collaboration.ui.UMLCollaborationDiagram
 org.argouml.uml.diagram.ui.ActionAddMessage
@@ -35,8 +35,8 @@ org.argouml.uml.diagram.collaboration.ui.PropPanelUMLCollaborationDiagram
 org.argouml.uml.diagram.collaboration.ui.ActionAddClassifierRole
 org.argouml.uml.diagram.collaboration.ui.FigClassifierRole
 org.argouml.ui.cmd.ShortcutMgr
-org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableFeaturesListModel
 org.argouml.uml.ui.behavior.collaborations.ActionAddMessagePredecessor
+org.argouml.uml.ui.behavior.collaborations.UMLClassifierRoleAvailableFeaturesListModel
 org.argouml.uml.ui.behavior.common_behavior.PropPanelStimulus
 org.argouml.uml.diagram.collaboration.ui.CollabDiagramRenderer
 org.argouml.ui.explorer.rules.GoOperationToCollaborationDiagram

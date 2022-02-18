@@ -3,11 +3,11 @@ org.argouml.uml.diagram.deployment.ui.DeploymentDiagramRenderer
 org.argouml.profile.internal.ProfileManagerImpl
 org.argouml.profile.UserDefinedProfile.FigNodeDescriptor
 org.argouml.kernel.ProjectImpl
-org.argouml.kernel.MemberList
 org.argouml.uml.diagram.ArgoDiagramImpl
+org.argouml.kernel.MemberList
 org.argouml.profile.UserDefinedProfile.UserDefinedFigNodeStrategy
-org.argouml.persistence.XmiFilePersister
 org.argouml.uml.ui.ActionDeploymentDiagram
+org.argouml.persistence.XmiFilePersister
 org.argouml.uml.diagram.deployment.DeploymentDiagramGraphModel
 org.argouml.profile.UserDefinedProfile
 org.argouml.profile.init.ProfileLoader.JarFileFilter

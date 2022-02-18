@@ -46,11 +46,11 @@ org.argouml.uml.ui.behavior.state_machines.UMLChangeExpressionModel
 org.argouml.persistence.XmiFilePersister
 org.argouml.ui.explorer.PerspectiveConfigurator.RuleListMouseListener
 org.argouml.ui.explorer.PerspectiveConfigurator.MoveUpListener
-org.argouml.ui.explorer.PerspectiveConfigurator.LibraryListSelectionListener
 org.argouml.uml.ui.SourcePathTableModel
+org.argouml.ui.explorer.PerspectiveConfigurator.LibraryListSelectionListener
 org.argouml.uml.diagram.ui.UMLDiagram
-org.argouml.ui.StylePanel
 org.argouml.uml.ui.ActionSaveGraphics
+org.argouml.ui.StylePanel
 org.argouml.uml.ui.SaveGraphicsManager
 org.argouml.uml.diagram.static_structure.layout.ClassdiagramModelElementFactory
 org.argouml.uml.diagram.static_structure.ui.PackagePortFigRect
@@ -58,8 +58,8 @@ org.argouml.persistence.ProfileConfigurationFilePersister
 org.argouml.profile.UserDefinedProfile.UserDefinedFigNodeStrategy
 org.argouml.uml.ui.foundation.extension_mechanisms.UMLTagDefinitionNamespaceComboBoxModel
 org.argouml.uml.diagram.static_structure.ui.FigInterface
-org.argouml.uml.ui.UMLComboBox2
 org.argouml.persistence.XMLTokenTableBase
+org.argouml.uml.ui.UMLComboBox2
 org.argouml.uml.diagram.ui.ModeCreateGraphEdge
 org.argouml.notation.providers.uml.AbstractMessageNotationUml
 org.argouml.ui.targetmanager.TargetManager.TargetRemover
@@ -198,8 +198,8 @@ org.argouml.uml.ui.foundation.core.UMLModelElementNamespaceComboBoxModel
 org.argouml.uml.ui.UMLTimeExpressionModel
 org.argouml.model.mdr.ModelManagementFactoryMDRImpl
 org.argouml.uml.diagram.ui.ActionSetMode
-org.argouml.ui.explorer.PerspectiveConfigurator.RulesListSelectionListener
 org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionNamespace
+org.argouml.ui.explorer.PerspectiveConfigurator.RulesListSelectionListener
 org.argouml.uml.reveng.ImportClassLoader
 org.argouml.uml.diagram.static_structure.ClassDiagramGraphModel
 org.argouml.profile.internal.ocl.uml14.OclAPIModelInterpreter
@@ -244,10 +244,10 @@ org.argouml.kernel.ProjectImpl.NamePCL
 org.argouml.model.mdr.DataTypesFactoryMDRImpl
 org.argouml.kernel.DefaultUndoManager.InteractionStack
 org.argouml.ui.LoadSwingWorker
-org.argouml.application.Main
 org.argouml.uml.diagram.DiagramUndoManager.DiagramCommand
-org.argouml.kernel.DefaultUndoManager.Interaction
+org.argouml.application.Main
 org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionOwner
+org.argouml.kernel.DefaultUndoManager.Interaction
 org.argouml.uml.diagram.ui.SelectionNodeClarifiers2
 org.argouml.uml.ui.ActionRemoveTaggedValue
 org.argouml.profile.ZipModelLoader

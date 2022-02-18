@@ -93,14 +93,44 @@ org.argouml.pattern.cognitive.critics.CrSingletonViolatedMissingStaticAttr
 org.argouml.pattern.cognitive.critics.CrSingletonViolatedOnlyPrivateConstructors
 org.argouml.pattern.cognitive.critics.InitPatternCritics
 org.argouml.persistence.AbstractFilePersister Refinement
+org.argouml.persistence.ArgoParser Refinement
+org.argouml.persistence.ArgoTokenTable Refinement
+org.argouml.persistence.DiagramMemberFilePersister Refinement
+org.argouml.persistence.FigEdgeHandler Refinement
+org.argouml.persistence.InterruptedIOException Refinement
+org.argouml.persistence.ModelMemberFilePersister Refinement
+org.argouml.persistence.MultitypeFileFilter Refinement
 org.argouml.persistence.OffenderXMLHelper
+org.argouml.persistence.OldModelMemberFilePersister Refinement
+org.argouml.persistence.OldZargoFilePersister Refinement
+org.argouml.persistence.OpenException Refinement
+org.argouml.persistence.PGMLStackParser Refinement
+org.argouml.persistence.PersistenceException Refinement
+org.argouml.persistence.PrivateHandler Refinement
+org.argouml.persistence.ProfileConfigurationFilePersister Refinement
+org.argouml.persistence.ProfileConfigurationParser Refinement
+org.argouml.persistence.ProfileConfigurationTokenTable Refinement
+org.argouml.persistence.ProjectFileView Refinement
 org.argouml.persistence.ResolvedCriticXMLHelper
+org.argouml.persistence.SAXParserBase Refinement
+org.argouml.persistence.SaveException Refinement
+org.argouml.persistence.SubInputStream Refinement
 org.argouml.persistence.ToDoItemXMLHelper
 org.argouml.persistence.TodoListMemberFilePersister
 org.argouml.persistence.TodoParser
 org.argouml.persistence.TodoTokenTable
+org.argouml.persistence.UmlFilePersister Refinement
+org.argouml.persistence.UmlVersionException Refinement
+org.argouml.persistence.VersionException Refinement
 org.argouml.persistence.XmiFilePersister Refinement
 org.argouml.persistence.XmiFilePersister parse(String,String) Refinement
+org.argouml.persistence.XmiFormatException Refinement
+org.argouml.persistence.XmiInputStream Refinement
+org.argouml.persistence.XmlFilePersister Refinement
+org.argouml.persistence.XmlFilterOutputStream Refinement
+org.argouml.persistence.XmlInputStream Refinement
+org.argouml.persistence.ZargoFilePersister Refinement
+org.argouml.persistence.ZipFilePersister Refinement
 org.argouml.profile.Profile Refinement
 org.argouml.profile.Profile getCritics()
 org.argouml.profile.Profile setCritics(Set<Critic>)

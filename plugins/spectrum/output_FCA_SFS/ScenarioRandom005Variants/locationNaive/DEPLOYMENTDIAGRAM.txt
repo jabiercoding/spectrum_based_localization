@@ -335,8 +335,8 @@ org.argouml.uml.ui.ActionGenerateOne
 org.argouml.model.euml.EUMLModelImplementation
 org.argouml.uml.ui.behavior.state_machines.ActionSetCompositeStateConcurrent
 org.argouml.ui.explorer.rules.PerspectiveRule
-org.argouml.model.Facade
 org.argouml.model.XmiReferenceException
+org.argouml.model.Facade
 org.argouml.util.SuffixFilter
 org.argouml.uml.diagram.ui.EnumLiteralsCompartmentContainer
 org.argouml.uml.ui.foundation.core.PropPanelFeature
@@ -362,8 +362,8 @@ org.argouml.uml.ui.foundation.core.ActionNewParameter
 org.argouml.uml.ui.ActionLayout
 org.argouml.model.PseudostateKind
 org.argouml.uml.ui.behavior.state_machines.ActionNewEvent
-org.argouml.model.StateMachinesHelper
 org.argouml.ui.AboutBox
+org.argouml.model.StateMachinesHelper
 org.argouml.uml.diagram.static_structure.ui.FigFeature.SelectionFeature
 org.argouml.ui.SystemInfoDialog.ClipboardObserver
 org.argouml.uml.ui.UMLModelElementTaggedValueProxy
@@ -743,8 +743,8 @@ org.argouml.uml.ui.behavior.activity_graphs.UMLPartitionContentListModel
 org.argouml.ui.explorer.WeakExplorerNode
 org.argouml.uml.diagram.ui.FigEdgeModelElement
 org.argouml.uml.ui.foundation.core.PropPanelDataType.ActionAddQueryOperation
-org.argouml.uml.ui.AbstractActionRemoveElement
 org.argouml.uml.diagram.OperationsCompartmentContainer
+org.argouml.uml.ui.AbstractActionRemoveElement
 org.argouml.configuration.ConfigurationFactory
 org.argouml.notation.providers.AssociationEndNameNotation
 org.argouml.uml.ui.foundation.core.ElementResidenceResidentListModel
@@ -754,8 +754,8 @@ org.argouml.util.LineSeparator
 org.argouml.uml.diagram.ui.ActionAddExistingEdge
 org.argouml.uml.ui.behavior.state_machines.UMLCompositeStateConcurrentCheckBox
 org.argouml.ui.explorer.rules.GoSubmachineStateToStateMachine
-org.argouml.model.UUIDManager
 org.argouml.uml.ui.foundation.core.UMLDependencyClientListModel
+org.argouml.model.UUIDManager
 org.argouml.model.mdr.UndoCoreHelperDecorator.BooleanSetter
 org.argouml.moduleloader.InitModuleLoader
 org.argouml.kernel.DefaultUndoManager.RedoStack
@@ -1153,8 +1153,8 @@ org.argouml.uml.ui.TabConstraints
 org.argouml.model.mdr.UndoUseCasesHelperDecorator
 org.argouml.ui.explorer.rules.GoTransitionToGuard
 org.argouml.uml.ui.Seperator
-org.argouml.uml.ui.behavior.activity_graphs.PropPanelClassifierInState
 org.argouml.notation.providers.uml.NotationUtilityUml.PropertySpecialString
+org.argouml.uml.ui.behavior.activity_graphs.PropPanelClassifierInState
 org.argouml.ui.explorer.PerspectiveConfigurator.RuleListener
 org.argouml.model.ActivityGraphsFactory
 org.argouml.uml.ui.behavior.state_machines.ActionNewTransition

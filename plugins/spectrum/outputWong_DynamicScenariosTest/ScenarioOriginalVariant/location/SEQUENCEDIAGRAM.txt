@@ -1,3 +1,15 @@
-org.argouml.sequence2.SequenceDiagramPropPanelFactory
+org.argouml.sequence2.diagram.UMLSequenceDiagram
+org.argouml.uml.ui.UMLEditableComboBox
 org.argouml.sequence2.diagram.FigMessageSpline
+org.argouml.uml.ui.UMLComboBox2
+org.argouml.uml.diagram.ui.PropPanelDiagram
+org.argouml.sequence2.SequenceDiagramPropPanelFactory
+org.argouml.uml.diagram.ui.DiagramNameDocument
+org.argouml.uml.ui.UMLComboBoxNavigator
+org.argouml.uml.ui.PropPanel
+org.argouml.sequence2.diagram.SequenceDiagramRenderer
+org.argouml.uml.ui.AbstractActionNavigate
 org.argouml.sequence2.SequenceDiagramModule
+org.argouml.sequence2.diagram.SequenceDiagramGraphModel
+org.argouml.ui.UndoableAction
+org.argouml.uml.ui.UMLSearchableComboBox

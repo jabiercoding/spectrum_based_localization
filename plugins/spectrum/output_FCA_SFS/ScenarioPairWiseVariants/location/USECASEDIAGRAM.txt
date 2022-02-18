@@ -35,7 +35,7 @@ org.argouml.uml.ui.UMLConditionExpressionModel setExpression(Object) Refinement
 org.argouml.uml.ui.behavior.use_cases.ActionAddExtendExtensionPoint
 org.argouml.uml.ui.behavior.use_cases.ActionNewActor
 org.argouml.uml.ui.behavior.use_cases.ActionNewExtendExtensionPoint
-org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint
+org.argouml.uml.ui.behavior.use_cases.ActionNewExtensionPoint Refinement
 org.argouml.uml.ui.behavior.use_cases.ActionNewUseCase
 org.argouml.uml.ui.behavior.use_cases.PropPanelActor
 org.argouml.uml.ui.behavior.use_cases.PropPanelExtend

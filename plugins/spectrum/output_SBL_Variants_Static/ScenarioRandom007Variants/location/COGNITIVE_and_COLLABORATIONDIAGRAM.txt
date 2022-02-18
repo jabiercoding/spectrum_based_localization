@@ -77,8 +77,6 @@ org.argouml.kernel.ProjectImpl addMember(Object) Refinement
 org.argouml.kernel.ProjectImpl addTodoMember(ProjectMemberTodoList) Refinement
 org.argouml.persistence.TodoListMemberFilePersister Refinement
 org.argouml.persistence.TodoParser Refinement
-org.argouml.persistence.TodoParser handleEndElement(XMLElement) Refinement
-org.argouml.persistence.TodoParser handleStartElement(XMLElement) Refinement
 org.argouml.persistence.TodoParser readTodoList(Reader) Refinement
 org.argouml.persistence.XmiFilePersister parseXmiExtensions(Project) Refinement
 org.argouml.profile.UserDefinedProfile UserDefinedProfile(String,URL,Set<Critic>,Set<String>) Refinement
@@ -126,17 +124,14 @@ org.argouml.uml.cognitive.critics.CrMultipleShallowHistoryStates predicate2(Obje
 org.argouml.uml.cognitive.critics.CrUML Refinement
 org.argouml.uml.cognitive.critics.CrUML expand(String,ListSet) Refinement
 org.argouml.uml.cognitive.critics.WizAssocComposite Refinement
-org.argouml.uml.cognitive.critics.WizAssocComposite doAction(int) Refinement
 org.argouml.uml.cognitive.critics.WizBreakCircularComp Refinement
 org.argouml.uml.cognitive.critics.WizBreakCircularComp doAction(int) Refinement
 org.argouml.uml.cognitive.critics.WizMEName Refinement
 org.argouml.uml.cognitive.critics.WizMEName doAction(int) Refinement
 org.argouml.uml.cognitive.critics.WizManyNames Refinement
-org.argouml.uml.cognitive.critics.WizManyNames doAction(int) Refinement
 org.argouml.uml.cognitive.critics.WizNavigable Refinement
 org.argouml.uml.cognitive.critics.WizNavigable doAction(int) Refinement
 org.argouml.uml.cognitive.critics.WizOperName Refinement
-org.argouml.uml.cognitive.critics.WizOperName doAction(int) Refinement
 org.argouml.uml.diagram.DiagramFactory DiagramFactory() Refinement
 org.argouml.uml.diagram.DiagramFactory createDiagram(Class,Object,Object) Refinement
 org.argouml.uml.diagram.UmlDiagramRenderer getFigEdgeFor(Object,Map) Refinement

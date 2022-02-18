@@ -39,8 +39,8 @@ org.argouml.ui.explorer.ExplorerPopup.ActionAddExistingRelatedNode
 org.argouml.ui.cmd.GenericArgoMenuBar
 org.argouml.ui.explorer.PerspectiveConfigurator.DuplicatePerspectiveListener
 org.argouml.application.LoadModules
-org.argouml.uml.diagram.static_structure.ui.FigPackage.HideVisibilityAction
 org.argouml.kernel.ProfileConfiguration
+org.argouml.uml.diagram.static_structure.ui.FigPackage.HideVisibilityAction
 org.argouml.ui.explorer.ExplorerPopup.OrderedMenu
 org.argouml.uml.ui.behavior.state_machines.UMLChangeExpressionModel
 org.argouml.persistence.XmiFilePersister
@@ -85,8 +85,8 @@ org.argouml.uml.generator.ui.ClassGenerationDialog
 org.argouml.uml.ui.ActionSaveProject
 org.argouml.uml.ui.UMLComboBoxModel2
 org.argouml.uml.diagram.ui.FigAssociationEndAnnotation
-org.argouml.model.mdr.XmiReferenceResolverImpl
 org.argouml.notation.providers.uml.AttributeNotationUml
+org.argouml.model.mdr.XmiReferenceResolverImpl
 org.argouml.uml.diagram.static_structure.ui.FigDataType
 org.argouml.ui.targetmanager.TargetManager.HistoryRemover
 org.argouml.persistence.ZipFilePersister
@@ -168,8 +168,8 @@ org.argouml.ui.explorer.ExplorerPopup.ActionCreateAssociation
 org.argouml.ui.explorer.PerspectiveConfigurator.ResetListener
 org.argouml.persistence.ProfileConfigurationParser.ProfileConfigurationTokenTable
 org.argouml.ui.ProjectBrowser.WindowCloser
-org.argouml.uml.ui.PropPanel
 org.argouml.uml.diagram.ui.FigOrdering
+org.argouml.uml.ui.PropPanel
 org.argouml.profile.internal.ProfileManagerImpl
 org.argouml.uml.ui.TabSrc.DefaultPredicate
 org.argouml.util.logging.AwtExceptionHandler
@@ -196,8 +196,8 @@ org.argouml.uml.ui.foundation.extension_mechanisms.UMLTagDefinitionComboBoxModel
 org.argouml.ui.explorer.PerspectiveConfigurator.RemovePerspectiveListener
 org.argouml.uml.ui.foundation.core.UMLModelElementNamespaceComboBoxModel
 org.argouml.uml.ui.UMLTimeExpressionModel
-org.argouml.model.mdr.ModelManagementFactoryMDRImpl
 org.argouml.uml.diagram.ui.ActionSetMode
+org.argouml.model.mdr.ModelManagementFactoryMDRImpl
 org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionNamespace
 org.argouml.ui.explorer.PerspectiveConfigurator.RulesListSelectionListener
 org.argouml.uml.diagram.static_structure.ClassDiagramGraphModel
@@ -224,8 +224,8 @@ org.argouml.uml.diagram.static_structure.layout.ClassdiagramLayouter.NodeRow
 org.argouml.ui.explorer.PerspectiveConfigurator.OkListener
 org.argouml.uml.ui.foundation.core.PropPanelMethod.UMLMethodSpecificationComboBoxModel
 org.argouml.persistence.OldZargoFilePersister
-org.argouml.ui.explorer.PerspectiveConfigurator.RenameDocumentListener
 org.argouml.application.events.ArgoEventPump.Pair
+org.argouml.ui.explorer.PerspectiveConfigurator.RenameDocumentListener
 org.argouml.model.mdr.Registry
 org.argouml.kernel.ProjectImpl
 org.argouml.persistence.AbstractFilePersister
@@ -241,11 +241,11 @@ org.argouml.persistence.ProfileConfigurationParser
 org.argouml.ui.explorer.DnDExplorerTree
 org.argouml.uml.ui.TabConstraints.ConstraintModel
 org.argouml.kernel.ProjectImpl.NamePCL
-org.argouml.model.mdr.DataTypesFactoryMDRImpl
 org.argouml.kernel.DefaultUndoManager.InteractionStack
+org.argouml.model.mdr.DataTypesFactoryMDRImpl
 org.argouml.ui.LoadSwingWorker
-org.argouml.uml.diagram.DiagramUndoManager.DiagramCommand
 org.argouml.application.Main
+org.argouml.uml.diagram.DiagramUndoManager.DiagramCommand
 org.argouml.uml.ui.foundation.extension_mechanisms.ActionSetTagDefinitionOwner
 org.argouml.kernel.DefaultUndoManager.Interaction
 org.argouml.uml.diagram.ui.SelectionNodeClarifiers2

@@ -153,8 +153,8 @@ org.argouml.uml.cognitive.critics.UMLWizard
 org.argouml.uml.cognitive.critics.CrTooManyClasses
 org.argouml.uml.cognitive.critics.WizAssocComposite
 org.argouml.uml.cognitive.critics.CrNodesOverlap
-org.argouml.cognitive.checklist.ui.InitCheckListUI
 org.argouml.cognitive.ListSet
+org.argouml.cognitive.checklist.ui.InitCheckListUI
 org.argouml.profile.UserDefinedProfile.FigNodeDescriptor
 org.argouml.cognitive.ui.WizStepTextField
 org.argouml.cognitive.ui.TabToDo
