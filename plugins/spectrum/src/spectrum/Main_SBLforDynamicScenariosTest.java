@@ -48,7 +48,7 @@ import utils.ScenarioUtils;
 public class Main_SBLforDynamicScenariosTest {
 
 
-	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	static File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 	//static File benchmarkFolder = new File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
 	static File originalVariantSrc = new File(benchmarkFolder,
@@ -66,6 +66,7 @@ public class Main_SBLforDynamicScenariosTest {
 	public static void main(String[] args) {
 
 		// create artefact model and feature list
+		long sbflStart = System.currentTimeMillis();
 		FeatureList featureList = FeatureListFactory.eINSTANCE.createFeatureList();
 		ArtefactModel artefactModel = ArtefactModelFactory.eINSTANCE.createArtefactModel();
 		featureList.setArtefactModel(artefactModel);
@@ -98,14 +99,20 @@ public class Main_SBLforDynamicScenariosTest {
 		adaptedModel.getOwnedBlocks().addAll(blocks);
 
 		// Launch feature location
-		//IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("Wong2");
+		IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("Wong2");
 		//IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("tarantula");
-		IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("ochiai");
+		//IFaultLocalizer<Block> rankingMetric = RankingMetrics.getRankingMetricByName("ochiai");
 		SpectrumBasedLocalization featureLocationAlgo = new SpectrumBasedLocalization();
 		List<LocatedFeature> flResult = featureLocationAlgo.locateFeatures(featureList, adaptedModel, rankingMetric, 1.0,
 				new ConsoleProgressMonitor());
+		
+		long sbflEnd = System.currentTimeMillis();
+		long sbflElapsedTime = sbflEnd - sbflStart;
+		
+		long rulesStart = System.currentTimeMillis();
+		
 		Map<String, Map<String, List<Integer>>> mapFeatureJavaLines = getResults(flResult);
-
+		
 		// adapt java source code of the original variant that was the one used for the
 		// traces
 		System.out.println("Adapting Original source code with JDT");
@@ -119,9 +126,14 @@ public class Main_SBLforDynamicScenariosTest {
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsFileTypeLevel = new LinkedHashMap<String, File>();
 
+		long rulesEnd = System.currentTimeMillis();
+		long rulesElapsedTime = rulesEnd - rulesStart;
+		
 		// For each scenario
 		for (File scenario : scenarios) {
-
+			
+			long executionStart = System.currentTimeMillis();
+			
 			System.out.println("Current scenario: " + scenario.getName());
 
 			// check if it was built
@@ -255,9 +267,12 @@ public class Main_SBLforDynamicScenariosTest {
 				benchmarkResults.put(feature, benchmarkResultsCurrentFeature);
 			}
 
+			long executionEnd = System.currentTimeMillis();
+			long executionElapsedTime = executionEnd - executionStart;
+			
 			//File outputFolder = new File("outputTarantula_DynamicScenariosTest");
-			File outputFolder = new File("outputOchiai_DynamicScenariosTest");
-			//File outputFolder = new File("outputWong_DynamicScenariosTest");
+			//File outputFolder = new File("outputOchiai_DynamicScenariosTest");
+			File outputFolder = new File("outputWong_DynamicScenariosTest");
 			File outputFolderScenario = new File(outputFolder, scenario.getName());
 			File resultsFolder = new File(outputFolderScenario, "location");
 			TransformFLResultsToBenchFormat.serializeResults(resultsFolder, benchmarkResults);
@@ -277,7 +292,7 @@ public class Main_SBLforDynamicScenariosTest {
 			mapScenarioMetricsFile.put(scenario.getName(), resultsFile);
 			List<String> featuresBeingConsidered = featureUtils.getFeatureIds();
 			featuresBeingConsidered.remove("LOGGING");
-			featuresBeingConsidered.remove("COGNITIVE");
+			//featuresBeingConsidered.remove("COGNITIVE");
 			HTMLReportUtils.create(outputFolder, mapScenarioMetricsFile, featuresBeingConsidered);
 			
 			
@@ -295,6 +310,13 @@ public class Main_SBLforDynamicScenariosTest {
 			System.out.println("Update html report type level ground truth");
 			mapScenarioMetricsFileTypeLevel.put(scenario.getName(), resultsFileTypeLevel);
 			HTMLReportUtils.createReportNaiveResults(outputFolder, mapScenarioMetricsFileTypeLevel,featuresBeingConsidered, "reportTypeLevel");
+			
+			File runtimeTrackerFile = new File(new File(outputFolder, "report"), scenario.getName()+ "_times.txt");
+			try {
+				FileUtils.writeFile(runtimeTrackerFile, Long.toString(sbflElapsedTime) + "\n" + Long.toString(rulesElapsedTime) + "\n" + Long.toString(executionElapsedTime));
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		// }
 	}

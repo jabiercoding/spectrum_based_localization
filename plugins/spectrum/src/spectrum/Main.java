@@ -40,7 +40,7 @@ import utils.ScenarioUtils;
 
 public class Main {
 
-	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	static File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 	// File("C:\\git\\argouml-spl-benchmark\\ArgoUMLSPLBenchmark");
 
 	static File jacocoExecutions = new File(

@@ -46,7 +46,7 @@ import utils.FileUtils;
 
 public class Main_SBLforDynamicOriginalManual {
 
-	static File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+	static File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 	// static File benchmarkFolder = new
 	// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 

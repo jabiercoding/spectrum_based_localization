@@ -49,7 +49,7 @@ public class Main_FCA_SFS {
 
 	public static void main(String[] args) {
 
-		File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+		File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 		// File benchmarkFolder = new
 		// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
@@ -57,13 +57,27 @@ public class Main_FCA_SFS {
 
 		File outputFolder = new File("output_FCA_SFS");
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
+		List<File> warmScenarios = new ArrayList<File>();
+		
+		File firstScenario = null;
+		
+		for (File scenario1 : scenarios) {
+			if (scenario1.getName().contains("ScenarioRandom002Variants")) {
+				firstScenario = scenario1;
+				break;
+			}
+		}
+		
+		warmScenarios.add(firstScenario);
+		warmScenarios.add(firstScenario);
+		warmScenarios.add(firstScenario);
 
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsFileNaive = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsTypeLevelNaive = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsTypeLevelBench = new LinkedHashMap<String, File>();
 
-		for (File scenario : scenarios) {
+		for (File scenario : warmScenarios) {
 
 			if (scenario.getName().contains("Original")) {
 				continue;
@@ -76,23 +90,32 @@ public class Main_FCA_SFS {
 				System.out.println("Skip: The scenario variants were not derived.");
 				continue;
 			}
-
+			
+			// Start preparation timer
+			long startPreparation = System.currentTimeMillis();
+			
 			// Get the artefact model and feature list of the scenario
 			Object[] amAndFl = GenerateScenarioResources.createArtefactModelAndFeatureList(scenario, false);
 			ArtefactModel am = (ArtefactModel) amAndFl[0];
 			FeatureList fl = (FeatureList) amAndFl[1];
 
+			
 			// Expand the feature list with 2-wise feature interactions
 			List<Feature> twoWise = FeatureListHelper.get2WiseFeatureInteractions(fl.getOwnedFeatures(), am);
 			fl.getOwnedFeatures().addAll(twoWise);
-
-			// Adapt the variants and create the adapted model
+			
+			// Adapt the varints and create the adapted model
 			IAdapter jdtAdapter = new JavaJDTAdapter();
 			List<IAdapter> adapters = new ArrayList<IAdapter>();
 			adapters.add(jdtAdapter);
 			AdaptedModel adaptedModel = AdaptConcurrently.adaptConcurrently(am, adapters, new ConsoleProgressMonitor());
 			//AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
-
+			
+			// Stop Timer for Preparation
+			long finishPreparation = System.currentTimeMillis();
+			long elapsedTimePreparation = finishPreparation - startPreparation;
+			
+			// Until here
 			long start = System.currentTimeMillis();
 
 			// Get blocks
@@ -191,7 +214,8 @@ public class Main_FCA_SFS {
 			File outputFolderNaive = new File(outputFolder, scenario.getName());
 			File resultsFolderNaive = new File(outputFolderNaive, "locationNaive");
 			TransformFLResultsToBenchFormat.serializeResults(resultsFolderNaive, naiveResults);
-
+			
+			
 			// Transform the results to the benchmark format
 			System.out.println("Transforming to benchmark format");
 			Map<String, Set<String>> benchmarkResults = TransformFLResultsToBenchFormat.transform(fl, adaptedModel,
@@ -210,6 +234,7 @@ public class Main_FCA_SFS {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
 			
 			
 			// Metrics calculation naive solution with type, i.e., class level ground truth
@@ -243,6 +268,15 @@ public class Main_FCA_SFS {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
+			
+			// Save tracked runtimes to a file for each specific scenario 
+			File runtimeTrackerFile = new File(new File(outputFolder, "report"), scenario.getName()+ "_times.txt");
+			try {
+				FileUtils.writeFile(runtimeTrackerFile, Long.toString(elapsedTimePreparation) + "\n" + Long.toString(elapsedTime));
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+						
 			
 
 			// update html report naive solution with benchmark groundtruth

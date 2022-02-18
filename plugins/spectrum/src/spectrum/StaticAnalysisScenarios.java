@@ -51,7 +51,7 @@ public class StaticAnalysisScenarios {
 	public static Map<String, Map<String, Set<String>>> getScenarioStaticResults(File outputFolder) {
 		
 		
-		File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+		File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 		// File benchmarkFolder = new
 		// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 

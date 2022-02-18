@@ -49,7 +49,7 @@ public class DynamicScenarios {
 
 	public static Map<String, Map<String, Set<String>>> getScenarioDynamicResults(File outputFolder, File traces) {
 
-		File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+		File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 		// static File benchmarkFolder = new
 		// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 

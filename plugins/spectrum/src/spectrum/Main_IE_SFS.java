@@ -52,19 +52,34 @@ public class Main_IE_SFS {
 
 		// File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
 		 File benchmarkFolder = new
-		 File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
+		 File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 
 		File scenariosFolder = new File(benchmarkFolder, "scenarios");
 
 		File outputFolder = new File("output_IE_SFS");
 		List<File> scenarios = ScenarioUtils.getAllScenariosOrderedByNumberOfVariants(scenariosFolder);
 
+		List<File> warmScenarios = new ArrayList<File>();
+		
+		File firstScenario = null;
+		
+		for (File scenario1 : scenarios) {
+			if (scenario1.getName().contains("ScenarioRandom002Variants")) {
+				firstScenario = scenario1;
+				break;
+			}
+		}
+		
+		warmScenarios.add(firstScenario);
+		warmScenarios.add(firstScenario);
+		warmScenarios.add(firstScenario);
+		
 		Map<String, File> mapScenarioMetricsFile = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsFileNaive = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsTypeLevelNaive = new LinkedHashMap<String, File>();
 		Map<String, File> mapScenarioMetricsTypeLevelBench = new LinkedHashMap<String, File>();
 
-		for (File scenario : scenarios) {
+		for (File scenario : warmScenarios) {
 
 			if (scenario.getName().contains("Original")) {
 				continue;
@@ -77,7 +92,9 @@ public class Main_IE_SFS {
 				System.out.println("Skip: The scenario variants were not derived.");
 				continue;
 			}
-
+			// Start Preparation timer
+			long startPreparation = System.currentTimeMillis();
+			
 			// Get the artefact model and feature list of the scenario
 			Object[] amAndFl = GenerateScenarioResources.createArtefactModelAndFeatureList(scenario, false);
 			ArtefactModel am = (ArtefactModel) amAndFl[0];
@@ -94,6 +111,10 @@ public class Main_IE_SFS {
 			AdaptedModel adaptedModel = AdaptConcurrently.adaptConcurrently(am, adapters, new ConsoleProgressMonitor());
 			//AdaptedModel adaptedModel = AdaptedModelHelper.adapt(am, adapters, new ConsoleProgressMonitor());
 
+			// Stop Timer for Preparation
+			long finishPreparation = System.currentTimeMillis();
+			long elapsedTimePreparation = finishPreparation - startPreparation;
+						
 			long start = System.currentTimeMillis();
 
 			// Get blocks
@@ -242,6 +263,14 @@ public class Main_IE_SFS {
 			try {
 				FileUtils.writeFile(resultsFileTypeLevel, resultsTypeLevel);
 			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			// Save tracked runtimes to a file for each specific scenario 
+			File runtimeTrackerFile = new File(new File(outputFolder, "report"), scenario.getName()+ "_times.txt");
+			try {
+				FileUtils.writeFile(runtimeTrackerFile, Long.toString(elapsedTimePreparation) + "\n" + Long.toString(elapsedTime));
+			} catch(Exception e) {
 				e.printStackTrace();
 			}
 			

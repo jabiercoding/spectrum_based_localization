@@ -16,7 +16,7 @@ import utils.ScenarioUtils;
 public class Main_HybridScenariosTest {
 
 	public static void main(String[] args) {
-		File benchmarkFolder = new File("C:\\ArgoUML-SPL\\ArgoUMLSPLBenchmark");
+		File benchmarkFolder = new File("/Users/brunomachado/eclipse-workspace/ArgoUMLSPLBenchmark");
 		// File benchmarkFolder = new
 		// File("C:/git/argouml-spl-benchmark/ArgoUMLSPLBenchmark");
 
